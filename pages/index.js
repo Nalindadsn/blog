@@ -139,7 +139,7 @@ export default function Home() {
 
 
   <div id="watch-video" className="bg-gray-800 py-24">
-    <iframe id="video" className="responsive-iframe mx-auto shadow-2xl" width="600" height="300" src="https://www.youtube.com/embed/U8EwCd1xJqA" frameBorder="0" allowFullScreen></iframe>
+    <iframe id="video" className="responsive-iframe mx-auto shadow-2xl" width="300" height="150" src="https://www.youtube.com/embed/U8EwCd1xJqA" frameBorder="0" allowFullScreen></iframe>
   </div>
   
 {/* 
