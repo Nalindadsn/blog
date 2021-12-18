@@ -15,7 +15,6 @@ export default function Home() {
     
 
 
-
       <nav className="bg-gray-800 w-full h-16  px-8   shadow-md fixed" >
   <div className="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
     <div className="relative flex items-center justify-between h-16">
