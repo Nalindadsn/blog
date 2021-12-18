@@ -143,7 +143,7 @@ export default function Home() {
   </div>
   
 {/* 
-  ------------------------------------------------ */}
+  -------------------------------------7----------- */}
 
 <div className="max-w-6xl mx-auto">
         <div className="flex items-center justify-center min-h-screen">
