@@ -16,7 +16,7 @@ export default function Home() {
 
 
 
-      <nav className="bg-gray-800">
+      <nav className="bg-gray-800 w-full h-16  px-8   shadow-md fixed" >
   <div className="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
     <div className="relative flex items-center justify-between h-16">
       <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
@@ -83,6 +83,8 @@ export default function Home() {
   </div>
 
 
+
+
   <div className="sm:hidden" id="mobile-menu">
     
     <div className="px-2 pt-2 pb-3 space-y-1">
@@ -97,58 +99,180 @@ export default function Home() {
     </div>
   </div>
 </nav>
-<div className='bg-gray-800'>oop</div>
-<div className="container m-auto p-8 text-grey-darkest ">
 
-   <h1 className="mb-8">Tailwind CSS flex grid</h1>
 
-   <h2 className="mb-4">Column Spacing</h2>
-   <p className="mb-4">Example of column spacing from the <a href="https://tailwindcss.com/docs/examples/grids/#column-spacing" className="text-indigo">documentation.</a></p>
 
-   <div className="flex -mx-2 mb-8">
-      <div className="w-1/3 px-2">
-         <div className="bg-grey-light h-12"></div>
+
+
+
+{/* //------------------- */}
+
+
+  <div  id="overview" className="w-4/5 mx-auto py-24 flex flex-row flex-no-wrap">
+    <div id="landing-text" className="w-1/2 flex flex-col">
+      <h4 className="font-medium text-green-400">Same chats, new different experience</h4>
+      <h2 className="font-bold text-5xl text-green-800 leading-tight mt-3 mb-6">It looks better and cleaner!</h2>
+      <span className="font-normal text-gray-600">Your favorite messaging app just got the best looking update yet! Now it feels like a breath of fresh air.</span>
+      <div id="buttons" className="font-medium flex flex-row mt-6">
+        <div className="mr-3 pl-0 p-2 cursor-pointer hover:underline"><a href="#watch-video">Watch video</a></div>
+        <div className="mx-4 p-2 px-4 border-2 text-green-500 border-green-400 rounded-lg hover:text-white hover:bg-green-400 cursor-pointer">Download</div>
       </div>
-      <div className="w-1/3 px-2">
-         <div className="bg-grey h-12"></div>
-      </div>
-      <div className="w-1/3 px-2">
-         <div className="bg-grey-light h-12"></div>
-      </div>
-   </div>
+    </div>
+    
+    <div id="landing-image" className="w-1/2">
+      <img src="https://i.imgur.com/5DNys2e.jpg" alt="landing-image" />
+    </div>
+  </div>
+    
+  <div id="watch-video" className="bg-gray-800 py-24">
+    <iframe id="video" className="mx-auto shadow-2xl" width="560" height="315" src="https://www.youtube.com/embed/U8EwCd1xJqA" frameBorder="0" allowFullScreen></iframe>
+  </div>
+  
+{/* 
+  ------------------------------------------------ */}
 
-   <h2 className="mb-4">Responsive 3 col flex grid</h2>
-
-   <div className="flex flex-wrap -mx-2 mb-8">
-      <div className="w-full md:w-1/2 lg:w-1/4 px-2 mb-4">
-         <div className="border h-12 text-sm text-grey-dark flex items-center justify-center">
-            <p>full / half / quarter</p>
-         </div>
+<div className="max-w-screen-xl mx-auto p-4">
+  <h1 className="text-5xl font-extrabold mb-4 text-center text-indigo-700">Tailwind CSS news feed #2</h1>
+  <div className="flex flex-col md:flex-row -mx-1.5 px-4 pt-4">
+    <a href="https://www.bbc.co.uk/news/technology-59520815" target="_blank" className="h-64 md:h-80 w-full md:w-1/2 mx-1.5 mb-4 md:mb-0 group">
+      <div className="h-64 md:h-80 relative">
+        <img src="https://images.unsplash.com/photo-1480694313141-fce5e697ee25?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=602&h=320q=80" className="absolute z-0 object-cover w-full h-64 md:h-80 rounded-lg" />
+        <div className="absolute gradient w-full h-64 md:h-80 rounded-lg z-10"></div>
+        <div className="absolute left-0 right-0 bottom-0 p-4 z-30">
+          <h1 className="font-bold text-white leading-tight sm:mb-2 group-hover:underline text-2xl md:text-3xl">The technology helping keep women safe on the streets</h1>
+          <div className="text-xs text-white hidden sm:block">
+            <div className="flex items-center">
+              <svg aria-hidden="true" focusable="false" data-prefix="far" data-icon="clock" className="h-3 mr-1" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                <path fill="currentColor" d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8zm0 448c-110.5 0-200-89.5-200-200S145.5 56 256 56s200 89.5 200 200-89.5 200-200 200zm61.8-104.4l-84.9-61.7c-3.1-2.3-4.9-5.9-4.9-9.7V116c0-6.6 5.4-12 12-12h32c6.6 0 12 5.4 12 12v141.7l66.8 48.6c5.4 3.9 6.5 11.4 2.6 16.8L334.6 349c-3.9 5.3-11.4 6.5-16.8 2.6z"></path>
+              </svg>
+              <span className="text-xs text-white">20h | Stephen Ainsworth</span>
+            </div>
+          </div>
+        </div>
       </div>
-      <div className="w-full md:w-1/2 lg:w-1/4 px-2 mb-4">
-         <div className="border h-12 text-sm text-grey-dark flex items-center justify-center">
-            <p>full / half / quarter</p>
-         </div>
+    </a>
+    <a href="https://www.bbc.co.uk/news/technology-59596267" target="_blank" className="h-64 md:h-80 w-full md:w-1/2 mx-1.5 group">
+      <div className="h-64 md:h-80 relative">
+        <img src="https://images.unsplash.com/photo-1501386761578-eac5c94b800a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=602&h=320q=80" target="_blank" className="absolute z-0 object-cover w-full h-64 md:h-80 rounded-lg" />
+        <div className="absolute gradient w-full h-64 md:h-80 rounded-lg z-10"></div>
+        <div className="absolute left-0 right-0 bottom-0 p-4 z-30">
+          <h1 className="font-bold text-white leading-tight sm:mb-2 group-hover:underline text-2xl md:text-3xl">Football fans spending millions on club crypto-tokens</h1>
+          <div className="text-xs text-white hidden sm:block">
+            <div className="flex items-center">
+              <svg aria-hidden="true" focusable="false" data-prefix="far" data-icon="clock" className="h-3 mr-1" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                <path fill="currentColor" d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8zm0 448c-110.5 0-200-89.5-200-200S145.5 56 256 56s200 89.5 200 200-89.5 200-200 200zm61.8-104.4l-84.9-61.7c-3.1-2.3-4.9-5.9-4.9-9.7V116c0-6.6 5.4-12 12-12h32c6.6 0 12 5.4 12 12v141.7l66.8 48.6c5.4 3.9 6.5 11.4 2.6 16.8L334.6 349c-3.9 5.3-11.4 6.5-16.8 2.6z"></path>
+              </svg>
+              <span className="text-xs text-white">2d | Stephen Ainsworth</span>
+            </div>
+          </div>
+        </div>
       </div>
-      <div className="w-full lg:w-1/2 px-2">
-         <div className="border h-12 text-sm text-grey-dark flex items-center justify-center">
-            <p>full / half</p>
-         </div>
-      </div>
-   </div>
-
-   <h2 className="mb-4">Using borders for gutters</h2>
-<div className='bg-gray-800'>
-
-   <div className="mb-8 p-2 w-full flex flex-wrap bg-grey-light ">
-      <div className="h-16 border-8 w-full md:w-1/2 lg:w-1/4 bg-grey"></div>
-      <div className="h-16 border-8 w-full md:w-1/2 lg:w-1/4 bg-grey"></div>
-      <div className="h-16 border-8 w-full lg:w-1/2 bg-grey"></div>
-   </div>
+    </a>
+  </div>
+  <div className="flex flex-col md:flex-row -mx-1.5 p-4">
+    <div className="w-full md:w-1/2 mx-1.5">
+      <a href="https://www.bbc.co.uk/news/technology-59609996" target="_blank" className="flex items-center group mb-3 pb-3 border-b">
+        <img src="https://images.unsplash.com/photo-1617802690992-15d93263d3a9?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&h=96&q=80" className="rounded-md object-cover mr-3 h-24 w-24" />
+        <div className="flex-1">
+          <h2 className="text-gray-700 font-bold text-lg md:text-xl leading-tight transition group-hover:text-blue-500 mb-2">Meta releases social VR space Horizon Worlds</h2>
+          <div className="flex items-center">
+            <svg aria-hidden="true" focusable="false" data-prefix="far" data-icon="clock" className="h-3 mr-1" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+              <path fill="currentColor" d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8zm0 448c-110.5 0-200-89.5-200-200S145.5 56 256 56s200 89.5 200 200-89.5 200-200 200zm61.8-104.4l-84.9-61.7c-3.1-2.3-4.9-5.9-4.9-9.7V116c0-6.6 5.4-12 12-12h32c6.6 0 12 5.4 12 12v141.7l66.8 48.6c5.4 3.9 6.5 11.4 2.6 16.8L334.6 349c-3.9 5.3-11.4 6.5-16.8 2.6z"></path>
+            </svg>
+            <span className="text-xs md:text-sm text-gray-700">2d | <span className="text-black">Stephen Ainsworth</span></span>
+          </div>
+        </div>
+      </a>
+      <a href="https://www.bbc.co.uk/news/technology-59346063" target="_blank" className="flex items-center group mb-3 pb-3 border-b">
+        <img src="https://images.unsplash.com/photo-1517328894681-0f5dfabd463c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=formatt&fit=crop&w=96&q=80" className="rounded-md object-cover mr-3 h-24 w-24" />
+        <div className="flex-1">
+          <h2 className="text-gray-700 font-bold text-lg md:text-xl leading-tight transition group-hover:text-blue-500 mb-2">Google issues warning to location-sharing apps
+          </h2>
+          <div className="flex items-center">
+            <svg aria-hidden="true" focusable="false" data-prefix="far" data-icon="clock" className="h-3 mr-1" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+              <path fill="currentColor" d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8zm0 448c-110.5 0-200-89.5-200-200S145.5 56 256 56s200 89.5 200 200-89.5 200-200 200zm61.8-104.4l-84.9-61.7c-3.1-2.3-4.9-5.9-4.9-9.7V116c0-6.6 5.4-12 12-12h32c6.6 0 12 5.4 12 12v141.7l66.8 48.6c5.4 3.9 6.5 11.4 2.6 16.8L334.6 349c-3.9 5.3-11.4 6.5-16.8 2.6z"></path>
+            </svg>
+            <span className="text-xs md:text-sm text-gray-700">4d | <span className="text-black">Stephen Ainsworth</span></span>
+          </div>
+        </div>
+      </a>
+      <a href="https://www.bbc.co.uk/news/technology-59594002" target="_blank" className="flex items-center group mb-3 pb-3 border-b md:mb-0 md:pb-0 md:border-none">
+        <img src="https://images.unsplash.com/photo-1516245834210-c4c142787335?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=96&q=80" className="rounded-md object-cover mr-3 h-24 w-24" />
+        <div className="flex-1">
+          <h2 className="text-gray-700 font-bold text-lg md:text-xl leading-tight transition group-hover:text-blue-500 mb-2">Click News: Four-wheeled robot walks upright</h2>
+          <div className="flex items-center">
+            <svg aria-hidden="true" focusable="false" data-prefix="far" data-icon="clock" className="h-3 mr-1" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+              <path fill="currentColor" d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8zm0 448c-110.5 0-200-89.5-200-200S145.5 56 256 56s200 89.5 200 200-89.5 200-200 200zm61.8-104.4l-84.9-61.7c-3.1-2.3-4.9-5.9-4.9-9.7V116c0-6.6 5.4-12 12-12h32c6.6 0 12 5.4 12 12v141.7l66.8 48.6c5.4 3.9 6.5 11.4 2.6 16.8L334.6 349c-3.9 5.3-11.4 6.5-16.8 2.6z"></path>
+            </svg>
+            <span className="text-xs md:text-sm text-gray-700">3d | <span className="text-black">Stephen Ainsworth</span></span>
+          </div>
+        </div>
+      </a>
+    </div>
+    <div className="w-full md:w-1/2 mx-1.5">
+      <a href="https://www.bbc.co.uk/news/world-asia-india-59627124" target="_blank" className="flex items-center group mb-3 pb-3 border-b">
+        <img src="https://images.unsplash.com/photo-1551817958-d9d86fb29431?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=96&q=80" className="rounded-md object-cover mr-3 h-24 w-24" />
+        <div className="flex-1">
+          <h2 className="text-gray-700 font-bold text-lg md:text-xl leading-tight transition group-hover:text-blue-500 mb-2">Modi's Twitter hacked with bitcoin tweet</h2>
+          <div className="flex items-center">
+            <svg aria-hidden="true" focusable="false" data-prefix="far" data-icon="clock" className="h-3 mr-1" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+              <path fill="currentColor" d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8zm0 448c-110.5 0-200-89.5-200-200S145.5 56 256 56s200 89.5 200 200-89.5 200-200 200zm61.8-104.4l-84.9-61.7c-3.1-2.3-4.9-5.9-4.9-9.7V116c0-6.6 5.4-12 12-12h32c6.6 0 12 5.4 12 12v141.7l66.8 48.6c5.4 3.9 6.5 11.4 2.6 16.8L334.6 349c-3.9 5.3-11.4 6.5-16.8 2.6z"></path>
+            </svg>
+            <span className="text-xs md:text-sm text-gray-700">3d | <span className="text-black">Stephen Ainsworth</span></span>
+          </div>
+        </div>
+      </a>
+      <a href="https://www.bbc.co.uk/news/uk-scotland-59476519" target="_blank" className="flex items-center group mb-3 pb-3 border-b">
+        <img src="https://images.unsplash.com/photo-1542751371-adc38448a05e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=formatt&fit=crop&h=96&q=80" className="rounded-md object-cover mr-3 h-24 w-24" />
+        <div className="flex-1">
+          <h2 className="text-gray-700 font-bold text-lg md:text-xl leading-tight transition group-hover:text-blue-500 mb-2">'Esports has massive potential in Scotland'</h2>
+          <div className="flex items-center">
+            <svg aria-hidden="true" focusable="false" data-prefix="far" data-icon="clock" className="h-3 mr-1" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+              <path fill="currentColor" d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8zm0 448c-110.5 0-200-89.5-200-200S145.5 56 256 56s200 89.5 200 200-89.5 200-200 200zm61.8-104.4l-84.9-61.7c-3.1-2.3-4.9-5.9-4.9-9.7V116c0-6.6 5.4-12 12-12h32c6.6 0 12 5.4 12 12v141.7l66.8 48.6c5.4 3.9 6.5 11.4 2.6 16.8L334.6 349c-3.9 5.3-11.4 6.5-16.8 2.6z"></path>
+            </svg>
+            <span className="text-xs md:text-sm text-gray-700">4d | <span className="text-black">Stephen Ainsworth</span></span>
+          </div>
+        </div>
+      </a>
+      <a href="https://www.bbc.co.uk/news/technology-56996717" target="_blank" className="flex items-center group">
+        <img src="https://images.unsplash.com/photo-1521542464131-cb30f7398bc6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=96&q=80" className="rounded-md object-cover mr-3 h-24 w-24" />
+        <div className="flex-1">
+          <h2 className="text-gray-700 font-bold text-lg md:text-xl leading-tight transition group-hover:text-blue-500 mb-2">Six million routers had serious security flaw</h2>
+          <div className="flex items-center">
+            <svg aria-hidden="true" focusable="false" data-prefix="far" data-icon="clock" className="h-3 mr-1" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+              <path fill="currentColor" d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8zm0 448c-110.5 0-200-89.5-200-200S145.5 56 256 56s200 89.5 200 200-89.5 200-200 200zm61.8-104.4l-84.9-61.7c-3.1-2.3-4.9-5.9-4.9-9.7V116c0-6.6 5.4-12 12-12h32c6.6 0 12 5.4 12 12v141.7l66.8 48.6c5.4 3.9 6.5 11.4 2.6 16.8L334.6 349c-3.9 5.3-11.4 6.5-16.8 2.6z"></path>
+            </svg>
+            <span className="text-xs md:text-sm text-gray-700">4d | <span className="text-black">Stephen Ainsworth</span></span>
+          </div>
+        </div>
+      </a>
+    </div>
+  </div>
+</div>
+<div className="text-center text-sm">
+  Created by <a href="https://stephenainsworth.com" target="_blank" title="Stephen Ainsworth - Web Developer" className=" transition hover:text-blue-500">Stephen Ainsworth</a>
 </div>
 
-</div>
 
+{/* 
+  ------------------------------------------------- */}
+  <div  id="beta-test" className="bg-green-600 py-24">
+    <h2 className="text-center text-4xl font-bold text-white">Sign up for beta</h2>
+      <form id="form"  action="https://www.freecodecamp.com/email-submit">
+        <div className="w-1/3 mt-12 mx-auto flex flex-row flex-no-wrap shadow-xl">
+          <input className="flex-grow bg-transparent py-4 px-6 placeholder-green-300 bg-green-800 rounded-l-lg text-green-300 outline-none" type="email" id="email" name="email" placeholder="Enter your email address" required />
+          <input className="py-2 px-4 text-white bg-green-900 rounded-r-lg text-green-500" type="submit" id="submit" value="Sign up" />
+        </div>
+      </form>
+  </div>
+ 
+  <div  id="download" className="bg-black py-16">
+    <h2 className="text-center text-4xl font-bold text-white">Download</h2>
+    <div className="flex justify-center mt-6">
+      <img src="https://i.imgur.com/dqNmjHG.png" alt="Download app button" width="300"/>
+    </div>
+  </div>
+  
 
 
 
