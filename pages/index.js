@@ -145,7 +145,7 @@ export default function Home() {
 {/* 
   -------------------------------------7----------- */}
 
-<div className="max-w-6xl mx-auto">
+{/* <div className="max-w-6xl mx-auto">
         <div className="flex items-center justify-center min-h-screen">
             <div className="max-w-sm w-full sm:w-1/2 lg:w-1/3 py-6 px-3">
                 <div className="bg-white shadow-xl rounded-lg overflow-hidden">
@@ -193,7 +193,7 @@ export default function Home() {
                 </div>
             </div>
         </div>
-    </div>
+    </div> */}
 
 
 {/* 
