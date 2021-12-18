@@ -11,7 +11,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main className={styles.main}>
+      <main >
     
 
 
@@ -71,12 +71,12 @@ export default function Home() {
           </div>
 
 
-          <div className="origin-top-right absolute right-0 mt-2 w-48 rounded-md shadow-lg py-1 bg-white ring-1 ring-black ring-opacity-5 focus:outline-none" role="menu" aria-orientation="vertical" aria-labelledby="user-menu-button" tabIndex="-1">
+          {/* <div className="origin-top-right absolute right-0 mt-2 w-48 rounded-md shadow-lg py-1 bg-white ring-1 ring-black ring-opacity-5 focus:outline-none" role="menu" aria-orientation="vertical" aria-labelledby="user-menu-button" tabIndex="-1">
 
             <a href="#" className="block px-4 py-2 text-sm text-gray-700" role="menuitem" tabIndex="-1" id="user-menu-item-0">Your Profile</a>
             <a href="#" className="block px-4 py-2 text-sm text-gray-700" role="menuitem" tabIndex="-1" id="user-menu-item-1">Settings</a>
             <a href="#" className="block px-4 py-2 text-sm text-gray-700" role="menuitem" tabIndex="-1" id="user-menu-item-2">Sign out</a>
-          </div>
+          </div> */}
         </div>
       </div>
     </div>
@@ -103,29 +103,36 @@ export default function Home() {
 
 
 
-
-
 {/* //------------------- */}
 
-
+<div className="bg-gray-800">
   <div  id="overview" className="w-4/5 mx-auto py-24 flex flex-row flex-no-wrap">
     <div id="landing-text" className="w-1/2 flex flex-col">
-      <h4 className="font-medium text-green-400">Same chats, new different experience</h4>
-      <h2 className="font-bold text-5xl text-green-800 leading-tight mt-3 mb-6">It looks better and cleaner!</h2>
+      <h4 className="font-medium text-white">Same chats, new different experience</h4>
+      <h2 className="font-bold text-5xl text-white leading-tight mt-3 mb-6">It looks better and cleaner!</h2>
       <span className="font-normal text-gray-600">Your favorite messaging app just got the best looking update yet! Now it feels like a breath of fresh air.</span>
       <div id="buttons" className="font-medium flex flex-row mt-6">
         <div className="mr-3 pl-0 p-2 cursor-pointer hover:underline"><a href="#watch-video">Watch video</a></div>
-        <div className="mx-4 p-2 px-4 border-2 text-green-500 border-green-400 rounded-lg hover:text-white hover:bg-green-400 cursor-pointer">Download</div>
+        <div className="mx-4 p-2 px-4 border-2 text-white border-white rounded-lg hover:text-white hover:bg-blue-400 cursor-pointer">Download</div>
       </div>
     </div>
     
     <div id="landing-image" className="w-1/2">
-      <img src="https://i.imgur.com/5DNys2e.jpg" alt="landing-image" />
+      <Image src="https://res.cloudinary.com/masterdevs/image/upload/v1639856212/codeaddon/12_ykiumq.jpg" width={1000} height={500} alt="landing-image" />
     </div>
   </div>
-    
+  </div>
+
+
+<div>
+  
+  </div>
+
+
+
+
   <div id="watch-video" className="bg-gray-800 py-24">
-    <iframe id="video" className="mx-auto shadow-2xl" width="560" height="315" src="https://www.youtube.com/embed/U8EwCd1xJqA" frameBorder="0" allowFullScreen></iframe>
+    <iframe id="video" className="responsive-iframe mx-auto shadow-2xl" width="600" height="300" src="https://www.youtube.com/embed/U8EwCd1xJqA" frameBorder="0" allowFullScreen></iframe>
   </div>
   
 {/* 
@@ -136,12 +143,12 @@ export default function Home() {
 
 {/* 
   ------------------------------------------------- */}
-  <div  id="beta-test" className="bg-green-600 py-24">
+  <div  id="beta-test" className=" py-24">
     <h2 className="text-center text-4xl font-bold text-white">Sign up for beta</h2>
       <form id="form"  action="https://www.freecodecamp.com/email-submit">
         <div className="w-1/3 mt-12 mx-auto flex flex-row flex-no-wrap shadow-xl">
-          <input className="flex-grow bg-transparent py-4 px-6 placeholder-green-300 bg-green-800 rounded-l-lg text-green-300 outline-none" type="email" id="email" name="email" placeholder="Enter your email address" required />
-          <input className="py-2 px-4 text-white bg-green-900 rounded-r-lg text-green-500" type="submit" id="submit" value="Sign up" />
+          <input className="flex-grow bg-transparent py-4 px-6 placeholder-blue-300 bg-blue-800 rounded-l-lg text-blue-300 outline-none" type="email" id="email" name="email" placeholder="Enter your email address" required />
+          <input className="py-2 px-4 text-white bg-blue-900 rounded-r-lg text-blue-500" type="submit" id="submit" value="Sign up" />
         </div>
       </form>
   </div>
