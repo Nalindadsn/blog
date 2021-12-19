@@ -369,7 +369,7 @@ export default function Home() {
 
       </main>
 
-      <footer className={styles.footer}>
+      {/* <footer className={styles.footer}>
 
 
       <div className="footer-2 bg-gray-800 pt-6 md:pt-12">
@@ -441,7 +441,7 @@ export default function Home() {
 
 </div>
 
-      </footer>
+      </footer> */}
     </div>
   )
 }
