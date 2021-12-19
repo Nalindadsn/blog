@@ -352,7 +352,7 @@ export default function Home() {
 
 
 
-{/*   
+  
   <div  id="beta-test" className="py-24">
     <h2 className="text-center text-4xl font-bold">Sign up for beta</h2>
       <form id="form"  action="https://www.freecodecamp.com/email-submit">
@@ -363,7 +363,7 @@ export default function Home() {
       </form>
   </div>
  
-  */}
+ 
 
 
 
