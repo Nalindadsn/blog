@@ -86,7 +86,7 @@ export default function Home() {
 
   <div className="sm:hidden" id="mobile-menu">
     
-    <div className="px-2 pt-2 pb-3 space-y-1">
+    <div className=" space-y-1">
 
       <a href="#" className="bg-gray-900 text-white block px-3 py-2 rounded-md text-base font-medium" aria-current="page">Dashboard</a>
 
@@ -134,10 +134,10 @@ export default function Home() {
   </div>
 
 
-<div className="p-6">
+<div className="container p-6">
 <div className="container mx-auto">
   <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6">
-    <div className="flex justify-center text-6xl border-2 border-gray-300 rounded-xl p-6 bg-gray-100">1</div>
+    <div className="flex ">container container container containtainer container container containtainer container container containtainer container container containtainer container container containtainer container container containtainer container container containtainer container container containtainer container container containtainer container container containtainer container container containtainer container container containtainer container container containtainer container container containtainer container container containtainer container container containtainer container container containtainer container container containtainer container container containtainer container container containtainer container container containtainer container container containtainer container container containtainer container container containtainer container container containtainer container container containtainer container container containtainer container container containtainer container container containercontainer containercontainer containercontainer containercontainer containercontainer containercontainer containercontainer containercontainer containercontainer containercontainer containercontainer containercontainer containercontainer containercontainer containercontainer containercontainer containercontainer</div>
     <div className="flex justify-center text-6xl border-2 border-gray-300 rounded-xl p-6 bg-gray-100">2</div>
     <div className="flex justify-center text-6xl border-2 border-gray-300 rounded-xl p-6 bg-gray-100">3</div>
     <div className="flex justify-center text-6xl border-2 border-gray-300 rounded-xl p-6 bg-gray-100">4</div>
@@ -211,8 +211,8 @@ export default function Home() {
   <div  id="beta-test" className="bg-gray-800 py-24">
     <h2 className="text-center text-4xl font-bold text-white">Sign up for beta</h2>
       <form id="form"  action="https://www.freecodecamp.com/email-submit">
-        <div className="w-1/3 mt-12 mx-auto flex flex-row flex-no-wrap shadow-xl">
-          <input className="flex-grow bg-transparent py-4 px-6 placeholder-gray-300 bg-gray-800 rounded-l-lg text-gray-300 outline-none" type="email" id="email" name="email" placeholder="Enter your email address" required />
+        <div className="w-2/3 mt-12 mx-auto flex flex-row flex-no-wrap shadow-xl">
+          <input className="flex-grow bg-transparent py-4  placeholder-gray-300 bg-gray-800 rounded-l-lg text-gray-300 outline-none" type="email" id="email" name="email" placeholder="Enter your email address" required />
           <input className="py-2 px-4 text-white bg-gray-900 rounded-r-lg text-gray-500" type="submit" id="submit" value="Sign up" />
         </div>
       </form>
