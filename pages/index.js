@@ -105,34 +105,44 @@ export default function Home() {
 {/* //------------------- */}
 
 <div className="bg-gray-800">
-  <div  id="overview" className="w-5/5 mx-auto py-24 flex flex-row flex-no-wrap">
-    <div id="landing-text" className="w-1/2 flex flex-col">
-      
-      <div>
-      <div className="w-1/4  mx-auto "></div>
-      <div className="w-3/4  mx-auto ">
-      <h4 className="font-medium text-white">Same chats, new different experience</h4>
+
+<div className=" mx-auto  py-24 ">
+  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6">
+    <div className="   py-12  pl-12">
+
+    <h4 className="font-medium text-white">Same chats, new different experience</h4>
       <h2 className="font-bold text-5xl text-white leading-tight mt-3 mb-6">It looks better and cleaner!</h2>
       <span className="font-normal text-gray-600">Your favorite messaging app just got the best looking update yet! Now it feels like a breath of fresh air.</span>
       <div id="buttons" className="font-medium flex flex-row mt-6">
         <div className="mr-3 pl-0 p-2 cursor-pointer hover:underline"><a href="#watch-video">Watch video</a></div>
         <div className="mx-4 p-2 px-4 border-2 text-white border-white rounded-lg hover:text-white hover:bg-gray-400 cursor-pointer">Download</div>
       </div>
-      </div>
-      </div>
 
 
     </div>
-    
-    <div id="landing-image" className="w-1/2">
-      <Image src="https://res.cloudinary.com/masterdevs/image/upload/v1639856212/codeaddon/12_ykiumq.jpg" width={1000} height={500} alt="landing-image" />
+    <div className=" justify-center   ">
+
+    <Image src="https://res.cloudinary.com/masterdevs/image/upload/v1639856212/codeaddon/12_ykiumq.jpg" width={1000} height={500} alt="landing-image" />
+
+
     </div>
   </div>
+</div>
+
+
+
   </div>
 
 
-<div>
-test
+<div className="p-6">
+<div className="container mx-auto">
+  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6">
+    <div className="flex justify-center text-6xl border-2 border-gray-300 rounded-xl p-6 bg-gray-100">1</div>
+    <div className="flex justify-center text-6xl border-2 border-gray-300 rounded-xl p-6 bg-gray-100">2</div>
+    <div className="flex justify-center text-6xl border-2 border-gray-300 rounded-xl p-6 bg-gray-100">3</div>
+    <div className="flex justify-center text-6xl border-2 border-gray-300 rounded-xl p-6 bg-gray-100">4</div>
+  </div>
+</div>
 </div>
 
 
