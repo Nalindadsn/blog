@@ -180,7 +180,7 @@ export default function Playlist() {
               <img className="object-cover h-full w-full" src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2250&q=80" />
               <figcaption className="absolute text-lg -mt-16 text-white px-4">
                 <div>
-                  <h1>			<i class="fa fa-bars text-gray-900"></i>
+                  <h1>			<i className="fa fa-bars text-gray-900"></i>
 </h1>
                 </div>
                 <div>
