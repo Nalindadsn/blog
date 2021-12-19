@@ -110,11 +110,11 @@ export default function Home() {
   <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6">
     <div className="   py-12  pl-12">
 
-    <h4 className="font-medium text-white">Same chats, new different experience</h4>
+    <h4 className="font-medium text-gray-300">Same chats, new different experience</h4>
       <h2 className="font-bold text-5xl text-white leading-tight mt-3 mb-6">It looks better and cleaner!</h2>
-      <span className="font-normal text-gray-600">Your favorite messaging app just got the best looking update yet! Now it feels like a breath of fresh air.</span>
+      <span className="font-normal text-gray-300">Your favorite messaging app just got the best looking update yet! Now it feels like a breath of fresh air.</span>
       <div id="buttons" className="font-medium flex flex-row mt-6">
-        <div className="mr-3 pl-0 p-2 cursor-pointer hover:underline"><a href="#watch-video">Watch video</a></div>
+        <div className="mr-3 pl-0 p-2 cursor-pointer hover:underline  text-gray-300"><a href="#watch-video">Watch video</a></div>
         <div className="mx-4 p-2 px-4 border-2 text-white border-white rounded-lg hover:text-white hover:bg-gray-400 cursor-pointer">Download</div>
       </div>
 
@@ -179,6 +179,8 @@ export default function Home() {
             </div>
           </div>
         </div>
+
+        
         <div className="md:w-1/2 px-3 mb-6 w-full">
           <div className="flex w-full h-full flex-wrap bg-gray-800 overflow-hidden rounded">
             <div className="w-2/6">
@@ -205,20 +207,21 @@ export default function Home() {
             </div>
           </div>
         </div>
+        
         <div className="md:w-1/2 px-3 mb-6 w-full">
           <div className="flex w-full h-full flex-wrap bg-gray-800 overflow-hidden rounded">
             <div className="w-2/6">
-              <img className="object-cover h-full w-full" src="https://images.unsplash.com/photo-1556742044-3c52d6e88c62?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2250&q=80" />
+              <img className="object-cover h-full w-full" src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2250&q=80" />
             </div>
             <div className="w-4/6 p-5">
               <h2 className="text-white leading-normal text-lg">How To Boost Your Traffic Of Your Blog And Destroy The Competition</h2>
               <div className="flex flex-wrap justify-between items-center mt-6">
                 <div className="inline-flex items-center">
                   <div className="w-10 h-10 rounded-full overflow-hidden flex-shrink-0">
-                    <img src="https://randomuser.me/api/portraits/men/11.jpg" />
+                    <img src="https://randomuser.me/api/portraits/men/8.jpg" />
                   </div>
                   <div className="flex-1 pl-2">
-                    <h2 className="text-white mb-1">Chris Sonne</h2>
+                    <h2 className="text-white mb-1">Jonathan Mithu</h2>
                     <p className="text-white opacity-50 text-xs">May 18</p>
                   </div>
                 </div>
@@ -231,20 +234,21 @@ export default function Home() {
             </div>
           </div>
         </div>
+        
         <div className="md:w-1/2 px-3 mb-6 w-full">
           <div className="flex w-full h-full flex-wrap bg-gray-800 overflow-hidden rounded">
             <div className="w-2/6">
-              <img className="object-cover h-full w-full" src="https://images.unsplash.com/photo-1556911220-e15b29be8c8f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjU1MzA3fQ&auto=format&fit=crop&w=2250&q=80" />
+              <img className="object-cover h-full w-full" src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2250&q=80" />
             </div>
             <div className="w-4/6 p-5">
               <h2 className="text-white leading-normal text-lg">How To Boost Your Traffic Of Your Blog And Destroy The Competition</h2>
               <div className="flex flex-wrap justify-between items-center mt-6">
                 <div className="inline-flex items-center">
                   <div className="w-10 h-10 rounded-full overflow-hidden flex-shrink-0">
-                    <img src="https://randomuser.me/api/portraits/men/33.jpg" />
+                    <img src="https://randomuser.me/api/portraits/men/8.jpg" />
                   </div>
                   <div className="flex-1 pl-2">
-                    <h2 className="text-white mb-1">Mike Olle</h2>
+                    <h2 className="text-white mb-1">Jonathan Mithu</h2>
                     <p className="text-white opacity-50 text-xs">May 18</p>
                   </div>
                 </div>
@@ -257,42 +261,21 @@ export default function Home() {
             </div>
           </div>
         </div>
+        
         <div className="md:w-1/2 px-3 mb-6 w-full">
-          <div className="flex w-full h-full flex-col flex-wrap bg-cover bg-no-repeat bg-center p-5 rounded overflow-hidden" >
-            <h2 className="text-white text-lg mb-2">Is The Herbal Way The Right Way</h2>
-            <p className="text-white opacity-50">Adwords Keyword Research For Beginners</p>
-            <div className="flex flex-wrap justify-between items-center mt-auto pt-6">
-              <div className="inline-flex items-center">
-                <div className="w-10 h-10 rounded-full overflow-hidden flex-shrink-0">
-                  <img src="https://randomuser.me/api/portraits/women/2.jpg" />
-                </div>
-                <div className="flex-1 pl-2">
-                  <h2 className="text-white mb-1">Jack Roath</h2>
-                  <p className="text-white opacity-50 text-xs">May 18</p>
-                </div>
-              </div>
-              <span className="text-white opacity-50">
-              <svg className="fill-current w-5 h-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 459 459">
-                <path d="M357 0H102C73.95 0 51 22.95 51 51v408l178.5-76.5L408 459V51c0-28.05-22.95-51-51-51z"/>
-              </svg>
-            </span>
-            </div>
-          </div>
-        </div>
-        <div className="lg:w-1/4 md:w-1/2 px-3 mb-6">
           <div className="flex w-full h-full flex-wrap bg-gray-800 overflow-hidden rounded">
-            <div className="w-full">
-              <img className="object-cover h-full w-full" src="https://images.unsplash.com/photo-1556909190-eccf4a8bf97a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2250&q=80" />
+            <div className="w-2/6">
+              <img className="object-cover h-full w-full" src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2250&q=80" />
             </div>
-            <div className="w-full p-5">
+            <div className="w-4/6 p-5">
               <h2 className="text-white leading-normal text-lg">How To Boost Your Traffic Of Your Blog And Destroy The Competition</h2>
               <div className="flex flex-wrap justify-between items-center mt-6">
                 <div className="inline-flex items-center">
                   <div className="w-10 h-10 rounded-full overflow-hidden flex-shrink-0">
-                    <img src="https://randomuser.me/api/portraits/men/22.jpg" />
+                    <img src="https://randomuser.me/api/portraits/men/8.jpg" />
                   </div>
                   <div className="flex-1 pl-2">
-                    <h2 className="text-white mb-1">Chris Sonne</h2>
+                    <h2 className="text-white mb-1">Jonathan Mithu</h2>
                     <p className="text-white opacity-50 text-xs">May 18</p>
                   </div>
                 </div>
@@ -305,20 +288,21 @@ export default function Home() {
             </div>
           </div>
         </div>
-        <div className="lg:w-1/4 md:w-1/2 px-3 mb-6">
+        
+        <div className="md:w-1/2 px-3 mb-6 w-full">
           <div className="flex w-full h-full flex-wrap bg-gray-800 overflow-hidden rounded">
-            <div className="w-full">
-              <img className="object-cover h-full w-full" src="https://images.unsplash.com/photo-1494438639946-1ebd1d20bf85?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2247&q=80" />
+            <div className="w-2/6">
+              <img className="object-cover h-full w-full" src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2250&q=80" />
             </div>
-            <div className="w-full p-5">
+            <div className="w-4/6 p-5">
               <h2 className="text-white leading-normal text-lg">How To Boost Your Traffic Of Your Blog And Destroy The Competition</h2>
               <div className="flex flex-wrap justify-between items-center mt-6">
                 <div className="inline-flex items-center">
                   <div className="w-10 h-10 rounded-full overflow-hidden flex-shrink-0">
-                    <img src="https://randomuser.me/api/portraits/men/23.jpg" />
+                    <img src="https://randomuser.me/api/portraits/men/8.jpg" />
                   </div>
                   <div className="flex-1 pl-2">
-                    <h2 className="text-white mb-1">Chris Sonne</h2>
+                    <h2 className="text-white mb-1">Jonathan Mithu</h2>
                     <p className="text-white opacity-50 text-xs">May 18</p>
                   </div>
                 </div>
@@ -331,58 +315,10 @@ export default function Home() {
             </div>
           </div>
         </div>
-        <div className="lg:w-1/4 md:w-1/2 px-3 mb-6">
-          <div className="flex w-full h-full flex-wrap bg-gray-800 overflow-hidden rounded">
-            <div className="w-full">
-              <img className="object-cover h-full w-full" src="https://images.unsplash.com/photo-1565388161858-5ae922cbfde0?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2250&q=80" />
-            </div>
-            <div className="w-full p-5">
-              <h2 className="text-white leading-normal text-lg">How To Boost Your Traffic Of Your Blog And Destroy The Competition</h2>
-              <div className="flex flex-wrap justify-between items-center mt-6">
-                <div className="inline-flex items-center">
-                  <div className="w-10 h-10 rounded-full overflow-hidden flex-shrink-0">
-                    <img src="https://randomuser.me/api/portraits/men/25.jpg" />
-                  </div>
-                  <div className="flex-1 pl-2">
-                    <h2 className="text-white mb-1">Chris Sonne</h2>
-                    <p className="text-white opacity-50 text-xs">May 18</p>
-                  </div>
-                </div>
-                <span className="text-white opacity-50">
-              <svg className="fill-current w-5 h-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 459 459">
-                <path d="M357 0H102C73.95 0 51 22.95 51 51v408l178.5-76.5L408 459V51c0-28.05-22.95-51-51-51z"/>
-              </svg>
-            </span>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div className="lg:w-1/4 md:w-1/2 px-3 mb-6">
-          <div className="flex w-full h-full flex-wrap bg-gray-800 overflow-hidden rounded">
-            <div className="w-full">
-              <img className="object-cover h-full w-full" src="https://images.unsplash.com/photo-1481277542470-605612bd2d61?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2195&q=80" />
-            </div>
-            <div className="w-full p-5">
-              <h2 className="text-white leading-normal text-lg">How To Boost Your Traffic Of Your Blog And Destroy The Competition</h2>
-              <div className="flex flex-wrap justify-between items-center mt-6">
-                <div className="inline-flex items-center">
-                  <div className="w-10 h-10 rounded-full overflow-hidden flex-shrink-0">
-                    <img src="https://randomuser.me/api/portraits/men/29.jpg" />
-                  </div>
-                  <div className="flex-1 pl-2">
-                    <h2 className="text-white mb-1">Chris Sonne</h2>
-                    <p className="text-white opacity-50 text-xs">May 18</p>
-                  </div>
-                </div>
-                <span className="text-white opacity-50">
-              <svg className="fill-current w-5 h-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 459 459">
-                <path d="M357 0H102C73.95 0 51 22.95 51 51v408l178.5-76.5L408 459V51c0-28.05-22.95-51-51-51z"/>
-              </svg>
-            </span>
-              </div>
-            </div>
-          </div>
-        </div>
+
+
+
+
       </div>
       <div className="text-center">
         <button className="border border-gray-600 text-gray-600 px-4 py-2 rounded-full hover:bg-gray-600 hover:text-white">Show More</button>
@@ -394,60 +330,117 @@ export default function Home() {
 
 {/* 
   ------------------------------------------------- */}
+<div className=" bg-gray-800 ">
 
+<div className="flex flex-col items-center w-2/3 sm:w-3/3 mx-auto pb-12 ">
+	<h1  className="font-bold text-4xl pt-6 text-white leading-tight mt-3 mb-6">Heading number one</h1>
 
+	<div 
+    	className="relative h-0 overflow-hidden max-w-full w-full" 
+		style={{paddingBottom: '56.25%'}}
+ 	>
+		<iframe
+       		src="https://www.youtube.com/embed/UBOj6rqRUME"
+            frameBorder="0"
+            allowFullScreen
+            className="absolute top-0 left-0 w-full h-full "
+        ></iframe>
+	</div>
+</div>  
 
-<div className="container p-6">
-<div className="container mx-auto">
-  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6">
-    <div className="flex ">container container container containtainer container container containtainer container container containtainer container container containtainer container container containtainer container container containtainer container container containtainer container container containtainer container container containtainer container container containtainer container container containtainer container container containtainer container container containtainer container container containtainer container container containtainer container container containtainer container container containtainer container container containtainer container container containtainer container container containtainer container container containtainer container container containtainer container container containtainer container container containtainer container container containtainer container container containtainer container container containtainer container container containtainer container container containercontainer containercontainer containercontainer containercontainer containercontainer containercontainer containercontainer containercontainer containercontainer containercontainer containercontainer containercontainer containercontainer containercontainer containercontainer containercontainer containercontainer</div>
-    <div className="flex justify-center text-6xl border-2 border-gray-300 rounded-xl p-6 bg-gray-100">2</div>
-    <div className="flex justify-center text-6xl border-2 border-gray-300 rounded-xl p-6 bg-gray-100">3</div>
-    <div className="flex justify-center text-6xl border-2 border-gray-300 rounded-xl p-6 bg-gray-100">4</div>
-  </div>
 </div>
-</div>
 
 
 
-
-  <div id="watch-video" className="bg-gray-800 py-24">
-    <iframe id="video" className="responsive-iframe mx-auto shadow-2xl" width="300" height="150" src="https://www.youtube.com/embed/U8EwCd1xJqA" frameBorder="0" allowFullScreen></iframe>
-  </div>
   
-  <div  id="beta-test" className="bg-gray-800 py-24">
-    <h2 className="text-center text-4xl font-bold text-white">Sign up for beta</h2>
+  <div  id="beta-test" className="py-24">
+    <h2 className="text-center text-4xl font-bold">Sign up for beta</h2>
       <form id="form"  action="https://www.freecodecamp.com/email-submit">
         <div className="w-2/3 mt-12 mx-auto flex flex-row flex-no-wrap shadow-xl">
-          <input className="flex-grow bg-transparent py-4  placeholder-gray-300 bg-gray-800 rounded-l-lg text-gray-300 outline-none" type="email" id="email" name="email" placeholder="Enter your email address" required />
+          <input className="flex-grow bg-transparent py-4  placeholder-gray-500 bg-gray-800 rounded-l-lg text-gray-300 outline-none" type="email" id="email" name="email" placeholder="Enter your email address" required />
           <input className="py-2 px-4 text-white bg-gray-900 rounded-r-lg text-gray-500" type="submit" id="submit" value="Sign up" />
         </div>
       </form>
   </div>
  
-  <div  id="download" className="bg-black py-16">
-    <h2 className="text-center text-4xl font-bold text-white">Download</h2>
-    <div className="flex justify-center mt-6">
-      <img src="https://i.imgur.com/dqNmjHG.png" alt="Download app button" width="300"/>
-    </div>
-  </div>
-  
+ 
 
 
 
       </main>
 
       <footer className={styles.footer}>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{' '}
-          <span className={styles.logo}>
-            <Image src="/vercel.svg" alt="Vercel Logo" width={72} height={16} />
-          </span>
-        </a>
+
+
+      <div className="footer-2 bg-gray-800 pt-6 md:pt-12">
+  <div className="container px-4 mx-auto">
+
+    <div className="md:flex md:flex-wrap md:-mx-4 py-6 md:pb-12">
+
+      <div className="footer-info lg:w-1/3 md:px-4">
+        <h4 className="text-white text-2xl mb-4">19K users are using FWR blocks and making their life easy.</h4>
+        <p className="text-gray-400">We have carefully crafted the blocks to suit to everyone's need.</p>
+        <div className="mt-4">
+          <button className="bg-facebook py-2 px-4 text-white rounded mt-2 transition-colors duration-300">
+            <span className="fab fa-facebook-f mr-2"></span> Follow
+          </button>
+          <button className="bg-twitter py-2 px-4 text-white rounded ml-2 mt-2 transition-colors duration-300">
+            <span className="fab fa-twitter mr-2"></span> Follow @freeweb19
+          </button>
+        </div>
+      </div>
+
+      <div className="md:w-2/3 lg:w-1/3 md:px-4 xl:pl-16 mt-12 lg:mt-0">
+        <div className="sm:flex">
+          <div className="sm:flex-1">
+            <h6 className="text-base font-medium text-white uppercase mb-2">About</h6>
+            <div>
+              <a href="#" className="text-gray-400 py-1 block hover:underline">Company</a>
+              <a href="#" className="text-gray-400 py-1 block hover:underline">Culture</a>
+              <a href="#" className="text-gray-400 py-1 block hover:underline">Team</a>
+              <a href="#" className="text-gray-400 py-1 block hover:underline">Careers</a>
+            </div>
+          </div>
+          <div className="sm:flex-1 mt-4 sm:mt-0">
+            <h6 className="text-base font-medium text-white uppercase mb-2">What we offer</h6>
+            <div>
+              <a href="#" className="text-gray-400 py-1 block hover:underline">Blocks</a>
+              <a href="#" className="text-gray-400 py-1 block hover:underline">Resources</a>
+              <a href="#" className="text-gray-400 py-1 block hover:underline">Tools</a>
+              <a href="#" className="text-gray-400 py-1 block hover:underline">Tutorials</a>
+              <a href="#" className="text-gray-400 py-1 block hover:underline">Freebies</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div className="md:w-1/3 md:px-4 md:text-center mt-12 lg:mt-0">
+        <h5 className="text-lg text-white font-medium mb-4">Explore our site</h5>
+        <button className="bg-indigo-600 text-white hover:bg-indigo-700 rounded py-2 px-6 md:px-12 transition-colors duration-300">Explore</button>
+      </div>
+
+    </div>
+
+  </div>
+
+  <div className="border-t border-solid border-gray-900 mt-4 py-4">
+    <div className="container px-4 mx-auto">
+
+      <div className="md:flex md:-mx-4 md:items-center">
+        <div className="md:flex-1 md:px-4 text-center md:text-left">
+          <p className="text-white">&copy; <strong>CODEADDON</strong></p>
+        </div>
+        <div className="md:flex-1 md:px-4 text-center md:text-right">
+          <a href="#" className="py-2 px-4 text-white inline-block hover:underline">Terms of Service</a>
+          <a href="#" className="py-2 px-4 text-white inline-block hover:underline">Privacy Policy</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+</div>
+
       </footer>
     </div>
   )
