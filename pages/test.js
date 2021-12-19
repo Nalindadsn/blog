@@ -1,9 +1,8 @@
 import Head from 'next/head'
 import Image from 'next/image'
-import styles from '../styles/Home.module.css'
 import React, { useState } from "react";
 
-export default function Home() {
+export default function Test() {
 
   const [showMe, setShowMe] = useState(false);
   const [showMe2, setShowMe2] = useState(false);
@@ -17,7 +16,7 @@ export default function Home() {
   }
 
   return (
-    <div className={styles.container}>
+    <div >
       <Head>
         <title>Create Next App</title>
         <meta name="description" content="web development tutorials " />
@@ -387,7 +386,7 @@ export default function Home() {
 
       </main>
 
-      <footer className={styles.footer}>
+      <footer >
 
 
       <div className="footer-2 bg-gray-800 pt-6 md:pt-12">
