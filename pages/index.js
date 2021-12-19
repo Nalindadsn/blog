@@ -29,9 +29,9 @@ export default function Home() {
 
 
       <nav className="bg-gray-800 w-full h-16  px-8   shadow-md fixed z-50" >
-  <div className="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
+  <div className="max-w-7xl mx-auto px-2 md:px-6 lg:px-8">
     <div className="relative flex items-center justify-between h-16">
-      <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
+      <div className="absolute inset-y-0 left-0 flex items-center md:hidden">
 
         <button  onClick={toggle} type="button" className="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white" aria-controls="mobile-menu" aria-expanded="false">
           <span className="sr-only">Open main menu</span>
@@ -46,21 +46,22 @@ export default function Home() {
           </svg>
         </button>
       </div>
-      <div className="flex-1 flex items-center justify-center sm:items-stretch sm:justify-start">
+      <div className="flex-1 flex items-center justify-center md:items-stretch md:justify-start">
         <div className="flex-shrink-0 flex items-center text-white">
-          CODEADDON
+         <a href="/" className=" text-white">  CODEADDON</a>
 
         </div>
-        <div className="hidden sm:block sm:ml-6">
+        <div className="hidden md:block sm:ml-6">
           <div className="flex space-x-4">
 
-            <a href="#" className="bg-gray-900 text-white px-3 py-2 rounded-md text-sm font-medium" aria-current="page">Dashboard</a>
+            <a href="#" className="bg-gray-900 text-white px-3 py-2 rounded-md text-sm font-medium" aria-current="page">Home</a>
 
-            <a href="#" className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Team</a>
+            <a href="#" className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Articles</a>
 
-            <a href="#" className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Projects</a>
+            <a href="#" className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Video Tutorials</a>
 
-            <a href="#" className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Calendar</a>
+            <a href="#" className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">About Us</a>
+            <a href="#" className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Contact Us</a>
           </div>
         </div>
       </div>
@@ -105,13 +106,14 @@ export default function Home() {
     
     <div className=" space-y-1">
 
-      <a href="#" className="bg-gray-900 text-white block px-3 py-2 rounded-md text-base font-medium" aria-current="page">Dashboard</a>
+      <a href="/" className="bg-gray-900 text-white block px-3 py-2 rounded-md text-base font-medium" aria-current="page">Home</a>
 
-      <a href="#" className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Team</a>
+      <a href="#" className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Articles</a>
 
-      <a href="#" className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Projects</a>
+      <a href="#" className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Video Tutorials</a>
 
-      <a href="#" className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Calendar</a>
+      <a href="#" className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">About Us</a>
+      <a href="#" className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Contact Us</a>
     </div>
   </div>
 </nav>
@@ -349,7 +351,7 @@ export default function Home() {
 <div className=" bg-gray-800 ">
 
 <div className="flex flex-col items-center w-2/3 sm:w-3/3 mx-auto pb-12 ">
-	<h1  className="font-bold text-4xl pt-6 text-white leading-tight mt-3 mb-6">Heading number one</h1>
+	<h1  className="font-bold text-4xl pt-6 text-white leading-tight mt-3 mb-6">Video Tutorials</h1>
 
 	<div 
     	className="relative h-0 overflow-hidden max-w-full w-full" 
