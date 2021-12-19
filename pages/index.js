@@ -1,8 +1,15 @@
 import Head from 'next/head'
 import Image from 'next/image'
 import styles from '../styles/Home.module.css'
+import React, { useState } from "react";
 
 export default function Home() {
+
+  const [showMe, setShowMe] = useState(false);
+  function toggle(){
+    setShowMe(!showMe);
+  }
+
   return (
     <div className={styles.container}>
       <Head>
@@ -20,7 +27,7 @@ export default function Home() {
     <div className="relative flex items-center justify-between h-16">
       <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
 
-        <button type="button" className="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white" aria-controls="mobile-menu" aria-expanded="false">
+        <button  onClick={toggle} type="button" className="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white" aria-controls="mobile-menu" aria-expanded="false">
           <span className="sr-only">Open main menu</span>
           
           
@@ -84,7 +91,9 @@ export default function Home() {
 
 
 
-  <div className="sm:hidden" id="mobile-menu">
+  <div className="sm:hidden" id="mobile-menu"  style={{
+        display: showMe?"block":"none"
+      }}>
     
     <div className=" space-y-1">
 
@@ -98,7 +107,6 @@ export default function Home() {
     </div>
   </div>
 </nav>
-
 
 
 
