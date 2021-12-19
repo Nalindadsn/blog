@@ -339,7 +339,7 @@ export default function Home() {
 
       </div>
       <div className="text-center">
-        <button className="border border-gray-600 text-gray-600 px-4 py-2 rounded-full hover:bg-gray-600 hover:text-white">Show More</button>
+        <button className=" border border-gray-600 text-gray-600 px-4 py-2 rounded-full hover:bg-gray-600 hover:text-white">Show More</button>
       </div>
     </div>
   </div>
@@ -351,7 +351,7 @@ export default function Home() {
 <div className=" bg-gray-800 ">
 
 <div className="flex flex-col items-center w-2/3 sm:w-3/3 mx-auto pb-12 ">
-	<h1  className="font-bold text-4xl pt-6 text-white leading-tight mt-3 mb-6">Video Tutorials</h1>
+	<h1  className="font-bold text-4xl pt-6 text-white leading-tight mt-3 mb-6">Video Lessons</h1>
 
 	<div 
     	className="relative h-0 overflow-hidden max-w-full w-full" 
