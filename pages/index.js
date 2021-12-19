@@ -91,7 +91,7 @@ export default function Home() {
 
 
 
-  <div className="sm:hidden" id="mobile-menu"  style={{
+  <div className="sm:hidden bg-gray-900" id="mobile-menu"  style={{
         display: showMe?"block":"none"
       }}>
     
