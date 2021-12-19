@@ -392,7 +392,7 @@ export default function Home() {
           <div className="container px-4 mx-auto">
 
             <div className="md:flex md:flex-wrap md:-mx-4 py-6 md:pb-12">
-
+{/* 
               <div className="footer-info lg:w-1/3 md:px-4">
                 <h4 className="text-white text-2xl mb-4">19K users are using FWR blocks and making their life easy.</h4>
                 <p className="text-gray-400">We have carefully crafted the blocks to suit to everyone's need.</p>
@@ -404,7 +404,7 @@ export default function Home() {
                     <span className="fab fa-twitter mr-2"></span> Follow @freeweb19
                   </button>
                 </div>
-              </div>
+              </div> */}
 
               <div className="md:w-2/3 lg:w-1/3 md:px-4 xl:pl-16 mt-12 lg:mt-0">
                 <div className="sm:flex">
