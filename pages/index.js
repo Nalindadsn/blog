@@ -140,8 +140,22 @@ export default function Home() {
     </div>
     <div className=" justify-center   ">
 
-    <Image src="https://res.cloudinary.com/masterdevs/image/upload/v1639856212/codeaddon/12_ykiumq.jpg" width={1000} height={500} alt="landing-image" />
 
+    <figure className="relative">
+
+
+
+<img className="object-cover h-full w-full" src="https://res.cloudinary.com/masterdevs/image/upload/v1639856212/codeaddon/12_ykiumq.jpg" />
+<figcaption className="absolute right-0 top-12 text-lg -mt-16 text-white px-4">
+
+  <div>
+    <h1  className="bg-sky-600 px-2 ">F</h1>
+    <h1  className="bg-red-500 px-2 ">Y</h1>
+    <h1  className="bg-sky-300 px-2 ">T</h1>
+  </div>
+  </figcaption>
+
+</figure>
 
     </div>
   </div>
