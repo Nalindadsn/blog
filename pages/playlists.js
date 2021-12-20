@@ -129,7 +129,7 @@ export default function Playlist() {
                     <i className="fa fa-paper"></i>
                     <span>Articles</span>
                 </a>
-                <a href="https://www.codeaddon.com/playlists" className="flex items-center space-x-2 py-2 px-4 transition duration-200 hover:bg-gray-700 hover:text-white">
+                <a href="https://www.codeaddon.com/playlists" className="flex items-center space-x-2 py-2 px-4 transition duration-200 bg-gray-700 text-white hover:bg-gray-700 hover:text-white">
                 <i className="fa fa-video"></i>
                     <span>Video Tutorials</span>
                 </a>
