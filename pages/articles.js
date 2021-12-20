@@ -180,8 +180,8 @@ export default function Articles() {
 
 
 <div className="flex ">
-  <div className="w-1/2 h-12"><h1 className="font-bold text-3xl ml-12">Playlists</h1></div>
-  <div className="w-1/2 h-12 text-right"><a href="">Home</a>/<a href="">Playlists</a>   </div>
+  <div className="w-1/2 h-12"><h1 className="font-bold text-3xl ml-12">Articles</h1></div>
+  <div className="w-1/2 h-12 text-right"><a href="">Home</a>/<a href="">Articles</a>   </div>
 </div>
 
   <div className=" pt-3 pb-6 flex-1">
