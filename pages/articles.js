@@ -125,12 +125,12 @@ export default function Articles() {
                     <i className="fa fa-home"></i>
                     <span>Home</span>
                 </a>
-                <a href="https://www.codeaddon.com/articles" className="flex items-center space-x-2 py-2 px-4 transition duration-200 hover:bg-gray-700 hover:text-white">
-                    <i className="fa fa-paper"></i>
+                <a href="https://www.codeaddon.com/articles" className="flex items-center space-x-2 py-2 px-4 transition duration-200   bg-gray-700 text-white hover:bg-gray-700 hover:text-white">
+                    <i className="fa fa-book"></i>
                     <span>Articles</span>
                 </a>
-                <a href="https://www.codeaddon.com/playlists" className="flex items-center space-x-2 py-2 px-4 transition duration-200 bg-gray-700 text-white hover:bg-gray-700 hover:text-white">
-                <i className="fa fa-video"></i>
+                <a href="https://www.codeaddon.com/playlists" className="flex items-center space-x-2 py-2 px-4 transition duration-200 hover:bg-gray-700 hover:text-white">
+                <i className="fa  fa-youtube-play"></i>
                     <span>Video Tutorials</span>
                 </a>
                 <a href="https://www.codeaddon.com/about" className="flex items-center space-x-2 py-2 px-4 transition duration-200 hover:bg-gray-700 hover:text-white">
