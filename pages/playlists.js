@@ -5,6 +5,8 @@ import React, { useState } from "react";
 export default function Playlist() {
 
   const [showMe, setShowMe] = useState(true);
+
+  
   const [showMe2, setShowMe2] = useState(false);
 
   function toggle(){
@@ -49,14 +51,7 @@ export default function Playlist() {
         <div className="hidden sm:block sm:ml-6">
           <div className="flex space-x-4">
 
-            <a href="#" className="bg-gray-900 text-white px-3 py-2 rounded-md text-sm font-medium" aria-current="page">Home</a>
 
-            <a href="#" className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Articles</a>
-
-            <a href="#" className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Video Tutorials</a>
-
-            <a href="#" className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">About Us</a>
-            <a href="#" className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Contact Us</a>
           </div>
         </div>
       </div>
@@ -122,40 +117,38 @@ export default function Playlist() {
      
           
           <a href="#" className="text-white flex items-center space-x-2 px-4" title="Your App is cool">
-                <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 flex-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" />
-                </svg>
-                <span className="text-2xl font-extrabold whitespace-nowrap truncate">Your App is cool</span>
+            
             </a>
            
             <nav data-dev-hint="main navigation">
-                <a href="#" className="flex items-center space-x-2 py-2 px-4 transition duration-200 hover:bg-gray-700 hover:text-white">
-                    <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path d="M12 14l9-5-9-5-9 5 9 5z" />
-                        <path d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z" />
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 14l9-5-9-5-9 5 9 5zm0 0l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14zm-4 6v-7.5l4-2.222" />
-                    </svg>
-                    <span>About</span>
+                <a href="https://www.codeaddon.com/" className="flex items-center space-x-2 py-2 px-4 transition duration-200 hover:bg-gray-700 hover:text-white">
+                    <i className="fa fa-home"></i>
+                    <span>Home</span>
                 </a>
-                <a href="#" className="flex items-center space-x-2 py-2 px-4 transition duration-200 hover:bg-gray-700 hover:text-white">
-                    <span className="ml-6">Without Icon</span>
+                <a href="https://www.codeaddon.com/articles" className="flex items-center space-x-2 py-2 px-4 transition duration-200 hover:bg-gray-700 hover:text-white">
+                    <i className="fa fa-paper"></i>
+                    <span>Articles</span>
                 </a>
-                <a href="#" className="flex items-center space-x-2 py-2 px-4 transition duration-200 hover:bg-gray-700 hover:text-white group">
-                    <span className="w-4 h-4 flex-shrink-0 border border-gray-600 rounded group-hover:border-gray-400 transition duration-200"></span>
-                    <span>Without Icon And a bit longer than usual</span>
+                <a href="https://www.codeaddon.com/playlists" className="flex items-center space-x-2 py-2 px-4 transition duration-200 hover:bg-gray-700 hover:text-white">
+                <i className="fa fa-video"></i>
+                    <span>Video Tutorials</span>
                 </a>
+                <a href="https://www.codeaddon.com/about" className="flex items-center space-x-2 py-2 px-4 transition duration-200 hover:bg-gray-700 hover:text-white">
+                <i className="fa fa-info"></i>
+                    <span>About Us</span>
+                </a>
+                <a href="https://www.codeaddon.com/contact" className="flex items-center space-x-2 py-2 px-4 transition duration-200 hover:bg-gray-700 hover:text-white">
+                <i className="fa fa-envelope"></i>
+                    <span>Contact Us</span>
+                </a>
+                
             </nav>
         </div>
 
         <nav data-dev-hint="second-main-navigation or footer navigation">
-            <a href="#" className="block py-2 px-4 transition duration-200 hover:bg-gray-700 hover:text-white">
-                asd
-            </a>
-            <a href="#" className="block py-2 px-4 transition duration-200 hover:bg-gray-700 hover:text-white">
-                asd
-            </a>
-            <a href="#" className="block py-2 px-4 transition duration-200 hover:bg-gray-700 hover:text-white">
-                asd
+            
+            <a href="#" className="block py-2 px-4 transition duration-200 hover:bg-gray-700 hover:text-white bg-red-500">
+                LOGOUT
             </a>
         </nav>
     </aside>
@@ -188,13 +181,54 @@ export default function Playlist() {
 
 <div className="flex ">
   <div className="w-1/2 h-12"><h1 className="font-bold text-3xl ml-12">Playlists</h1></div>
-  <div className="w-1/2 h-12 text-right">Playlist</div>
+  <div className="w-1/2 h-12 text-right"><a href="">Home</a>/<a href="">Playlists</a>   </div>
 </div>
 
   <div className=" pt-3 pb-6 flex-1">
     <div className="container mx-auto">
       <div className="flex flex-wrap md:-mx-3">
         
+      <div className="md:w-1/2 px-3 mb-6 w-full">
+          <div className="flex w-full h-full flex-wrap bg-gray-800 overflow-hidden rounded">
+            <figure className="w-2/6 relative">
+
+
+
+              <img className="object-cover h-full w-full" src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2250&q=80" />
+              <figcaption className="absolute text-lg -mt-16 text-white px-4">
+                <div>
+                  <h1>			
+                    <i className="fa fa-bars  bg-gray-900 p-1 text-white"></i>
+                  </h1>
+                </div>
+                <div>
+                  <h1  className="bg-gray-900 px-2">V : 20</h1>
+                </div>
+                </figcaption>
+
+            </figure>
+            <div className="w-4/6 p-5">
+              <h2 className="text-white leading-normal text-lg">How To Boost Your Traffic Of Your Blog And Destroy The Competition</h2>
+              <div className="flex flex-wrap justify-between items-center mt-6">
+                <div className="inline-flex items-center">
+                  <div className="w-10 h-10 rounded-full overflow-hidden flex-shrink-0">
+                    <img src="https://randomuser.me/api/portraits/men/5.jpg" />
+                  </div>
+                  <div className="flex-1 pl-2">
+                    <h2 className="text-white mb-1">Luke Nunez</h2>
+                    <p className="text-white opacity-50 text-xs">May 18</p>
+                  </div>
+                </div>
+                <span className="text-white opacity-50">
+              <svg className="fill-current w-5 h-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 459 459">
+                <path d="M357 0H102C73.95 0 51 22.95 51 51v408l178.5-76.5L408 459V51c0-28.05-22.95-51-51-51z"/>
+              </svg>
+            </span>
+              </div>
+            </div>
+          </div>
+        </div>
+
         <div className="md:w-1/2 px-3 mb-6 w-full">
           <div className="flex w-full h-full flex-wrap bg-gray-800 overflow-hidden rounded">
             <figure className="w-2/6 relative">
