@@ -107,9 +107,7 @@ export default function Playlist() {
 
 
 
-  <div className="sm:hidden bg-gray-900" id="mobile-menu"  style={{
-        display: showMe?"block":"none"
-      }}>
+  <div className="sm:hidden bg-gray-900" id="mobile-menu" >
     
     <div className=" space-y-1">
 
@@ -154,7 +152,9 @@ export default function Playlist() {
         </label>
     </header>
 
-    <aside id="sidebar" className="bg-gray-800 text-gray-100 md:w-64 w-3/4 space-y-6 pt-6 px-0 absolute inset-y-0 left-0 transform md:relative md:translate-x-0 transition duration-200 ease-in-out  md:flex md:flex-col md:justify-between overflow-y-auto" data-dev-hint="sidebar; px-0 for frameless; px-2 for visually inset the navigation">
+    <aside id="sidebar" className="z-50 bg-gray-800 text-gray-100 md:w-64 w-3/4 space-y-6 pt-6 px-0 absolute inset-y-0 left-0 transform md:relative md:translate-x-0 transition duration-200 ease-in-out  md:flex md:flex-col md:justify-between overflow-y-auto" data-dev-hint="sidebar; px-0 for frameless; px-2 for visually inset the navigation"  style={{
+        display: showMe?"block":"none"
+      }}>
         <div className="flex flex-col space-y-6" data-dev-hint="optional div for having an extra footer navigation">
             <a href="#" className="text-white flex items-center space-x-2 px-4" title="Your App is cool">
                 <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 flex-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -204,7 +204,12 @@ export default function Playlist() {
 
 {/* 
 ============================================== */}
-<h1 className="font-bold text-3xl ">Playlists</h1>
+
+
+<div className="flex ">
+  <div className="w-1/2 h-12"><h1 className="font-bold text-3xl ">Playlists</h1></div>
+  <div className="w-1/2 h-12 text-right ">Playlist</div>
+</div>
 
 <div className="flex flex-col min-h-screen">
 
