@@ -113,6 +113,9 @@ export default function Playlist() {
     </label>
 
     <header className="bg-gray-600 text-gray-100 flex justify-between md:hidden" data-dev-hint="mobile menu bar">
+
+
+
         <a href="#" className="block p-4 text-white font-bold whitespace-nowrap truncate">
             Your App is cool
         </a>
@@ -131,13 +134,28 @@ export default function Playlist() {
         display: showMe?"block":"none"
       }}>
         <div className="flex flex-col space-y-6" data-dev-hint="optional div for having an extra footer navigation">
-            <a href="#" className="text-white flex items-center space-x-2 px-4" title="Your App is cool">
+    
+    <button style={{marginLeft:"40px",width:"50px"}}  onClick={toggle} type="button" className="absolute right-0 top-0  inline-flex items-center justify-center p-2 text-gray-400 hover:text-white hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white" aria-controls="mobile-menu" aria-expanded="false">
+              <span className="sr-only">Open main menu</span>
+              
+              
+              <svg className="block h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h16" />
+              </svg>
+              
+              <svg className="hidden h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" />
+              </svg>
+          </button>         
+          
+          
+          <a href="#" className="text-white flex items-center space-x-2 px-4" title="Your App is cool">
                 <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 flex-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" />
                 </svg>
                 <span className="text-2xl font-extrabold whitespace-nowrap truncate">Your App is cool</span>
             </a>
-
+           
             <nav data-dev-hint="main navigation">
                 <a href="#" className="flex items-center space-x-2 py-2 px-4 transition duration-200 hover:bg-gray-700 hover:text-white">
                     <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -176,30 +194,30 @@ export default function Playlist() {
             <div className="px-4  sm:px-0">
                 <div className=" rounded-lg h-96">
 
-
+                <button   onClick={toggle} type="button" className="absolute z-50  top-0  inline-flex items-center justify-center p-2 text-gray-400 hover:text-white hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white" aria-controls="mobile-menu" aria-expanded="false">
+              <span className="sr-only">Open main menu</span>
+              
+              
+              <svg className="block h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h16" />
+              </svg>
+              
+              <svg className="hidden h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" />
+              </svg>
+          </button>  
 {/* 
 ============================================== */}
 
-<button style={{marginLeft:"-40px"}}  onClick={toggle} type="button" className="absalute inline-flex items-center justify-center p-2 text-gray-400 hover:text-white hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white" aria-controls="mobile-menu" aria-expanded="false">
-          <span className="sr-only">Open main menu</span>
-          
-          
-          <svg className="block h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h16" />
-          </svg>
-          
-          <svg className="hidden h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" />
-          </svg>
-</button>
-
-<div className="flex ">
-  <div className="w-1/2 h-12"><h1 className="font-bold text-3xl ">Playlists</h1></div>
-  <div className="w-1/2 h-12 text-right ">Playlist</div>
-</div>
 
 <div className="flex flex-col min-h-screen">
 
+
+
+<div className="flex ">
+  <div className="w-1/2 h-12"><h1 className="font-bold text-3xl ml-12">Playlists</h1></div>
+  <div className="w-1/2 h-12 text-right\">Playlist</div>
+</div>
 
   <div className=" pt-3 pb-6 flex-1">
     <div className="container mx-auto">
