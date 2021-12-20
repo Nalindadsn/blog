@@ -122,7 +122,7 @@ export default function Home() {
 
 {/* //------------------- */}
 
-<div className="bg-gray-800">
+<div className="bg-gray-800 relative">
 
 <div className=" mx-auto  py-24 ">
   <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6">
@@ -141,21 +141,21 @@ export default function Home() {
     <div className=" justify-center   ">
 
 
-    <figure className="relative">
 
 
 
 <img className="object-cover h-full w-full" src="https://res.cloudinary.com/masterdevs/image/upload/v1639856212/codeaddon/12_ykiumq.jpg" />
-<figcaption className="absolute right-0 top-12 text-lg -mt-16 text-white px-4">
+<figcaption className="absolute right-0 top-32 text-lg -mt-16 text-white px-4 pt-12  ">
 
-  <div>
+
+  <div className="shadow">
     <h1  className="bg-sky-600 px-2 ">F</h1>
     <h1  className="bg-red-500 px-2 ">Y</h1>
     <h1  className="bg-sky-300 px-2 ">T</h1>
   </div>
   </figcaption>
 
-</figure>
+
 
     </div>
   </div>
