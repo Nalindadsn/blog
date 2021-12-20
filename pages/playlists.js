@@ -112,42 +112,14 @@ export default function Playlist() {
         </svg>
     </label>
 
-    <header className="bg-gray-600 text-gray-100 flex justify-between md:hidden" data-dev-hint="mobile menu bar">
 
-
-
-        <a href="#" className="block p-4 text-white font-bold whitespace-nowrap truncate">
-            Your App is cool
-        </a>
-
-        <label htmlFor="menu-open" id="mobile-menu-button" className="m-2 p-2 focus:outline-none hover:text-white hover:bg-gray-700 rounded-md">
-            <svg id="menu-open-icon" className="h-6 w-6 transition duration-200 ease-in-out" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h16" />
-            </svg>
-            <svg id="menu-close-icon" className="h-6 w-6 transition duration-200 ease-in-out" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" />
-            </svg>
-        </label>
-    </header>
 
     <aside id="sidebar" className="z-50 bg-gray-800 text-gray-100 md:w-64 w-3/4 space-y-6 pt-6 px-0 absolute inset-y-0 left-0 transform md:relative md:translate-x-0 transition duration-200 ease-in-out  md:flex md:flex-col md:justify-between overflow-y-auto" data-dev-hint="sidebar; px-0 for frameless; px-2 for visually inset the navigation"  style={{
         display: showMe?"block":"none"
       }}>
         <div className="flex flex-col space-y-6" data-dev-hint="optional div for having an extra footer navigation">
     
-    <button style={{marginLeft:"40px",width:"50px"}}  onClick={toggle} type="button" className="absolute right-0 top-0  inline-flex items-center justify-center p-2 text-gray-400 hover:text-white hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white" aria-controls="mobile-menu" aria-expanded="false">
-              <span className="sr-only">Open main menu</span>
-              
-              
-              <svg className="block h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h16" />
-              </svg>
-              
-              <svg className="hidden h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" />
-              </svg>
-          </button>         
-          
+     
           
           <a href="#" className="text-white flex items-center space-x-2 px-4" title="Your App is cool">
                 <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 flex-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -216,7 +188,7 @@ export default function Playlist() {
 
 <div className="flex ">
   <div className="w-1/2 h-12"><h1 className="font-bold text-3xl ml-12">Playlists</h1></div>
-  <div className="w-1/2 h-12 text-right\">Playlist</div>
+  <div className="w-1/2 h-12 text-right">Playlist</div>
 </div>
 
   <div className=" pt-3 pb-6 flex-1">
