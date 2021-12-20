@@ -17,6 +17,10 @@ export default function Playlist() {
 
   return (
     <div >
+
+
+
+      
       <Head>
         <title>Create Next App</title>
         <meta name="description" content="web development tutorials " />
@@ -28,7 +32,10 @@ export default function Playlist() {
     
 
 
-      <nav className="bg-gray-800 w-full h-16  px-8   shadow-md fixed z-50" >
+
+
+
+      <nav className="bg-gray-800 w-full h-16  px-8   shadow-md  z-50" >
   <div className="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
     <div className="relative flex items-center justify-between h-16">
       <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
@@ -120,54 +127,89 @@ export default function Playlist() {
 
 
 
-{/* //------------------- */}
-
-<div className="bg-gray-800">
-
-<div className=" mx-auto  py-24 ">
-  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6">
-    <div className="   py-12  pl-12">
-
-    <h4 className="font-medium text-gray-300">Same chats, new different experience</h4>
-      <h2 className="font-bold text-5xl text-white leading-tight mt-3 mb-6">It looks better and cleaner!</h2>
-      <span className="font-normal text-gray-300">Your favorite messaging app just got the best looking update yet! Now it feels like a breath of fresh air.</span>
-      <div id="buttons" className="font-medium flex flex-row mt-6">
-        <div className="mr-3 pl-0 p-2 cursor-pointer hover:underline  text-gray-300"><a href="#watch-video">Watch video</a></div>
-        <div className="mx-4 p-2 px-4 border-2 text-white border-white rounded-lg hover:text-white hover:bg-gray-400 cursor-pointer">Download</div>
-      </div>
-
-
-    </div>
-    <div className=" justify-center   ">
-
-    <Image src="https://res.cloudinary.com/masterdevs/image/upload/v1639856212/codeaddon/12_ykiumq.jpg" width={1000} height={500} alt="landing-image" />
-
-
-    </div>
-  </div>
-</div>
 
 
 
-  </div>
+      <div className="relative min-h-screen md:flex" data-dev-hint="container">
+    <input type="checkbox" id="menu-open" className="hidden" />
 
+    <label htmlFor="menu-open" className="absolute right-2 bottom-2 shadow-lg rounded-full p-2 bg-gray-100 text-gray-600 md:hidden" data-dev-hint="floating action button">
+        <svg className="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+    </label>
+
+    <header className="bg-gray-600 text-gray-100 flex justify-between md:hidden" data-dev-hint="mobile menu bar">
+        <a href="#" className="block p-4 text-white font-bold whitespace-nowrap truncate">
+            Your App is cool
+        </a>
+
+        <label htmlFor="menu-open" id="mobile-menu-button" className="m-2 p-2 focus:outline-none hover:text-white hover:bg-gray-700 rounded-md">
+            <svg id="menu-open-icon" className="h-6 w-6 transition duration-200 ease-in-out" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+            <svg id="menu-close-icon" className="h-6 w-6 transition duration-200 ease-in-out" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" />
+            </svg>
+        </label>
+    </header>
+
+    <aside id="sidebar" className="bg-gray-800 text-gray-100 md:w-64 w-3/4 space-y-6 pt-6 px-0 absolute inset-y-0 left-0 transform md:relative md:translate-x-0 transition duration-200 ease-in-out  md:flex md:flex-col md:justify-between overflow-y-auto" data-dev-hint="sidebar; px-0 for frameless; px-2 for visually inset the navigation">
+        <div className="flex flex-col space-y-6" data-dev-hint="optional div for having an extra footer navigation">
+            <a href="#" className="text-white flex items-center space-x-2 px-4" title="Your App is cool">
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 flex-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" />
+                </svg>
+                <span className="text-2xl font-extrabold whitespace-nowrap truncate">Your App is cool</span>
+            </a>
+
+            <nav data-dev-hint="main navigation">
+                <a href="#" className="flex items-center space-x-2 py-2 px-4 transition duration-200 hover:bg-gray-700 hover:text-white">
+                    <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path d="M12 14l9-5-9-5-9 5 9 5z" />
+                        <path d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z" />
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 14l9-5-9-5-9 5 9 5zm0 0l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14zm-4 6v-7.5l4-2.222" />
+                    </svg>
+                    <span>About</span>
+                </a>
+                <a href="#" className="flex items-center space-x-2 py-2 px-4 transition duration-200 hover:bg-gray-700 hover:text-white">
+                    <span className="ml-6">Without Icon</span>
+                </a>
+                <a href="#" className="flex items-center space-x-2 py-2 px-4 transition duration-200 hover:bg-gray-700 hover:text-white group">
+                    <span className="w-4 h-4 flex-shrink-0 border border-gray-600 rounded group-hover:border-gray-400 transition duration-200"></span>
+                    <span>Without Icon And a bit longer than usual</span>
+                </a>
+            </nav>
+        </div>
+
+        <nav data-dev-hint="second-main-navigation or footer navigation">
+            <a href="#" className="block py-2 px-4 transition duration-200 hover:bg-gray-700 hover:text-white">
+                asd
+            </a>
+            <a href="#" className="block py-2 px-4 transition duration-200 hover:bg-gray-700 hover:text-white">
+                asd
+            </a>
+            <a href="#" className="block py-2 px-4 transition duration-200 hover:bg-gray-700 hover:text-white">
+                asd
+            </a>
+        </nav>
+    </aside>
+
+    <main id="content" className="flex-1 p-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+
+            <div className="px-4 py-6 sm:px-0">
+                <div className=" rounded-lg h-96">
 
 
 {/* 
-  -------------------------------------7----------- */}
-
+============================================== */}
+<h1 className="font-bold text-3xl ">Playlists</h1>
 
 <div className="flex flex-col min-h-screen">
-  <div className="">
-    
-    
-    <div className="flex justify-center border-t  py-5">
-      <a href="#" className="mx-4 p-2 px-4 border-2 bg-gray-900 text-white border-white rounded-lg hover:text-white hover:bg-gray-800 cursor-pointer">Articles</a>
-      <a href="#" className="text-gray-600 mx-5 hover:text-gray-500">Recommends</a>
-      <a href="#" className="text-gray-600 mx-5 hover:text-gray-500">Subscriptions</a>
-    </div>
-  </div>
-  <div className=" pt-12 pb-6 flex-1">
+
+
+  <div className=" pt-3 pb-6 flex-1">
     <div className="container mx-auto">
       <div className="flex flex-wrap md:-mx-3">
         
@@ -180,8 +222,9 @@ export default function Playlist() {
               <img className="object-cover h-full w-full" src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2250&q=80" />
               <figcaption className="absolute text-lg -mt-16 text-white px-4">
                 <div>
-                  <h1>			<i className="fa fa-bars text-gray-900"></i>
-</h1>
+                  <h1>			
+                    <i className="fa fa-bars  bg-gray-900 p-1 text-white"></i>
+                  </h1>
                 </div>
                 <div>
                   <h1  className="bg-gray-900 px-2">V : 20</h1>
@@ -351,128 +394,86 @@ export default function Playlist() {
 
 
       </div>
-      <div className="text-center">
-        <button className="border border-gray-600 text-gray-600 px-4 py-2 rounded-full hover:bg-gray-600 hover:text-white">Show More</button>
-      </div>
+      
+      
     </div>
   </div>
 </div>
 
+<footer >
 
+
+<div className="border-t border-solid border-gray-900 mt-4 py-4">
+      <div className="container px-4 mx-auto">
+
+        <div className="md:flex md:-mx-4 md:items-center">
+          <div className="md:flex-1 md:px-4 text-center md:text-left">
+            <p className="text-gray-800">&copy; <strong>CODEADDON</strong></p>
+          </div>
+          <div className="md:flex-1 md:px-4 text-center md:text-right">
+            <a href="#" className="py-2 px-4 text-gray-800 inline-block hover:underline">Terms of Service</a>
+            <a href="#" className="py-2 px-4 text-gray-800 inline-block hover:underline">Privacy Policy</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+</footer>
 {/* 
   ------------------------------------------------- */}
-<div className=" bg-gray-800 ">
 
-<div className="flex flex-col items-center w-2/3 sm:w-3/3 mx-auto pb-12 ">
-	<h1  className="font-bold text-4xl pt-6 text-white leading-tight mt-3 mb-6">Video Tutorials</h1>
+                </div>
+            </div>
 
-	<div 
-    	className="relative h-0 overflow-hidden max-w-full w-full" 
-		style={{paddingBottom: '56.25%'}}
- 	>
-		<iframe id="watch-video" 
-       		src="https://www.youtube.com/embed/UBOj6rqRUME"
-            frameBorder="0"
-            allowFullScreen
-            className="absolute top-0 left-0 w-full h-full "
-        ></iframe>
-	</div>
-</div>  
-
+        </div>
+    </main>
 </div>
 
 
 
-  
-  <div  id="beta-test" className="py-24">
-    <h2 className="text-center text-4xl font-bold">Sign up for beta</h2>
-      <form id="form"  action="https://www.freecodecamp.com/email-submit">
-        <div className="w-2/3 mt-12 mx-auto flex flex-row flex-no-wrap shadow-xl">
-          <input className="flex-grow bg-transparent py-4  placeholder-gray-500 bg-gray-800 rounded-l-lg text-gray-300 outline-none" type="email" id="email" name="email" placeholder="Enter your email address" required />
-          <input className="py-2 px-4 text-white bg-gray-900 rounded-r-lg text-gray-500" type="submit" id="submit" value="Sign up" />
-        </div>
-      </form>
-  </div>
- 
- 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{/* //------------------- */}
+
+
+
+
+
+
+
+{/* 
+  ------------------------------------------------- */}
+
+
+
+
+
 
 
 
       </main>
 
-      <footer >
-
-
-      <div className="footer-2 bg-gray-800 pt-6 md:pt-12">
-          <div className="container px-4 mx-auto">
-
-            <div className="md:flex md:flex-wrap md:-mx-4 py-6 md:pb-12">
-{/* 
-              <div className="footer-info lg:w-1/3 md:px-4">
-                <h4 className="text-white text-2xl mb-4">19K users are using FWR blocks and making their life easy.</h4>
-                <p className="text-gray-400">We have carefully crafted the blocks to suit to everyone's need.</p>
-                <div className="mt-4">
-                  <button className="bg-facebook py-2 px-4 text-white rounded mt-2 transition-colors duration-300">
-                    <span className="fab fa-facebook-f mr-2"></span> Follow
-                  </button>
-                  <button className="bg-twitter py-2 px-4 text-white rounded ml-2 mt-2 transition-colors duration-300">
-                    <span className="fab fa-twitter mr-2"></span> Follow @freeweb19
-                  </button>
-                </div>
-              </div> */}
-
-              <div className="md:w-2/3 lg:w-1/3 md:px-4 xl:pl-16 mt-12 lg:mt-0">
-                <div className="sm:flex">
-                  <div className="sm:flex-1">
-                    <h6 className="text-base font-medium text-white uppercase mb-2">About</h6>
-                    <div>
-                      <a href="#" className="text-gray-400 py-1 block hover:underline">Company</a>
-                      <a href="#" className="text-gray-400 py-1 block hover:underline">Culture</a>
-                      <a href="#" className="text-gray-400 py-1 block hover:underline">Articles</a>
-                      <a href="#" className="text-gray-400 py-1 block hover:underline">Careers</a>
-                    </div>
-                  </div>
-                  <div className="sm:flex-1 mt-4 sm:mt-0">
-                    <h6 className="text-base font-medium text-white uppercase mb-2">What we offer</h6>
-                    <div>
-                      <a href="#" className="text-gray-400 py-1 block hover:underline">Blocks</a>
-                      <a href="#" className="text-gray-400 py-1 block hover:underline">Resources</a>
-                      <a href="#" className="text-gray-400 py-1 block hover:underline">Tools</a>
-                      <a href="#" className="text-gray-400 py-1 block hover:underline">Tutorials</a>
-                      <a href="#" className="text-gray-400 py-1 block hover:underline">Freebies</a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <div className="md:w-1/3 md:px-4 md:text-center mt-12 lg:mt-0">
-                <h5 className="text-lg text-white font-medium mb-4">Explore our site</h5>
-                <button className="bg-indigo-600 text-white hover:bg-indigo-700 rounded py-2 px-6 md:px-12 transition-colors duration-300">Explore</button>
-              </div>
-
-            </div>
-
-          </div>
-
-          <div className="border-t border-solid border-gray-900 mt-4 py-4">
-            <div className="container px-4 mx-auto">
-
-              <div className="md:flex md:-mx-4 md:items-center">
-                <div className="md:flex-1 md:px-4 text-center md:text-left">
-                  <p className="text-white">&copy; <strong>CODEADDON</strong></p>
-                </div>
-                <div className="md:flex-1 md:px-4 text-center md:text-right">
-                  <a href="#" className="py-2 px-4 text-white inline-block hover:underline">Terms of Service</a>
-                  <a href="#" className="py-2 px-4 text-white inline-block hover:underline">Privacy Policy</a>
-                </div>
-              </div>
-
-            </div>
-          </div>
-
-    </div>
-
-      </footer>
+ 
     </div>
   )
 }
