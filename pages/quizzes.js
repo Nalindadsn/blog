@@ -113,7 +113,7 @@ export default function Quizzes() {
 
 
     <aside id="sidebar" className="z-50 bg-gray-800 text-gray-100 md:w-64 w-3/4 space-y-6 pt-6 px-0 absolute inset-y-0 left-0 transform md:relative md:translate-x-0 transition duration-200 ease-in-out  md:flex md:flex-col md:justify-between overflow-y-auto hidden md:block  hdd" data-dev-hint="sidebar; px-0 for frameless; px-2 for visually inset the navigation"  style={
-          showMe!==""?(showMe?{ display:"block"}:{display:"none" }):({color:"white"})
+          showMe!==""?(showMe?{ display:"block"}:{display:"none" }):({})
       }>
         <div className="flex flex-col space-y-6" data-dev-hint="optional div for having an extra footer navigation">
     
@@ -132,12 +132,12 @@ export default function Quizzes() {
                     <i className="fa fa-book"></i>
                     <span>Articles</span>
                 </a>
-                <a href="https://www.codeaddon.com/playlists" className="flex items-center space-x-2 py-2 px-4 transition duration-200 bg-gray-700 text-white hover:bg-gray-700 hover:text-white">
+                <a href="https://www.codeaddon.com/playlists" className="flex items-center space-x-2 py-2 px-4 transition duration-200 hover:bg-gray-700 hover:text-white">
                 <i className="fa fa-youtube-play"></i>
                     <span>Video Tutorials</span>
                 </a>
                 <a href="https://www.codeaddon.com/quizzes" className="flex items-center space-x-2 py-2 px-4 transition duration-200 bg-gray-700 text-white hover:bg-gray-700 hover:text-white">
-                <i className="fa fa-youtube-play"></i>
+                <i className="fa fa-sticky-note"></i>
                     <span>Quizzes</span>
                 </a>
                 <a href="https://www.codeaddon.com/about" className="flex items-center space-x-2 py-2 px-4 transition duration-200 hover:bg-gray-700 hover:text-white">
