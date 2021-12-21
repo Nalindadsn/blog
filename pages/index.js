@@ -22,6 +22,8 @@ export default function Home() {
         <title>Create Next App</title>
         <meta name="description" content="web development tutorials " />
         <link rel="icon" href="/favicon.ico" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+
       </Head>
 
       <main >
@@ -48,7 +50,7 @@ export default function Home() {
       </div>
       <div className="flex-1 flex items-center justify-center sm:items-stretch sm:justify-start">
         <div className="flex-shrink-0 flex items-center text-white">
-         <a href="https://www.codeaddon.com/"> CODEADDON</a>
+         <a href="https://www.codeaddon.com/" className='font-bold'> <span className='text-amber-500'><i class="fa fa-chevron-left"></i>CODE<i class="fa fa-chevron-right"></i></span>ADDON</a>
 
         </div>
         <div className="hidden sm:block sm:ml-6">
