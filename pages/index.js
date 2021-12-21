@@ -176,9 +176,9 @@ export default function Home() {
     
     
     <div className="flex justify-center border-t  py-5">
-      <a href="#" className="mx-4 p-2 px-4 border-2 bg-gray-900 text-white border-white rounded-lg hover:text-white hover:bg-gray-800 cursor-pointer">Articles</a>
-      <a href="#" className="text-gray-600 mx-5 hover:text-gray-500">Recommends</a>
-      <a href="#" className="text-gray-600 mx-5 hover:text-gray-500">Subscriptions</a>
+      <a href="#" className="mx-4 p-2 px-4 border-2 bg-gray-900 text-white border-white rounded-lg hover:text-white hover:bg-gray-800 cursor-pointer">New Articles</a>
+      <a href="#" className="text-gray-600 mx-5 hover:text-gray-500">Most Populer</a>
+
     </div>
   </div>
   <div className=" pt-12 pb-6 flex-1">
@@ -353,7 +353,7 @@ export default function Home() {
 
       </div>
       <div className="text-center">
-        <button className="border border-gray-600 text-gray-600 px-4 py-2 rounded-full hover:bg-gray-600 hover:text-white">Show More</button>
+        <a href="https://www.codeaddon.com/articles" className="border border-gray-600 text-gray-600 px-4 py-2 rounded-full hover:bg-gray-600 hover:text-white">Show More</a>
       </div>
     </div>
   </div>
