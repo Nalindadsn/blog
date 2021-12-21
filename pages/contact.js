@@ -176,12 +176,12 @@ export default function Contact() {
       <div className="flex items-center mt-5">
 
 
-        <span className="text-sm">+93 749 99 65 50</span>
+
       </div>
       <div className="flex items-center mt-5">
 
 
-        <span className="text-sm">24/7</span>
+
       </div>
       
     </div>
