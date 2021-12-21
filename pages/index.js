@@ -127,7 +127,7 @@ export default function Home() {
 
 <div className=" mx-auto  py-20 ">
   <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6">
-    <div className="   py-12  pl-12">
+    <div className="   py-12  pl-12 ml-12">
 
     <h4 className="font-medium text-gray-300">Same chats, new different experience</h4>
       <h2 className="font-bold text-5xl text-white leading-tight mt-3 mb-6">It looks better and cleaner!</h2>
