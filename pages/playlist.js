@@ -203,9 +203,16 @@ export default function Playlist() {
           <p>Edison bulb poke etsy brunch, freegan lumbersexual tacos. Activated charcoal mustache small batch thundercats vexillologist poke meh snackwave. Biodiesel photo booth cardigan heirloom normcore taiyaki palo santo yuccie unicorn swag street art kitsch seitan raclette.</p>
         </div>
       </div>
-      <div className="md:flex md:w-2/2 lg:w-1/4 px-2 py-2">
-        <div className="md:flex-1 p-4 rounded shadow-lg bg-white border-b border-r border-grey-dark">
-          <p>Chambray gochujang activated charcoal seitan etsy. Williamsburg tattooed intelligentsia shoreditch keytar. Paleo gochujang copper mug.</p>
+      <div className="md:flex md:w-2/2 lg:w-1/4 px-2 py-2 ">
+        <div className="md:flex-1 p-4 rounded shadow-lg bg-white border-b border-r border-grey-dark rc">
+        <p>Chambray gochujang activated charcoal seitan etsy. Williamsburg tattooed intelligentsia shoreditch keytar. Paleo gochujang copper mug.</p>
+        <p>Chambray gochujang activated charcoal seitan etsy. Williamsburg tattooed intelligentsia shoreditch keytar. Paleo gochujang copper mug.</p>
+        <p>Chambray gochujang activated charcoal seitan etsy. Williamsburg tattooed intelligentsia shoreditch keytar. Paleo gochujang copper mug.</p>
+        <p>Chambray gochujang activated charcoal seitan etsy. Williamsburg tattooed intelligentsia shoreditch keytar. Paleo gochujang copper mug.</p>
+        <p>Chambray gochujang activated charcoal seitan etsy. Williamsburg tattooed intelligentsia shoreditch keytar. Paleo gochujang copper mug.</p>
+        <p>Chambray gochujang activated charcoal seitan etsy. Williamsburg tattooed intelligentsia shoreditch keytar. Paleo gochujang copper mug.</p>
+        <p>Chambray gochujang activated charcoal seitan etsy. Williamsburg tattooed intelligentsia shoreditch keytar. Paleo gochujang copper mug.</p>
+        <p>Chambray gochujang activated charcoal seitan etsy. Williamsburg tattooed intelligentsia shoreditch keytar. Paleo gochujang copper mug.</p>
         </div>
       </div>
     </div>
