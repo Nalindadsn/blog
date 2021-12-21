@@ -158,11 +158,7 @@ export default function Contact() {
 
 <div >
   <div className="grid grid-cols-1 md:grid-cols-12 ">
-    <div className="bg-gray-900 md:col-span-4 p-10 text-white">
 
-
-      
-    </div>
       <form className="md:col-span-8 p-10">
   <div className="flex flex-wrap -mx-3 mb-6">
     <div className="w-full md:w-1/2 px-3 mb-6 md:mb-0">
@@ -214,6 +210,11 @@ export default function Contact() {
   </div>
     
 </form>
+    <div className=" md:col-span-4 p-10 text-white">
+
+
+      
+    </div>
     
   </div>
 </div>
