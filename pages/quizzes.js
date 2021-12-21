@@ -148,16 +148,15 @@ export default function Quizzes() {
                 <i className="fa fa-envelope"></i>
                     <span>Contact Us</span>
                 </a>
+                <a href="https://www.codeaddon.com/contact" className="flex items-center space-x-2 py-2 px-4 transition duration-200 hover:bg-gray-700 hover:text-white bg-red-500">
+                <i className="fa fa-envelope"></i>
+                    <span>LOGOUT</span>
+                </a>
                 
             </nav>
         </div>
 
-        <nav data-dev-hint="second-main-navigation or footer navigation">
-            
-            <a href="#" className="block py-2 px-4 transition duration-200 hover:bg-gray-700 hover:text-white bg-red-500">
-                LOGOUT
-            </a>
-        </nav>
+
     </aside>
 
     <main id="content" className="flex-1 lg:px-8">
