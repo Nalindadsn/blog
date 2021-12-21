@@ -138,7 +138,7 @@ export default function About() {
     </div>
     <div className=" justify-center   ">
 
-    <Image src="https://res.cloudinary.com/masterdevs/image/upload/v1639856212/codeaddon/12_ykiumq.jpg" width={1000} height={500} alt="landing-image" />
+    <Image src="https://res.cloudinary.com/masterdevs/image/upload/v1640121452/codeaddon/codeaddon-banner-web-development_vibee4.png" width={1000} height={500} alt="landing-image" />
 
 
     </div>

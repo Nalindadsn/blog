@@ -125,7 +125,7 @@ export default function Home() {
 
 <div className="bg-gray-800 relative">
 
-<div className=" mx-auto  py-24 ">
+<div className=" mx-auto  py-20 ">
   <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6">
     <div className="   py-12  pl-12">
 
@@ -145,8 +145,8 @@ export default function Home() {
 
 
 
-<img className="object-cover h-full w-full" src="https://res.cloudinary.com/masterdevs/image/upload/v1639856212/codeaddon/12_ykiumq.jpg" />
-<figcaption className="absolute right-0 top-32 text-lg -mt-16 text-white px-4 pt-12  ">
+<img className="object-cover h-full w-full -mt-5" src="https://res.cloudinary.com/masterdevs/image/upload/v1640121452/codeaddon/codeaddon-banner-web-development_vibee4.png" />
+<figcaption className="absolute left-0 top-32 text-lg -mt-16 text-white px-4 pt-12  ">
 
 
   <div className="shadow">
