@@ -193,230 +193,76 @@ export default function Quizzes() {
 
   <div className=" pt-3 pb-6 flex-1">
     <div className="container mx-auto">
-      <div className="flex flex-wrap md:-mx-3">
-        
-      <div className="md:w-1/2 px-3 mb-6 w-full">
-          <div className="flex w-full h-full flex-wrap bg-gray-800 overflow-hidden rounded">
-            <figure className="w-2/6 relative">
-
-
-
-              <img className="object-cover h-full w-full" src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2250&q=80" />
-              <figcaption className="absolute text-lg -mt-16 text-white px-4">
-                <div>
-                  <h1>			
-                    <i className="fa fa-bars  bg-gray-900 p-1 text-white"></i>
-                  </h1>
-                </div>
-                <div>
-                  <h1  className="bg-gray-900 px-2">V : 20</h1>
-                </div>
-                </figcaption>
-
-            </figure>
-            <div className="w-4/6 p-5">
-              <h2 className="text-white leading-normal text-lg">How To Boost Your Traffic Of Your Blog And Destroy The Competition</h2>
-              <div className="flex flex-wrap justify-between items-center mt-6">
-                <div className="inline-flex items-center">
-                  <div className="w-10 h-10 rounded-full overflow-hidden flex-shrink-0">
-                    <img src="https://randomuser.me/api/portraits/men/5.jpg" />
-                  </div>
-                  <div className="flex-1 pl-2">
-                    <h2 className="text-white mb-1">Luke Nunez</h2>
-                    <p className="text-white opacity-50 text-xs">May 18</p>
-                  </div>
-                </div>
-                <span className="text-white opacity-50">
-              <svg className="fill-current w-5 h-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 459 459">
-                <path d="M357 0H102C73.95 0 51 22.95 51 51v408l178.5-76.5L408 459V51c0-28.05-22.95-51-51-51z"/>
-              </svg>
-            </span>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div className="md:w-1/2 px-3 mb-6 w-full">
-          <div className="flex w-full h-full flex-wrap bg-gray-800 overflow-hidden rounded">
-            <figure className="w-2/6 relative">
-
-
-
-              <img className="object-cover h-full w-full" src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2250&q=80" />
-              <figcaption className="absolute text-lg -mt-16 text-white px-4">
-                <div>
-                  <h1>			
-                    <i className="fa fa-bars  bg-gray-900 p-1 text-white"></i>
-                  </h1>
-                </div>
-                <div>
-                  <h1  className="bg-gray-900 px-2">V : 20</h1>
-                </div>
-                </figcaption>
-
-            </figure>
-            <div className="w-4/6 p-5">
-              <h2 className="text-white leading-normal text-lg">How To Boost Your Traffic Of Your Blog And Destroy The Competition</h2>
-              <div className="flex flex-wrap justify-between items-center mt-6">
-                <div className="inline-flex items-center">
-                  <div className="w-10 h-10 rounded-full overflow-hidden flex-shrink-0">
-                    <img src="https://randomuser.me/api/portraits/men/5.jpg" />
-                  </div>
-                  <div className="flex-1 pl-2">
-                    <h2 className="text-white mb-1">Luke Nunez</h2>
-                    <p className="text-white opacity-50 text-xs">May 18</p>
-                  </div>
-                </div>
-                <span className="text-white opacity-50">
-              <svg className="fill-current w-5 h-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 459 459">
-                <path d="M357 0H102C73.95 0 51 22.95 51 51v408l178.5-76.5L408 459V51c0-28.05-22.95-51-51-51z"/>
-              </svg>
-            </span>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        
-        <div className="md:w-1/2 px-3 mb-6 w-full">
-          <div className="flex w-full h-full flex-wrap bg-gray-800 overflow-hidden rounded">
-            <div className="w-2/6">
-              <img className="object-cover h-full w-full" src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2250&q=80" />
-            </div>
-            <div className="w-4/6 p-5">
-              <h2 className="text-white leading-normal text-lg">How To Boost Your Traffic Of Your Blog And Destroy The Competition</h2>
-              <div className="flex flex-wrap justify-between items-center mt-6">
-                <div className="inline-flex items-center">
-                  <div className="w-10 h-10 rounded-full overflow-hidden flex-shrink-0">
-                    <img src="https://randomuser.me/api/portraits/men/8.jpg" />
-                  </div>
-                  <div className="flex-1 pl-2">
-                    <h2 className="text-white mb-1">Jonathan Mithu</h2>
-                    <p className="text-white opacity-50 text-xs">May 18</p>
-                  </div>
-                </div>
-                <span className="text-white opacity-50">
-              <svg className="fill-current w-5 h-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 459 459">
-                <path d="M357 0H102C73.95 0 51 22.95 51 51v408l178.5-76.5L408 459V51c0-28.05-22.95-51-51-51z"/>
-              </svg>
-            </span>
-              </div>
-            </div>
-          </div>
-        </div>
-        
-        <div className="md:w-1/2 px-3 mb-6 w-full">
-          <div className="flex w-full h-full flex-wrap bg-gray-800 overflow-hidden rounded">
-            <div className="w-2/6">
-              <img className="object-cover h-full w-full" src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2250&q=80" />
-            </div>
-            <div className="w-4/6 p-5">
-              <h2 className="text-white leading-normal text-lg">How To Boost Your Traffic Of Your Blog And Destroy The Competition</h2>
-              <div className="flex flex-wrap justify-between items-center mt-6">
-                <div className="inline-flex items-center">
-                  <div className="w-10 h-10 rounded-full overflow-hidden flex-shrink-0">
-                    <img src="https://randomuser.me/api/portraits/men/8.jpg" />
-                  </div>
-                  <div className="flex-1 pl-2">
-                    <h2 className="text-white mb-1">Jonathan Mithu</h2>
-                    <p className="text-white opacity-50 text-xs">May 18</p>
-                  </div>
-                </div>
-                <span className="text-white opacity-50">
-              <svg className="fill-current w-5 h-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 459 459">
-                <path d="M357 0H102C73.95 0 51 22.95 51 51v408l178.5-76.5L408 459V51c0-28.05-22.95-51-51-51z"/>
-              </svg>
-            </span>
-              </div>
-            </div>
-          </div>
-        </div>
-        
-        <div className="md:w-1/2 px-3 mb-6 w-full">
-          <div className="flex w-full h-full flex-wrap bg-gray-800 overflow-hidden rounded">
-            <div className="w-2/6">
-              <img className="object-cover h-full w-full" src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2250&q=80" />
-            </div>
-            <div className="w-4/6 p-5">
-              <h2 className="text-white leading-normal text-lg">How To Boost Your Traffic Of Your Blog And Destroy The Competition</h2>
-              <div className="flex flex-wrap justify-between items-center mt-6">
-                <div className="inline-flex items-center">
-                  <div className="w-10 h-10 rounded-full overflow-hidden flex-shrink-0">
-                    <img src="https://randomuser.me/api/portraits/men/8.jpg" />
-                  </div>
-                  <div className="flex-1 pl-2">
-                    <h2 className="text-white mb-1">Jonathan Mithu</h2>
-                    <p className="text-white opacity-50 text-xs">May 18</p>
-                  </div>
-                </div>
-                <span className="text-white opacity-50">
-              <svg className="fill-current w-5 h-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 459 459">
-                <path d="M357 0H102C73.95 0 51 22.95 51 51v408l178.5-76.5L408 459V51c0-28.05-22.95-51-51-51z"/>
-              </svg>
-            </span>
-              </div>
-            </div>
-          </div>
-        </div>
-        
-        <div className="md:w-1/2 px-3 mb-6 w-full">
-          <div className="flex w-full h-full flex-wrap bg-gray-800 overflow-hidden rounded">
-            <div className="w-2/6">
-              <img className="object-cover h-full w-full" src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2250&q=80" />
-            </div>
-            <div className="w-4/6 p-5">
-              <h2 className="text-white leading-normal text-lg">How To Boost Your Traffic Of Your Blog And Destroy The Competition</h2>
-              <div className="flex flex-wrap justify-between items-center mt-6">
-                <div className="inline-flex items-center">
-                  <div className="w-10 h-10 rounded-full overflow-hidden flex-shrink-0">
-                    <img src="https://randomuser.me/api/portraits/men/8.jpg" />
-                  </div>
-                  <div className="flex-1 pl-2">
-                    <h2 className="text-white mb-1">Jonathan Mithu</h2>
-                    <p className="text-white opacity-50 text-xs">May 18</p>
-                  </div>
-                </div>
-                <span className="text-white opacity-50">
-              <svg className="fill-current w-5 h-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 459 459">
-                <path d="M357 0H102C73.95 0 51 22.95 51 51v408l178.5-76.5L408 459V51c0-28.05-22.95-51-51-51z"/>
-              </svg>
-            </span>
-              </div>
-            </div>
-          </div>
-        </div>
-        
-        <div className="md:w-1/2 px-3 mb-6 w-full">
-          <div className="flex w-full h-full flex-wrap bg-gray-800 overflow-hidden rounded">
-            <div className="w-2/6">
-              <img className="object-cover h-full w-full" src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2250&q=80" />
-            </div>
-            <div className="w-4/6 p-5">
-              <h2 className="text-white leading-normal text-lg">How To Boost Your Traffic Of Your Blog And Destroy The Competition</h2>
-              <div className="flex flex-wrap justify-between items-center mt-6">
-                <div className="inline-flex items-center">
-                  <div className="w-10 h-10 rounded-full overflow-hidden flex-shrink-0">
-                    <img src="https://randomuser.me/api/portraits/men/8.jpg" />
-                  </div>
-                  <div className="flex-1 pl-2">
-                    <h2 className="text-white mb-1">Jonathan Mithu</h2>
-                    <p className="text-white opacity-50 text-xs">May 18</p>
-                  </div>
-                </div>
-                <span className="text-white opacity-50">
-              <svg className="fill-current w-5 h-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 459 459">
-                <path d="M357 0H102C73.95 0 51 22.95 51 51v408l178.5-76.5L408 459V51c0-28.05-22.95-51-51-51z"/>
-              </svg>
-            </span>
-              </div>
-            </div>
-          </div>
-        </div>
 
 
 
 
-      </div>
+
+
+
+
+    <div className="container my-8 mx-auto px-4 leading-normal">
+
+
+<div className="flex mb-4">
+  <div className="w-1/2 ">
+
+  <h2 className="mb-6 font-bold text-1xl">
+  Question No : <span className='bg-gray-900 text-white py-2 px-3'>01</span>
+</h2>
+  </div>
+  <div className="w-1/2 ">
+
+  <h2 className="mb-6 font-bold text-1xl text-right">
+  Time : <span className='bg-gray-900 text-white py-2 px-3'>01.02</span>
+</h2>
+  </div>
+</div>
+
+<h1 className="mb-8  font-medium">Icon list with Tailwind CSS</h1>
+
+
+<ul className="list-reset text-black mb-8 p-8 text-grey-darker rounded shadow-lg">
+   <li className="flex items-center mb-3">
+      <svg xmlns="http://www.w3.org/2000/svg" className="flex-none w-8 mr-2" viewBox="0 0 24 24" fill="green">
+      <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"
+            /></svg>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+   </li>
+   <li className="flex items-center mb-3">
+      <svg xmlns="http://www.w3.org/2000/svg" className="flex-none w-8 mr-2" viewBox="0 0 24 24" fill="green">
+      <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"
+            /></svg> Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet qui, nulla explicabo obcaecati natus atque blanditiis modi officiis itaque saepe maiores quaerat, impedit nam officia libero. Eius, dolore! Provident, est!
+   </li>
+   <li className="flex items-center mb-3">
+      <svg xmlns="http://www.w3.org/2000/svg" className="flex-none w-8 mr-2" viewBox="0 0 24 24" fill="green">
+      <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"
+            /></svg> Eius, dolore! Provident, est!
+   </li>
+   <li className="flex items-center mb-3">
+      <svg xmlns="http://www.w3.org/2000/svg" className="flex-none w-8 mr-2" viewBox="0 0 24 24" fill="black">
+      <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"
+            /></svg> Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet qui, nulla explicabo obcaecati natus.
+   </li>      
+
+</ul>
+
+</div>
+
+<div class="flex mb-4">
+  <div class="w-1/2 "></div>
+  <div class="w-1/2  text-right">
+  <button class="rounded bg-blue-500 hover:bg-blue-700 py-2 px-4 text-white mr-3"> Skip</button>
+  <button class="rounded bg-blue-500 hover:bg-blue-700 py-2 px-4 text-white"> Next</button>
+  </div>
+</div>
+
+
+
+
+
+
+
       
       
     </div>
