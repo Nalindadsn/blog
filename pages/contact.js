@@ -172,7 +172,6 @@ export default function Contact() {
       <div className="flex items-center mt-5">
 
 
-        <span className="text-sm">House #14, Street #12, Darulaman Road, Kabul, Afghanistan.</span>
       </div>
       <div className="flex items-center mt-5">
 
