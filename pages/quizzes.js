@@ -280,7 +280,7 @@ export default function Quizzes() {
 
         <div className="md:flex md:-mx-4 md:items-center">
           <div className="md:flex-1 md:px-4 text-center md:text-left">
-            <p className="text-gray-800">&copy; <strong>CODEADDON</strong></p>
+             <div className="text-white">&copy; <a href="https://www.codeaddon.com/" className='font-bold'> <span className='text-amber-500'><i className="fa fa-chevron-left"></i>CODE<i className="fa fa-chevron-right"></i></span>ADDON</a></div>
           </div>
           <div className="md:flex-1 md:px-4 text-center md:text-right">
             <a href="#" className="py-2 px-4 text-gray-800 inline-block hover:underline">Terms of Service</a>
