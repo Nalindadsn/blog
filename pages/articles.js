@@ -212,7 +212,7 @@ export default function Articles() {
               <div className="flex flex-wrap justify-between items-center mt-6">
                 <div className="inline-flex items-center">
                   <div className="w-10 h-10 rounded-full overflow-hidden flex-shrink-0">
-                    <img src="https://randomuser.me/api/portraits/men/5.jpg" />
+                    <img src="https://res.cloudinary.com/masterdevs/image/upload/v1640114706/codeaddon/nalinda-dissanayaka_u5uh0z.jpg" />
                   </div>
                   <div className="flex-1 pl-2">
                     <h2 className="text-white mb-1">Luke Nunez</h2>
@@ -253,7 +253,7 @@ export default function Articles() {
               <div className="flex flex-wrap justify-between items-center mt-6">
                 <div className="inline-flex items-center">
                   <div className="w-10 h-10 rounded-full overflow-hidden flex-shrink-0">
-                    <img src="https://randomuser.me/api/portraits/men/5.jpg" />
+                    <img src="https://res.cloudinary.com/masterdevs/image/upload/v1640114706/codeaddon/nalinda-dissanayaka_u5uh0z.jpg" />
                   </div>
                   <div className="flex-1 pl-2">
                     <h2 className="text-white mb-1">Luke Nunez</h2>
@@ -281,10 +281,10 @@ export default function Articles() {
               <div className="flex flex-wrap justify-between items-center mt-6">
                 <div className="inline-flex items-center">
                   <div className="w-10 h-10 rounded-full overflow-hidden flex-shrink-0">
-                    <img src="https://randomuser.me/api/portraits/men/8.jpg" />
+                    <img src="https://res.cloudinary.com/masterdevs/image/upload/v1640114706/codeaddon/nalinda-dissanayaka_u5uh0z.jpg" />
                   </div>
                   <div className="flex-1 pl-2">
-                    <h2 className="text-white mb-1">Jonathan Mithu</h2>
+                    <h2 className="text-white mb-1">Nalinda Dissanayaka</h2>
                     <p className="text-white opacity-50 text-xs">May 18</p>
                   </div>
                 </div>
@@ -308,10 +308,10 @@ export default function Articles() {
               <div className="flex flex-wrap justify-between items-center mt-6">
                 <div className="inline-flex items-center">
                   <div className="w-10 h-10 rounded-full overflow-hidden flex-shrink-0">
-                    <img src="https://randomuser.me/api/portraits/men/8.jpg" />
+                    <img src="https://res.cloudinary.com/masterdevs/image/upload/v1640114706/codeaddon/nalinda-dissanayaka_u5uh0z.jpg" />
                   </div>
                   <div className="flex-1 pl-2">
-                    <h2 className="text-white mb-1">Jonathan Mithu</h2>
+                    <h2 className="text-white mb-1">Nalinda Dissanayaka</h2>
                     <p className="text-white opacity-50 text-xs">May 18</p>
                   </div>
                 </div>
@@ -335,10 +335,10 @@ export default function Articles() {
               <div className="flex flex-wrap justify-between items-center mt-6">
                 <div className="inline-flex items-center">
                   <div className="w-10 h-10 rounded-full overflow-hidden flex-shrink-0">
-                    <img src="https://randomuser.me/api/portraits/men/8.jpg" />
+                    <img src="https://res.cloudinary.com/masterdevs/image/upload/v1640114706/codeaddon/nalinda-dissanayaka_u5uh0z.jpg" />
                   </div>
                   <div className="flex-1 pl-2">
-                    <h2 className="text-white mb-1">Jonathan Mithu</h2>
+                    <h2 className="text-white mb-1">Nalinda Dissanayaka</h2>
                     <p className="text-white opacity-50 text-xs">May 18</p>
                   </div>
                 </div>
@@ -362,10 +362,10 @@ export default function Articles() {
               <div className="flex flex-wrap justify-between items-center mt-6">
                 <div className="inline-flex items-center">
                   <div className="w-10 h-10 rounded-full overflow-hidden flex-shrink-0">
-                    <img src="https://randomuser.me/api/portraits/men/8.jpg" />
+                    <img src="https://res.cloudinary.com/masterdevs/image/upload/v1640114706/codeaddon/nalinda-dissanayaka_u5uh0z.jpg" />
                   </div>
                   <div className="flex-1 pl-2">
-                    <h2 className="text-white mb-1">Jonathan Mithu</h2>
+                    <h2 className="text-white mb-1">Nalinda Dissanayaka</h2>
                     <p className="text-white opacity-50 text-xs">May 18</p>
                   </div>
                 </div>
@@ -389,10 +389,10 @@ export default function Articles() {
               <div className="flex flex-wrap justify-between items-center mt-6">
                 <div className="inline-flex items-center">
                   <div className="w-10 h-10 rounded-full overflow-hidden flex-shrink-0">
-                    <img src="https://randomuser.me/api/portraits/men/8.jpg" />
+                    <img src="https://res.cloudinary.com/masterdevs/image/upload/v1640114706/codeaddon/nalinda-dissanayaka_u5uh0z.jpg" />
                   </div>
                   <div className="flex-1 pl-2">
-                    <h2 className="text-white mb-1">Jonathan Mithu</h2>
+                    <h2 className="text-white mb-1">Nalinda Dissanayaka</h2>
                     <p className="text-white opacity-50 text-xs">May 18</p>
                   </div>
                 </div>
