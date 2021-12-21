@@ -72,7 +72,7 @@ export default function Quizzes() {
           <div>
             <button type="button" className="bg-gray-800 flex text-sm rounded-full focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white" id="user-menu-button" aria-expanded="false" aria-haspopup="true">
               <span className="sr-only">Open user menu</span>
-              <img  onClick={toggleuser}  className="h-8 w-8 rounded-full" src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80" alt="" />
+              <img  onClick={toggleuser}  className="h-8 w-8 rounded-full" src="https://res.cloudinary.com/masterdevs/image/upload/v1640114706/codeaddon/nalinda-dissanayaka_u5uh0z.jpg" alt="" />
             </button>
           </div>
 
@@ -203,11 +203,14 @@ export default function Quizzes() {
 
     <div className="container my-8 mx-auto px-4 leading-normal">
 
+    <h2 className="mb-6 font-bold text-2xl text-center bg-gray-900 text-white p-2">
+      Quize name
+</h2>
 
 <div className="flex mb-4">
   <div className="w-1/2 ">
 
-  <h2 className="mb-6 font-bold text-1xl">
+  <h2 className="mb-6 font-bold text-1xl ">
   Question No : <span className='bg-gray-900 text-white py-2 px-3'>01</span>
 </h2>
   </div>

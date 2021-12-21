@@ -2,11 +2,12 @@ import Head from 'next/head'
 import Image from 'next/image'
 import React, { useState } from "react";
 
-export default function Playlist() {
+
+export default function Quiz() {
 
 
   
-  const [showMe, setShowMe] = useState(true);
+  const [showMe, setShowMe] = useState('');
 
   
   const [showMe2, setShowMe2] = useState(false);
@@ -111,9 +112,9 @@ export default function Playlist() {
 
 
 
-    <aside id="sidebar" className="z-50 bg-gray-800 text-gray-100 md:w-64 w-3/4 space-y-6 pt-6 px-0 absolute inset-y-0 left-0 transform md:relative md:translate-x-0 transition duration-200 ease-in-out  md:flex md:flex-col md:justify-between overflow-y-auto" data-dev-hint="sidebar; px-0 for frameless; px-2 for visually inset the navigation"  style={{
-        display: showMe?"block":"none"
-      }}>
+    <aside id="sidebar" className="z-50 bg-gray-800 text-gray-100 md:w-64 w-3/4 space-y-6 pt-6 px-0 absolute inset-y-0 left-0 transform md:relative md:translate-x-0 transition duration-200 ease-in-out  md:flex md:flex-col md:justify-between overflow-y-auto hidden md:block  hdd" data-dev-hint="sidebar; px-0 for frameless; px-2 for visually inset the navigation"  style={
+          showMe!==""?(showMe?{ display:"block"}:{display:"none" }):({})
+      }>
         <div className="flex flex-col space-y-6" data-dev-hint="optional div for having an extra footer navigation">
     
      
@@ -131,9 +132,13 @@ export default function Playlist() {
                     <i className="fa fa-book"></i>
                     <span>Articles</span>
                 </a>
-                <a href="https://www.codeaddon.com/playlists" className="flex items-center space-x-2 py-2 px-4 transition duration-200 bg-gray-700 text-white hover:bg-gray-700 hover:text-white">
+                <a href="https://www.codeaddon.com/playlists" className="flex items-center space-x-2 py-2 px-4 transition duration-200 hover:bg-gray-700 hover:text-white">
                 <i className="fa fa-youtube-play"></i>
                     <span>Video Tutorials</span>
+                </a>
+                <a href="https://www.codeaddon.com/quizzes" className="flex items-center space-x-2 py-2 px-4 transition duration-200 bg-gray-700 text-white hover:bg-gray-700 hover:text-white">
+                <i className="fa fa-sticky-note"></i>
+                    <span>Quizzes</span>
                 </a>
                 <a href="https://www.codeaddon.com/about" className="flex items-center space-x-2 py-2 px-4 transition duration-200 hover:bg-gray-700 hover:text-white">
                 <i className="fa fa-info"></i>
@@ -143,19 +148,19 @@ export default function Playlist() {
                 <i className="fa fa-envelope"></i>
                     <span>Contact Us</span>
                 </a>
+                <a href="https://www.codeaddon.com/contact" className="flex items-center space-x-2 py-2 px-4 transition duration-200 hover:bg-gray-700 hover:text-white bg-red-500">
+                <i className="fa fa-envelope"></i>
+                    <span>LOGOUT</span>
+                </a>
                 
             </nav>
         </div>
 
-        <nav data-dev-hint="second-main-navigation or footer navigation">
-            
-            <a href="#" className="block py-2 px-4 transition duration-200 hover:bg-gray-700 hover:text-white bg-red-500">
-                LOGOUT
-            </a>
-        </nav>
+
     </aside>
 
     <main id="content" className="flex-1 lg:px-8">
+
         <div className="max-w-7xl mx-auto">
 
             <div className="px-4  sm:px-0">
@@ -174,7 +179,7 @@ export default function Playlist() {
               </svg>
           </button>  
 {/* 
-============================================== */}
+===================================================== */}
 
 
 <div className="flex flex-col min-h-screen">
@@ -182,44 +187,52 @@ export default function Playlist() {
 
 
 <div className="flex ">
-  <div className="w-1/2 h-12"><h1 className="font-bold text-3xl ml-12">Playlists</h1></div>
-  <div className="w-1/2 h-12 text-right"><a href="">Home</a>/<a href="">Playlists</a>   </div>
+  <div className="w-1/2 h-12"><h1 className="font-bold text-3xl ml-12">Quizzes</h1></div>
+  <div className="w-1/2 h-12 text-right"><a href="">Home</a>/<a href="">Quizzes</a>   </div>
+</div>
+
+  <div className=" pt-3 pb-6 flex-1">
+    <div className="container mx-auto">
+
+
+
+
+
+
+
+
+    <div className="container my-8 mx-auto px-4 leading-normal">
+
+
+<ul>
+<li className='list-reset mb-2 p-2 text-grey-darker rounded shadow-lg bg-gray-800 text-white'>01. web develpment quiz 1 </li>
+<li className='list-reset mb-2 p-2 text-grey-darker rounded shadow-lg bg-gray-800 text-white'>01. web develpment quiz 1</li>
+<li className='list-reset mb-2 p-2 text-grey-darker rounded shadow-lg bg-gray-800 text-white'>01. web develpment quiz 1</li>
+<li className='list-reset mb-2 p-2 text-grey-darker rounded shadow-lg bg-gray-800 text-white'>01. web develpment quiz 1</li>
+
+
+</ul>
+
+
+
+
+
+
+
+
 </div>
 
 
 
-<main  className="  ">
 
-    <div className="md:flex content-center flex-wrap -mx-2 p-3 bg-grey rounded shadow-lg">
 
-      <div className="md:flex md:w-2/2 lg:w-3/4 px-2 py-2">
-        <div className="md:flex-1 p-4 rounded shadow-lg bg-white border-b border-r border-grey-dark">
-        <div className="video-wrap">
-  
-  <iframe width="560" height="315" src="https://www.youtube.com/embed/ScMzIvxBSi4" frameBorder="0" allowFullScreen></iframe>
 
-</div>
 
-          <p>Edison bulb poke etsy brunch, freegan lumbersexual tacos. Activated charcoal mustache small batch thundercats vexillologist poke meh snackwave. Biodiesel photo booth cardigan heirloom normcore taiyaki palo santo yuccie unicorn swag street art kitsch seitan raclette.</p>
-        </div>
-      </div>
-      <div className="md:flex md:w-2/2 lg:w-1/4 px-2 py-2 ">
-        <div className="md:flex-1 p-4 rounded shadow-lg bg-white border-b border-r border-grey-dark rc">
-        <p>Chambray gochujang activated charcoal seitan etsy. Williamsburg tattooed intelligentsia shoreditch keytar. Paleo gochujang copper mug.</p>
-        <p>Chambray gochujang activated charcoal seitan etsy. Williamsburg tattooed intelligentsia shoreditch keytar. Paleo gochujang copper mug.</p>
-        <p>Chambray gochujang activated charcoal seitan etsy. Williamsburg tattooed intelligentsia shoreditch keytar. Paleo gochujang copper mug.</p>
-        <p>Chambray gochujang activated charcoal seitan etsy. Williamsburg tattooed intelligentsia shoreditch keytar. Paleo gochujang copper mug.</p>
-        <p>Chambray gochujang activated charcoal seitan etsy. Williamsburg tattooed intelligentsia shoreditch keytar. Paleo gochujang copper mug.</p>
-        <p>Chambray gochujang activated charcoal seitan etsy. Williamsburg tattooed intelligentsia shoreditch keytar. Paleo gochujang copper mug.</p>
-        <p>Chambray gochujang activated charcoal seitan etsy. Williamsburg tattooed intelligentsia shoreditch keytar. Paleo gochujang copper mug.</p>
-        <p>Chambray gochujang activated charcoal seitan etsy. Williamsburg tattooed intelligentsia shoreditch keytar. Paleo gochujang copper mug.</p>
-        </div>
-      </div>
+
+      
+      
     </div>
-  </main>
-
-
-
+  </div>
 </div>
 
 <footer >
