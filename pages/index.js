@@ -50,7 +50,7 @@ export default function Home() {
       </div>
       <div className="flex-1 flex items-center justify-center sm:items-stretch sm:justify-start">
         <div className="flex-shrink-0 flex items-center text-white">
-         <a href="https://www.codeaddon.com/" className='font-bold'> <span className='text-amber-500'><i class="fa fa-chevron-left"></i>CODE<i class="fa fa-chevron-right"></i></span>ADDON</a>
+         <a href="https://www.codeaddon.com/" className='font-bold'> <span className='text-amber-500'><i className="fa fa-chevron-left"></i>CODE<i className="fa fa-chevron-right"></i></span>ADDON</a>
 
         </div>
         <div className="hidden sm:block sm:ml-6">
