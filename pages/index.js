@@ -208,7 +208,7 @@ export default function Home() {
     <div className="flex justify-center border-t  py-5">
 
 
-      <h2 className=' pt-12 pb-5 font-bold text-5xl text-amber-500'>- Latest Atricles -</h2>
+      <h2 className=' pt-12 pb-5 font-bold text-5xl text-gray-900'> Latest Atricles </h2>
     </div>
   </div>
   <div className=" pb-6 flex-1">
