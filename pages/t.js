@@ -1,16 +1,29 @@
 
 import Layout from '../components/Layout'
+import db from '../utils/db';
+import Product from '../models/Product';
 
-import data from '../utils/data';
-export default function T() {
+export default function T(props) {
+    const { products } = props;
   return (
     <Layout>
+ {products.map((product) => (
 
-{data.products.map((product) => (
-<div key={product.image}>{product.image}</div>
-))}
+<div key={product.image}>{product.name}</div>
+ ))}
+
 
 
     </Layout>
   )
 }
+export async function getServerSideProps() {
+    await db.connect();
+    const products = await Product.find({}).lean();
+    await db.disconnect();
+    return {
+      props: {
+        products: products.map(db.convertDocToObj),
+      },
+    };
+  }
