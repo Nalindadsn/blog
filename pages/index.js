@@ -171,7 +171,7 @@ export default function Home() {
       <span className="font-small text-white pt-0 text-shadow-lg	 "> Your favorite messaging app just got the best looking update yet! Now it feels like a breath of fresh air.</span>
       <div id="buttons" className="font-medium flex flex-row mt-1">
         <div className="mr-3 pl-0 p-2 cursor-pointer hover:underline  text-gray-300 "><a href="#watch-video">Watch video</a></div>
-        <div className="mx-4 p-2 px-4 border-2 text-white border-white rounded-lg hover:text-white hover:bg-gray-400 cursor-pointer">Download</div>
+        <div className="mx-4 p-2 px-4 border-2 text-white border-white rounded-lg hover:text-white hover:bg-gray-900 cursor-pointer">Download</div>
       </div>
 </div>
 </figcaption>
