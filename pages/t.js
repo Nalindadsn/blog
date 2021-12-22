@@ -1,11 +1,14 @@
 
 import Layout from '../components/Layout'
 
+import data from '../utils/data';
 export default function T() {
   return (
     <Layout>
 
-oop
+{data.products.map((product) => (
+<div key={product.image}>{product.image}</div>
+))}
 
 
     </Layout>
