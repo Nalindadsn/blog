@@ -1,13 +1,14 @@
 import Head from 'next/head';
 
-import React, { useState,useContext } from "react";
-import { Store } from '../utils/Store';
+import React, { useState } from "react";
+//import React, { useState,useContext } from "react";
+// import { Store } from '../utils/Store';
 
 
 
 export default function Layout({ children }) {
-    const {state,dispatch}=useContext(Store);
-    const {darkMode}=state;
+    // const {state,dispatch}=useContext(Store);
+    // const {darkMode}=state;
     const [showMe, setShowMe] = useState(false);
     const [showMe2, setShowMe2] = useState(false);
   
