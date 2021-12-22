@@ -6,7 +6,7 @@ import { Store } from '../utils/Store';
 
 
 export default function Layout({ children }) {
-    const {state,dispatch}=useContext(Store)
+    const {state,dispatch}=useContext(Store);
     const [showMe, setShowMe] = useState(false);
     const [showMe2, setShowMe2] = useState(false);
   
@@ -31,7 +31,9 @@ export default function Layout({ children }) {
 
     <main>
 
-
+    {/* style={{
+        display: showMe?"block":"none"
+      }} */}
     <nav className="bg-gray-800 w-full h-16  px-8   shadow-md fixed z-50" >
   <div className="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
     <div className="relative flex items-center justify-between h-16">
