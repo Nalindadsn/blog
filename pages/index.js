@@ -182,7 +182,7 @@ export default function Home() {
 
 
 <div className='bg-white h-12'></div>
-<img className=" pb-12 object-cover h-full w-full " src="https://res.cloudinary.com/masterdevs/image/upload/v1640121452/codeaddon/codeaddon-banner-web-development_vibee4.png" />
+<img className=" pb-14 object-cover h-full w-full " src="https://res.cloudinary.com/masterdevs/image/upload/v1640121452/codeaddon/codeaddon-banner-web-development_vibee4.png" />
 
 
 
