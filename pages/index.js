@@ -125,38 +125,39 @@ export default function Home() {
 
 {/* //------------------- */}
 
-<div className="bg-gray-800 relative">
+<div className="bg-gray-800">
 
-<div className=" mx-auto  py-20 ">
+<div className=" mx-auto  ">
   <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6">
-    <div className="   py-12  pl-12 ml-12">
+    <div className="  relative  py-12  pl-12 ml-12">
+    <figcaption className="absolute -left-5 top-24 text-lg -mt-16 text-white px-4 pt-12  ">
 
-    <h4 className="font-medium text-gray-300">Same chats, new different experience</h4>
+
+<div className="shadow">
+  <h1  className="bg-sky-600 px-2 ">F</h1>
+  <h1  className="bg-red-500 px-2 ">Y</h1>
+  <h1  className="bg-sky-300 px-2 ">T</h1>
+</div>
+</figcaption>
+    <h4 className="font-medium text-gray-300 pt-20">Same chats, new different experience</h4>
       <h2 className="font-bold text-5xl text-white leading-tight mt-3 mb-6">It looks better and cleaner!</h2>
-      <span className="font-normal text-gray-300">Your favorite messaging app just got the best looking update yet! Now it feels like a breath of fresh air.</span>
+      <span className="font-normal text-gray-300"> Your favorite messaging app just got the best looking update yet! Now it feels like a breath of fresh air.</span>
       <div id="buttons" className="font-medium flex flex-row mt-6">
         <div className="mr-3 pl-0 p-2 cursor-pointer hover:underline  text-gray-300"><a href="#watch-video">Watch video</a></div>
         <div className="mx-4 p-2 px-4 border-2 text-white border-white rounded-lg hover:text-white hover:bg-gray-400 cursor-pointer">Download</div>
       </div>
+      
 
 
     </div>
-    <div className=" justify-center   ">
+    <div className=" justify-center relative  ">
 
 
 
 
+<div className='bg-white h-12'></div>
+<img className="  object-cover h-full w-full " src="https://res.cloudinary.com/masterdevs/image/upload/v1640121452/codeaddon/codeaddon-banner-web-development_vibee4.png" />
 
-<img className="object-cover h-full w-full -mt-5" src="https://res.cloudinary.com/masterdevs/image/upload/v1640121452/codeaddon/codeaddon-banner-web-development_vibee4.png" />
-<figcaption className="absolute left-0 top-32 text-lg -mt-16 text-white px-4 pt-12  ">
-
-
-  <div className="shadow">
-    <h1  className="bg-sky-600 px-2 ">F</h1>
-    <h1  className="bg-red-500 px-2 ">Y</h1>
-    <h1  className="bg-sky-300 px-2 ">T</h1>
-  </div>
-  </figcaption>
 
 
 
