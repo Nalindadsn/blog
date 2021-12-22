@@ -35,7 +35,7 @@ export default function Home() {
       <nav className="bg-gray-800 w-full h-16  px-8   shadow-md fixed z-50" >
   <div className="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
     <div className="relative flex items-center justify-between h-16">
-      <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
+      <div className="absolute inset-y-0 left-0 flex items-center md:hidden">
 
         <button  onClick={toggle} type="button" className="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white" aria-controls="mobile-menu" aria-expanded="false">
           <span className="sr-only">Open main menu</span>
@@ -50,23 +50,23 @@ export default function Home() {
           </svg>
         </button>
       </div>
-      <div className="flex-1 flex items-center justify-center sm:items-stretch sm:justify-start">
+      <div className="flex-1 flex items-center justify-center md:items-stretch md:justify-start">
         <div className="flex-shrink-0 flex items-center text-white">
          <a href="https://www.codeaddon.com/" className='font-bold'> <span className='text-amber-500'><i className="fa fa-chevron-left"></i>CODE<i className="fa fa-chevron-right"></i></span>ADDON</a>
 
         </div>
-        <div className="hidden sm:block sm:ml-6">
+        <div className="hidden md:block md:ml-6">
           <div className="flex space-x-4">
 
-            <a href="https://www.codeaddon.com/" className="bg-gray-900 text-white px-3 py-2 rounded-md text-sm font-medium" aria-current="page">Home</a>
+            <a href="https://www.codeaddon.com/" className="bg-gray-900 text-white px-2 py-2 rounded-md text-sm font-medium" aria-current="page">Home</a>
 
             <a href="https://www.codeaddon.com/articles" className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Articles</a>
 
-            <a href="https://www.codeaddon.com/playlists" className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Video Tutorials</a>
+            <a href="https://www.codeaddon.com/playlists" className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Videos</a>
             <a href="https://www.codeaddon.com/quizzes" className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Quizzes</a>
 
-            <a href="https://www.codeaddon.com/about" className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">About Us</a>
-            <a href="https://www.codeaddon.com/contact" className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Contact Us</a>
+            <a href="https://www.codeaddon.com/about" className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">About</a>
+            <a href="https://www.codeaddon.com/contact" className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Contact</a>
           </div>
         </div>
       </div>
@@ -174,8 +174,10 @@ export default function Home() {
       <h2 className="font-bold text-4xl text-white leading-tight  text-shadow-lg pt-1 pb-2	">It looks better and cleaner!</h2>
       <span className="font-small text-white pt-0 text-shadow-lg	 "> Your favorite messaging app just got the best looking update yet! Now it feels like a breath of fresh air.</span>
       <div id="buttons" className="font-medium flex flex-row mt-4">
-        <div className="mr-3 pl-0 p-2 cursor-pointer hover:underline  text-gray-300 "><a href="#watch-video">Watch video</a></div>
-        <div className="mx-4 p-2 px-4 border-2 text-white border-white rounded-lg bg-gray-900 hover:text-white hover:bg-gray-700 cursor-pointer">Download</div>
+
+      <a href="#watch-video" className='mx-4 p-2 px-4 border-2 text-white border-white rounded-lg hover:text-white hover:bg-gray-900 cursor-pointer'>Sign In</a>
+        <a className="mx-4 p-2 px-4 border-2 text-white border-white rounded-lg hover:text-white hover:bg-gray-900 cursor-pointer">Register</a>
+      
       </div>
 </div>
 </figcaption>
