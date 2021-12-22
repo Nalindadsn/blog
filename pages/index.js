@@ -153,7 +153,7 @@ export default function Home() {
 
     </div>
     <div className=" justify-center relative  ">
-    <figcaption className="absolute right-0 top-24 text-lg -mt-16 text-white px-4 pt-12  ">
+    <figcaption className="absolute right-0 top-24 text-lg -mt-16 text-white px-4 pt-12 z-50  block md:hidden ">
 
 
 <div className=" p-5">
