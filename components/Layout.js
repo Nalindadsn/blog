@@ -1,12 +1,12 @@
 import Head from 'next/head';
 
-import React, { useState } from "react";
-// import React, { useContext, useState } from 'react';
+import React, { useState,useContext } from "react";
+import { Store } from '../utils/Store';
 
-// import NextLink from 'next/link';
 
 
 export default function Layout({ children }) {
+    const {state,dispatch}=useContext(Store)
     const [showMe, setShowMe] = useState(false);
     const [showMe2, setShowMe2] = useState(false);
   
