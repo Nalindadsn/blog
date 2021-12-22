@@ -32,8 +32,8 @@ export default function Home() {
     
 
 
-      <nav className="bg-gray-800 w-full h-16  px-8   shadow-md fixed z-50" >
-  <div className="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
+      <nav className="bg-gray-800 w-full h-16  px-1   shadow-md fixed z-50" >
+  <div className="max-w-7xl mx-0 px-2 sm:px-6 lg:px-8">
     <div className="relative flex items-center justify-between h-16">
       <div className="absolute inset-y-0 left-0 flex items-center md:hidden">
 
@@ -203,7 +203,7 @@ export default function Home() {
   -------------------------------------7----------- */}
 
 
-<div className="flex flex-col min-h-screen">
+<div className="flex flex-col min-h-screen md:px-3">
   <div className="">
     
     
