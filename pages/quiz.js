@@ -204,14 +204,18 @@ export default function Quiz() {
     <div className="container my-8 mx-auto px-4 leading-normal">
 
 
-<ul>
-<li className='list-reset mb-2 p-2 text-grey-darker rounded shadow-lg bg-gray-800 text-white'>01. web develpment quiz 1 </li>
-<li className='list-reset mb-2 p-2 text-grey-darker rounded shadow-lg bg-gray-800 text-white'>01. web develpment quiz 1</li>
-<li className='list-reset mb-2 p-2 text-grey-darker rounded shadow-lg bg-gray-800 text-white'>01. web develpment quiz 1</li>
-<li className='list-reset mb-2 p-2 text-grey-darker rounded shadow-lg bg-gray-800 text-white'>01. web develpment quiz 1</li>
+
+    <div class="bg-gray-800 text-white">
+  <div class="relative">  
+  
+  <button className=" absolute right-5 top-0 mx-4 p-2  px-4 border-2 text-white text-center border-white rounded-lg hover:text-white hover:bg-gray-400 ">Start</button>
+
+    01. web develpment quiz 1<br/>
+    No of Questions : 50<br/>
+  </div>
+</div>
 
 
-</ul>
 
 
 
