@@ -9,7 +9,7 @@ export default function T(props) {
     <Layout>
  {products.map((product) => (
 
-<div key={product.image}>{product.name}</div>
+<div key={product._id}>{product._id}-{product.name}</div>
  ))}
 
 
