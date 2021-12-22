@@ -154,7 +154,7 @@ export default function Home() {
     </div>
     <div className=" justify-center relative  ">
 
-<div className=' bg-gray-900/50 absolute w-full h-full' ></div>
+<div className='bg-gray-900/50 md:bg-gray-900/0 absolute w-full h-full' ></div>
 
     <figcaption className="absolute right-0 top-24 text-lg -mt-16 text-white px-4 pt-12 z-50  block md:hidden ">
 
@@ -169,8 +169,8 @@ export default function Home() {
 
 
 <div className="shadow p-5">
-<h4 className="font-medium text-white pt-20 text-shadow-lg	">Same chats, new different experience</h4>
-      <h2 className="font-bold text-4xl text-white leading-tight  text-shadow-lg	">It looks better and cleaner!</h2>
+<h4 className="font-medium text-white pt-20 text-shadow-lg pt-12	">Same chats, new different experience</h4>
+      <h2 className="font-bold text-4xl text-white leading-tight  text-shadow-lg py-3	">It looks better and cleaner!</h2>
       <span className="font-small text-white pt-0 text-shadow-lg	 "> Your favorite messaging app just got the best looking update yet! Now it feels like a breath of fresh air.</span>
       <div id="buttons" className="font-medium flex flex-row mt-6">
         <div className="mr-3 pl-0 p-2 cursor-pointer hover:underline  text-gray-300 "><a href="#watch-video">Watch video</a></div>
