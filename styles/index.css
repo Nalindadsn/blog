@@ -26,7 +26,13 @@
     }
     
 
-     
+  
+@media (max-width: 800px) {
+  .ml-0{
+    margin-left: 3px !important;
+  }
+} 
+
       .text-shadow {
     text-shadow: 0 2px 4px rgba(0,0,0,0.10);
   }
