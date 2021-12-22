@@ -1,9 +1,10 @@
+
 import Head from 'next/head'
 import Image from 'next/image'
 import React, { useState } from "react";
 
 
-export default function Quizzes() {
+export default function Quiz() {
 
 
   
@@ -203,62 +204,42 @@ export default function Quizzes() {
 
     <div className="container my-8 mx-auto px-4 leading-normal">
 
-    <h2 className="mb-6 font-bold text-2xl text-center bg-gray-900 text-white p-2">
-      Quize name
-</h2>
 
-<div className="flex mb-4">
-  <div className="w-1/2 ">
 
-  <h2 className="mb-6 font-bold text-1xl ">
-  Question No : <span className='bg-gray-900 text-white py-2 px-3'>01</span>
-</h2>
+    <div className="">
+
+
+    <div className="relative p-2 mb-2 bg-gray-800 text-white">  
+  <button className=" absolute right-0 top-0 mt-2 mx-4 p-2  px-4 border-2 text-white text-center border-white rounded-lg hover:text-white hover:bg-gray-400 ">Start</button>
+    <div className=' mr-24'>
+        01. web develpment quiz 1 web develpment quiz 1 web develpment quiz 1 web develpment quiz 1 web develpment quiz 1 web develpment quiz 1 web develpment quiz 1 web develpment quiz 1 web develpment quiz 1<br/>
+        <hr className='bg-slate-900 mb-2'/><span className='bg-slate-900 p-2 mt-5'>No of Questions : 50</span>
+
+    </div>
   </div>
-  <div className="w-1/2 ">
 
-  <h2 className="mb-6 font-bold text-1xl text-right">
-  Time : <span className='bg-gray-900 text-white py-2 px-3'>01.02</span>
-</h2>
+  <div className="relative p-2 mb-2 bg-gray-800 text-white ">  
+  <button className=" absolute right-0 top-0 mt-2 mx-4 p-2  px-4 border-2 text-white text-center border-white rounded-lg hover:text-white hover:bg-gray-400 ">Start</button>
+    <div className=' mr-24'>
+        01. web develpment quiz 1 web develpment quiz 1 web develpment quiz 1 web develpment quiz 1 web develpment quiz 1 web develpment quiz 1 web develpment quiz 1 web develpment quiz 1 web develpment quiz 1<br/>
+        <hr className='bg-slate-900 mb-2'/><span className='bg-slate-900 p-2 mt-5'>No of Questions : 50</span>
+
+    </div>
   </div>
-</div>
-
-<h1 className="mb-8  font-medium">Icon list with Tailwind CSS</h1>
-
-
-<ul className="list-reset text-black mb-8 p-8 text-grey-darker rounded shadow-lg">
-   <li className="flex items-center mb-3">
-      <svg xmlns="http://www.w3.org/2000/svg" className="flex-none w-8 mr-2" viewBox="0 0 24 24" fill="green">
-      <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"
-            /></svg>
-      Lorem ipsum dolor sit amet consectetur adipisicing elit.
-   </li>
-   <li className="flex items-center mb-3">
-      <svg xmlns="http://www.w3.org/2000/svg" className="flex-none w-8 mr-2" viewBox="0 0 24 24" fill="green">
-      <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"
-            /></svg> Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet qui, nulla explicabo obcaecati natus atque blanditiis modi officiis itaque saepe maiores quaerat, impedit nam officia libero. Eius, dolore! Provident, est!
-   </li>
-   <li className="flex items-center mb-3">
-      <svg xmlns="http://www.w3.org/2000/svg" className="flex-none w-8 mr-2" viewBox="0 0 24 24" fill="green">
-      <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"
-            /></svg> Eius, dolore! Provident, est!
-   </li>
-   <li className="flex items-center mb-3">
-      <svg xmlns="http://www.w3.org/2000/svg" className="flex-none w-8 mr-2" viewBox="0 0 24 24" fill="black">
-      <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"
-            /></svg> Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet qui, nulla explicabo obcaecati natus.
-   </li>      
-
-</ul>
 
 </div>
 
-<div className="flex mb-4">
-  <div className="w-1/2 "></div>
-  <div className="w-1/2  text-right">
-  <button className="rounded bg-blue-500 hover:bg-blue-700 py-2 px-4 text-white mr-3"> Skip</button>
-  <button className="rounded bg-blue-500 hover:bg-blue-700 py-2 px-4 text-white"> Next</button>
-  </div>
+
+
+
+
+
+
+
+
+
 </div>
+
 
 
 
