@@ -116,6 +116,7 @@ export default function Home() {
       <a href="https://www.codeaddon.com/articles" className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2  text-base font-medium">Articles</a>
 
       <a href="https://www.codeaddon.com/playlists" className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2  text-base font-medium">Video Tutorials</a>
+      <a href="https://www.codeaddon.com/quizzes" className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2  text-base font-medium">quizzes</a>
 
       <a href="https://www.codeaddon.com/about" className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2  text-base font-medium">About Us</a>
       <a href="https://www.codeaddon.com/contact" className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2  text-base font-medium">Contact Us</a>
@@ -205,12 +206,12 @@ export default function Home() {
     
     
     <div className="flex justify-center border-t  py-5">
-      <a href="#" className="mx-4 p-2 px-4 border-2 bg-gray-900 text-white border-white rounded-lg hover:text-white hover:bg-gray-800 cursor-pointer">New Articles</a>
-      <a href="#" className="text-gray-600 mx-5 hover:text-gray-500">Most Populer</a>
 
+
+      <h2 className=' pt-12 pb-5 font-bold text-5xl text-amber-500'>- Latest Atricles -</h2>
     </div>
   </div>
-  <div className=" pt-12 pb-6 flex-1">
+  <div className=" pb-6 flex-1">
     <div className="container mx-auto">
       <div className="flex flex-wrap md:-mx-3">
         
