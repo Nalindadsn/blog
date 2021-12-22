@@ -12,8 +12,6 @@ function reducer(state, action) {
       return { ...state, darkMode: true };
     case 'DARK_MODE_OFF':
       return { ...state, darkMode: false };
- 
-      
     default:
       return state;
   }
