@@ -196,7 +196,7 @@ export default function Playlists() {
 
 
 
-              <img className="object-cover h-full w-full" src="https://res.cloudinary.com/masterdevs/image/upload/v1640231976/codeaddon/codeaddon-image-icon2_srky38.jpg" />
+              <img className="object-cover h-full w-full" src="https://res.cloudinary.com/masterdevs/image/upload/v1640117880/codeaddon/codeaddon-banner_tmtp8t.png" />
               <figcaption className="absolute text-lg -mt-16 text-white px-4">
                 <div>
                   <h1>			
@@ -237,7 +237,7 @@ export default function Playlists() {
 
 
 
-              <img className="object-cover h-full w-full" src="https://res.cloudinary.com/masterdevs/image/upload/v1640231976/codeaddon/codeaddon-image-icon2_srky38.jpg" />
+              <img className="object-cover h-full w-full" src="https://res.cloudinary.com/masterdevs/image/upload/v1640117880/codeaddon/codeaddon-banner_tmtp8t.png" />
               <figcaption className="absolute text-lg -mt-16 text-white px-4">
                 <div>
                   <h1>			
@@ -276,7 +276,7 @@ export default function Playlists() {
         <div className="md:w-1/2 px-3 mb-6 w-full">
           <div className="flex w-full h-full flex-wrap bg-gray-800 overflow-hidden rounded">
             <div className="w-2/6">
-              <img className="object-cover h-full w-full" src="https://res.cloudinary.com/masterdevs/image/upload/v1640231976/codeaddon/codeaddon-image-icon2_srky38.jpg" />
+              <img className="object-cover h-full w-full" src="https://res.cloudinary.com/masterdevs/image/upload/v1640117880/codeaddon/codeaddon-banner_tmtp8t.png" />
             </div>
             <div className="w-4/6 p-5">
               <h2 className="text-white leading-normal text-lg">How To Boost Your Traffic Of Your Blog And Destroy The Competition</h2>
@@ -303,7 +303,7 @@ export default function Playlists() {
         <div className="md:w-1/2 px-3 mb-6 w-full">
           <div className="flex w-full h-full flex-wrap bg-gray-800 overflow-hidden rounded">
             <div className="w-2/6">
-              <img className="object-cover h-full w-full" src="https://res.cloudinary.com/masterdevs/image/upload/v1640231976/codeaddon/codeaddon-image-icon2_srky38.jpg" />
+              <img className="object-cover h-full w-full" src="https://res.cloudinary.com/masterdevs/image/upload/v1640117880/codeaddon/codeaddon-banner_tmtp8t.png" />
             </div>
             <div className="w-4/6 p-5">
               <h2 className="text-white leading-normal text-lg">How To Boost Your Traffic Of Your Blog And Destroy The Competition</h2>
@@ -330,7 +330,7 @@ export default function Playlists() {
         <div className="md:w-1/2 px-3 mb-6 w-full">
           <div className="flex w-full h-full flex-wrap bg-gray-800 overflow-hidden rounded">
             <div className="w-2/6">
-              <img className="object-cover h-full w-full" src="https://res.cloudinary.com/masterdevs/image/upload/v1640231976/codeaddon/codeaddon-image-icon2_srky38.jpg" />
+              <img className="object-cover h-full w-full" src="https://res.cloudinary.com/masterdevs/image/upload/v1640117880/codeaddon/codeaddon-banner_tmtp8t.png" />
             </div>
             <div className="w-4/6 p-5">
               <h2 className="text-white leading-normal text-lg">How To Boost Your Traffic Of Your Blog And Destroy The Competition</h2>
@@ -357,7 +357,7 @@ export default function Playlists() {
         <div className="md:w-1/2 px-3 mb-6 w-full">
           <div className="flex w-full h-full flex-wrap bg-gray-800 overflow-hidden rounded">
             <div className="w-2/6">
-              <img className="object-cover h-full w-full" src="https://res.cloudinary.com/masterdevs/image/upload/v1640231976/codeaddon/codeaddon-image-icon2_srky38.jpg" />
+              <img className="object-cover h-full w-full" src="https://res.cloudinary.com/masterdevs/image/upload/v1640117880/codeaddon/codeaddon-banner_tmtp8t.png" />
             </div>
             <div className="w-4/6 p-5">
               <h2 className="text-white leading-normal text-lg">How To Boost Your Traffic Of Your Blog And Destroy The Competition</h2>
@@ -384,7 +384,7 @@ export default function Playlists() {
         <div className="md:w-1/2 px-3 mb-6 w-full">
           <div className="flex w-full h-full flex-wrap bg-gray-800 overflow-hidden rounded">
             <div className="w-2/6">
-              <img className="object-cover h-full w-full" src="https://res.cloudinary.com/masterdevs/image/upload/v1640231976/codeaddon/codeaddon-image-icon2_srky38.jpg" />
+              <img className="object-cover h-full w-full" src="https://res.cloudinary.com/masterdevs/image/upload/v1640117880/codeaddon/codeaddon-banner_tmtp8t.png" />
             </div>
             <div className="w-4/6 p-5">
               <h2 className="text-white leading-normal text-lg">How To Boost Your Traffic Of Your Blog And Destroy The Competition</h2>

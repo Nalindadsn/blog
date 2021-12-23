@@ -2,9 +2,12 @@ import Head from 'next/head'
 import Image from 'next/image'
 import styles from '../styles/Home.module.css'
 import React, { useState } from "react";
+import db from '../utils/db';
+import Product from '../models/Product';
 
-export default function Home() {
+export default function Home(props) {
 
+  const { products } = props;
   const [showMe, setShowMe] = useState(false);
   const [showMe2, setShowMe2] = useState(false);
 
@@ -217,13 +220,20 @@ export default function Home() {
     <div className="container mx-auto">
       <div className="flex flex-wrap md:-mx-3">
         
-        <div className="md:w-1/2 px-3 mb-6 w-full ">
+
+      {products.map((product) => (
+
+
+
+
+
+        <div key={product._id} className="md:w-1/2 px-3 mb-6 w-full ">
           <div className="flex w-full h-full flex-wrap bg-gray-800 overflow-hidden rounded shadow">
             <div className="w-2/6">
-              <img className="object-cover h-full w-full" src="https://res.cloudinary.com/masterdevs/image/upload/v1640231976/codeaddon/codeaddon-image-icon2_srky38.jpg" />
+              <img className="object-cover h-full w-full" src="https://res.cloudinary.com/masterdevs/image/upload/v1640117880/codeaddon/codeaddon-banner_tmtp8t.png" />
             </div>
             <div className="w-4/6 p-5">
-              <h2 className="text-white leading-normal text-lg">How To Boost Your Traffic Of Your Blog And Destroy The Competition</h2>
+              <h2 className="text-white leading-normal text-lg">{product.name}</h2>
               <div className="flex flex-wrap justify-between items-center mt-6 ">
                 <div className="inline-flex items-center shadow">
                   <div className="w-10 h-10 rounded-full overflow-hidden flex-shrink-0 ">
@@ -244,11 +254,11 @@ export default function Home() {
           </div>
         </div>
 
-        
+))}        
         <div className="md:w-1/2 px-3 mb-6 w-full">
           <div className="flex w-full h-full flex-wrap bg-gray-800 overflow-hidden rounded">
             <div className="w-2/6">
-              <img className="object-cover h-full w-full" src="https://res.cloudinary.com/masterdevs/image/upload/v1640231976/codeaddon/codeaddon-image-icon2_srky38.jpg" />
+              <img className="object-cover h-full w-full" src="https://res.cloudinary.com/masterdevs/image/upload/v1640117880/codeaddon/codeaddon-banner_tmtp8t.png" />
             </div>
             <div className="w-4/6 p-5">
               <h2 className="text-white leading-normal text-lg">How To Boost Your Traffic Of Your Blog And Destroy The Competition</h2>
@@ -275,7 +285,7 @@ export default function Home() {
         <div className="md:w-1/2 px-3 mb-6 w-full">
           <div className="flex w-full h-full flex-wrap bg-gray-800 overflow-hidden rounded">
             <div className="w-2/6">
-              <img className="object-cover h-full w-full" src="https://res.cloudinary.com/masterdevs/image/upload/v1640231976/codeaddon/codeaddon-image-icon2_srky38.jpg" />
+              <img className="object-cover h-full w-full" src="https://res.cloudinary.com/masterdevs/image/upload/v1640117880/codeaddon/codeaddon-banner_tmtp8t.png" />
             </div>
             <div className="w-4/6 p-5">
               <h2 className="text-white leading-normal text-lg">How To Boost Your Traffic Of Your Blog And Destroy The Competition</h2>
@@ -302,7 +312,7 @@ export default function Home() {
         <div className="md:w-1/2 px-3 mb-6 w-full">
           <div className="flex w-full h-full flex-wrap bg-gray-800 overflow-hidden rounded">
             <div className="w-2/6">
-              <img className="object-cover h-full w-full" src="https://res.cloudinary.com/masterdevs/image/upload/v1640231976/codeaddon/codeaddon-image-icon2_srky38.jpg" />
+              <img className="object-cover h-full w-full" src="https://res.cloudinary.com/masterdevs/image/upload/v1640117880/codeaddon/codeaddon-banner_tmtp8t.png" />
             </div>
             <div className="w-4/6 p-5">
               <h2 className="text-white leading-normal text-lg">How To Boost Your Traffic Of Your Blog And Destroy The Competition</h2>
@@ -329,7 +339,7 @@ export default function Home() {
         <div className="md:w-1/2 px-3 mb-6 w-full">
           <div className="flex w-full h-full flex-wrap bg-gray-800 overflow-hidden rounded">
             <div className="w-2/6">
-              <img className="object-cover h-full w-full" src="https://res.cloudinary.com/masterdevs/image/upload/v1640231976/codeaddon/codeaddon-image-icon2_srky38.jpg" />
+              <img className="object-cover h-full w-full" src="https://res.cloudinary.com/masterdevs/image/upload/v1640117880/codeaddon/codeaddon-banner_tmtp8t.png" />
             </div>
             <div className="w-4/6 p-5">
               <h2 className="text-white leading-normal text-lg">How To Boost Your Traffic Of Your Blog And Destroy The Competition</h2>
@@ -356,7 +366,7 @@ export default function Home() {
         <div className="md:w-1/2 px-3 mb-6 w-full">
           <div className="flex w-full h-full flex-wrap bg-gray-800 overflow-hidden rounded">
             <div className="w-2/6">
-              <img className="object-cover h-full w-full" src="https://res.cloudinary.com/masterdevs/image/upload/v1640231976/codeaddon/codeaddon-image-icon2_srky38.jpg" />
+              <img className="object-cover h-full w-full" src="https://res.cloudinary.com/masterdevs/image/upload/v1640117880/codeaddon/codeaddon-banner_tmtp8t.png" />
             </div>
             <div className="w-4/6 p-5">
               <h2 className="text-white leading-normal text-lg">How To Boost Your Traffic Of Your Blog And Destroy The Competition</h2>
@@ -508,4 +518,14 @@ export default function Home() {
       </footer>
     </div>
   )
+}
+export async function getServerSideProps() {
+  await db.connect();
+  const products = await Product.find({}).lean();
+  await db.disconnect();
+  return {
+    props: {
+      products: products.map(db.convertDocToObj),
+    },
+  };
 }
