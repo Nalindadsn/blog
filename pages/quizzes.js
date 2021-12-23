@@ -207,9 +207,11 @@ export default function Quiz() {
 
 
     <div className="">
+<h1 className='text-center'>
+  No Quizzes
+</h1>
 
-
-    <div className="relative p-3 mb-2 bg-gray-800 text-white  rounded-md shadow">  
+    {/* <div className="relative p-3 mb-2 bg-gray-800 text-white  rounded-md shadow">  
   <button className=" absolute right-0 bottom-1 mt-2 mx-4 p-2  px-4 border-2 text-white text-center border-white rounded-lg hover:text-white hover:bg-gray-400 ">Start</button>
     <div className=''>
       <span className='text-gray-800 bg-white px-2 mr-2'>01.</span>
@@ -229,7 +231,7 @@ export default function Quiz() {
         <hr className='bg-slate-900 mt-2 mb-5'/><span className='bg-slate-900 p-2 mt-5'>No of Questions : 50</span>
 
     </div>
-  </div>
+  </div> */}
 
 
 
