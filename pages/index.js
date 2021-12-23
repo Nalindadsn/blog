@@ -229,16 +229,19 @@ export default function Home(props) {
       {products?.map((product) => (
 
 
-
-
-
         <div key={product._id} className="md:w-1/2 px-3 mb-6 w-full ">
           <div className="flex w-full h-full flex-wrap bg-gray-800 overflow-hidden rounded shadow">
             <div className="w-2/6">
-              <img className="object-cover h-full w-full" src="https://res.cloudinary.com/masterdevs/image/upload/v1640117880/codeaddon/codeaddon-banner_tmtp8t.png" />
+            
+              <Image
+      src="https://res.cloudinary.com/masterdevs/image/upload/v1640117880/codeaddon/codeaddon-banner_tmtp8t.png"
+      alt={product.slug}
+      width={900}
+      height={509}
+    />
             </div>
             <div className="w-4/6 p-5">
-              <h2 className="text-white leading-normal text-lg">{product.name}</h2>
+              <h2 className="text-white leading-normal text-lg"> {product.name}</h2>
               <div className="flex flex-wrap justify-between items-center mt-6 ">
                 <div className="inline-flex items-center shadow">
                   <div className="w-10 h-10 rounded-full overflow-hidden flex-shrink-0 ">

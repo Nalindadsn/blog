@@ -1,5 +1,5 @@
 
-import Layout from '../../components/Layout'
+import Layout from '../../components/LayoutH'
 import db from '../../utils/db';
 import Product from '../../models/Product';
 
@@ -13,7 +13,7 @@ export default function PostScreen(props) {
 
 <div>{product.name}</div>
  
-test
+
 
 
     </Layout>

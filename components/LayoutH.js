@@ -5,7 +5,7 @@ import { Store } from '../utils/Store';
 
 
 
-export default function Layout({ children }) {
+export default function LayoutH({ children }) {
     const {state,dispatch}=useContext(Store);
     const {darkMode}=state;
     const [showMe, setShowMe] = useState(false);
@@ -153,16 +153,8 @@ style={{ backgroundColor: darkMode?"black":"red"}}
   <h1  className="bg-sky-300 px-2 ">T</h1>
 </div>
 </figcaption>
-    <h4 className="font-medium text-gray-300 pt-20">Same chats, new different experience</h4>
-      <h2 className="font-bold text-5xl text-white leading-tight mt-3 mb-6">It looks better and cleaner!</h2>
-      <span className="font-normal text-gray-300"> Your favorite messaging app just got the best looking update yet! Now it feels like a breath of fresh air.</span>
-      <div id="buttons" className="font-medium flex flex-row mt-6">
-        <div className="mr-3 pl-0 p-2 cursor-pointer hover:underline  text-gray-300"><a href="#watch-video">Watch video</a></div>
-        <div className="mx-4 p-2 px-4 border-2 text-white border-white rounded-lg hover:text-white hover:bg-gray-400 cursor-pointer">Download</div>
-      </div>
-      
 
-
+      <h2 className="font-bold text-5xl text-white leading-tight mt-3 mb-6 pt-20">It looks better and cleaner!</h2>
     </div>
     <div className=" justify-center relative  ">
 
@@ -181,19 +173,14 @@ style={{ backgroundColor: darkMode?"black":"red"}}
 
 
 <div className="shadow py-5 pl-5  mr-6 pr-7">
-<h4 className="font-medium text-white pt-20 text-shadow-lg pt-12	">Same chats, new different experience</h4>
-      <h2 className="font-bold text-4xl text-white leading-tight  text-shadow-lg pt-1 pb-2	">It looks better and cleaner!</h2>
+<h4 className="font-medium text-white pt-20 text-shadow-lg pt-20	">Same chats, new different experience</h4>
+
       <span className="font-small text-white pt-0 text-shadow-lg	 "> Your favorite messaging app just got the best looking update yet! Now it feels like a breath of fresh air.</span>
-      <div id="buttons" className="font-medium flex flex-row mt-4">
-        <div className="mr-3 pl-0 p-2 cursor-pointer hover:underline  text-gray-300 "><a href="#watch-video">Watch video</a></div>
-        <div className="mx-4 p-2 px-4 border-2 text-white border-white rounded-lg bg-gray-900 hover:text-white hover:bg-gray-700 cursor-pointer">Download</div>
-      </div>
+      
 </div>
 </figcaption>
 
 
-<div className='bg-white h-12'></div>
-<img className=" pb-14 object-cover h-full w-full " src="https://res.cloudinary.com/masterdevs/image/upload/v1640121452/codeaddon/codeaddon-banner-web-development_vibee4.png" />
 
 
 
