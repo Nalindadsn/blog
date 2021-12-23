@@ -152,7 +152,7 @@ export default function Home(props) {
 </div>
 </figcaption>
     <h4 className="font-medium text-gray-300 pt-20">Same chats, new different experience</h4>
-      <h2 className="font-bold text-5xl text-white leading-tight mt-3 mb-6">It looks better and cleaner!</h2>
+      <h2 className="font-bold text-5xl text-white leading-tight mt-3 mb-6">under maintenance!</h2>
       <span className="font-normal text-gray-300"> Your favorite messaging app just got the best looking update yet! Now it feels like a breath of fresh air.</span>
       <div id="buttons" className="font-medium flex flex-row mt-6">
         <a href="#watch-video" className='mx-4 p-2 px-4 border-2 text-white border-white rounded-lg hover:text-white hover:bg-gray-900 cursor-pointer'>Sign In</a>
@@ -237,8 +237,8 @@ export default function Home(props) {
               <Image
       src="https://res.cloudinary.com/masterdevs/image/upload/v1640117880/codeaddon/codeaddon-banner_tmtp8t.png"
       alt={product.name}
-      width={900}
-      height={509}
+      width={450}
+      height={254}
     />
             </div>
             <div className="w-4/6 p-5">

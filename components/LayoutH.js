@@ -169,16 +169,12 @@ style={{ backgroundColor: darkMode?"black":"red"}}
   <h1  className="bg-sky-300 px-2 ">T</h1>
 </div>
 </figcaption>
-    <figcaption className="absolute -left-5 top-0 text-lg -mt-16 text-white px-4 pt-12 block md:hidden">
 
 
 <div className="shadow py-5 pl-5  mr-6 pr-7">
-<h4 className="font-medium text-white pt-20 text-shadow-lg pt-20	">Same chats, new different experience</h4>
+<h2 className="font-bold text-5xl text-white leading-tight mt-3 mb-6 pt-20 z-50">It looks better and cleaner!</h2>
 
-      <span className="font-small text-white pt-0 text-shadow-lg	 "> Your favorite messaging app just got the best looking update yet! Now it feels like a breath of fresh air.</span>
-      
 </div>
-</figcaption>
 
 
 
