@@ -1,5 +1,6 @@
 import Head from 'next/head'
 import Image from 'next/image'
+import Link from 'next/link'
 import styles from '../styles/Home.module.css'
 import React, { useState } from "react";
 import db from '../utils/db';
@@ -235,13 +236,17 @@ export default function Home(props) {
             
               <Image
       src="https://res.cloudinary.com/masterdevs/image/upload/v1640117880/codeaddon/codeaddon-banner_tmtp8t.png"
-      alt={product.slug}
+      alt={product.name}
       width={900}
       height={509}
     />
             </div>
             <div className="w-4/6 p-5">
-              <h2 className="text-white leading-normal text-lg"> {product.name}</h2>
+              <h2 className="text-white leading-normal text-lg">
+              <Link href={`/post/${product.slug}`}>
+          <a>{product.name}</a>
+        </Link>
+                 </h2>
               <div className="flex flex-wrap justify-between items-center mt-6 ">
                 <div className="inline-flex items-center shadow">
                   <div className="w-10 h-10 rounded-full overflow-hidden flex-shrink-0 ">
