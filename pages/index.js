@@ -217,16 +217,16 @@ export default function Home() {
     <div className="container mx-auto">
       <div className="flex flex-wrap md:-mx-3">
         
-        <div className="md:w-1/2 px-3 mb-6 w-full">
-          <div className="flex w-full h-full flex-wrap bg-gray-800 overflow-hidden rounded">
+        <div className="md:w-1/2 px-3 mb-6 w-full ">
+          <div className="flex w-full h-full flex-wrap bg-gray-800 overflow-hidden rounded shadow">
             <div className="w-2/6">
-              <img className="object-cover h-full w-full" src="https://images.unsplash.com/photo-1532799755889-1247a1b7f10e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1936&q=80" />
+              <img className="object-cover h-full w-full" src="https://res.cloudinary.com/masterdevs/image/upload/v1640231976/codeaddon/codeaddon-image-icon2_srky38.jpg" />
             </div>
             <div className="w-4/6 p-5">
               <h2 className="text-white leading-normal text-lg">How To Boost Your Traffic Of Your Blog And Destroy The Competition</h2>
-              <div className="flex flex-wrap justify-between items-center mt-6">
-                <div className="inline-flex items-center">
-                  <div className="w-10 h-10 rounded-full overflow-hidden flex-shrink-0">
+              <div className="flex flex-wrap justify-between items-center mt-6 ">
+                <div className="inline-flex items-center shadow">
+                  <div className="w-10 h-10 rounded-full overflow-hidden flex-shrink-0 ">
                     <img src="https://res.cloudinary.com/masterdevs/image/upload/v1640114706/codeaddon/nalinda-dissanayaka_u5uh0z.jpg" />
                   </div>
                   <div className="flex-1 pl-2">
@@ -248,7 +248,7 @@ export default function Home() {
         <div className="md:w-1/2 px-3 mb-6 w-full">
           <div className="flex w-full h-full flex-wrap bg-gray-800 overflow-hidden rounded">
             <div className="w-2/6">
-              <img className="object-cover h-full w-full" src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2250&q=80" />
+              <img className="object-cover h-full w-full" src="https://res.cloudinary.com/masterdevs/image/upload/v1640231976/codeaddon/codeaddon-image-icon2_srky38.jpg" />
             </div>
             <div className="w-4/6 p-5">
               <h2 className="text-white leading-normal text-lg">How To Boost Your Traffic Of Your Blog And Destroy The Competition</h2>
@@ -275,7 +275,7 @@ export default function Home() {
         <div className="md:w-1/2 px-3 mb-6 w-full">
           <div className="flex w-full h-full flex-wrap bg-gray-800 overflow-hidden rounded">
             <div className="w-2/6">
-              <img className="object-cover h-full w-full" src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2250&q=80" />
+              <img className="object-cover h-full w-full" src="https://res.cloudinary.com/masterdevs/image/upload/v1640231976/codeaddon/codeaddon-image-icon2_srky38.jpg" />
             </div>
             <div className="w-4/6 p-5">
               <h2 className="text-white leading-normal text-lg">How To Boost Your Traffic Of Your Blog And Destroy The Competition</h2>
@@ -302,7 +302,7 @@ export default function Home() {
         <div className="md:w-1/2 px-3 mb-6 w-full">
           <div className="flex w-full h-full flex-wrap bg-gray-800 overflow-hidden rounded">
             <div className="w-2/6">
-              <img className="object-cover h-full w-full" src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2250&q=80" />
+              <img className="object-cover h-full w-full" src="https://res.cloudinary.com/masterdevs/image/upload/v1640231976/codeaddon/codeaddon-image-icon2_srky38.jpg" />
             </div>
             <div className="w-4/6 p-5">
               <h2 className="text-white leading-normal text-lg">How To Boost Your Traffic Of Your Blog And Destroy The Competition</h2>
@@ -329,7 +329,7 @@ export default function Home() {
         <div className="md:w-1/2 px-3 mb-6 w-full">
           <div className="flex w-full h-full flex-wrap bg-gray-800 overflow-hidden rounded">
             <div className="w-2/6">
-              <img className="object-cover h-full w-full" src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2250&q=80" />
+              <img className="object-cover h-full w-full" src="https://res.cloudinary.com/masterdevs/image/upload/v1640231976/codeaddon/codeaddon-image-icon2_srky38.jpg" />
             </div>
             <div className="w-4/6 p-5">
               <h2 className="text-white leading-normal text-lg">How To Boost Your Traffic Of Your Blog And Destroy The Competition</h2>
@@ -356,7 +356,7 @@ export default function Home() {
         <div className="md:w-1/2 px-3 mb-6 w-full">
           <div className="flex w-full h-full flex-wrap bg-gray-800 overflow-hidden rounded">
             <div className="w-2/6">
-              <img className="object-cover h-full w-full" src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2250&q=80" />
+              <img className="object-cover h-full w-full" src="https://res.cloudinary.com/masterdevs/image/upload/v1640231976/codeaddon/codeaddon-image-icon2_srky38.jpg" />
             </div>
             <div className="w-4/6 p-5">
               <h2 className="text-white leading-normal text-lg">How To Boost Your Traffic Of Your Blog And Destroy The Competition</h2>
