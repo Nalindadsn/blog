@@ -221,7 +221,7 @@ export default function Home(props) {
       <div className="flex flex-wrap md:-mx-3">
         
 
-      {products.map((product) => (
+      {products?.map((product) => (
 
 
 
@@ -255,144 +255,8 @@ export default function Home(props) {
         </div>
 
 ))}        
-        <div className="md:w-1/2 px-3 mb-6 w-full">
-          <div className="flex w-full h-full flex-wrap bg-gray-800 overflow-hidden rounded">
-            <div className="w-2/6">
-              <img className="object-cover h-full w-full" src="https://res.cloudinary.com/masterdevs/image/upload/v1640117880/codeaddon/codeaddon-banner_tmtp8t.png" />
-            </div>
-            <div className="w-4/6 p-5">
-              <h2 className="text-white leading-normal text-lg">How To Boost Your Traffic Of Your Blog And Destroy The Competition</h2>
-              <div className="flex flex-wrap justify-between items-center mt-6">
-                <div className="inline-flex items-center">
-                  <div className="w-10 h-10 rounded-full overflow-hidden flex-shrink-0">
-                    <img src="https://res.cloudinary.com/masterdevs/image/upload/v1640114706/codeaddon/nalinda-dissanayaka_u5uh0z.jpg" />
-                  </div>
-                  <div className="flex-1 pl-2">
-                    <h2 className="text-white mb-1">Nalinda Dissanayaka</h2>
-                    <p className="text-white opacity-50 text-xs">May 18</p>
-                  </div>
-                </div>
-                <span className="text-white opacity-50">
-              <svg className="fill-current w-5 h-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 459 459">
-                <path d="M357 0H102C73.95 0 51 22.95 51 51v408l178.5-76.5L408 459V51c0-28.05-22.95-51-51-51z"/>
-              </svg>
-            </span>
-              </div>
-            </div>
-          </div>
-        </div>
-        
-        <div className="md:w-1/2 px-3 mb-6 w-full">
-          <div className="flex w-full h-full flex-wrap bg-gray-800 overflow-hidden rounded">
-            <div className="w-2/6">
-              <img className="object-cover h-full w-full" src="https://res.cloudinary.com/masterdevs/image/upload/v1640117880/codeaddon/codeaddon-banner_tmtp8t.png" />
-            </div>
-            <div className="w-4/6 p-5">
-              <h2 className="text-white leading-normal text-lg">How To Boost Your Traffic Of Your Blog And Destroy The Competition</h2>
-              <div className="flex flex-wrap justify-between items-center mt-6">
-                <div className="inline-flex items-center">
-                  <div className="w-10 h-10 rounded-full overflow-hidden flex-shrink-0">
-                    <img src="https://res.cloudinary.com/masterdevs/image/upload/v1640114706/codeaddon/nalinda-dissanayaka_u5uh0z.jpg" />
-                  </div>
-                  <div className="flex-1 pl-2">
-                    <h2 className="text-white mb-1">Nalinda Dissanayaka</h2>
-                    <p className="text-white opacity-50 text-xs">May 18</p>
-                  </div>
-                </div>
-                <span className="text-white opacity-50">
-              <svg className="fill-current w-5 h-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 459 459">
-                <path d="M357 0H102C73.95 0 51 22.95 51 51v408l178.5-76.5L408 459V51c0-28.05-22.95-51-51-51z"/>
-              </svg>
-            </span>
-              </div>
-            </div>
-          </div>
-        </div>
-        
-        <div className="md:w-1/2 px-3 mb-6 w-full">
-          <div className="flex w-full h-full flex-wrap bg-gray-800 overflow-hidden rounded">
-            <div className="w-2/6">
-              <img className="object-cover h-full w-full" src="https://res.cloudinary.com/masterdevs/image/upload/v1640117880/codeaddon/codeaddon-banner_tmtp8t.png" />
-            </div>
-            <div className="w-4/6 p-5">
-              <h2 className="text-white leading-normal text-lg">How To Boost Your Traffic Of Your Blog And Destroy The Competition</h2>
-              <div className="flex flex-wrap justify-between items-center mt-6">
-                <div className="inline-flex items-center">
-                  <div className="w-10 h-10 rounded-full overflow-hidden flex-shrink-0">
-                    <img src="https://res.cloudinary.com/masterdevs/image/upload/v1640114706/codeaddon/nalinda-dissanayaka_u5uh0z.jpg" />
-                  </div>
-                  <div className="flex-1 pl-2">
-                    <h2 className="text-white mb-1">Nalinda Dissanayaka</h2>
-                    <p className="text-white opacity-50 text-xs">May 18</p>
-                  </div>
-                </div>
-                <span className="text-white opacity-50">
-              <svg className="fill-current w-5 h-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 459 459">
-                <path d="M357 0H102C73.95 0 51 22.95 51 51v408l178.5-76.5L408 459V51c0-28.05-22.95-51-51-51z"/>
-              </svg>
-            </span>
-              </div>
-            </div>
-          </div>
-        </div>
-        
-        <div className="md:w-1/2 px-3 mb-6 w-full">
-          <div className="flex w-full h-full flex-wrap bg-gray-800 overflow-hidden rounded">
-            <div className="w-2/6">
-              <img className="object-cover h-full w-full" src="https://res.cloudinary.com/masterdevs/image/upload/v1640117880/codeaddon/codeaddon-banner_tmtp8t.png" />
-            </div>
-            <div className="w-4/6 p-5">
-              <h2 className="text-white leading-normal text-lg">How To Boost Your Traffic Of Your Blog And Destroy The Competition</h2>
-              <div className="flex flex-wrap justify-between items-center mt-6">
-                <div className="inline-flex items-center">
-                  <div className="w-10 h-10 rounded-full overflow-hidden flex-shrink-0">
-                    <img src="https://res.cloudinary.com/masterdevs/image/upload/v1640114706/codeaddon/nalinda-dissanayaka_u5uh0z.jpg" />
-                  </div>
-                  <div className="flex-1 pl-2">
-                    <h2 className="text-white mb-1">Nalinda Dissanayaka</h2>
-                    <p className="text-white opacity-50 text-xs">May 18</p>
-                  </div>
-                </div>
-                <span className="text-white opacity-50">
-              <svg className="fill-current w-5 h-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 459 459">
-                <path d="M357 0H102C73.95 0 51 22.95 51 51v408l178.5-76.5L408 459V51c0-28.05-22.95-51-51-51z"/>
-              </svg>
-            </span>
-              </div>
-            </div>
-          </div>
-        </div>
-        
-        <div className="md:w-1/2 px-3 mb-6 w-full">
-          <div className="flex w-full h-full flex-wrap bg-gray-800 overflow-hidden rounded">
-            <div className="w-2/6">
-              <img className="object-cover h-full w-full" src="https://res.cloudinary.com/masterdevs/image/upload/v1640117880/codeaddon/codeaddon-banner_tmtp8t.png" />
-            </div>
-            <div className="w-4/6 p-5">
-              <h2 className="text-white leading-normal text-lg">How To Boost Your Traffic Of Your Blog And Destroy The Competition</h2>
-              <div className="flex flex-wrap justify-between items-center mt-6">
-                <div className="inline-flex items-center">
-                  <div className="w-10 h-10 rounded-full overflow-hidden flex-shrink-0">
-                    <img src="https://res.cloudinary.com/masterdevs/image/upload/v1640114706/codeaddon/nalinda-dissanayaka_u5uh0z.jpg" />
-                  </div>
-                  <div className="flex-1 pl-2">
-                    <h2 className="text-white mb-1">Nalinda Dissanayaka</h2>
-                    <p className="text-white opacity-50 text-xs">May 18</p>
-                  </div>
-                </div>
-                <span className="text-white opacity-50">
-              <svg className="fill-current w-5 h-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 459 459">
-                <path d="M357 0H102C73.95 0 51 22.95 51 51v408l178.5-76.5L408 459V51c0-28.05-22.95-51-51-51z"/>
-              </svg>
-            </span>
-              </div>
-            </div>
-          </div>
-        </div>
-
-
-
-
+      
+      
       </div>
       <div className="text-center">
         <a href="https://www.codeaddon.com/articles" className="border border-gray-600 text-gray-600 px-4 py-2 rounded-full hover:bg-gray-600 hover:text-white">Show More</a>
