@@ -210,22 +210,15 @@ export default function Quiz() {
 
 
     <div className="relative p-2 mb-2 bg-gray-800 text-white">  
-  <button className=" absolute right-0 top-0 mt-2 mx-4 p-2  px-4 border-2 text-white text-center border-white rounded-lg hover:text-white hover:bg-gray-400 ">Start</button>
-    <div className=' mr-24'>
+  <button className=" absolute right-0 bottom-1 mt-2 mx-4 p-2  px-4 border-2 text-white text-center border-white rounded-lg hover:text-white hover:bg-gray-400 ">Start</button>
+    <div className=''>
         01. web develpment quiz 1 web develpment quiz 1 web develpment quiz 1 web develpment quiz 1 web develpment quiz 1 web develpment quiz 1 web develpment quiz 1 web develpment quiz 1 web develpment quiz 1<br/>
-        <hr className='bg-slate-900 mb-2'/><span className='bg-slate-900 p-2 mt-5'>No of Questions : 50</span>
+        <hr className='bg-slate-900 mt-2 mb-5'/><span className='bg-slate-900 p-2 mt-5'>No of Questions : 50</span>
 
     </div>
   </div>
 
-  <div className="relative p-2 mb-2 bg-gray-800 text-white ">  
-  <button className=" absolute right-0 top-0 mt-2 mx-4 p-2  px-4 border-2 text-white text-center border-white rounded-lg hover:text-white hover:bg-gray-400 ">Start</button>
-    <div className=' mr-24'>
-        01. web develpment quiz 1 web develpment quiz 1 web develpment quiz 1 web develpment quiz 1 web develpment quiz 1 web develpment quiz 1 web develpment quiz 1 web develpment quiz 1 web develpment quiz 1<br/>
-        <hr className='bg-slate-900 mb-2'/><span className='bg-slate-900 p-2 mt-5'>No of Questions : 50</span>
 
-    </div>
-  </div>
 
 </div>
 
