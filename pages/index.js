@@ -63,14 +63,13 @@ export default function Home(props) {
         <div className="hidden md:block md:ml-2 lg:ml-6">
           <div className="flex space-x-4">
             <Link href="/">
-            
-            <a className="bg-gray-900 text-white px-3 py-2 rounded-md text-sm font-medium" aria-current="page">Home</a>
+              <a className="bg-gray-900 text-white px-3 py-2 rounded-md text-sm font-medium" aria-current="page">Home</a>
             </Link>
             <Link href="/articles">
-                        <a className="ml-1  text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Articles</a>
+              <a className="ml-1  text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Articles</a>
             </Link>
             <Link href="/playlists">
-                        <a className="ml-1 text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Videos</a>
+              <a className="ml-1 text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Videos</a>
             </Link>
             <Link href="/quizzes">            
             <a className="ml-1 text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Quizzes</a>
@@ -112,17 +111,14 @@ export default function Home(props) {
           <div  className="origin-top-right absolute right-0 mt-2 w-48 rounded-md shadow-lg py-1 bg-white ring-1 ring-black ring-opacity-5 focus:outline-none" role="menu" aria-orientation="vertical" aria-labelledby="user-menu-button" tabIndex="-1"  style={{
         display: showMe2?"block":"none"
       }}>
-        <Link href="/profile">            <a className="block px-4 py-2 text-sm text-gray-700" role="menuitem" tabIndex="-1" id="user-menu-item-0">Your Profile</a>
-
-        
+        <Link href="/profile">
+          <a className="block px-4 py-2 text-sm text-gray-700" role="menuitem" tabIndex="-1" id="user-menu-item-0">Your Profile</a>
         </Link>
-        <Link href="/settings">            <a className="block px-4 py-2 text-sm text-gray-700" role="menuitem" tabIndex="-1" id="user-menu-item-1">Settings</a>
-
-
+        <Link href="/settings">
+          <a className="block px-4 py-2 text-sm text-gray-700" role="menuitem" tabIndex="-1" id="user-menu-item-1">Settings</a>
         </Link>
         <Link href="/logout">
-                    <a className="block px-4 py-2 text-sm text-gray-700" role="menuitem" tabIndex="-1" id="user-menu-item-2">Sign out</a>
-
+          <a className="block px-4 py-2 text-sm text-gray-700" role="menuitem" tabIndex="-1" id="user-menu-item-2">Sign out</a>
         </Link>
           </div>
         </div>
@@ -139,19 +135,15 @@ export default function Home(props) {
     
     <div className=" space-y-1">
       <Link href="/">
-      
       <a className="bg-gray-700   text-white block px-3 py-2  text-base font-medium" aria-current="page">Home</a>
       </Link>
       <Link href="/articles">
       <a className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2  text-base font-medium">Articles</a>
-      
       </Link>
       <Link href="/playlists">
-      
       <a className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2  text-base font-medium">Video Tutorials</a>
       </Link>
       <Link href="/quizzes">
-      
       <a className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2  text-base font-medium">quizzes</a>
       </Link>
       <Link href="/about">
@@ -160,7 +152,6 @@ export default function Home(props) {
       </Link>
       <Link href="/contact">
       <a className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2  text-base font-medium">Contact Us</a>
-      
       </Link>
 
 
