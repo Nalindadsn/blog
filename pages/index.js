@@ -42,7 +42,7 @@ export default function Home(props) {
     <div className="relative flex items-center justify-between h-16">
       <div className="absolute inset-y-0 left-0 flex items-center md:hidden">
 
-        <button  onClick={toggle} type="button" className="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white" aria-controls="mobile-menu" aria-expanded="false">
+        <button  onClick={toggle} type="button" className="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white z-50" aria-controls="mobile-menu" aria-expanded="false">
           <span className="sr-only">Open main menu</span>
           
           
@@ -129,39 +129,56 @@ export default function Home(props) {
 
 
 
-  <div className="sm:hidden bg-gray-900" id="mobile-menu"  style={{
-        display: showMe?"block":"none"
-      }}>
-    
-    <div className=" space-y-1">
-      <Link href="/">
-      <a className="bg-gray-700   text-white block px-3 py-2  text-base font-medium" aria-current="page">Home</a>
-      </Link>
-      <Link href="/articles">
-      <a className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2  text-base font-medium">Articles</a>
-      </Link>
-      <Link href="/playlists">
-      <a className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2  text-base font-medium">Video Tutorials</a>
-      </Link>
-      <Link href="/quizzes">
-      <a className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2  text-base font-medium">quizzes</a>
-      </Link>
-      <Link href="/about">
-      
-      <a className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2  text-base font-medium">About Us</a>
-      </Link>
-      <Link href="/contact">
-      <a className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2  text-base font-medium">Contact Us</a>
-      </Link>
-
-
-
-
-    </div>
-  </div>
 </nav>
 
 
+
+<aside id="sidebar" className="z-40 bg-gray-800 text-gray-100 md:w-64 w-3/4 space-y-6 pt-6 px-0 absolute inset-y-0 left-0 transform md:relative md:translate-x-0 transition duration-200 ease-in-out  md:flex md:flex-col md:justify-between overflow-y-auto hidden md:block  hdd" data-dev-hint="sidebar; px-0 for frameless; px-2 for visually inset the navigation"  style={
+          showMe!==""?(showMe?{ display:"block"}:{display:"none" }):({})
+      }>
+        <div className="flex flex-col space-y-6" data-dev-hint="optional div for having an extra footer navigation">
+    
+     
+          
+          <a href="#" className="text-white flex items-center space-x-2 px-4" title="Your App is cool">
+            
+            </a>
+           
+            <nav data-dev-hint="main navigation">
+                <a href="https://www.codeaddon.com/" className="flex items-center space-x-2 py-2 px-4 transition duration-200 hover:bg-gray-700 hover:text-white">
+                    <i className="fa fa-home"></i>
+                    <span>Home</span>
+                </a>
+                <a href="https://www.codeaddon.com/articles" className="flex items-center space-x-2 py-2 px-4 transition duration-200 hover:bg-gray-700 hover:text-white">
+                    <i className="fa fa-book"></i>
+                    <span>Articles</span>
+                </a>
+                <a href="https://www.codeaddon.com/playlists" className="flex items-center space-x-2 py-2 px-4 transition duration-200 hover:bg-gray-700 hover:text-white">
+                <i className="fa fa-youtube-play"></i>
+                    <span>Video Tutorials</span>
+                </a>
+                <a href="https://www.codeaddon.com/quizzes" className="flex items-center space-x-2 py-2 px-4 transition duration-200 bg-gray-700 text-white hover:bg-gray-700 hover:text-white">
+                <i className="fa fa-sticky-note"></i>
+                    <span>Quizzes</span>
+                </a>
+                <a href="https://www.codeaddon.com/about" className="flex items-center space-x-2 py-2 px-4 transition duration-200 hover:bg-gray-700 hover:text-white">
+                <i className="fa fa-info"></i>
+                    <span>About Us</span>
+                </a>
+                <a href="https://www.codeaddon.com/contact" className="flex items-center space-x-2 py-2 px-4 transition duration-200 hover:bg-gray-700 hover:text-white">
+                <i className="fa fa-envelope"></i>
+                    <span>Contact Us</span>
+                </a>
+                <a href="https://www.codeaddon.com/contact" className="flex items-center space-x-2 py-2 px-4 transition duration-200 hover:bg-gray-700 hover:text-white bg-red-500">
+                <i className="fa fa-envelope"></i>
+                    <span>LOGOUT</span>
+                </a>
+                
+            </nav>
+        </div>
+
+
+    </aside>
 
 {/* //------------------- */}
 
