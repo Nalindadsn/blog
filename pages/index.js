@@ -133,7 +133,7 @@ export default function Home(props) {
 
 
 
-<aside id="sidebar" className="z-40 bg-gray-800 text-gray-100 md:w-64 w-3/4 space-y-6 pt-6 px-0 absolute inset-y-0 left-0 transform md:relative md:translate-x-0 transition duration-200 ease-in-out  md:flex md:flex-col md:justify-between overflow-y-auto hidden md:block  hdd" data-dev-hint="sidebar; px-0 for frameless; px-2 for visually inset the navigation"  style={
+<aside id="sidebar" className="z-40 bg-gray-800 text-gray-100 md:w-64 w-3/4 space-y-6 pt-6 px-0  inset-y-0 left-0 transform md:relative md:translate-x-0 transition duration-200 ease-in-out  md:flex md:flex-col md:justify-between overflow-y-auto hidden md:block  fixed" data-dev-hint="sidebar; px-0 for frameless; px-2 for visually inset the navigation"  style={
           showMe!==""?(showMe?{ display:"block"}:{display:"none" }):({})
       }>
         <div className="flex flex-col space-y-6" data-dev-hint="optional div for having an extra footer navigation">
