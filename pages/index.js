@@ -243,7 +243,7 @@ export default function Home(props) {
 
 <div className='text-center  w-full p-5'>
 {categories?.map((category) => (
-      <a href='' key={category._id} className="md:w-1/5 px-3 mb-6 bg-gray-800 text-white p-2 m-1 inline-block">
+      <a href='' key={category._id} className="md:w-1/5 px-3 mb-1 bg-gray-800 text-white p-2 m-1 inline-block">
         {category.name}
       </a>
       ))}
