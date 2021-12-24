@@ -1,6 +1,172 @@
+import bcrypt from 'bcryptjs'
 const data = {
-    products: [
-
+  users: [
+    {
+      name: 'Admin',
+      email: 'admin@example.com',
+      password: bcrypt.hashSync('123456'),
+      isAdmin: true,
+    },
+    {
+      name: 'User',
+      email: 'user@example.com',
+      password: bcrypt.hashSync('123456'),
+      isAdmin: false,
+    },
+  ],
+  playlist: [
+    {
+      user: '613f3c0b217785ee9b399d9c',
+      name: 'playlist1',
+      slug: 'playlist-1',
+      category: 'Shirts',
+      image: '/images/shirt1.jpg',
+      price: 70,
+      type: 'video',
+      description: 'A popular shirt',
+    },
+    {
+      user: '613f3c0b217785ee9b399d9c',
+      name: 'playlist2',
+      slug: 'playlist-2',
+      category: 'Shirts',
+      image: '/images/shirt1.jpg',
+      price: 80,
+      type: 'video',
+      description: 'A popular shirt',
+    },
+    {
+      user: '613f3c0b217785ee9b399d9c',
+      name: 'playlist2',
+      slug: 'playlist-3',
+      category: 'Shirts',
+      image: '/images/shirt1.jpg',
+      price: 80,
+      type: 'video',
+      description: 'A popular shirt',
+    },
+    {
+      user: '613f3c0b217785ee9b399d9c',
+      name: 'playlist2',
+      slug: 'playlist-4',
+      category: 'Shirts',
+      image: '/images/shirt1.jpg',
+      price: 80,
+      type: 'video',
+      description: 'A popular shirt',
+    },
+    {
+      user: '613f3c0b217785ee9b399d9c',
+      name: 'playlist2',
+      slug: 'playlist-5',
+      category: 'Shirts',
+      image: '/images/shirt1.jpg',
+      price: 80,
+      type: 'video',
+      description: 'A popular shirt',
+    },
+    {
+      user: '613f3c0b217785ee9b399d9c',
+      name: 'playlist2',
+      slug: 'playlist-6',
+      category: 'Shirts',
+      image: '/images/shirt1.jpg',
+      price: 80,
+      type: 'video',
+      description: 'A popular shirt',
+    },
+    {
+      user: '613f3c0b217785ee9b399d9c',
+      name: 'playlist2',
+      slug: 'playlist-7',
+      category: 'Shirts',
+      image: '/images/shirt1.jpg',
+      price: 80,
+      type: 'video',
+      description: 'A popular shirt',
+    },
+    {
+      user: '613f3c0b217785ee9b399d9c',
+      name: 'playlist2',
+      slug: 'playlist-8',
+      category: 'Shirts',
+      image: '/images/shirt1.jpg',
+      price: 80,
+      type: 'video',
+      description: 'A popular shirt',
+    },
+    {
+      user: '613f3c0b217785ee9b399d9c',
+      name: 'playlist2',
+      slug: 'playlist-9',
+      category: 'Shirts',
+      image: '/images/shirt1.jpg',
+      price: 80,
+      type: 'video',
+      description: 'A popular shirt',
+    },
+    {
+      user: '613f3c0b217785ee9b399d9c',
+      name: 'playlist2',
+      slug: 'playlist-10',
+      category: 'Shirts',
+      image: '/images/shirt1.jpg',
+      price: 80,
+      type: 'video',
+      description: 'A popular shirt',
+    },
+    {
+      user: '613f3c0b217785ee9b399d9c',
+      name: 'playlist2',
+      slug: 'playlist-11',
+      category: 'Shirts',
+      image: '/images/shirt1.jpg',
+      price: 80,
+      type: 'video',
+      description: 'A popular shirt',
+    },
+    {
+      user: '613f3c0b217785ee9b399d9c',
+      name: 'playlist2',
+      slug: 'playlist-12',
+      category: 'Shirts',
+      image: '/images/shirt1.jpg',
+      price: 80,
+      type: 'video',
+      description: 'A popular shirt',
+    },
+    {
+      user: '613f3c0b217785ee9b399d9c',
+      name: 'playlist2',
+      slug: 'playlist-13',
+      category: 'Shirts',
+      image: '/images/shirt1.jpg',
+      price: 80,
+      type: 'video',
+      description: 'A popular shirt',
+    },
+    {
+      user: '613f3c0b217785ee9b399d9c',
+      name: 'playlist2',
+      slug: 'playlist-14',
+      category: 'Shirts',
+      image: '/images/shirt1.jpg',
+      price: 80,
+      type: 'video',
+      description: 'A popular shirt',
+    },
+    {
+      user: '613f3c0b217785ee9b399d9c',
+      name: 'playlist2',
+      slug: 'playlist-15',
+      category: 'Shirts',
+      image: '/images/shirt1.jpg',
+      price: 80,
+      type: 'video',
+      description: 'A popular shirt',
+    },
+  ],
+  products: [
       {
         name: 'Mysql Queries',
         slug: 'mysql-queries',
@@ -73,6 +239,58 @@ const data = {
         countInStock: 20,
         description: 'How to create a responsive website?',
       },
-    ],
-  };
-  export default data;
+  ],
+    categories: [
+
+      {
+        name: 'HTML & CSS',
+        slug: 'html-css',
+        image: 'https://res.cloudinary.com/masterdevs/image/upload/v1639856155/codeaddon/3_uwf0hd.jpg',
+        description: 'HTML & CSS'
+      },
+      {
+        name: 'PHP & MYSQL',
+        slug: 'php-mysql',
+        image: 'https://res.cloudinary.com/masterdevs/image/upload/v1640231976/codeaddon/codeaddon-image-icon2_srky38.jpg',
+        description: 'PHP & MYSQL'
+      },
+      {
+        name: 'Javascript',
+        slug: 'javascript',
+        image: 'https://res.cloudinary.com/masterdevs/image/upload/v1640231976/codeaddon/codeaddon-image-icon2_srky38.jpg',
+        description: 'Javascript'
+      },
+      {
+        name: 'Reactjs',
+        slug: 'reactjs',
+        image: 'https://res.cloudinary.com/masterdevs/image/upload/v1640231976/codeaddon/codeaddon-image-icon2_srky38.jpg',
+        description: 'Reactjs'
+      },
+      {
+        name: 'Nextjs',
+        slug: 'nextjs',
+        image: 'https://res.cloudinary.com/masterdevs/image/upload/v1640231976/codeaddon/codeaddon-image-icon2_srky38.jpg',
+        description: 'Nextjs',
+      },
+      {
+        name: 'PHP',
+        slug: 'php',
+        image: 'https://res.cloudinary.com/masterdevs/image/upload/v1640231976/codeaddon/codeaddon-image-icon2_srky38.jpg',
+        description: 'PHP',
+      },
+      {
+        name: 'MYSQL',
+        slug: 'mysql',
+        image: 'https://res.cloudinary.com/masterdevs/image/upload/v1640231976/codeaddon/codeaddon-image-icon2_srky38.jpg',
+        description: 'MYSQL',
+      },
+      {
+        name: 'HTML',
+        slug: 'html',
+        image: 'https://res.cloudinary.com/masterdevs/image/upload/v1640231976/codeaddon/codeaddon-image-icon2_srky38.jpg',
+        description: 'HTML',
+      },
+
+    ]
+}
+export default data
