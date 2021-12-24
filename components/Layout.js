@@ -77,7 +77,7 @@ export default function Layout({ children },props) {
       </div>
       <div className="flex-1 flex items-center  md:items-stretch ">
         <div className="flex-shrink-0 flex items-center text-white">
-         <Link href="/"><a className='font-bold '> <span className='text-amber-500 pl-8 md:pl-0 sm:pl-0 '><i className="fa fa-chevron-left"></i>CODE<i className="fa fa-chevron-right"></i></span>ADDON</a></Link>
+         <Link href="/"><a className='font-bold pl-0 md:pl-0 sm:pl-0'> <span className='text-amber-500 pl-0 md:pl-0 sm:pl-0 '><i className="fa fa-chevron-left"></i>CODE<i className="fa fa-chevron-right"></i></span>ADDON</a></Link>
 
         </div>
         <div className="hidden md:block md:ml-2 lg:ml-6">
