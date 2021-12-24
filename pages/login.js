@@ -1,26 +1,41 @@
 
 import axios from 'axios';
-import React, { useState } from "react";
-
+import React, { useContext, useEffect, useState } from 'react';
+import { Store } from '../utils/Store';
+import Cookies from 'js-cookie';
+import { useRouter } from 'next/router';
 import Layout from '../components/Layout'
 
 
 export default function Login() {
+    const router = useRouter();
+    const { redirect } = router.query; // login?redirect=/shipping
+    const { state, dispatch } = useContext(Store);
+    const { userInfo } = state;
+    useEffect(() => {
+      if (userInfo) {
+        router.push('/');
+      }
+    }, []);
+  
+
     const [email,setEmail]=useState('')
     const [password,setPassword]=useState('')
     const submitHandler = async(e) => {
 e.preventDefault()
 try {
 const {data}=await axios.post('/api/users/login',{email,password})
-    alert('success')
+dispatch({ type: 'USER_LOGIN', payload: data });
+Cookies.set('userInfo', data);
+router.push(redirect || '/');
 } catch (err) {
-    alert(err.message)
+    alert(err.response.data ?err.response.data.message : err.message)
    
 }
       };
     return (
     <Layout>---------
-        <form onSubmit={submitHandler} >
+        <form className='pt-20' onSubmit={submitHandler} >
             <input type="text" name="email" id="email" className="border" 
             onChange={e=>setEmail(e=e.target.value)}
              /><br/>

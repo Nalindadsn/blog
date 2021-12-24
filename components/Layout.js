@@ -1,11 +1,15 @@
 import Head from 'next/head';
 
+import Image from 'next/image'
+import Link from 'next/link'
 import React, { useState,useContext } from "react";
 import { Store } from '../utils/Store';
-
+import { useRouter } from 'next/router';
 
 
 export default function Layout({ children }) {
+  const router = useRouter();
+
     const {state,dispatch}=useContext(Store);
     const {darkMode}=state;
     const [showMe, setShowMe] = useState(false);
@@ -18,7 +22,25 @@ export default function Layout({ children }) {
     function toggleuser(){
       setShowMe2(!showMe2);
     }
-  
+    const darkModeChangeHandler = () => {
+      dispatch({ type: darkMode ? 'DARK_MODE_OFF' : 'DARK_MODE_ON' });
+      const newDarkMode = !darkMode;
+      Cookies.set('darkMode', newDarkMode ? 'ON' : 'OFF');
+    };
+    const [anchorEl, setAnchorEl] = useState(null);
+    const loginClickHandler = (e) => {
+      setAnchorEl(e.currentTarget);
+    };
+    const loginMenuCloseHandler = () => {
+      setAnchorEl(null);
+    };
+    const logoutClickHandler = () => {
+      setAnchorEl(null);
+      dispatch({ type: 'USER_LOGOUT' });
+      Cookies.remove('userInfo');
+      Cookies.remove('cartItems');
+      router.push('/');
+    };
     
   return (
     <div>
@@ -32,17 +54,13 @@ export default function Layout({ children }) {
 
     <main>
 
-    {/* 
-style={{ backgroundColor: darkMode?"black":"red"}} 
-      */}
- 
 
- <nav className="bg-gray-800 w-full h-16  px-1   shadow-md fixed z-50" >
+    <nav className="bg-gray-800 w-full h-16  px-1   shadow-md fixed z-50" >
   <div className="max-w-7xl mx-0 p-0 sm:px-2 lg:px-6">
     <div className="relative flex items-center justify-between h-16">
       <div className="absolute inset-y-0 left-0 flex items-center md:hidden">
 
-        <button  onClick={toggle} type="button" className="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white" aria-controls="mobile-menu" aria-expanded="false">
+        <button  onClick={toggle} type="button" className="inline-flex items-center justify-center p-2  text-gray-400 hover:text-white bg-gray-700/10 hover:bg-gray-700/50 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white fixed top-16 z-50" aria-controls="mobile-menu" aria-expanded="false">
           <span className="sr-only">Open main menu</span>
           
           
@@ -57,21 +75,30 @@ style={{ backgroundColor: darkMode?"black":"red"}}
       </div>
       <div className="flex-1 flex items-center  md:items-stretch ">
         <div className="flex-shrink-0 flex items-center text-white">
-         <a href="https://www.codeaddon.com/" className='font-bold '> <span className='text-amber-500 pl-8 md:pl-0 '><i className="fa fa-chevron-left"></i>CODE<i className="fa fa-chevron-right"></i></span>ADDON</a>
+         <Link href="/"><a className='font-bold '> <span className='text-amber-500 pl-8 md:pl-0 sm:pl-0 '><i className="fa fa-chevron-left"></i>CODE<i className="fa fa-chevron-right"></i></span>ADDON</a></Link>
 
         </div>
         <div className="hidden md:block md:ml-2 lg:ml-6">
           <div className="flex space-x-4">
+            <Link href="/">
+              <a className="bg-gray-900 text-white px-3 py-2 rounded-md text-sm font-medium" aria-current="page">Home</a>
+            </Link>
+            <Link href="/articles">
+              <a className="ml-1  text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Articles</a>
+            </Link>
+            <Link href="/playlists">
+              <a className="ml-1 text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Videos</a>
+            </Link>
+            <Link href="/quizzes">            
+            <a className="ml-1 text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Quizzes</a>
+            </Link>
+            <Link href="/about">
+            <a className="ml-1 text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">About</a>
+            </Link>
+            <Link href="/contact">
+            <a className="ml-1 text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Contact</a>
+            </Link>
 
-            <a href="https://www.codeaddon.com/" className="bg-gray-900 text-white px-3 py-2 rounded-md text-sm font-medium" aria-current="page">Home</a>
-
-            <a href="https://www.codeaddon.com/articles" className="ml-1  text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Articles</a>
-
-            <a href="https://www.codeaddon.com/playlists" className="ml-1 text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Videos</a>
-            <a href="https://www.codeaddon.com/quizzes" className="ml-1 text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Quizzes</a>
-
-            <a href="https://www.codeaddon.com/about" className="ml-1 text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">About</a>
-            <a href="https://www.codeaddon.com/contact" className="ml-1 text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Contact</a>
           </div>
         </div>
       </div>
@@ -84,12 +111,14 @@ style={{ backgroundColor: darkMode?"black":"red"}}
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9" />
           </svg>
         </button>
-        <a href='' className="border-2 text-white border-white  py-1 px-3 mr-1 rounded-full text-gray-400 hover:text-gray-800 hover:bg-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white">
+        <Link href='/login'>
+        <a className="border-2 text-white border-white  py-1 px-3 mr-1 rounded-full text-gray-400 hover:text-gray-800 hover:bg-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white">
           Login
         </a>
-        <a href='' className="border-2 text-white border-white  py-1 px-3  rounded-full text-gray-400 hover:text-gray-800 hover:bg-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white">
+        </Link>
+        {/* <a href='' className="border-2 text-white border-white  py-1 px-3  rounded-full text-gray-400 hover:text-gray-800 hover:bg-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white">
           Register
-        </a>
+        </a> */}
         <div className="ml-3 relative">
           <div>
             {/* <button type="button" className="bg-gray-800 flex text-sm rounded-full focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white" id="user-menu-button" aria-expanded="false" aria-haspopup="true">
@@ -102,10 +131,15 @@ style={{ backgroundColor: darkMode?"black":"red"}}
           <div  className="origin-top-right absolute right-0 mt-2 w-48 rounded-md shadow-lg py-1 bg-white ring-1 ring-black ring-opacity-5 focus:outline-none" role="menu" aria-orientation="vertical" aria-labelledby="user-menu-button" tabIndex="-1"  style={{
         display: showMe2?"block":"none"
       }}>
-
-            <a href="https://www.codeaddon.com/profile" className="block px-4 py-2 text-sm text-gray-700" role="menuitem" tabIndex="-1" id="user-menu-item-0">Your Profile</a>
-            <a href="https://www.codeaddon.com/settings" className="block px-4 py-2 text-sm text-gray-700" role="menuitem" tabIndex="-1" id="user-menu-item-1">Settings</a>
-            <a href="https://www.codeaddon.com/logout" className="block px-4 py-2 text-sm text-gray-700" role="menuitem" tabIndex="-1" id="user-menu-item-2">Sign out</a>
+        <Link href="/profile">
+          <a className="block px-4 py-2 text-sm text-gray-700" role="menuitem" tabIndex="-1" id="user-menu-item-0">Your Profile</a>
+        </Link>
+        <Link href="/settings">
+          <a className="block px-4 py-2 text-sm text-gray-700" role="menuitem" tabIndex="-1" id="user-menu-item-1">Settings</a>
+        </Link>
+        <Link href="/logout">
+          <a className="block px-4 py-2 text-sm text-gray-700" role="menuitem" tabIndex="-1" id="user-menu-item-2">Sign out</a>
+        </Link>
           </div>
         </div>
       </div>
@@ -115,105 +149,67 @@ style={{ backgroundColor: darkMode?"black":"red"}}
 
 
 
-  <div className="sm:hidden bg-gray-900" id="mobile-menu"  style={{
-        display: showMe?"block":"none"
-      }}>
-    
-    <div className=" space-y-1">
-
-      <a href="https://www.codeaddon.com/" className="bg-gray-700   text-white block px-3 py-2  text-base font-medium" aria-current="page">Home</a>
-
-      <a href="https://www.codeaddon.com/articles" className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2  text-base font-medium">Articles</a>
-
-      <a href="https://www.codeaddon.com/playlists" className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2  text-base font-medium">Video Tutorials</a>
-      <a href="https://www.codeaddon.com/quizzes" className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2  text-base font-medium">quizzes</a>
-
-      <a href="https://www.codeaddon.com/about" className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2  text-base font-medium">About Us</a>
-      <a href="https://www.codeaddon.com/contact" className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2  text-base font-medium">Contact Us</a>
-    </div>
-  </div>
 </nav>
 
 
 
+<aside id="sidebar" className="z-40 bg-gray-800 text-gray-100 md:w-64 w-3/4 space-y-6 pt-6 px-0  inset-y-0 left-0 transform md:relative md:translate-x-0 transition duration-200 ease-in-out  md:flex md:flex-col md:justify-between overflow-y-auto hidden md:block  fixed" data-dev-hint="sidebar; px-0 for frameless; px-2 for visually inset the navigation"  style={
+          showMe!==""?(showMe?{ display:"block"}:{display:"none" }):({})
+      }>
+        <div className="flex flex-col space-y-6" data-dev-hint="optional div for having an extra footer navigation">
+    
+     
+          
+          <a href="#" className="text-white flex items-center space-x-2 px-4" title="Your App is cool">
+            
+            </a>
+           
+            <nav data-dev-hint="main navigation">
+                <a href="https://www.codeaddon.com/" className="mt-14 flex items-center space-x-2 py-2 px-4 transition duration-200 hover:bg-gray-700 hover:text-white">
+                    <i className="fa fa-home"></i>
+                    <span>Home</span>
+                </a>
+                <a href="https://www.codeaddon.com/articles" className="flex items-center space-x-2 py-2 px-4 transition duration-200 hover:bg-gray-700 hover:text-white">
+                    <i className="fa fa-book"></i>
+                    <span>Articles</span>
+                </a>
+                <a href="https://www.codeaddon.com/playlists" className="flex items-center space-x-2 py-2 px-4 transition duration-200 hover:bg-gray-700 hover:text-white">
+                <i className="fa fa-youtube-play"></i>
+                    <span>Video Tutorials</span>
+                </a>
+                <a href="https://www.codeaddon.com/quizzes" className="flex items-center space-x-2 py-2 px-4 transition duration-200 bg-gray-700 text-white hover:bg-gray-700 hover:text-white">
+                <i className="fa fa-sticky-note"></i>
+                    <span>Quizzes</span>
+                </a>
+                <a href="https://www.codeaddon.com/about" className="flex items-center space-x-2 py-2 px-4 transition duration-200 hover:bg-gray-700 hover:text-white">
+                <i className="fa fa-info"></i>
+                    <span>About Us</span>
+                </a>
+                <a href="https://www.codeaddon.com/contact" className="flex items-center space-x-2 py-2 px-4 transition duration-200 hover:bg-gray-700 hover:text-white">
+                <i className="fa fa-envelope"></i>
+                    <span>Contact Us</span>
+                </a>
+                <a href="https://www.codeaddon.com/contact" className="flex items-center space-x-2 py-2 px-4 transition duration-200 hover:bg-gray-700 hover:text-white bg-red-500">
+                <i className="fa fa-envelope"></i>
+                    <span>LOGOUT</span>
+                </a>
+                
+            </nav>
+        </div>
+
+
+    </aside>
 
 {/* //------------------- */}
+    {/* 
+style={{ backgroundColor: darkMode?"black":"red"}} 
+      */}
+ 
 
-<div className="bg-gray-800">
-
-<div className=" mx-auto  ">
-  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6">
-    <div className="  relative  py-12  pl-12 ml-12  hidden md:block ">
-    <figcaption className="absolute -left-5 top-24 text-lg -mt-16 text-white px-4 pt-12  ">
-
-
-<div className="shadow">
-  <h1  className="bg-sky-600 px-2 ">F</h1>
-  <h1  className="bg-red-500 px-2 ">Y</h1>
-  <h1  className="bg-sky-300 px-2 ">T</h1>
-</div>
-</figcaption>
-    <h4 className="font-medium text-gray-300 pt-20">Same chats, new different experience</h4>
-      <h2 className="font-bold text-5xl text-white leading-tight mt-3 mb-6">It looks better and cleaner!</h2>
-      <span className="font-normal text-gray-300"> Your favorite messaging app just got the best looking update yet! Now it feels like a breath of fresh air.</span>
-      <div id="buttons" className="font-medium flex flex-row mt-6">
-        <div className="mr-3 pl-0 p-2 cursor-pointer hover:underline  text-gray-300"><a href="#watch-video">Watch video</a></div>
-        <div className="mx-4 p-2 px-4 border-2 text-white border-white rounded-lg hover:text-white hover:bg-gray-400 cursor-pointer">Download</div>
-      </div>
-      
+{children}
+{/* //------------------- */}
 
 
-    </div>
-    <div className=" justify-center relative  ">
-
-<div className='bg-gray-900/50 md:bg-gray-900/0 absolute w-full h-full' ></div>
-
-    <figcaption className="absolute right-0 top-24 text-lg -mt-16 text-white px-4 pt-12 z-40  block md:hidden ">
-
-
-<div className=" p-5">
-  <h1  className="bg-sky-600 px-2 ">F</h1>
-  <h1  className="bg-red-500 px-2 ">Y</h1>
-  <h1  className="bg-sky-300 px-2 ">T</h1>
-</div>
-</figcaption>
-    <figcaption className="absolute -left-5 top-0 text-lg -mt-16 text-white px-4 pt-12 block md:hidden">
-
-
-<div className="shadow py-5 pl-5  mr-6 pr-7">
-<h4 className="font-medium text-white pt-20 text-shadow-lg pt-12	">Same chats, new different experience</h4>
-      <h2 className="font-bold text-4xl text-white leading-tight  text-shadow-lg pt-1 pb-2	">It looks better and cleaner!</h2>
-      <span className="font-small text-white pt-0 text-shadow-lg	 "> Your favorite messaging app just got the best looking update yet! Now it feels like a breath of fresh air.</span>
-      <div id="buttons" className="font-medium flex flex-row mt-4">
-        <div className="mr-3 pl-0 p-2 cursor-pointer hover:underline  text-gray-300 "><a href="#watch-video">Watch video</a></div>
-        <div className="mx-4 p-2 px-4 border-2 text-white border-white rounded-lg bg-gray-900 hover:text-white hover:bg-gray-700 cursor-pointer">Download</div>
-      </div>
-</div>
-</figcaption>
-
-
-<div className='bg-white h-12'></div>
-<img className=" pb-14 object-cover h-full w-full " src="https://res.cloudinary.com/masterdevs/image/upload/v1640121452/codeaddon/codeaddon-banner-web-development_vibee4.png" />
-
-
-
-
-    </div>
-  </div>
-</div>
-
-
-
-  </div>
-
-
-
-{/* 
-  -------------------------------------7----------- */}
-
-
-      {children}
-      
     </main>
 
     <footer>
