@@ -34,7 +34,7 @@ router.push(redirect || '/');
 }
       };
     return (
-    <Layout>---------
+    <Layout>----------
         <form className='pt-20' onSubmit={submitHandler} >
             <input type="text" name="email" id="email" className="border" 
             onChange={e=>setEmail(e=e.target.value)}
