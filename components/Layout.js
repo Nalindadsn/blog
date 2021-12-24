@@ -11,7 +11,6 @@ import Cookies from 'js-cookie';
 export default function Layout({ children },props) {
   const router = useRouter();
 
-  const { products,categories } = props;
     const {state,dispatch}=useContext(Store);
     const {darkMode,userInfo}=state;
     const [showMe, setShowMe] = useState(false);
@@ -160,7 +159,9 @@ export default function Layout({ children },props) {
             )
         }
         <div className="ml-3 relative">
+          {userInfo?userInfo.name:"no"}
           {
+            
             userInfo ? (
 
           <div>
