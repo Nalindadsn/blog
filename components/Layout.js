@@ -43,7 +43,7 @@ export default function Layout({ children },props) {
       toggleuser()
       router.push('/');
     };
-    
+    const userDetails=JSON.parse(userInfo)
 
   return (
     <div>
@@ -153,9 +153,11 @@ export default function Layout({ children },props) {
             
               ""
             ):(  
-        <a href='' className="border-2 text-white border-white  py-1 px-3  rounded-full text-gray-400 hover:text-gray-800 hover:bg-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white">
-          Register
-        </a>
+              <Link href='/register'>
+              <a className="border-2 text-white border-white  py-1 px-3 mr-1 rounded-full text-gray-400 hover:text-gray-800 hover:bg-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white">
+                Register
+              </a>
+              </Link>
             )
         }
         <div className="ml-3 relative">
@@ -167,7 +169,7 @@ export default function Layout({ children },props) {
           <div>
             <button type="button" className="bg-gray-800 flex text-sm rounded-full focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white" id="user-menu-button" aria-expanded="false" aria-haspopup="true">
               <span className="sr-only">Open user menu</span>
-              <img  onClick={toggleuser}  className="h-8 w-8 rounded-full" src={userInfo.image} alt="" />
+              <img  onClick={toggleuser}  className="h-8 w-8 rounded-full" src={userDetails.image} alt="" />
               
             </button>
           </div>
