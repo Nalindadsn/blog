@@ -168,6 +168,8 @@ const data = {
   ],
   products: [
       {
+        
+      user: '613f3c0b217785ee9b399d9c',
         name: 'Mysql Queries',
         slug: 'mysql-queries',
         category: 'Shirts',
@@ -180,6 +182,7 @@ const data = {
         description: 'Mysql Queries',
       },
       {
+        user: '613f3c0b217785ee9b399d9c',
         name: 'How to make a next app?',
         slug: 'create-next-app',
         category: 'Pants',
@@ -192,6 +195,7 @@ const data = {
         description: 'How to make a next app?',
       },
       {
+        user: '613f3c0b217785ee9b399d9c',
         name: 'How to make a react app?',
         slug: 'create-react-app',
         category: 'Pants',
@@ -204,6 +208,7 @@ const data = {
         description: 'How to make a react app?',
       },
       {
+        user: '613f3c0b217785ee9b399d9c',
         name: 'what is web development?',
         slug: 'what-is-web-development',
         category: 'Pants',
@@ -216,6 +221,7 @@ const data = {
         description: 'what is web development?',
       },
       {
+        user: '613f3c0b217785ee9b399d9c',
         name: 'How to connect a database?',
         slug: 'connect a database',
         category: 'Pants',
@@ -228,6 +234,7 @@ const data = {
         description: 'How to connect a database?',
       },
       {
+        user: '613f3c0b217785ee9b399d9c',
         name: 'How to create a responsive website?',
         slug: 'responsive-web-development',
         category: 'Pants',

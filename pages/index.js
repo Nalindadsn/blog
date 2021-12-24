@@ -454,15 +454,36 @@ export default function Home(props) {
     </div>
   )
 }
+
+// export async function getServerSideProps(context) {
+
+//   await db.connect()
+//   const products = await Product.find({}).lean();
+//   const categories = await Category.find({}).lean();
+
+//   await db.disconnect()
+//   return {
+//     props: {
+//       products: db.convertDocToObj(JSON.parse(JSON.stringify(products))),
+//       categories: db.convertDocToObj(JSON.parse(JSON.stringify(categories))),
+//     },
+//   }
+// }
 export async function getServerSideProps() {
-  await db.connect();
-  const products = await Product.find({}).lean();
-  const categories = await Category.find({}).lean();
-  await db.disconnect();
+  await db.connect()
+  const products = await Product.find({}).lean()
+  const categories = await Category.find({}).lean()
+
+
+  await db.disconnect()
   return {
     props: {
-      products: products.map(db.convertDocToObj),
-      categories: categories.map(db.convertDocToObj),
+      products: JSON.parse(JSON.stringify(products)).map(
+        db.convertDocToObj
+      ),
+      categories: JSON.parse(JSON.stringify(categories)).map(
+        db.convertDocToObj
+      ),
     },
-  };
+  }
 }
