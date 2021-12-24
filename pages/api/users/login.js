@@ -16,6 +16,7 @@ handler.post(async (req, res) => {
       token,
       _id: user._id,
       name: user.name,
+      image: user.image,
       email: user.email,
       isAdmin: user.isAdmin,
     });

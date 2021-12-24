@@ -5,13 +5,15 @@ import Link from 'next/link'
 import React, { useState,useContext } from "react";
 import { Store } from '../utils/Store';
 import { useRouter } from 'next/router';
+import Cookies from 'js-cookie';
 
 
-export default function Layout({ children }) {
+export default function Layout({ children },props) {
   const router = useRouter();
 
+  const { products,categories } = props;
     const {state,dispatch}=useContext(Store);
-    const {darkMode}=state;
+    const {darkMode,userInfo}=state;
     const [showMe, setShowMe] = useState(false);
     const [showMe2, setShowMe2] = useState(false);
   
@@ -39,9 +41,11 @@ export default function Layout({ children }) {
       dispatch({ type: 'USER_LOGOUT' });
       Cookies.remove('userInfo');
       Cookies.remove('cartItems');
+      toggleuser()
       router.push('/');
     };
     
+
   return (
     <div>
     <Head>
@@ -53,7 +57,6 @@ export default function Layout({ children }) {
     </Head>
 
     <main>
-
 
     <nav className="bg-gray-800 w-full h-16  px-1   shadow-md fixed z-50" >
   <div className="max-w-7xl mx-0 p-0 sm:px-2 lg:px-6">
@@ -83,12 +86,36 @@ export default function Layout({ children }) {
             <Link href="/">
               <a className="bg-gray-900 text-white px-3 py-2 rounded-md text-sm font-medium" aria-current="page">Home</a>
             </Link>
-            <Link href="/articles">
-              <a className="ml-1  text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Articles</a>
-            </Link>
-            <Link href="/playlists">
-              <a className="ml-1 text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Videos</a>
-            </Link>
+            
+            
+            
+<Link href="/articles">
+<div className="dropdown inline-block relative ml-1">
+  <button className="bg-gray-800 text-white font-semibold py-2 px-3 rounded inline-flex items-center">
+    <span className="mr-1">Articles</span>
+    <svg className="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"/> </svg>
+  </button>
+  <ul className="dropdown-menu absolute hidden text-gray-700 pt-1">
+    <li className=""><a className="rounded-t bg-gray-200 hover:bg-gray-400 py-2 px-4 block whitespace-no-wrap" href="#">One</a></li>
+    <li className=""><a className="bg-gray-200 hover:bg-gray-400 py-2 px-4 block whitespace-no-wrap" href="#">Two</a></li>
+    <li className=""><a className="rounded-b bg-gray-200 hover:bg-gray-400 py-2 px-4 block whitespace-no-wrap" href="#">Three is the magic number</a></li>
+  </ul>
+</div>
+</Link>           
+<Link href="/articles">
+<div className="dropdown inline-block relative ml-1">
+  <button className="bg-gray-800 text-white font-semibold py-2 px-3 rounded inline-flex items-center">
+    <span className="mr-1">Videos</span>
+    <svg className="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"/> </svg>
+  </button>
+  <ul className="dropdown-menu absolute hidden text-gray-700 pt-1">
+    <li className=""><a className="rounded-t bg-gray-200 hover:bg-gray-400 py-2 px-4 block whitespace-no-wrap" href="#">php</a></li>
+    <li className=""><a className="bg-gray-200 hover:bg-gray-400 py-2 px-4 block whitespace-no-wrap" href="#">Two</a></li>
+    <li className=""><a className="rounded-b bg-gray-200 hover:bg-gray-400 py-2 px-4 block whitespace-no-wrap" href="#">Three is the magic number</a></li>
+  </ul>
+</div>
+</Link>
+
             <Link href="/quizzes">            
             <a className="ml-1 text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Quizzes</a>
             </Link>
@@ -111,20 +138,43 @@ export default function Layout({ children }) {
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9" />
           </svg>
         </button>
-       
-        <Link href=''>
-          <a className="border-2 text-white border-white  py-1 px-3  rounded-full text-gray-400 hover:text-gray-800 hover:bg-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white">
-          Register
+        {
+            userInfo ? (
+            
+              ""
+            ):(  
+        <Link href='/login'>
+        <a className="border-2 text-white border-white  py-1 px-3 mr-1 rounded-full text-gray-400 hover:text-gray-800 hover:bg-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white">
+          Login
         </a>
         </Link>
+        )}
+         {
+            userInfo ? (
+            
+              ""
+            ):(  
+        <a href='' className="border-2 text-white border-white  py-1 px-3  rounded-full text-gray-400 hover:text-gray-800 hover:bg-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white">
+          Register
+        </a>
+            )
+        }
         <div className="ml-3 relative">
+          {
+            userInfo ? (
+
           <div>
-            {/* <button type="button" className="bg-gray-800 flex text-sm rounded-full focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white" id="user-menu-button" aria-expanded="false" aria-haspopup="true">
+            <button type="button" className="bg-gray-800 flex text-sm rounded-full focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white" id="user-menu-button" aria-expanded="false" aria-haspopup="true">
               <span className="sr-only">Open user menu</span>
-              <img  onClick={toggleuser}  className="h-8 w-8 rounded-full" src="https://res.cloudinary.com/masterdevs/image/upload/v1640114706/codeaddon/nalinda-dissanayaka_u5uh0z.jpg" alt="" />
-            </button> */}
-           
+              <img  onClick={toggleuser}  className="h-8 w-8 rounded-full" src={userInfo.image} alt="" />
+              
+            </button>
           </div>
+            ):(
+              ""
+            )
+
+          }
 
 
           <div  className="origin-top-right absolute right-0 mt-2 w-48 rounded-md shadow-lg py-1 bg-white ring-1 ring-black ring-opacity-5 focus:outline-none" role="menu" aria-orientation="vertical" aria-labelledby="user-menu-button" tabIndex="-1"  style={{
@@ -136,9 +186,7 @@ export default function Layout({ children }) {
         <Link href="/settings">
           <a className="block px-4 py-2 text-sm text-gray-700" role="menuitem" tabIndex="-1" id="user-menu-item-1">Settings</a>
         </Link>
-        <Link href="/logout">
-          <a className="block px-4 py-2 text-sm text-gray-700" role="menuitem" tabIndex="-1" id="user-menu-item-2">Sign out</a>
-        </Link>
+          <div  onClick={logoutClickHandler} className="block px-4 py-2 text-sm text-gray-700 cursor-pointer" role="menuitem" tabIndex="-1" id="user-menu-item-2">Sign out</div>
           </div>
         </div>
       </div>
@@ -287,4 +335,22 @@ style={{ backgroundColor: darkMode?"black":"red"}}
   </div>
  
   );
+}
+export async function getServerSideProps() {
+  await db.connect()
+  const products = await Product.find({}).lean()
+  const categories = await Category.find({}).lean()
+
+
+  await db.disconnect()
+  return {
+    props: {
+      products: JSON.parse(JSON.stringify(products)).map(
+        db.convertDocToObj
+      ),
+      categories: JSON.parse(JSON.stringify(categories)).map(
+        db.convertDocToObj
+      ),
+    },
+  }
 }
