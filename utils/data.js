@@ -253,49 +253,57 @@ const data = {
         name: 'HTML & CSS',
         slug: 'html-css',
         image: 'https://res.cloudinary.com/masterdevs/image/upload/v1639856155/codeaddon/3_uwf0hd.jpg',
-        description: 'HTML & CSS'
+        description: 'HTML & CSS',
+        type:"article"
       },
       {
         name: 'PHP & MYSQL',
         slug: 'php-mysql',
         image: 'https://res.cloudinary.com/masterdevs/image/upload/v1640231976/codeaddon/codeaddon-image-icon2_srky38.jpg',
-        description: 'PHP & MYSQL'
+        description: 'PHP & MYSQL',
+        type:"video"
       },
       {
         name: 'Javascript',
         slug: 'javascript',
         image: 'https://res.cloudinary.com/masterdevs/image/upload/v1640231976/codeaddon/codeaddon-image-icon2_srky38.jpg',
-        description: 'Javascript'
+        description: 'Javascript',
+        type:"video"
       },
       {
         name: 'Reactjs',
         slug: 'reactjs',
         image: 'https://res.cloudinary.com/masterdevs/image/upload/v1640231976/codeaddon/codeaddon-image-icon2_srky38.jpg',
-        description: 'Reactjs'
+        description: 'Reactjs',
+        type:"video"
       },
       {
         name: 'Nextjs',
         slug: 'nextjs',
         image: 'https://res.cloudinary.com/masterdevs/image/upload/v1640231976/codeaddon/codeaddon-image-icon2_srky38.jpg',
         description: 'Nextjs',
+        type:"video"
       },
       {
         name: 'PHP',
         slug: 'php',
         image: 'https://res.cloudinary.com/masterdevs/image/upload/v1640231976/codeaddon/codeaddon-image-icon2_srky38.jpg',
         description: 'PHP',
+        type:"article"
       },
       {
         name: 'MYSQL',
         slug: 'mysql',
         image: 'https://res.cloudinary.com/masterdevs/image/upload/v1640231976/codeaddon/codeaddon-image-icon2_srky38.jpg',
         description: 'MYSQL',
+        type:"video"
       },
       {
         name: 'HTML',
         slug: 'html',
         image: 'https://res.cloudinary.com/masterdevs/image/upload/v1640231976/codeaddon/codeaddon-image-icon2_srky38.jpg',
         description: 'HTML',
+        type:"video"
       },
 
     ]
