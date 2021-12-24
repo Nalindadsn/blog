@@ -283,20 +283,23 @@ export default function Home(props) {
     <div className="container mx-auto">
       <div className="flex flex-wrap md:-mx-3">
 
-
+        
+ 
       {products?.map((product) => (
 
 
         <div key={product._id} className="md:w-1/2 px-3 mb-6 w-full ">
           <div className="flex w-full h-full flex-wrap bg-gray-800 overflow-hidden rounded shadow">
             <div className="w-2/6">
-            
+            <div style={{position:"relative",width:"100%",paddingBottom:"100%"}}>
               <Image
       src="https://res.cloudinary.com/masterdevs/image/upload/v1640117880/codeaddon/codeaddon-banner_tmtp8t.png"
       alt={product.name}
-      width={450}
-      height={254}
+      layout='fill'
+      objectFit='cover'
     />
+
+            </div>
             </div>
             <div className="w-4/6 p-5">
               <h2 className="text-white leading-normal text-lg">
