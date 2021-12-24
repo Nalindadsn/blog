@@ -57,7 +57,7 @@ export default function Home(props) {
       </div>
       <div className="flex-1 flex items-center  md:items-stretch ">
         <div className="flex-shrink-0 flex items-center text-white">
-         <Link href="/"><a className='font-bold '> <span className='text-amber-500 pl-8 md:pl-0 '><i className="fa fa-chevron-left"></i>CODE<i className="fa fa-chevron-right"></i></span>ADDON</a></Link>
+         <Link href="/"><a className='font-bold '> <span className='text-amber-500 pl-8 md:pl-0 sm:pl-0 '><i className="fa fa-chevron-left"></i>CODE<i className="fa fa-chevron-right"></i></span>ADDON</a></Link>
 
         </div>
         <div className="hidden md:block md:ml-2 lg:ml-6">
@@ -224,7 +224,7 @@ export default function Home(props) {
 
 
 <div className="shadow py-5 pl-5  mr-6 pr-7">
-<h4 className="font-medium text-white pt-12 mt-5 text-shadow-lg  	">Same chats, new different experience</h4>
+<h4 className="font-medium text-white pt-12 mt-5 text-shadow-lg  	 ml-10">Same chats, new different experience</h4>
       <h2 className="font-bold text-4xl text-white leading-tight  text-shadow-lg pt-1 pb-2	">under maintenance!</h2>
       <span className="font-small text-white pt-0 text-shadow-lg	 "> Your favorite messaging app just got the best looking update yet! Now it feels like a breath of fresh air.</span>
       <div id="buttons" className="font-medium flex flex-row mt-4">
