@@ -5,49 +5,49 @@ const data = {
         name: 'HTML & CSS',
         slug: 'html-css',
         image: 'https://res.cloudinary.com/masterdevs/image/upload/v1639856155/codeaddon/3_uwf0hd.jpg',
-        description: '',
+        description: 'HTML & CSS'
       },
       {
         name: 'PHP & MYSQL',
         slug: 'php-mysql',
         image: 'https://res.cloudinary.com/masterdevs/image/upload/v1640231976/codeaddon/codeaddon-image-icon2_srky38.jpg',
-        description: '',
+        description: 'PHP & MYSQL'
       },
       {
         name: 'Javascript',
         slug: 'javascript',
         image: 'https://res.cloudinary.com/masterdevs/image/upload/v1640231976/codeaddon/codeaddon-image-icon2_srky38.jpg',
-        description: '',
+        description: 'Javascript'
       },
       {
         name: 'Reactjs',
         slug: 'reactjs',
         image: 'https://res.cloudinary.com/masterdevs/image/upload/v1640231976/codeaddon/codeaddon-image-icon2_srky38.jpg',
-        description: '',
-      },,
+        description: 'Reactjs'
+      },
       {
         name: 'Nextjs',
         slug: 'nextjs',
         image: 'https://res.cloudinary.com/masterdevs/image/upload/v1640231976/codeaddon/codeaddon-image-icon2_srky38.jpg',
-        description: '',
+        description: 'Nextjs',
       },
       {
         name: 'PHP',
         slug: 'php',
         image: 'https://res.cloudinary.com/masterdevs/image/upload/v1640231976/codeaddon/codeaddon-image-icon2_srky38.jpg',
-        description: '',
+        description: 'PHP',
       },
       {
         name: 'MYSQL',
         slug: 'mysql',
         image: 'https://res.cloudinary.com/masterdevs/image/upload/v1640231976/codeaddon/codeaddon-image-icon2_srky38.jpg',
-        description: '',
+        description: 'MYSQL',
       },
       {
         name: 'HTML',
         slug: 'html',
         image: 'https://res.cloudinary.com/masterdevs/image/upload/v1640231976/codeaddon/codeaddon-image-icon2_srky38.jpg',
-        description: '',
+        description: 'HTML',
       },
 
     ],

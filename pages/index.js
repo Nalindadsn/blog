@@ -5,10 +5,11 @@ import styles from '../styles/Home.module.css'
 import React, { useState } from "react";
 import db from '../utils/db';
 import Product from '../models/Product';
+import Category from '../models/Category';
 
 export default function Home(props) {
 
-  const { products } = props;
+  const { products,categories } = props;
   const [showMe, setShowMe] = useState(false);
   const [showMe2, setShowMe2] = useState(false);
 
@@ -56,21 +57,31 @@ export default function Home(props) {
       </div>
       <div className="flex-1 flex items-center  md:items-stretch ">
         <div className="flex-shrink-0 flex items-center text-white">
-         <a href="https://www.codeaddon.com/" className='font-bold '> <span className='text-amber-500 pl-8 md:pl-0 '><i className="fa fa-chevron-left"></i>CODE<i className="fa fa-chevron-right"></i></span>ADDON</a>
+         <Link href="/"><a className='font-bold '> <span className='text-amber-500 pl-8 md:pl-0 '><i className="fa fa-chevron-left"></i>CODE<i className="fa fa-chevron-right"></i></span>ADDON</a></Link>
 
         </div>
         <div className="hidden md:block md:ml-2 lg:ml-6">
           <div className="flex space-x-4">
+            <Link href="/">
+            
+            <a className="bg-gray-900 text-white px-3 py-2 rounded-md text-sm font-medium" aria-current="page">Home</a>
+            </Link>
+            <Link href="/articles">
+                        <a className="ml-1  text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Articles</a>
+            </Link>
+            <Link href="/playlists">
+                        <a className="ml-1 text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Videos</a>
+            </Link>
+            <Link href="/quizzes">            
+            <a className="ml-1 text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Quizzes</a>
+            </Link>
+            <Link href="/about">
+            <a className="ml-1 text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">About</a>
+            </Link>
+            <Link href="/contact">
+            <a className="ml-1 text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Contact</a>
+            </Link>
 
-            <a href="https://www.codeaddon.com/" className="bg-gray-900 text-white px-3 py-2 rounded-md text-sm font-medium" aria-current="page">Home</a>
-
-            <a href="https://www.codeaddon.com/articles" className="ml-1  text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Articles</a>
-
-            <a href="https://www.codeaddon.com/playlists" className="ml-1 text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Videos</a>
-            <a href="https://www.codeaddon.com/quizzes" className="ml-1 text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Quizzes</a>
-
-            <a href="https://www.codeaddon.com/about" className="ml-1 text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">About</a>
-            <a href="https://www.codeaddon.com/contact" className="ml-1 text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Contact</a>
           </div>
         </div>
       </div>
@@ -101,10 +112,18 @@ export default function Home(props) {
           <div  className="origin-top-right absolute right-0 mt-2 w-48 rounded-md shadow-lg py-1 bg-white ring-1 ring-black ring-opacity-5 focus:outline-none" role="menu" aria-orientation="vertical" aria-labelledby="user-menu-button" tabIndex="-1"  style={{
         display: showMe2?"block":"none"
       }}>
+        <Link href="/profile">            <a className="block px-4 py-2 text-sm text-gray-700" role="menuitem" tabIndex="-1" id="user-menu-item-0">Your Profile</a>
 
-            <a href="https://www.codeaddon.com/profile" className="block px-4 py-2 text-sm text-gray-700" role="menuitem" tabIndex="-1" id="user-menu-item-0">Your Profile</a>
-            <a href="https://www.codeaddon.com/settings" className="block px-4 py-2 text-sm text-gray-700" role="menuitem" tabIndex="-1" id="user-menu-item-1">Settings</a>
-            <a href="https://www.codeaddon.com/logout" className="block px-4 py-2 text-sm text-gray-700" role="menuitem" tabIndex="-1" id="user-menu-item-2">Sign out</a>
+        
+        </Link>
+        <Link href="/settings">            <a className="block px-4 py-2 text-sm text-gray-700" role="menuitem" tabIndex="-1" id="user-menu-item-1">Settings</a>
+
+
+        </Link>
+        <Link href="/logout">
+                    <a className="block px-4 py-2 text-sm text-gray-700" role="menuitem" tabIndex="-1" id="user-menu-item-2">Sign out</a>
+
+        </Link>
           </div>
         </div>
       </div>
@@ -119,16 +138,34 @@ export default function Home(props) {
       }}>
     
     <div className=" space-y-1">
+      <Link href="/">
+      
+      <a className="bg-gray-700   text-white block px-3 py-2  text-base font-medium" aria-current="page">Home</a>
+      </Link>
+      <Link href="/articles">
+      <a className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2  text-base font-medium">Articles</a>
+      
+      </Link>
+      <Link href="/playlists">
+      
+      <a className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2  text-base font-medium">Video Tutorials</a>
+      </Link>
+      <Link href="/quizzes">
+      
+      <a className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2  text-base font-medium">quizzes</a>
+      </Link>
+      <Link href="/about">
+      
+      <a className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2  text-base font-medium">About Us</a>
+      </Link>
+      <Link href="/contact">
+      <a className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2  text-base font-medium">Contact Us</a>
+      
+      </Link>
 
-      <a href="https://www.codeaddon.com/" className="bg-gray-700   text-white block px-3 py-2  text-base font-medium" aria-current="page">Home</a>
 
-      <a href="https://www.codeaddon.com/articles" className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2  text-base font-medium">Articles</a>
 
-      <a href="https://www.codeaddon.com/playlists" className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2  text-base font-medium">Video Tutorials</a>
-      <a href="https://www.codeaddon.com/quizzes" className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2  text-base font-medium">quizzes</a>
 
-      <a href="https://www.codeaddon.com/about" className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2  text-base font-medium">About Us</a>
-      <a href="https://www.codeaddon.com/contact" className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2  text-base font-medium">Contact Us</a>
     </div>
   </div>
 </nav>
@@ -212,20 +249,30 @@ export default function Home(props) {
   -------------------------------------7----------- */}
 
 
+
+<div className='text-center  w-full p-5'>
+{categories?.map((category) => (
+      <a href='' key={category._id} className="md:w-1/5 px-3 mb-6 bg-gray-800 text-white p-2 m-1">
+        {category.name}
+      </a>
+      ))}
+</div>
+
+
+
 <div className="flex flex-col min-h-screen md:px-3">
   <div className="">
     
     
-    <div className="flex justify-center border-t  py-5">
+    <div className="flex justify-center   py-5">
 
-
-      <h2 className=' pt-12 pb-5 font-bold text-4xl text-gray-900'> Latest Atricles </h2>
+      <h2 className=' pt-12 pb-5 font-bold text-4xl text-gray-900 '> Latest Atricles </h2>
     </div>
   </div>
   <div className=" pb-6 flex-1">
     <div className="container mx-auto">
       <div className="flex flex-wrap md:-mx-3">
-        
+
 
       {products?.map((product) => (
 
@@ -272,7 +319,10 @@ export default function Home(props) {
       
       </div>
       <div className="text-center">
-        <a href="https://www.codeaddon.com/articles" className="border border-gray-600 text-gray-600 px-4 py-2 rounded-full hover:bg-gray-600 hover:text-white">Show More</a>
+      <Link href="/articles" > 
+      <a className="border border-gray-600 text-gray-600 px-4 py-2 rounded-full hover:bg-gray-600 hover:text-white">Show More</a>
+      </Link> 
+
       </div>
     </div>
   </div>
@@ -399,10 +449,12 @@ export default function Home(props) {
 export async function getServerSideProps() {
   await db.connect();
   const products = await Product.find({}).lean();
+  const categories = await Category.find({}).lean();
   await db.disconnect();
   return {
     props: {
       products: products.map(db.convertDocToObj),
+      categories: categories.map(db.convertDocToObj),
     },
   };
 }
