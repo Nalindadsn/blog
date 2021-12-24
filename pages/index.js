@@ -42,7 +42,7 @@ export default function Home(props) {
     <div className="relative flex items-center justify-between h-16">
       <div className="absolute inset-y-0 left-0 flex items-center md:hidden">
 
-        <button  onClick={toggle} type="button" className="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white z-50" aria-controls="mobile-menu" aria-expanded="false">
+        <button  onClick={toggle} type="button" className="inline-flex items-center justify-center p-2  text-gray-400 hover:text-white hover:bg-gray-700/50 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white fixed top-16 z-50" aria-controls="mobile-menu" aria-expanded="false">
           <span className="sr-only">Open main menu</span>
           
           
@@ -145,7 +145,7 @@ export default function Home(props) {
             </a>
            
             <nav data-dev-hint="main navigation">
-                <a href="https://www.codeaddon.com/" className="flex items-center space-x-2 py-2 px-4 transition duration-200 hover:bg-gray-700 hover:text-white">
+                <a href="https://www.codeaddon.com/" className="mt-14 flex items-center space-x-2 py-2 px-4 transition duration-200 hover:bg-gray-700 hover:text-white">
                     <i className="fa fa-home"></i>
                     <span>Home</span>
                 </a>
