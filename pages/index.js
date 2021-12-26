@@ -1,79 +1,20 @@
 import Head from 'next/head'
 import Image from 'next/image'
-import Link from 'next/link'
-import styles from '../styles/Home.module.css'
-import React, { useState } from "react";
+import Link from 'next/link';
 import db from '../utils/db';
 import Product from '../models/Product';
 import Category from '../models/Category';
-import Layout from '../components/Layout';
-
-export default function Home(props) {
-
+const Home = (props) => {
+ 
   const { products,categories } = props;
-  const [showMe, setShowMe] = useState(false);
-  const [showMe2, setShowMe2] = useState(false);
-
-  function toggle(){
-    setShowMe(!showMe);
-  }
-
-  function toggleuser(){
-    setShowMe2(!showMe2);
-  }
-
-return (
-<Layout>
-
-<aside id="sidebar" className="z-40 bg-gray-800 text-gray-100 md:w-64 w-3/4 space-y-6 pt-6 px-0  inset-y-0 left-0 transform md:relative md:translate-x-0 transition duration-200 ease-in-out  md:flex md:flex-col md:justify-between overflow-y-auto hidden md:block  fixed" data-dev-hint="sidebar; px-0 for frameless; px-2 for visually inset the navigation"  style={
-          showMe!==""?(showMe?{ display:"block"}:{display:"none" }):({})
-      }>
-        <div className="flex flex-col space-y-6" data-dev-hint="optional div for having an extra footer navigation">
-    
-     
-          
-          <a href="#" className="text-white flex items-center space-x-2 px-4" title="Your App is cool">
-            
-            </a>
-           
-            <nav data-dev-hint="main navigation">
-                <a href="https://www.codeaddon.com/" className="mt-14 flex items-center space-x-2 py-2 px-4 transition duration-200 hover:bg-gray-700 hover:text-white">
-                    <i className="fa fa-home"></i>
-                    <span>Home</span>
-                </a>
-                <a href="https://www.codeaddon.com/articles" className="flex items-center space-x-2 py-2 px-4 transition duration-200 hover:bg-gray-700 hover:text-white">
-                    <i className="fa fa-book"></i>
-                    <span>Articles</span>
-                </a>
-                <a href="https://www.codeaddon.com/playlists" className="flex items-center space-x-2 py-2 px-4 transition duration-200 hover:bg-gray-700 hover:text-white">
-                <i className="fa fa-youtube-play"></i>
-                    <span>Video Tutorials</span>
-                </a>
-                <a href="https://www.codeaddon.com/quizzes" className="flex items-center space-x-2 py-2 px-4 transition duration-200 bg-gray-700 text-white hover:bg-gray-700 hover:text-white">
-                <i className="fa fa-sticky-note"></i>
-                    <span>Quizzes</span>
-                </a>
-                <a href="https://www.codeaddon.com/about" className="flex items-center space-x-2 py-2 px-4 transition duration-200 hover:bg-gray-700 hover:text-white">
-                <i className="fa fa-info"></i>
-                    <span>About Us</span>
-                </a>
-                <a href="https://www.codeaddon.com/contact" className="flex items-center space-x-2 py-2 px-4 transition duration-200 hover:bg-gray-700 hover:text-white">
-                <i className="fa fa-envelope"></i>
-                    <span>Contact Us</span>
-                </a>
-                <a href="https://www.codeaddon.com/contact" className="flex items-center space-x-2 py-2 px-4 transition duration-200 hover:bg-gray-700 hover:text-white bg-red-500">
-                <i className="fa fa-envelope"></i>
-                    <span>LOGOUT</span>
-                </a>
-                
-            </nav>
-        </div>
-
-
-    </aside>
-
+  
+  return(
+    <div>
+      <Head>
+        <title>Home Page -codeaddon</title>
+      </Head>
 {/* //------------------- */}
-
+{console.log(categories)}
 <div className="bg-gray-800">
 
 <div className=" mx-auto  ">
@@ -149,7 +90,6 @@ return (
   -------------------------------------7----------- */}
 
 
-
 <div className='text-center  w-full p-5'>
 {categories?.map((category) => (
       <a href='' key={category._id} className="md:w-1/5 px-3 mb-1 bg-gray-800 text-white p-2 m-1 inline-block">
@@ -157,6 +97,12 @@ return (
       </a>
       ))}
 </div>
+
+
+
+  {/* --------------------------------------
+   */}
+
 
 
 
@@ -234,61 +180,14 @@ return (
 
 {/* 
   ------------------------------------------------- */}
-<div className=" bg-gray-800 ">
-
-<div className="flex flex-col items-center w-2/3 sm:w-3/3 mx-auto pb-12 ">
-	<h1  className="font-bold text-4xl pt-6 text-white leading-tight mt-3 mb-6">Video Tutorials</h1>
-
-	<div 
-    	className="relative h-0 overflow-hidden max-w-full w-full" 
-		style={{paddingBottom: '56.25%'}}
- 	>
-		<iframe id="watch-video" 
-       		src="https://www.youtube.com/embed/UBOj6rqRUME"
-            frameBorder="0"
-            allowFullScreen
-            className="absolute top-0 left-0 w-full h-full "
-        ></iframe>
-	</div>
-</div>  
-
-</div>
-
-
-
-  
-  <div  id="beta-test" className="py-24">
-    <h2 className="text-center text-4xl font-bold">Sign up for beta</h2>
-      <form id="form"  action="https://www.freecodecamp.com/email-submit">
-        <div className="w-2/3 mt-12 mx-auto flex flex-row flex-no-wrap shadow-xl">
-          <input className="flex-grow bg-transparent py-4  placeholder-gray-500 bg-gray-800 rounded-l-lg text-gray-300 outline-none" type="email" id="email" name="email" placeholder="Enter your email address" required />
-          <input className="py-2 px-4 text-white bg-gray-900 rounded-r-lg text-gray-500" type="submit" id="submit" value="Sign up" />
-        </div>
-      </form>
-  </div>
- 
- 
-
-
-
-    </Layout>
+    
+    </div>
   )
 }
 
-// export async function getServerSideProps(context) {
 
-//   await db.connect()
-//   const products = await Product.find({}).lean();
-//   const categories = await Category.find({}).lean();
 
-//   await db.disconnect()
-//   return {
-//     props: {
-//       products: db.convertDocToObj(JSON.parse(JSON.stringify(products))),
-//       categories: db.convertDocToObj(JSON.parse(JSON.stringify(categories))),
-//     },
-//   }
-// }
+export default Home
 export async function getServerSideProps() {
   await db.connect()
   const products = await Product.find({}).lean()
