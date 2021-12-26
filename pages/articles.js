@@ -159,7 +159,7 @@ export default function Articles() {
             <div className="px-4  sm:px-0">
                 <div className=" rounded-lg h-96">
 
-                <button   onClick={toggle} type="button" className="absolute z-50  top-0  inline-flex items-center justify-center p-2 text-gray-400 hover:text-white hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white" aria-controls="mobile-menu" aria-expanded="false">
+                <button   onClick={toggle} type="button" className="absolute z-50  top-0  inline-flex items-center justify-center p-2 text-gray-400 hover:text-white hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white block sm:hidden md:hidden" aria-controls="mobile-menu" aria-expanded="false">
               <span className="sr-only">Open main menu</span>
               
               

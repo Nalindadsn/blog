@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import Link from 'next/link'
-
+import Image from 'next/image';
 function NavBar() {
 
     const [showMe, setShowMe] = useState(false);
@@ -37,7 +37,10 @@ function NavBar() {
       </div>
       <div className="flex-1 flex items-center  md:items-stretch ">
         <div className="flex-shrink-0 flex items-center text-white">
-         <Link href="/"><a className='font-bold pl-0 md:pl-0 sm:pl-0'> <span className='text-amber-500 pl-0 md:pl-0 sm:pl-0 '><i className="fa fa-chevron-left"></i>CODE<i className="fa fa-chevron-right"></i></span>ADDON</a></Link>
+         <Link href="/"><a> 
+           <Image width="130" height="23" src="https://res.cloudinary.com/masterdevs/image/upload/v1640546396/codeaddon/CODEADDON_LOGO_ypghfy.png" />
+           
+           </a></Link>
 
         </div>
         <div className="hidden md:block md:ml-2 lg:ml-6">
@@ -122,7 +125,7 @@ function NavBar() {
           </div> */}
           
 
-          <div  className="origin-top-right absolute right-0 mt-2 w-48 rounded-md shadow-lg py-1 bg-white ring-1 ring-black ring-opacity-5 focus:outline-none" role="menu" aria-orientation="vertical" aria-labelledby="user-menu-button" tabIndex="-1"  style={{
+          <div  className="z-50 origin-top-right absolute right-0 mt-2 w-48 rounded-md shadow-lg py-1 bg-white ring-1 ring-black ring-opacity-5 focus:outline-none" role="menu" aria-orientation="vertical" aria-labelledby="user-menu-button" tabIndex="-1"  style={{
         display: showMe2?"block":"none"
       }}>
         <Link href="/profile">
@@ -197,3 +200,20 @@ function NavBar() {
 }
 
 export default NavBar
+
+export async function getServerSideProps() {
+  await db.connect()
+  const products = await Product.find({}).lean()
+  const categories = await Category.find({}).lean()
+
+
+  await db.disconnect()
+  return {
+    props: {
+
+      categories: JSON.parse(JSON.stringify(categories)).map(
+        db.convertDocToObj
+      ),
+    },
+  }
+}
