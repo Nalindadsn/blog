@@ -15,10 +15,17 @@ export default function Layout({ children },props) {
     const {darkMode,userInfo}=state;
     const [showMe, setShowMe] = useState(false);
     const [showMe2, setShowMe2] = useState(false);
+    const [ui, setUi] = useState('');
+    
   
+  
+
+
+    
     function toggle(){
       setShowMe(!showMe);
     }
+    
   
     function toggleuser(){
       setShowMe2(!showMe2);
@@ -43,10 +50,11 @@ export default function Layout({ children },props) {
       toggleuser()
       router.push('/');
     };
-    const userDetails=JSON.parse(userInfo)
+   
 
-  return (
+    return (
     <div>
+      
     <Head>
 
     <title>Create Next App</title>
@@ -56,7 +64,8 @@ export default function Layout({ children },props) {
     </Head>
 
     <main>
-
+      
+      {console.log(userInfo)}
     <nav className="bg-gray-800 w-full h-16  px-1   shadow-md fixed z-50" >
   <div className="max-w-7xl mx-0 p-0 sm:px-2 lg:px-6">
     <div className="relative flex items-center justify-between h-16">
@@ -137,6 +146,7 @@ export default function Layout({ children },props) {
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9" />
           </svg>
         </button>
+        {/* <pre>{JSON.stringify(u.name)}</pre> */}
         {
             userInfo ? (
             
@@ -161,7 +171,6 @@ export default function Layout({ children },props) {
             )
         }
         <div className="ml-3 relative">
-          {userInfo?userInfo.name:"no"}
           {
             
             userInfo ? (
@@ -169,7 +178,7 @@ export default function Layout({ children },props) {
           <div>
             <button type="button" className="bg-gray-800 flex text-sm rounded-full focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white" id="user-menu-button" aria-expanded="false" aria-haspopup="true">
               <span className="sr-only">Open user menu</span>
-              <img  onClick={toggleuser}  className="h-8 w-8 rounded-full" src={userDetails.image} alt="" />
+              <img  onClick={toggleuser}  className="h-8 w-8 rounded-full" src={userInfo.image} alt="" />
               
             </button>
           </div>
@@ -338,22 +347,4 @@ style={{ backgroundColor: darkMode?"black":"red"}}
   </div>
  
   );
-}
-export async function getServerSideProps() {
-  await db.connect()
-  const products = await Product.find({}).lean()
-  const categories = await Category.find({}).lean()
-
-
-  await db.disconnect()
-  return {
-    props: {
-      products: JSON.parse(JSON.stringify(products)).map(
-        db.convertDocToObj
-      ),
-      categories: JSON.parse(JSON.stringify(categories)).map(
-        db.convertDocToObj
-      ),
-    },
-  }
 }
