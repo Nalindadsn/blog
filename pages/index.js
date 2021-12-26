@@ -112,7 +112,7 @@ const Home = (props) => {
     
     <div className="flex justify-center   py-5">
 
-      <h2 className=' pt-12 pb-5 font-bold text-4xl text-gray-900 '> Latest Atricles </h2>
+      <h2 className=' py-5  font-bold text-4xl text-gray-900 '> Latest Atricles </h2>
     </div>
   </div>
   <div className=" pb-6 flex-1">
@@ -167,7 +167,7 @@ const Home = (props) => {
       
       
       </div>
-      <div className="text-center">
+      <div className="text-center pb-12 ">
       <Link href="/articles" > 
       <a className="border border-gray-600 text-gray-600 px-4 py-2 rounded-full hover:bg-gray-600 hover:text-white">Show More</a>
       </Link> 
