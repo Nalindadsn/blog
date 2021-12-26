@@ -12,8 +12,12 @@ export default function PostScreen(props) {
 
 <div>
   
+<br/>
+<br/>
+<br/>
+{product.name}
 
-  {product.name}</div>
+</div>
  
 
 

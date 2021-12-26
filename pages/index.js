@@ -138,12 +138,20 @@ const Home = (props) => {
             </div>
             </div>
             <div className="w-4/6 p-5">
-              <h2 className="text-white leading-normal text-lg">
+              <h2 className="text-white font-bold	 leading-normal text-lg">
               <Link href={`/post/${product.slug}`}>
           <a>{product.name}</a>
         </Link>
                  </h2>
-              <div className="flex flex-wrap justify-between items-center mt-6 ">
+
+<p className='text-slate-300'>
+
+Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+tempor 
+
+</p>
+
+              <div className="flex flex-wrap justify-between items-center mt-3 ">
                 <div className="inline-flex items-center shadow">
                   <div className="w-10 h-10 rounded-full overflow-hidden flex-shrink-0 ">
                     <Image width="256" height="256" src="https://res.cloudinary.com/masterdevs/image/upload/v1640114706/codeaddon/nalinda-dissanayaka_u5uh0z.jpg" alt='Nalinda Dissanayaka - author' />
@@ -167,7 +175,7 @@ const Home = (props) => {
       
       
       </div>
-      <div className="text-center pb-12 ">
+      <div className="text-center pt-6 pb-12 ">
       <Link href="/articles" > 
       <a className="border border-gray-600 text-gray-600 px-4 py-2 rounded-full hover:bg-gray-600 hover:text-white">Show More</a>
       </Link> 
