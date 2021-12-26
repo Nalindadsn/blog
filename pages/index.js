@@ -127,7 +127,7 @@ const Home = (props) => {
         <div key={product._id} className="md:w-1/2 px-3 mb-6 w-full ">
           <div className="flex w-full h-full flex-wrap bg-gray-800 overflow-hidden rounded shadow">
             <div className="w-2/6">
-            <div style={{position:"relative",width:"100%",paddingBottom:"100%"}}>
+            <div style={{position:"relative",height:"100%",paddingBottom:"100%"}}>
               <Image
       src="https://res.cloudinary.com/masterdevs/image/upload/v1640117880/codeaddon/codeaddon-banner_tmtp8t.png"
       alt={product.name}
@@ -180,7 +180,7 @@ const Home = (props) => {
 
 {/* 
   ------------------------------------------------- */}
-    
+{/*     
     <div className="max-w-screen-xl mx-auto p-4">
   <h1 className="text-5xl font-extrabold mb-4 text-center text-indigo-700">Tailwind CSS news feed #2</h1>
   <div className="flex flex-col md:flex-row -mx-1.5 px-4 pt-4">
@@ -302,7 +302,7 @@ const Home = (props) => {
 <div className="text-center text-sm">
   Created by <a href="https://stephenainsworth.com" target="_blank" title="Stephen Ainsworth - Web Developer" className=" transition hover:text-blue-500">Stephen Ainsworth</a>
 </div>
-
+ */}
 
 
 
