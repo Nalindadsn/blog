@@ -1,5 +1,5 @@
 
-import Layout from '../../components/LayoutH'
+import Layout from '../../components/Layout'
 import db from '../../utils/db';
 import Product from '../../models/Product';
 
@@ -9,14 +9,15 @@ export default function PostScreen(props) {
         return <div>Product Not Found</div>;
       }
   return (
-    <Layout>
 
-<div>{product.name}</div>
+<div>
+  
+
+  {product.name}</div>
  
 
 
 
-    </Layout>
   )
 }
 export async function getServerSideProps(context) {
