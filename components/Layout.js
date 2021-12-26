@@ -1,72 +1,24 @@
-import Head from 'next/head';
+import React, { useState } from 'react'
+import Link from 'next/link';
 
-import Image from 'next/image'
-import Link from 'next/link'
-import React, { useState,useContext } from "react";
-import { Store } from '../utils/Store';
-import { useRouter } from 'next/router';
-import Cookies from 'js-cookie';
+function Layout({children}) {
 
+  const [showMe, setShowMe] = useState(false);
+  const [showMe2, setShowMe2] = useState(false);  
 
-export default function Layout({ children },props) {
-  const router = useRouter();
-
-    const {state,dispatch}=useContext(Store);
-    const {darkMode,userInfo}=state;
-    const [showMe, setShowMe] = useState(false);
-    const [showMe2, setShowMe2] = useState(false);
-    const [ui, setUi] = useState('');
-    
   
+  function toggle(){
+    setShowMe(!showMe);
+  }
   
 
-
-    
-    function toggle(){
-      setShowMe(!showMe);
-    }
-    
-  
-    function toggleuser(){
-      setShowMe2(!showMe2);
-    }
-    const darkModeChangeHandler = () => {
-      dispatch({ type: darkMode ? 'DARK_MODE_OFF' : 'DARK_MODE_ON' });
-      const newDarkMode = !darkMode;
-      Cookies.set('darkMode', newDarkMode ? 'ON' : 'OFF');
-    };
-    const [anchorEl, setAnchorEl] = useState(null);
-    const loginClickHandler = (e) => {
-      setAnchorEl(e.currentTarget);
-    };
-    const loginMenuCloseHandler = () => {
-      setAnchorEl(null);
-    };
-    const logoutClickHandler = () => {
-      setAnchorEl(null);
-      dispatch({ type: 'USER_LOGOUT' });
-      Cookies.remove('userInfo');
-      Cookies.remove('cartItems');
-      toggleuser()
-      router.push('/');
-    };
-   
+  function toggleuser(){
+    setShowMe2(!showMe2);
+  }
 
     return (
-    <div>
-      
-    <Head>
-
-    <title>Create Next App</title>
-        <meta name="description" content="web development tutorials " />
-        <link rel="icon" href="../favicon.ico" />
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
-    </Head>
-
-    <main>
-      
-      {console.log(userInfo)}
-    <nav className="bg-gray-800 w-full h-16  px-1   shadow-md fixed z-50" >
+        <div className="container">
+  <nav className="bg-gray-800 w-full h-16  px-1   shadow-md fixed z-50" >
   <div className="max-w-7xl mx-0 p-0 sm:px-2 lg:px-6">
     <div className="relative flex items-center justify-between h-16">
       <div className="absolute inset-y-0 left-0 flex items-center md:hidden">
@@ -147,47 +99,29 @@ export default function Layout({ children },props) {
           </svg>
         </button>
         {/* <pre>{JSON.stringify(u.name)}</pre> */}
-        {
-            userInfo ? (
-            
-              ""
-            ):(  
+
         <Link href='/login'>
         <a className="border-2 text-white border-white  py-1 px-3 mr-1 rounded-full text-gray-400 hover:text-gray-800 hover:bg-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white">
           Login
         </a>
         </Link>
-        )}
-         {
-            userInfo ? (
-            
-              ""
-            ):(  
+ 
               <Link href='/register'>
               <a className="border-2 text-white border-white  py-1 px-3 mr-1 rounded-full text-gray-400 hover:text-gray-800 hover:bg-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white">
                 Register
               </a>
               </Link>
-            )
-        }
+
         <div className="ml-3 relative">
-          {
-            
-            userInfo ? (
 
           <div>
             <button type="button" className="bg-gray-800 flex text-sm rounded-full focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white" id="user-menu-button" aria-expanded="false" aria-haspopup="true">
               <span className="sr-only">Open user menu</span>
-              <img  onClick={toggleuser}  className="h-8 w-8 rounded-full" src={userInfo.image} alt="" />
+              <img  onClick={toggleuser}  className="h-8 w-8 rounded-full" src="https://res.cloudinary.com/masterdevs/image/upload/v1640359719/codeaddon/codeaddon-user_bclsui.jpg" alt="" />
               
             </button>
           </div>
-            ):(
-              ""
-            )
-
-          }
-
+          
 
           <div  className="origin-top-right absolute right-0 mt-2 w-48 rounded-md shadow-lg py-1 bg-white ring-1 ring-black ring-opacity-5 focus:outline-none" role="menu" aria-orientation="vertical" aria-labelledby="user-menu-button" tabIndex="-1"  style={{
         display: showMe2?"block":"none"
@@ -198,7 +132,7 @@ export default function Layout({ children },props) {
         <Link href="/settings">
           <a className="block px-4 py-2 text-sm text-gray-700" role="menuitem" tabIndex="-1" id="user-menu-item-1">Settings</a>
         </Link>
-          <div  onClick={logoutClickHandler} className="block px-4 py-2 text-sm text-gray-700 cursor-pointer" role="menuitem" tabIndex="-1" id="user-menu-item-2">Sign out</div>
+          <div className="block px-4 py-2 text-sm text-gray-700 cursor-pointer" role="menuitem" tabIndex="-1" id="user-menu-item-2">Sign out</div>
           </div>
         </div>
       </div>
@@ -259,92 +193,14 @@ export default function Layout({ children },props) {
 
     </aside>
 
-{/* //------------------- */}
-    {/* 
-style={{ backgroundColor: darkMode?"black":"red"}} 
-      */}
- 
-
-{children}
-{/* //------------------- */}
-
-
-    </main>
-
-    <footer>
-
-
-      <div className="footer-2 bg-gray-800 pt-6 md:pt-12">
-          <div className="container px-4 mx-auto">
-
-            <div className="md:flex md:flex-wrap md:-mx-4 py-6 md:pb-12">
-{/* 
-              <div className="footer-info lg:w-1/3 md:px-4">
-                <h4 className="text-white text-2xl mb-4">19K users are using FWR blocks and making their life easy.</h4>
-                <p className="text-gray-400">We have carefully crafted the blocks to suit to everyone's need.</p>
-                <div className="mt-4">
-                  <button className="bg-facebook py-2 px-4 text-white rounded mt-2 transition-colors duration-300">
-                    <span className="fab fa-facebook-f mr-2"></span> Follow
-                  </button>
-                  <button className="bg-twitter py-2 px-4 text-white rounded ml-2 mt-2 transition-colors duration-300">
-                    <span className="fab fa-twitter mr-2"></span> Follow @freeweb19
-                  </button>
-                </div>
-              </div> */}
-
-              <div className="md:w-2/3 lg:w-1/3 md:px-4 xl:pl-16 mt-12 lg:mt-0">
-                <div className="sm:flex">
-                  <div className="sm:flex-1">
-                    <h6 className="text-base font-medium text-white uppercase mb-2">About</h6>
-                    <div>
-                      <a href="#" className="text-gray-400 py-1 block hover:underline">Company</a>
-                      <a href="#" className="text-gray-400 py-1 block hover:underline">Culture</a>
-                      <a href="#" className="text-gray-400 py-1 block hover:underline">Articles</a>
-                      <a href="#" className="text-gray-400 py-1 block hover:underline">Careers</a>
-                    </div>
-                  </div>
-                  <div className="sm:flex-1 mt-4 sm:mt-0">
-                    <h6 className="text-base font-medium text-white uppercase mb-2">What we offer</h6>
-                    <div>
-                      <a href="#" className="text-gray-400 py-1 block hover:underline">Blocks</a>
-                      <a href="#" className="text-gray-400 py-1 block hover:underline">Resources</a>
-                      <a href="#" className="text-gray-400 py-1 block hover:underline">Tools</a>
-                      <a href="#" className="text-gray-400 py-1 block hover:underline">Tutorials</a>
-                      <a href="#" className="text-gray-400 py-1 block hover:underline">Freebies</a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <div className="md:w-1/3 md:px-4 md:text-center mt-12 lg:mt-0">
-                <h5 className="text-lg text-white font-medium mb-4">Explore our site</h5>
-                <button className="bg-indigo-600 text-white hover:bg-indigo-700 rounded py-2 px-6 md:px-12 transition-colors duration-300">Explore</button>
-              </div>
-
-            </div>
-
-          </div>
-
-          <div className="border-t border-solid border-gray-900 mt-4 py-4">
-            <div className="container px-4 mx-auto">
-
-              <div className="md:flex md:-mx-4 md:items-center">
-                <div className="md:flex-1 md:px-4 text-center md:text-left">
-                  <div className="text-white">&copy; <a href="https://www.codeaddon.com/" className='font-bold'> <span className='text-amber-500'><i className="fa fa-chevron-left"></i>CODE<i className="fa fa-chevron-right"></i></span>ADDON</a></div>
-                </div> 
-                <div className="md:flex-1 md:px-4 text-center md:text-right">
-                  <a href="#" className="py-2 px-4 text-white inline-block hover:underline">Terms of Service</a>
-                  <a href="#" className="py-2 px-4 text-white inline-block hover:underline">Privacy Policy</a>
-                </div>
-              </div>
-
-            </div>
-          </div>
-
-    </div>
-
-      </footer>
-  </div>
- 
-  );
+            {children}
+        </div>
+    )
 }
+
+export default Layout
+
+
+
+
+
