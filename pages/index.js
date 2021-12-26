@@ -53,7 +53,7 @@ const Home = (props) => {
   <h1  className="bg-sky-300 px-2 ">T</h1>
 </div>
 </figcaption>
-    <figcaption className="absolute -left-5 top-0 text-lg -mt-16 text-white px-4 pt-12 block md:hidden">
+    <figcaption className="absolute -left-5 top-0 text-lg -mt-16 text-white px-4 pt-12 block md:hidden z-50">
 
 
 <div className="shadow py-5 pl-5  mr-6 pr-7">
@@ -71,7 +71,7 @@ const Home = (props) => {
 
 
 <div className='bg-white h-12'></div>
-<Image width="675" height="528" className=" pb-14 object-cover h-full w-full " src="https://res.cloudinary.com/masterdevs/image/upload/v1640121452/codeaddon/codeaddon-banner-web-development_vibee4.png" alt='codeaddon-banner-web-development' />
+<Image width="675" height="528" className="z-40 pb-14 object-cover h-full w-full block sm:hidden" src="https://res.cloudinary.com/masterdevs/image/upload/v1640121452/codeaddon/codeaddon-banner-web-development_vibee4.png" alt='codeaddon-banner-web-development' />
 
 
 
