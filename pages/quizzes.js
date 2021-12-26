@@ -252,7 +252,7 @@ export default function Quiz() {
   No Quizzes
 </h1>
 
-<section className="">
+{/* <section className="">
     <div className="">
 
         <div className=" bg-indigo-600 shadow-lg rounded-lg">
@@ -299,7 +299,7 @@ export default function Quiz() {
             </div>
         </div>
     </div>
-</section>
+</section> */}
 
 <div x-show="open" className="fixed bottom-0 right-0 w-full md:bottom-8 md:right-12 md:w-auto z-60" x-data="{ open: true }">
     <div className="bg-gray-800 text-gray-50 text-sm p-3 md:rounded shadow-lg flex justify-between">
