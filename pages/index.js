@@ -43,7 +43,7 @@ const Home = (props) => {
     </div>
     <div className=" justify-center relative  ">
 
-<div className='bg-gray-900/50 md:bg-gray-900/0 absolute w-full h-full' ></div>
+<div className='bg-gray-900/50 md:bg-gray-900/0 absolute w-full h-full z-30' ></div>
 
     <figcaption className="absolute right-0 top-24 text-lg -mt-16 text-white px-4 pt-12 z-40  block md:hidden ">
 
