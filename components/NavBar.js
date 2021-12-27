@@ -64,7 +64,7 @@ function NavBar() {
   </ul>
 </div>
 </Link>           
-<Link href="/articles">
+{/* <Link href="/articles">
 <div className="dropdown inline-block relative ml-1">
   <button className="bg-gray-800 text-white font-semibold py-2 px-3 rounded inline-flex items-center">
     <span className="mr-1">Videos</span>
@@ -76,7 +76,7 @@ function NavBar() {
     <li className=""><a className="rounded-b bg-gray-200 hover:bg-gray-400 py-2 px-4 block whitespace-no-wrap" href="#">Three is the magic number</a></li>
   </ul>
 </div>
-</Link>
+</Link> */}
 
             <Link href="/quizzes">            
             <a className="ml-1 text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Quizzes</a>
