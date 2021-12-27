@@ -6,7 +6,7 @@ const signToken = (user) => {
       _id: user._id,
       name: user.name,
       email: user.email,
-      isAdmin: user.isAdmin,
+      role: user.role,
     },
 
     process.env.JWT_SECRET,
@@ -32,12 +32,12 @@ const isAuth = async (req, res, next) => {
     res.status(401).send({ message: 'Token is not suppiled' });
   }
 };
-const isAdmin = async (req, res, next) => {
-  if (req.user.isAdmin) {
+const role = async (req, res, next) => {
+  if (req.user.role) {
     next();
   } else {
     res.status(401).send({ message: 'User is not admin' });
   }
 };
 
-export { signToken, isAuth, isAdmin };
+export { signToken, isAuth, role };

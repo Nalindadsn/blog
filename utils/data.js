@@ -5,13 +5,13 @@ const data = {
       name: 'Admin',
       email: 'admin@example.com',
       password: bcrypt.hashSync('123456'),
-      isAdmin: true,
+      role: "admin",
     },
     {
       name: 'User',
       email: 'user@example.com',
       password: bcrypt.hashSync('123456'),
-      isAdmin: false,
+      role: "user",
     },
   ],
   playlist: [

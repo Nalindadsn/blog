@@ -2,11 +2,12 @@ import mongoose from 'mongoose';
 
 const userSchema = new mongoose.Schema(
   {
-    image: { type: String, required: true, default: "https://res.cloudinary.com/masterdevs/image/upload/v1640359719/codeaddon/codeaddon-user_bclsui.jpg" },
+    avatar: { type: String, required: true, default: "https://res.cloudinary.com/masterdevs/image/upload/v1640359719/codeaddon/codeaddon-user_bclsui.jpg" },
     name: { type: String, required: true },
     email: { type: String, required: true, unique: true },
     password: { type: String, required: true },
-    isAdmin: { type: Boolean, required: true, default: false },
+    role: { type: String, required: true, default: "user" },
+    root: { type: Boolean, default: false },
   },
   {
     timestamps: true,

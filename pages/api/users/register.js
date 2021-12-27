@@ -12,7 +12,7 @@ handler.post(async (req, res) => {
     name: req.body.name,
     email: req.body.email,
     password: bcrypt.hashSync(req.body.password),
-    isAdmin: false,
+    user: false,
   });
   const user = await newUser.save();
   await db.disconnect();
@@ -23,7 +23,7 @@ handler.post(async (req, res) => {
     _id: user._id,
     name: user.name,
     email: user.email,
-    isAdmin: user.isAdmin,
+    role: user.role,
   });
 });
 

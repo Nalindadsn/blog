@@ -24,7 +24,7 @@ handler.put(async (req, res) => {
     _id: user._id,
     name: user.name,
     email: user.email,
-    isAdmin: user.isAdmin,
+    role: user.role,
   });
 });
 
