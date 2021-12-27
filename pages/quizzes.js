@@ -77,12 +77,12 @@ export default function Quiz() {
                     <span>Articles</span>
                 </a>
               </Link>
-              <Link href="/playlists">
+              {/* <Link href="/playlists">
                 <a className="flex items-center space-x-2 py-2 px-4 transition duration-200 hover:bg-gray-700 hover:text-white">
                 <i className="fa fa-youtube-play"></i>
                     <span>Video Tutorials</span>
                 </a>
-              </Link>
+              </Link> */}
               <Link href="/quizzes">
                 <a className="flex items-center space-x-2 py-2 px-4 transition duration-200 bg-gray-700 text-white hover:bg-gray-700 hover:text-white">
                 <i className="fa fa-sticky-note"></i>

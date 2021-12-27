@@ -26,6 +26,13 @@ function NavBar() {
           return ""
       }
   }
+  const isActiveM = (r) => {
+    if(r === router.pathname){
+        return " bg-gray-700 "
+    }else{
+        return ""
+    }
+}
     return (
        <div>
              <nav className="bg-gray-800 w-full h-16  px-1   shadow-md fixed z-50" >
@@ -172,43 +179,43 @@ function NavBar() {
            
             <nav data-dev-hint="main navigation">
               <Link href="/">
-                <a className="mt-14 flex items-center space-x-2 py-2 px-4 transition duration-200 hover:bg-gray-700 hover:text-white">
+                <a className={"mt-14 flex items-center space-x-2 py-2 px-4 transition duration-200 text-white hover:bg-gray-700 hover:text-white" + isActiveM('/')}>
                     <i className="fa fa-home"></i>
                     <span>Home</span>
                 </a>
               </Link>
               <Link href="/articles">
-                <a className="flex items-center space-x-2 py-2 px-4 transition duration-200 hover:bg-gray-700 hover:text-white">
+                <a className={"flex items-center space-x-2 py-2 px-4 transition duration-200 text-white hover:bg-gray-700 hover:text-white" + isActiveM('/articles')}>
                     <i className="fa fa-book"></i>
                     <span>Articles</span>
                 </a>
               </Link>
-              <Link href="/playlists">
-                <a className="flex items-center space-x-2 py-2 px-4 transition duration-200 hover:bg-gray-700 hover:text-white">
+              {/* <Link href="/playlists">
+                <a className={"flex items-center space-x-2 py-2 px-4 transition duration-200 text-white hover:bg-gray-700 hover:text-white" + isActiveM('/playlists')}>
                 <i className="fa fa-youtube-play"></i>
                     <span>Video Tutorials</span>
                 </a>
-              </Link>
+              </Link> */}
               <Link href="/quizzes">
-                <a className="flex items-center space-x-2 py-2 px-4 transition duration-200 bg-gray-700 text-white hover:bg-gray-700 hover:text-white">
+                <a className={"flex items-center space-x-2 py-2 px-4 transition duration-200 text-white hover:bg-gray-700 hover:text-white" + isActiveM('/quizzes')}>
                 <i className="fa fa-sticky-note"></i>
                     <span>Quizzes</span>
                 </a>
               </Link>
               <Link href="/about">
-                <a className="flex items-center space-x-2 py-2 px-4 transition duration-200 hover:bg-gray-700 hover:text-white">
+                <a className={"flex items-center space-x-2 py-2 px-4 transition duration-200 text-white hover:bg-gray-700 hover:text-white" + isActiveM('/about')}>
                 <i className="fa fa-info"></i>
                     <span>About Us</span>
                 </a>
               </Link>
               <Link href="/contact">
-                <a className="flex items-center space-x-2 py-2 px-4 transition duration-200 hover:bg-gray-700 hover:text-white">
+                <a className={"flex items-center space-x-2 py-2 px-4 transition duration-200 text-white hover:bg-gray-700 hover:text-white" + isActiveM('/contact')}>
                 <i className="fa fa-envelope"></i>
                     <span>Contact Us</span>
                 </a>
               </Link>
               {/* <Link href="/contact">
-                <a className="flex items-center space-x-2 py-2 px-4 transition duration-200 hover:bg-gray-700 hover:text-white bg-red-500">
+                <a className="flex items-center space-x-2 py-2 px-4 transition duration-200 text-white hover:bg-gray-700 hover:text-white bg-red-500">
                 <i className="fa fa-envelope"></i>
                     <span>LOGOUT</span>
                 </a>
