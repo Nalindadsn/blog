@@ -11,7 +11,6 @@ function Layout({children}) {
         <div>
 <NavBar/>
             {children}
- <Footer/>           
         </div>
     )
 }

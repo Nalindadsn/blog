@@ -4,6 +4,7 @@ import Link from 'next/link';
 import db from '../utils/db';
 import Product from '../models/Product';
 import Category from '../models/Category';
+import Footer from '../components/Footer';
 const Home = (props) => {
  
   const { products,categories } = props;
@@ -313,7 +314,7 @@ tempor
  */}
 
 
-
+<Footer/>
 
 
     </div>

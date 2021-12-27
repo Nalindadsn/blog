@@ -1,7 +1,7 @@
 import Head from 'next/head'
 import Image from 'next/image'
-import Link from 'next/link';
 import React, { useState } from "react";
+import Footerb from '../components/Footerb';
 
 export default function Articles() {
 
@@ -23,8 +23,15 @@ export default function Articles() {
 
 
 
+      
+      <Head>
+        <title>Create Next App</title>
+        <meta name="description" content="web development tutorials " />
+        <link rel="icon" href="/favicon.ico" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+      </Head>
 
-      <div className='w-full' >
+      <main >
     
 
 
@@ -114,7 +121,7 @@ export default function Articles() {
             
             </a>
            
-            <nav data-dev-hint="div className='w-full' navigation">
+            <nav data-dev-hint="main navigation">
                 <a href="https://www.codeaddon.com/" className="flex items-center space-x-2 py-2 px-4 transition duration-200 hover:bg-gray-700 hover:text-white">
                     <i className="fa fa-home"></i>
                     <span>Home</span>
@@ -147,13 +154,13 @@ export default function Articles() {
         </nav>
     </aside>
 
-    <div id="content" className="flex-1 lg:px-8 w-full">
+    <main id="content" className="flex-1 lg:px-8">
         <div className="max-w-7xl mx-auto">
 
             <div className="px-4  sm:px-0">
                 <div className=" rounded-lg h-96">
 
-                <button   onClick={toggle} type="button" className="absolute z-50  top-0  inline-flex items-center justify-center p-2 text-gray-400 hover:text-white hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white block sm:hidden md:hidden" aria-controls="mobile-menu" aria-expanded="false">
+                <button   onClick={toggle} type="button" className="absolute z-50  top-0  inline-flex items-center justify-center p-2 text-gray-400 hover:text-white hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white" aria-controls="mobile-menu" aria-expanded="false">
               <span className="sr-only">Open main menu</span>
               
               
@@ -169,53 +176,221 @@ export default function Articles() {
 ============================================== */}
 
 
-<div className="flex flex-col min-h-screen md:px-3">
-  <div className="">
-    
-    
-    <div className="flex justify-center   py-5">
+<div className="flex flex-col min-h-screen">
 
-      <h2 className=' py-5  font-bold text-4xl text-gray-900 '> Latest Atricles </h2>
-    </div>
-  </div>
-  <div className=" pb-6 flex-1">
+
+
+<div className="flex ">
+  <div className="w-1/2 h-12"><h1 className="font-bold text-3xl ml-12">Articles</h1></div>
+  <div className="w-1/2 h-12 text-right"><a href="">Home</a>/<a href="">Articles</a>   </div>
+</div>
+
+  <div className=" pt-3 pb-6 flex-1">
     <div className="container mx-auto">
       <div className="flex flex-wrap md:-mx-3">
+        
+      <div className="md:w-1/2 px-3 mb-6 w-full">
+          <div className="flex w-full h-full flex-wrap bg-gray-800 overflow-hidden rounded">
+            <figure className="w-2/6 relative">
+
+
+
+              <img className="object-cover h-full w-full" src="https://res.cloudinary.com/masterdevs/image/upload/v1640117880/codeaddon/codeaddon-banner_tmtp8t.png" />
+              <figcaption className="absolute text-lg -mt-16 text-white px-4">
+                <div>
+                  <h1>			
+                    <i className="fa fa-bars  bg-gray-900 p-1 text-white"></i>
+                  </h1>
+                </div>
+                <div>
+                  <h1  className="bg-gray-900 px-2">V : 20</h1>
+                </div>
+                </figcaption>
+
+            </figure>
+            <div className="w-4/6 p-5">
+              <h2 className="text-white leading-normal text-lg">How To Boost Your Traffic Of Your Blog And Destroy The Competition</h2>
+              <div className="flex flex-wrap justify-between items-center mt-6">
+                <div className="inline-flex items-center">
+                  <div className="w-10 h-10 rounded-full overflow-hidden flex-shrink-0">
+                    <img src="https://res.cloudinary.com/masterdevs/image/upload/v1640114706/codeaddon/nalinda-dissanayaka_u5uh0z.jpg" />
+                  </div>
+                  <div className="flex-1 pl-2">
+                    <h2 className="text-white mb-1">Luke Nunez</h2>
+                    <p className="text-white opacity-50 text-xs">May 18</p>
+                  </div>
+                </div>
+                <span className="text-white opacity-50">
+              <svg className="fill-current w-5 h-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 459 459">
+                <path d="M357 0H102C73.95 0 51 22.95 51 51v408l178.5-76.5L408 459V51c0-28.05-22.95-51-51-51z"/>
+              </svg>
+            </span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div className="md:w-1/2 px-3 mb-6 w-full">
+          <div className="flex w-full h-full flex-wrap bg-gray-800 overflow-hidden rounded">
+            <figure className="w-2/6 relative">
+
+
+
+              <img className="object-cover h-full w-full" src="https://res.cloudinary.com/masterdevs/image/upload/v1640117880/codeaddon/codeaddon-banner_tmtp8t.png" />
+              <figcaption className="absolute text-lg -mt-16 text-white px-4">
+                <div>
+                  <h1>			
+                    <i className="fa fa-bars  bg-gray-900 p-1 text-white"></i>
+                  </h1>
+                </div>
+                <div>
+                  <h1  className="bg-gray-900 px-2">V : 20</h1>
+                </div>
+                </figcaption>
+
+            </figure>
+            <div className="w-4/6 p-5">
+              <h2 className="text-white leading-normal text-lg">How To Boost Your Traffic Of Your Blog And Destroy The Competition</h2>
+              <div className="flex flex-wrap justify-between items-center mt-6">
+                <div className="inline-flex items-center">
+                  <div className="w-10 h-10 rounded-full overflow-hidden flex-shrink-0">
+                    <img src="https://res.cloudinary.com/masterdevs/image/upload/v1640114706/codeaddon/nalinda-dissanayaka_u5uh0z.jpg" />
+                  </div>
+                  <div className="flex-1 pl-2">
+                    <h2 className="text-white mb-1">Luke Nunez</h2>
+                    <p className="text-white opacity-50 text-xs">May 18</p>
+                  </div>
+                </div>
+                <span className="text-white opacity-50">
+              <svg className="fill-current w-5 h-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 459 459">
+                <path d="M357 0H102C73.95 0 51 22.95 51 51v408l178.5-76.5L408 459V51c0-28.05-22.95-51-51-51z"/>
+              </svg>
+            </span>
+              </div>
+            </div>
+          </div>
+        </div>
 
         
-
-
-      <div className="md:w-1/2 px-3 mb-6 w-full ">
-          <div className="flex w-full h-full flex-wrap bg-gray-800 overflow-hidden rounded shadow">
+        <div className="md:w-1/2 px-3 mb-6 w-full">
+          <div className="flex w-full h-full flex-wrap bg-gray-800 overflow-hidden rounded">
             <div className="w-2/6">
-            <div style={{position:"relative",height:"100%",paddingBottom:"100%"}}>
-              <Image
-      src="https://res.cloudinary.com/masterdevs/image/upload/v1640117880/codeaddon/codeaddon-banner_tmtp8t.png"
-      alt="test"
-      layout='fill'
-      objectFit='cover'
-    />
-
-            </div>
+              <img className="object-cover h-full w-full" src="https://res.cloudinary.com/masterdevs/image/upload/v1640117880/codeaddon/codeaddon-banner_tmtp8t.png" />
             </div>
             <div className="w-4/6 p-5">
-              <h2 className="text-white font-bold	 leading-normal text-lg">
-              <Link href={`/post/`}>
-          <a>test</a>
-        </Link>
-                 </h2>
-
-<p className='text-slate-300'>
-
-Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-tempor 
-
-</p>
-
-              <div className="flex flex-wrap justify-between items-center mt-3 ">
-                <div className="inline-flex items-center shadow">
-                  <div className="w-10 h-10 rounded-full overflow-hidden flex-shrink-0 ">
-                    <Image width="256" height="256" src="https://res.cloudinary.com/masterdevs/image/upload/v1640114706/codeaddon/nalinda-dissanayaka_u5uh0z.jpg" alt='Nalinda Dissanayaka - author' />
+              <h2 className="text-white leading-normal text-lg">How To Boost Your Traffic Of Your Blog And Destroy The Competition</h2>
+              <div className="flex flex-wrap justify-between items-center mt-6">
+                <div className="inline-flex items-center">
+                  <div className="w-10 h-10 rounded-full overflow-hidden flex-shrink-0">
+                    <img src="https://res.cloudinary.com/masterdevs/image/upload/v1640114706/codeaddon/nalinda-dissanayaka_u5uh0z.jpg" />
+                  </div>
+                  <div className="flex-1 pl-2">
+                    <h2 className="text-white mb-1">Nalinda Dissanayaka</h2>
+                    <p className="text-white opacity-50 text-xs">May 18</p>
+                  </div>
+                </div>
+                <span className="text-white opacity-50">
+              <svg className="fill-current w-5 h-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 459 459">
+                <path d="M357 0H102C73.95 0 51 22.95 51 51v408l178.5-76.5L408 459V51c0-28.05-22.95-51-51-51z"/>
+              </svg>
+            </span>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div className="md:w-1/2 px-3 mb-6 w-full">
+          <div className="flex w-full h-full flex-wrap bg-gray-800 overflow-hidden rounded">
+            <div className="w-2/6">
+              <img className="object-cover h-full w-full" src="https://res.cloudinary.com/masterdevs/image/upload/v1640117880/codeaddon/codeaddon-banner_tmtp8t.png" />
+            </div>
+            <div className="w-4/6 p-5">
+              <h2 className="text-white leading-normal text-lg">How To Boost Your Traffic Of Your Blog And Destroy The Competition</h2>
+              <div className="flex flex-wrap justify-between items-center mt-6">
+                <div className="inline-flex items-center">
+                  <div className="w-10 h-10 rounded-full overflow-hidden flex-shrink-0">
+                    <img src="https://res.cloudinary.com/masterdevs/image/upload/v1640114706/codeaddon/nalinda-dissanayaka_u5uh0z.jpg" />
+                  </div>
+                  <div className="flex-1 pl-2">
+                    <h2 className="text-white mb-1">Nalinda Dissanayaka</h2>
+                    <p className="text-white opacity-50 text-xs">May 18</p>
+                  </div>
+                </div>
+                <span className="text-white opacity-50">
+              <svg className="fill-current w-5 h-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 459 459">
+                <path d="M357 0H102C73.95 0 51 22.95 51 51v408l178.5-76.5L408 459V51c0-28.05-22.95-51-51-51z"/>
+              </svg>
+            </span>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div className="md:w-1/2 px-3 mb-6 w-full">
+          <div className="flex w-full h-full flex-wrap bg-gray-800 overflow-hidden rounded">
+            <div className="w-2/6">
+              <img className="object-cover h-full w-full" src="https://res.cloudinary.com/masterdevs/image/upload/v1640117880/codeaddon/codeaddon-banner_tmtp8t.png" />
+            </div>
+            <div className="w-4/6 p-5">
+              <h2 className="text-white leading-normal text-lg">How To Boost Your Traffic Of Your Blog And Destroy The Competition</h2>
+              <div className="flex flex-wrap justify-between items-center mt-6">
+                <div className="inline-flex items-center">
+                  <div className="w-10 h-10 rounded-full overflow-hidden flex-shrink-0">
+                    <img src="https://res.cloudinary.com/masterdevs/image/upload/v1640114706/codeaddon/nalinda-dissanayaka_u5uh0z.jpg" />
+                  </div>
+                  <div className="flex-1 pl-2">
+                    <h2 className="text-white mb-1">Nalinda Dissanayaka</h2>
+                    <p className="text-white opacity-50 text-xs">May 18</p>
+                  </div>
+                </div>
+                <span className="text-white opacity-50">
+              <svg className="fill-current w-5 h-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 459 459">
+                <path d="M357 0H102C73.95 0 51 22.95 51 51v408l178.5-76.5L408 459V51c0-28.05-22.95-51-51-51z"/>
+              </svg>
+            </span>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div className="md:w-1/2 px-3 mb-6 w-full">
+          <div className="flex w-full h-full flex-wrap bg-gray-800 overflow-hidden rounded">
+            <div className="w-2/6">
+              <img className="object-cover h-full w-full" src="https://res.cloudinary.com/masterdevs/image/upload/v1640117880/codeaddon/codeaddon-banner_tmtp8t.png" />
+            </div>
+            <div className="w-4/6 p-5">
+              <h2 className="text-white leading-normal text-lg">How To Boost Your Traffic Of Your Blog And Destroy The Competition</h2>
+              <div className="flex flex-wrap justify-between items-center mt-6">
+                <div className="inline-flex items-center">
+                  <div className="w-10 h-10 rounded-full overflow-hidden flex-shrink-0">
+                    <img src="https://res.cloudinary.com/masterdevs/image/upload/v1640114706/codeaddon/nalinda-dissanayaka_u5uh0z.jpg" />
+                  </div>
+                  <div className="flex-1 pl-2">
+                    <h2 className="text-white mb-1">Nalinda Dissanayaka</h2>
+                    <p className="text-white opacity-50 text-xs">May 18</p>
+                  </div>
+                </div>
+                <span className="text-white opacity-50">
+              <svg className="fill-current w-5 h-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 459 459">
+                <path d="M357 0H102C73.95 0 51 22.95 51 51v408l178.5-76.5L408 459V51c0-28.05-22.95-51-51-51z"/>
+              </svg>
+            </span>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div className="md:w-1/2 px-3 mb-6 w-full">
+          <div className="flex w-full h-full flex-wrap bg-gray-800 overflow-hidden rounded">
+            <div className="w-2/6">
+              <img className="object-cover h-full w-full" src="https://res.cloudinary.com/masterdevs/image/upload/v1640117880/codeaddon/codeaddon-banner_tmtp8t.png" />
+            </div>
+            <div className="w-4/6 p-5">
+              <h2 className="text-white leading-normal text-lg">How To Boost Your Traffic Of Your Blog And Destroy The Competition</h2>
+              <div className="flex flex-wrap justify-between items-center mt-6">
+                <div className="inline-flex items-center">
+                  <div className="w-10 h-10 rounded-full overflow-hidden flex-shrink-0">
+                    <img src="https://res.cloudinary.com/masterdevs/image/upload/v1640114706/codeaddon/nalinda-dissanayaka_u5uh0z.jpg" />
                   </div>
                   <div className="flex-1 pl-2">
                     <h2 className="text-white mb-1">Nalinda Dissanayaka</h2>
@@ -232,471 +407,17 @@ tempor
           </div>
         </div>
 
-        
 
 
-        <div className="md:w-1/2 px-3 mb-6 w-full ">
-          <div className="flex w-full h-full flex-wrap bg-gray-800 overflow-hidden rounded shadow">
-            <div className="w-2/6">
-            <div style={{position:"relative",height:"100%",paddingBottom:"100%"}}>
-              <Image
-      src="https://res.cloudinary.com/masterdevs/image/upload/v1640117880/codeaddon/codeaddon-banner_tmtp8t.png"
-      alt="test"
-      layout='fill'
-      objectFit='cover'
-    />
-
-            </div>
-            </div>
-            <div className="w-4/6 p-5">
-              <h2 className="text-white font-bold	 leading-normal text-lg">
-              <Link href={`/post/`}>
-          <a>test</a>
-        </Link>
-                 </h2>
-
-<p className='text-slate-300'>
-
-Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-tempor 
-
-</p>
-
-              <div className="flex flex-wrap justify-between items-center mt-3 ">
-                <div className="inline-flex items-center shadow">
-                  <div className="w-10 h-10 rounded-full overflow-hidden flex-shrink-0 ">
-                    <Image width="256" height="256" src="https://res.cloudinary.com/masterdevs/image/upload/v1640114706/codeaddon/nalinda-dissanayaka_u5uh0z.jpg" alt='Nalinda Dissanayaka - author' />
-                  </div>
-                  <div className="flex-1 pl-2">
-                    <h2 className="text-white mb-1">Nalinda Dissanayaka</h2>
-                    <p className="text-white opacity-50 text-xs">May 18</p>
-                  </div>
-                </div>
-                <span className="text-white opacity-50">
-              <svg className="fill-current w-5 h-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 459 459">
-                <path d="M357 0H102C73.95 0 51 22.95 51 51v408l178.5-76.5L408 459V51c0-28.05-22.95-51-51-51z"/>
-              </svg>
-            </span>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        
-
-
-        <div className="md:w-1/2 px-3 mb-6 w-full ">
-          <div className="flex w-full h-full flex-wrap bg-gray-800 overflow-hidden rounded shadow">
-            <div className="w-2/6">
-            <div style={{position:"relative",height:"100%",paddingBottom:"100%"}}>
-              <Image
-      src="https://res.cloudinary.com/masterdevs/image/upload/v1640117880/codeaddon/codeaddon-banner_tmtp8t.png"
-      alt="test"
-      layout='fill'
-      objectFit='cover'
-    />
-
-            </div>
-            </div>
-            <div className="w-4/6 p-5">
-              <h2 className="text-white font-bold	 leading-normal text-lg">
-              <Link href={`/post/`}>
-          <a>test</a>
-        </Link>
-                 </h2>
-
-<p className='text-slate-300'>
-
-Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-tempor 
-
-</p>
-
-              <div className="flex flex-wrap justify-between items-center mt-3 ">
-                <div className="inline-flex items-center shadow">
-                  <div className="w-10 h-10 rounded-full overflow-hidden flex-shrink-0 ">
-                    <Image width="256" height="256" src="https://res.cloudinary.com/masterdevs/image/upload/v1640114706/codeaddon/nalinda-dissanayaka_u5uh0z.jpg" alt='Nalinda Dissanayaka - author' />
-                  </div>
-                  <div className="flex-1 pl-2">
-                    <h2 className="text-white mb-1">Nalinda Dissanayaka</h2>
-                    <p className="text-white opacity-50 text-xs">May 18</p>
-                  </div>
-                </div>
-                <span className="text-white opacity-50">
-              <svg className="fill-current w-5 h-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 459 459">
-                <path d="M357 0H102C73.95 0 51 22.95 51 51v408l178.5-76.5L408 459V51c0-28.05-22.95-51-51-51z"/>
-              </svg>
-            </span>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        
-
-
-        <div className="md:w-1/2 px-3 mb-6 w-full ">
-          <div className="flex w-full h-full flex-wrap bg-gray-800 overflow-hidden rounded shadow">
-            <div className="w-2/6">
-            <div style={{position:"relative",height:"100%",paddingBottom:"100%"}}>
-              <Image
-      src="https://res.cloudinary.com/masterdevs/image/upload/v1640117880/codeaddon/codeaddon-banner_tmtp8t.png"
-      alt="test"
-      layout='fill'
-      objectFit='cover'
-    />
-
-            </div>
-            </div>
-            <div className="w-4/6 p-5">
-              <h2 className="text-white font-bold	 leading-normal text-lg">
-              <Link href={`/post/`}>
-          <a>test</a>
-        </Link>
-                 </h2>
-
-<p className='text-slate-300'>
-
-Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-tempor 
-
-</p>
-
-              <div className="flex flex-wrap justify-between items-center mt-3 ">
-                <div className="inline-flex items-center shadow">
-                  <div className="w-10 h-10 rounded-full overflow-hidden flex-shrink-0 ">
-                    <Image width="256" height="256" src="https://res.cloudinary.com/masterdevs/image/upload/v1640114706/codeaddon/nalinda-dissanayaka_u5uh0z.jpg" alt='Nalinda Dissanayaka - author' />
-                  </div>
-                  <div className="flex-1 pl-2">
-                    <h2 className="text-white mb-1">Nalinda Dissanayaka</h2>
-                    <p className="text-white opacity-50 text-xs">May 18</p>
-                  </div>
-                </div>
-                <span className="text-white opacity-50">
-              <svg className="fill-current w-5 h-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 459 459">
-                <path d="M357 0H102C73.95 0 51 22.95 51 51v408l178.5-76.5L408 459V51c0-28.05-22.95-51-51-51z"/>
-              </svg>
-            </span>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        
-
-
-        <div className="md:w-1/2 px-3 mb-6 w-full ">
-          <div className="flex w-full h-full flex-wrap bg-gray-800 overflow-hidden rounded shadow">
-            <div className="w-2/6">
-            <div style={{position:"relative",height:"100%",paddingBottom:"100%"}}>
-              <Image
-      src="https://res.cloudinary.com/masterdevs/image/upload/v1640117880/codeaddon/codeaddon-banner_tmtp8t.png"
-      alt="test"
-      layout='fill'
-      objectFit='cover'
-    />
-
-            </div>
-            </div>
-            <div className="w-4/6 p-5">
-              <h2 className="text-white font-bold	 leading-normal text-lg">
-              <Link href={`/post/`}>
-          <a>test</a>
-        </Link>
-                 </h2>
-
-<p className='text-slate-300'>
-
-Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-tempor 
-
-</p>
-
-              <div className="flex flex-wrap justify-between items-center mt-3 ">
-                <div className="inline-flex items-center shadow">
-                  <div className="w-10 h-10 rounded-full overflow-hidden flex-shrink-0 ">
-                    <Image width="256" height="256" src="https://res.cloudinary.com/masterdevs/image/upload/v1640114706/codeaddon/nalinda-dissanayaka_u5uh0z.jpg" alt='Nalinda Dissanayaka - author' />
-                  </div>
-                  <div className="flex-1 pl-2">
-                    <h2 className="text-white mb-1">Nalinda Dissanayaka</h2>
-                    <p className="text-white opacity-50 text-xs">May 18</p>
-                  </div>
-                </div>
-                <span className="text-white opacity-50">
-              <svg className="fill-current w-5 h-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 459 459">
-                <path d="M357 0H102C73.95 0 51 22.95 51 51v408l178.5-76.5L408 459V51c0-28.05-22.95-51-51-51z"/>
-              </svg>
-            </span>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        
-
-
-        <div className="md:w-1/2 px-3 mb-6 w-full ">
-          <div className="flex w-full h-full flex-wrap bg-gray-800 overflow-hidden rounded shadow">
-            <div className="w-2/6">
-            <div style={{position:"relative",height:"100%",paddingBottom:"100%"}}>
-              <Image
-      src="https://res.cloudinary.com/masterdevs/image/upload/v1640117880/codeaddon/codeaddon-banner_tmtp8t.png"
-      alt="test"
-      layout='fill'
-      objectFit='cover'
-    />
-
-            </div>
-            </div>
-            <div className="w-4/6 p-5">
-              <h2 className="text-white font-bold	 leading-normal text-lg">
-              <Link href={`/post/`}>
-          <a>test</a>
-        </Link>
-                 </h2>
-
-<p className='text-slate-300'>
-
-Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-tempor 
-
-</p>
-
-              <div className="flex flex-wrap justify-between items-center mt-3 ">
-                <div className="inline-flex items-center shadow">
-                  <div className="w-10 h-10 rounded-full overflow-hidden flex-shrink-0 ">
-                    <Image width="256" height="256" src="https://res.cloudinary.com/masterdevs/image/upload/v1640114706/codeaddon/nalinda-dissanayaka_u5uh0z.jpg" alt='Nalinda Dissanayaka - author' />
-                  </div>
-                  <div className="flex-1 pl-2">
-                    <h2 className="text-white mb-1">Nalinda Dissanayaka</h2>
-                    <p className="text-white opacity-50 text-xs">May 18</p>
-                  </div>
-                </div>
-                <span className="text-white opacity-50">
-              <svg className="fill-current w-5 h-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 459 459">
-                <path d="M357 0H102C73.95 0 51 22.95 51 51v408l178.5-76.5L408 459V51c0-28.05-22.95-51-51-51z"/>
-              </svg>
-            </span>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        
-
-
-        <div className="md:w-1/2 px-3 mb-6 w-full ">
-          <div className="flex w-full h-full flex-wrap bg-gray-800 overflow-hidden rounded shadow">
-            <div className="w-2/6">
-            <div style={{position:"relative",height:"100%",paddingBottom:"100%"}}>
-              <Image
-      src="https://res.cloudinary.com/masterdevs/image/upload/v1640117880/codeaddon/codeaddon-banner_tmtp8t.png"
-      alt="test"
-      layout='fill'
-      objectFit='cover'
-    />
-
-            </div>
-            </div>
-            <div className="w-4/6 p-5">
-              <h2 className="text-white font-bold	 leading-normal text-lg">
-              <Link href={`/post/`}>
-          <a>test</a>
-        </Link>
-                 </h2>
-
-<p className='text-slate-300'>
-
-Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-tempor 
-
-</p>
-
-              <div className="flex flex-wrap justify-between items-center mt-3 ">
-                <div className="inline-flex items-center shadow">
-                  <div className="w-10 h-10 rounded-full overflow-hidden flex-shrink-0 ">
-                    <Image width="256" height="256" src="https://res.cloudinary.com/masterdevs/image/upload/v1640114706/codeaddon/nalinda-dissanayaka_u5uh0z.jpg" alt='Nalinda Dissanayaka - author' />
-                  </div>
-                  <div className="flex-1 pl-2">
-                    <h2 className="text-white mb-1">Nalinda Dissanayaka</h2>
-                    <p className="text-white opacity-50 text-xs">May 18</p>
-                  </div>
-                </div>
-                <span className="text-white opacity-50">
-              <svg className="fill-current w-5 h-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 459 459">
-                <path d="M357 0H102C73.95 0 51 22.95 51 51v408l178.5-76.5L408 459V51c0-28.05-22.95-51-51-51z"/>
-              </svg>
-            </span>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        
-
-
-        <div className="md:w-1/2 px-3 mb-6 w-full ">
-          <div className="flex w-full h-full flex-wrap bg-gray-800 overflow-hidden rounded shadow">
-            <div className="w-2/6">
-            <div style={{position:"relative",height:"100%",paddingBottom:"100%"}}>
-              <Image
-      src="https://res.cloudinary.com/masterdevs/image/upload/v1640117880/codeaddon/codeaddon-banner_tmtp8t.png"
-      alt="test"
-      layout='fill'
-      objectFit='cover'
-    />
-
-            </div>
-            </div>
-            <div className="w-4/6 p-5">
-              <h2 className="text-white font-bold	 leading-normal text-lg">
-              <Link href={`/post/`}>
-          <a>test</a>
-        </Link>
-                 </h2>
-
-<p className='text-slate-300'>
-
-Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-tempor 
-
-</p>
-
-              <div className="flex flex-wrap justify-between items-center mt-3 ">
-                <div className="inline-flex items-center shadow">
-                  <div className="w-10 h-10 rounded-full overflow-hidden flex-shrink-0 ">
-                    <Image width="256" height="256" src="https://res.cloudinary.com/masterdevs/image/upload/v1640114706/codeaddon/nalinda-dissanayaka_u5uh0z.jpg" alt='Nalinda Dissanayaka - author' />
-                  </div>
-                  <div className="flex-1 pl-2">
-                    <h2 className="text-white mb-1">Nalinda Dissanayaka</h2>
-                    <p className="text-white opacity-50 text-xs">May 18</p>
-                  </div>
-                </div>
-                <span className="text-white opacity-50">
-              <svg className="fill-current w-5 h-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 459 459">
-                <path d="M357 0H102C73.95 0 51 22.95 51 51v408l178.5-76.5L408 459V51c0-28.05-22.95-51-51-51z"/>
-              </svg>
-            </span>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        
-
-
-        <div className="md:w-1/2 px-3 mb-6 w-full ">
-          <div className="flex w-full h-full flex-wrap bg-gray-800 overflow-hidden rounded shadow">
-            <div className="w-2/6">
-            <div style={{position:"relative",height:"100%",paddingBottom:"100%"}}>
-              <Image
-      src="https://res.cloudinary.com/masterdevs/image/upload/v1640117880/codeaddon/codeaddon-banner_tmtp8t.png"
-      alt="test"
-      layout='fill'
-      objectFit='cover'
-    />
-
-            </div>
-            </div>
-            <div className="w-4/6 p-5">
-              <h2 className="text-white font-bold	 leading-normal text-lg">
-              <Link href={`/post/`}>
-          <a>test</a>
-        </Link>
-                 </h2>
-
-<p className='text-slate-300'>
-
-Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-tempor 
-
-</p>
-
-              <div className="flex flex-wrap justify-between items-center mt-3 ">
-                <div className="inline-flex items-center shadow">
-                  <div className="w-10 h-10 rounded-full overflow-hidden flex-shrink-0 ">
-                    <Image width="256" height="256" src="https://res.cloudinary.com/masterdevs/image/upload/v1640114706/codeaddon/nalinda-dissanayaka_u5uh0z.jpg" alt='Nalinda Dissanayaka - author' />
-                  </div>
-                  <div className="flex-1 pl-2">
-                    <h2 className="text-white mb-1">Nalinda Dissanayaka</h2>
-                    <p className="text-white opacity-50 text-xs">May 18</p>
-                  </div>
-                </div>
-                <span className="text-white opacity-50">
-              <svg className="fill-current w-5 h-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 459 459">
-                <path d="M357 0H102C73.95 0 51 22.95 51 51v408l178.5-76.5L408 459V51c0-28.05-22.95-51-51-51z"/>
-              </svg>
-            </span>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        
-
-
-        <div className="md:w-1/2 px-3 mb-6 w-full ">
-          <div className="flex w-full h-full flex-wrap bg-gray-800 overflow-hidden rounded shadow">
-            <div className="w-2/6">
-            <div style={{position:"relative",height:"100%",paddingBottom:"100%"}}>
-              <Image
-      src="https://res.cloudinary.com/masterdevs/image/upload/v1640117880/codeaddon/codeaddon-banner_tmtp8t.png"
-      alt="test"
-      layout='fill'
-      objectFit='cover'
-    />
-
-            </div>
-            </div>
-            <div className="w-4/6 p-5">
-              <h2 className="text-white font-bold	 leading-normal text-lg">
-              <Link href={`/post/`}>
-          <a>test</a>
-        </Link>
-                 </h2>
-
-<p className='text-slate-300'>
-
-Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-tempor 
-
-</p>
-
-              <div className="flex flex-wrap justify-between items-center mt-3 ">
-                <div className="inline-flex items-center shadow">
-                  <div className="w-10 h-10 rounded-full overflow-hidden flex-shrink-0 ">
-                    <Image width="256" height="256" src="https://res.cloudinary.com/masterdevs/image/upload/v1640114706/codeaddon/nalinda-dissanayaka_u5uh0z.jpg" alt='Nalinda Dissanayaka - author' />
-                  </div>
-                  <div className="flex-1 pl-2">
-                    <h2 className="text-white mb-1">Nalinda Dissanayaka</h2>
-                    <p className="text-white opacity-50 text-xs">May 18</p>
-                  </div>
-                </div>
-                <span className="text-white opacity-50">
-              <svg className="fill-current w-5 h-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 459 459">
-                <path d="M357 0H102C73.95 0 51 22.95 51 51v408l178.5-76.5L408 459V51c0-28.05-22.95-51-51-51z"/>
-              </svg>
-            </span>
-              </div>
-            </div>
-          </div>
-        </div>
-
-      
-      
-      </div>
-      <div className="text-center pt-6 pb-12 ">
-      <Link href="/articles" > 
-      <a className="border border-gray-600 text-gray-600 px-4 py-2 rounded-full hover:bg-gray-600 hover:text-white">Show More</a>
-      </Link> 
 
       </div>
+      
+      
     </div>
   </div>
 </div>
 
-
-
+<Footerb/>
 {/* 
   ------------------------------------------------- */}
 
@@ -704,20 +425,7 @@ tempor
             </div>
 
         </div>
-        
-        <div className='pt-5 clear-both w-full' >
-
-
-
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-
-        </div>
-    </div>
+    </main>
 </div>
 
 
@@ -762,7 +470,7 @@ proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 
 
 
-      </div>
+      </main>
 
  
     </div>
