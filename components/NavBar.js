@@ -36,6 +36,7 @@ function NavBar() {
 const hd = (r) => {
   if(r === router.pathname){
       return " none "
+      setShowMe(true)
   }else{
       return ""
   }
