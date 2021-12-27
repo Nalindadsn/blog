@@ -15,7 +15,6 @@ const Home = (props) => {
         <title>Home Page -codeaddon</title>
       </Head>
 {/* //------------------- */}
-{console.log(categories)}
 <div className="bg-gray-800">
 
 <div className=" mx-auto  ">
