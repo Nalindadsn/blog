@@ -15,7 +15,10 @@ const Contact = (props) => {
 <br/>
 <br/>
 <br/>
+<div style={{minHeight:"80vh"}}>
+
 Contact Us
+</div>
 <Footer/>
 
     </div>

@@ -10,7 +10,7 @@ const About = (props) => {
         <title>About Us Page -codeaddon</title>
       </Head>
 {/* //------------------- */}
-<div  className='min-h-full'>
+<div  style={{minHeight:"80vh"}}>
 <br/>
 <br/>
 <br/>
