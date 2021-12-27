@@ -60,7 +60,7 @@ const Home = (props) => {
 <h4 className="font-medium text-white pt-12 mt-5 text-shadow-lg  	 ml-10">Same chats, new different experience</h4>
       <h2 className="font-bold text-4xl text-white leading-tight  text-shadow-lg pt-1 pb-2	">under maintenance!</h2>
       <span className="font-small text-white pt-0 text-shadow-lg	 "> Your favorite messaging app just got the best looking update yet! Now it feels like a breath of fresh air.</span>
-      <div id="buttons" className="font-medium flex flex-row mt-4 bg-gray-800">
+      <div id="buttons" className="font-medium flex flex-row mt-4 py-2 bg-gray-800 rounded">
 
       <a href="#watch-video" className='mx-4 p-2 px-4 border-2 text-white border-white rounded-lg hover:text-white hover:bg-gray-900 cursor-pointer'>Sign In</a>
         <a className="mx-4 p-2 px-4 border-2 text-white border-white rounded-lg hover:text-white hover:bg-gray-900 cursor-pointer">Register</a>
