@@ -1,4 +1,5 @@
 import Head from 'next/head'
+import Footer from '../components/Footer'
 const Contact = (props) => {
  
 
@@ -15,7 +16,7 @@ const Contact = (props) => {
 <br/>
 <br/>
 Contact Us
-
+<Footer/>
 
     </div>
   )

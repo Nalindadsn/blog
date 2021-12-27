@@ -6,6 +6,7 @@ class MyDocument extends Document{
             <Html lang="en">
                 <Head>
                     <meta name="description" content="web development lessons"/>
+                    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
                  
                  </Head>
                 <body>

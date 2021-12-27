@@ -1,4 +1,5 @@
 import Head from 'next/head'
+import Footer from '../components/Footer'
 const About = (props) => {
  
 
@@ -9,14 +10,16 @@ const About = (props) => {
         <title>About Us Page -codeaddon</title>
       </Head>
 {/* //------------------- */}
+<div  className='min-h-full'>
+<br/>
+<br/>
+<br/>
+<br/>
+About Us
 
-<br/>
-<br/>
-<br/>
-<br/>
-test
+</div>
 
-
+<Footer/>
     </div>
   )
 }

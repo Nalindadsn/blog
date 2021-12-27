@@ -1,7 +1,10 @@
 import React, { useState } from 'react'
 import Link from 'next/link'
 import Image from 'next/image';
+import { useRouter } from 'next/router';
 function NavBar() {
+  
+  const router = useRouter()
 
     const [showMe, setShowMe] = useState(false);
     const [showMe2, setShowMe2] = useState(false);  
@@ -15,6 +18,14 @@ function NavBar() {
     function toggleuser(){
       setShowMe2(!showMe2);
     }
+    
+    const isActive = (r) => {
+      if(r === router.pathname){
+          return " bg-gray-900 "
+      }else{
+          return ""
+      }
+  }
     return (
        <div>
              <nav className="bg-gray-800 w-full h-16  px-1   shadow-md fixed z-50" >
@@ -46,22 +57,22 @@ function NavBar() {
         <div className="hidden md:block md:ml-2 lg:ml-6">
           <div className="flex space-x-4">
             <Link href="/">
-              <a className="bg-gray-900 text-white px-3 py-2 rounded-md text-sm font-medium" aria-current="page">Home</a>
+              <a className={" text-white px-3 py-2 rounded-md text-sm font-medium  hover:bg-gray-900" + isActive('/')} aria-current="page">Home </a>
             </Link>
             
             
             
 <Link href="/articles">
 <div className="dropdown inline-block relative ml-1">
-  <button className="bg-gray-800 text-white font-semibold py-2 px-3 rounded inline-flex items-center">
+  <button className={" text-white px-3 py-2 rounded-md text-sm font-medium hover:bg-gray-900" + isActive('/articles')}>
     <span className="mr-1">Articles</span>
-    <svg className="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"/> </svg>
+    {/* <svg className="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"/> </svg> */}
   </button>
-  <ul className="dropdown-menu absolute hidden text-gray-700 pt-1">
+  {/* <ul className="dropdown-menu absolute hidden text-gray-700 pt-1">
     <li className=""><a className="rounded-t bg-gray-200 hover:bg-gray-400 py-2 px-4 block whitespace-no-wrap" href="#">One</a></li>
     <li className=""><a className="bg-gray-200 hover:bg-gray-400 py-2 px-4 block whitespace-no-wrap" href="#">Two</a></li>
     <li className=""><a className="rounded-b bg-gray-200 hover:bg-gray-400 py-2 px-4 block whitespace-no-wrap" href="#">Three is the magic number</a></li>
-  </ul>
+  </ul> */}
 </div>
 </Link>           
 {/* <Link href="/articles">
@@ -79,13 +90,13 @@ function NavBar() {
 </Link> */}
 
             <Link href="/quizzes">            
-            <a className="ml-1 text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Quizzes</a>
+            <a className={" text-white px-3 py-2 rounded-md text-sm font-medium  hover:bg-gray-900" + isActive('/quizzes')}>Quizzes</a>
             </Link>
             <Link href="/about">
-            <a className="ml-1 text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">About</a>
+            <a className={" text-white px-3 py-2 rounded-md text-sm font-medium  hover:bg-gray-900" + isActive('/about')}>About</a>
             </Link>
             <Link href="/contact">
-            <a className="ml-1 text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Contact</a>
+            <a className={" text-white px-3 py-2 rounded-md text-sm font-medium  hover:bg-gray-900" + isActive('/contact')}>Contact</a>
             </Link>
 
           </div>

@@ -53,7 +53,7 @@ export default function Quiz() {
 
 
 
-    <aside id="sidebar" className="mt-5 z-40 bg-gray-800 text-gray-100 md:w-64 w-3/4 space-y-6 pt-6 px-0 absolute inset-y-0 left-0 transform md:relative md:translate-x-0 transition duration-200 ease-in-out  md:flex md:flex-col md:justify-between overflow-y-auto hidden md:block  hdd" data-dev-hint="sidebar; px-0 for frameless; px-2 for visually inset the navigation"  style={
+    <aside id="sidebar" className="mt-0 z-40 bg-gray-800 text-gray-100 md:w-64 w-3/4 space-y-6 pt-0 px-0 absolute inset-y-0 left-0 transform md:relative md:translate-x-0 transition duration-200 ease-in-out  md:flex md:flex-col md:justify-between overflow-y-auto hidden md:block  hdd" data-dev-hint="sidebar; px-0 for frameless; px-2 for visually inset the navigation"  style={
           showMe!==""?(showMe?{ display:"block"}:{display:"none" }):({})
       }>
         <div className="flex flex-col space-y-6" data-dev-hint="optional div for having an extra footer navigation">
@@ -65,34 +65,48 @@ export default function Quiz() {
             </a>
            
             <nav data-dev-hint="main navigation">
-                <a href="https://www.codeaddon.com/" className="flex items-center space-x-2 py-2 px-4 transition duration-200 hover:bg-gray-700 hover:text-white">
+              <Link href="/">
+                <a className="mt-14 flex items-center space-x-2 py-2 px-4 transition duration-200 hover:bg-gray-700 hover:text-white">
                     <i className="fa fa-home"></i>
                     <span>Home</span>
                 </a>
-                <a href="https://www.codeaddon.com/articles" className="flex items-center space-x-2 py-2 px-4 transition duration-200 hover:bg-gray-700 hover:text-white">
+              </Link>
+              <Link href="/articles">
+                <a className="flex items-center space-x-2 py-2 px-4 transition duration-200 hover:bg-gray-700 hover:text-white">
                     <i className="fa fa-book"></i>
                     <span>Articles</span>
                 </a>
-                <a href="https://www.codeaddon.com/playlists" className="flex items-center space-x-2 py-2 px-4 transition duration-200 hover:bg-gray-700 hover:text-white">
+              </Link>
+              <Link href="/playlists">
+                <a className="flex items-center space-x-2 py-2 px-4 transition duration-200 hover:bg-gray-700 hover:text-white">
                 <i className="fa fa-youtube-play"></i>
                     <span>Video Tutorials</span>
                 </a>
-                <a href="https://www.codeaddon.com/quizzes" className="flex items-center space-x-2 py-2 px-4 transition duration-200 bg-gray-700 text-white hover:bg-gray-700 hover:text-white">
+              </Link>
+              <Link href="/quizzes">
+                <a className="flex items-center space-x-2 py-2 px-4 transition duration-200 bg-gray-700 text-white hover:bg-gray-700 hover:text-white">
                 <i className="fa fa-sticky-note"></i>
                     <span>Quizzes</span>
                 </a>
-                <a href="https://www.codeaddon.com/about" className="flex items-center space-x-2 py-2 px-4 transition duration-200 hover:bg-gray-700 hover:text-white">
+              </Link>
+              <Link href="/about">
+                <a className="flex items-center space-x-2 py-2 px-4 transition duration-200 hover:bg-gray-700 hover:text-white">
                 <i className="fa fa-info"></i>
                     <span>About Us</span>
                 </a>
-                <a href="https://www.codeaddon.com/contact" className="flex items-center space-x-2 py-2 px-4 transition duration-200 hover:bg-gray-700 hover:text-white">
+              </Link>
+              <Link href="/contact">
+                <a className="flex items-center space-x-2 py-2 px-4 transition duration-200 hover:bg-gray-700 hover:text-white">
                 <i className="fa fa-envelope"></i>
                     <span>Contact Us</span>
                 </a>
-                <a href="https://www.codeaddon.com/contact" className="flex items-center space-x-2 py-2 px-4 transition duration-200 hover:bg-gray-700 hover:text-white bg-red-500">
+              </Link>
+              {/* <Link href="/contact">
+                <a className="flex items-center space-x-2 py-2 px-4 transition duration-200 hover:bg-gray-700 hover:text-white bg-red-500">
                 <i className="fa fa-envelope"></i>
                     <span>LOGOUT</span>
                 </a>
+              </Link> */}
                 
             </nav>
         </div>
@@ -104,10 +118,10 @@ export default function Quiz() {
 
         <div className="max-w-7xl mx-auto">
 
-            <div className="px-4  sm:px-0">
+            <div className="px-4  ">
                 <div className=" rounded-lg h-96">
 
-                <button   onClick={toggle} type="button" className="absolute z-50  top-16  inline-flex items-center justify-center p-2 text-gray-400 hover:text-white hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white" aria-controls="mobile-menu" aria-expanded="false">
+                <button   onClick={toggle} type="button" className="tg absolute z-30 left-3  top-16  inline-flex items-center justify-center p-2 text-gray-400 hover:text-white hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white bg-gray-900  " aria-controls="mobile-menu" aria-expanded="false">
               <span className="sr-only">Open main menu</span>
               
               
@@ -127,9 +141,9 @@ export default function Quiz() {
 
 
 
-<div className="flex ">
-  <div className="w-1/2 h-12"><h1 className="font-bold text-3xl ml-12">Quizzes</h1></div>
-  <div className="w-1/2 h-12 text-right"><a href="">Home</a>/<a href="">Quizzes</a>   </div>
+<div className="flex pt-20">
+  <div className="w-1/2 h-12"><h1 className="font-bold text-3xl ml-14">Quizzes</h1></div>
+  <div className="w-1/2 h-12 text-right mr-3"><a href="">Home</a>/<a href="">Quizzes</a>   </div>
 </div>
 
   <div className=" pt-3 pb-6 flex-1">
