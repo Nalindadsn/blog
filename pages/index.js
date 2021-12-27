@@ -54,17 +54,17 @@ const Home = (props) => {
   <h1  className="bg-sky-300 px-2 ">T</h1>
 </div>
 </figcaption>
-    <figcaption className="absolute -left-5 top-0 text-lg -mt-16 text-white px-4 pt-12 block md:hidden z-40">
+    <figcaption className="absolute -left-5 top-0 text-lg -mt-16 text-white px-4 pt-12 block md:hidden z-30">
 
 
 <div className="shadow py-5 pl-5  mr-6 pr-7">
 <h4 className="font-medium text-white pt-12 mt-5 text-shadow-lg  	 ml-10">Same chats, new different experience</h4>
       <h2 className="font-bold text-4xl text-white leading-tight  text-shadow-lg pt-1 pb-2	">under maintenance!</h2>
       <span className="font-small text-white pt-0 text-shadow-lg	 "> Your favorite messaging app just got the best looking update yet! Now it feels like a breath of fresh air.</span>
-      <div id="buttons" className="font-medium flex flex-row mt-4 py-2 bg-gray-800 rounded">
+      <div id="buttons" className="font-medium flex flex-row mt-4 py-2 rounded">
 
-      <a href="#watch-video" className='mx-4 p-2 px-4 border-2 text-white border-white rounded-lg hover:text-white hover:bg-gray-900 cursor-pointer'>Sign In</a>
-        <a className="mx-4 p-2 px-4 border-2 text-white border-white rounded-lg hover:text-white hover:bg-gray-900 cursor-pointer">Register</a>
+      <a href="#watch-video" className='mx-4 p-2 px-4 border-2 text-white border-white rounded-lg  bg-gray-800 hover:text-white hover:bg-gray-900 cursor-pointer'>Sign In</a>
+        <a className="mx-4 p-2 px-4 border-2 text-white border-white rounded-lg  bg-gray-800 hover:text-white hover:bg-gray-900 cursor-pointer">Register</a>
       
       </div>
 </div>
@@ -72,7 +72,7 @@ const Home = (props) => {
 
 
 <div className='bg-white h-12'></div>
-<Image width="675" height="528" className="z-30 pb-14 object-cover h-full w-full block sm:hidden" src="https://res.cloudinary.com/masterdevs/image/upload/v1640121452/codeaddon/codeaddon-banner-web-development_vibee4.png" alt='codeaddon-banner-web-development' />
+<Image width="675" height="528" className="z-20 pb-14 object-cover h-full w-full block md:hidden sm:hidden" src="https://res.cloudinary.com/masterdevs/image/upload/v1640121452/codeaddon/codeaddon-banner-web-development_vibee4.png" alt='codeaddon-banner-web-development' />
 
 
 

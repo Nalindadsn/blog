@@ -160,34 +160,48 @@ function NavBar() {
             </a>
            
             <nav data-dev-hint="main navigation">
-                <a href="https://www.codeaddon.com/" className="mt-14 flex items-center space-x-2 py-2 px-4 transition duration-200 hover:bg-gray-700 hover:text-white">
+              <Link href="/">
+                <a className="mt-14 flex items-center space-x-2 py-2 px-4 transition duration-200 hover:bg-gray-700 hover:text-white">
                     <i className="fa fa-home"></i>
                     <span>Home</span>
                 </a>
-                <a href="https://www.codeaddon.com/articles" className="flex items-center space-x-2 py-2 px-4 transition duration-200 hover:bg-gray-700 hover:text-white">
+              </Link>
+              <Link href="/articles">
+                <a className="flex items-center space-x-2 py-2 px-4 transition duration-200 hover:bg-gray-700 hover:text-white">
                     <i className="fa fa-book"></i>
                     <span>Articles</span>
                 </a>
-                <a href="https://www.codeaddon.com/playlists" className="flex items-center space-x-2 py-2 px-4 transition duration-200 hover:bg-gray-700 hover:text-white">
+              </Link>
+              <Link href="/playlists">
+                <a className="flex items-center space-x-2 py-2 px-4 transition duration-200 hover:bg-gray-700 hover:text-white">
                 <i className="fa fa-youtube-play"></i>
                     <span>Video Tutorials</span>
                 </a>
-                <a href="https://www.codeaddon.com/quizzes" className="flex items-center space-x-2 py-2 px-4 transition duration-200 bg-gray-700 text-white hover:bg-gray-700 hover:text-white">
+              </Link>
+              <Link href="/quizzes">
+                <a className="flex items-center space-x-2 py-2 px-4 transition duration-200 bg-gray-700 text-white hover:bg-gray-700 hover:text-white">
                 <i className="fa fa-sticky-note"></i>
                     <span>Quizzes</span>
                 </a>
-                <a href="https://www.codeaddon.com/about" className="flex items-center space-x-2 py-2 px-4 transition duration-200 hover:bg-gray-700 hover:text-white">
+              </Link>
+              <Link href="/about">
+                <a className="flex items-center space-x-2 py-2 px-4 transition duration-200 hover:bg-gray-700 hover:text-white">
                 <i className="fa fa-info"></i>
                     <span>About Us</span>
                 </a>
-                <a href="https://www.codeaddon.com/contact" className="flex items-center space-x-2 py-2 px-4 transition duration-200 hover:bg-gray-700 hover:text-white">
+              </Link>
+              <Link href="/contact">
+                <a className="flex items-center space-x-2 py-2 px-4 transition duration-200 hover:bg-gray-700 hover:text-white">
                 <i className="fa fa-envelope"></i>
                     <span>Contact Us</span>
                 </a>
-                <a href="https://www.codeaddon.com/contact" className="flex items-center space-x-2 py-2 px-4 transition duration-200 hover:bg-gray-700 hover:text-white bg-red-500">
+              </Link>
+              {/* <Link href="/contact">
+                <a className="flex items-center space-x-2 py-2 px-4 transition duration-200 hover:bg-gray-700 hover:text-white bg-red-500">
                 <i className="fa fa-envelope"></i>
                     <span>LOGOUT</span>
                 </a>
+              </Link> */}
                 
             </nav>
         </div>
