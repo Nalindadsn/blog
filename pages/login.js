@@ -35,16 +35,24 @@ router.push(redirect || '/');
 }
       };
     return (
-    <Layout>----------test
-        <form className='pt-20' onSubmit={submitHandler} >
-            <input type="text" name="email" id="email" className="border" 
+      <div>
+
+      <div className='w-full max-w-xs pt-20'>
+        <form className='bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4 ' onSubmit={submitHandler} >
+        <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="email" >email</label>
+            <input type="text" name="email" id="email" className="appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" 
             onChange={e=>setEmail(e=e.target.value)}
              /><br/>
-            <input type="password" name="password" id="password" className="border" 
+             <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="password" >password</label>
+            <input type="password" name="password" id="password" className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" 
             onChange={e=>setPassword(e=e.target.value)} /><br/>
             <button type="submit">submit</button>
 
-        </form>----------
-    </Layout>
+        </form>
+
+
+      </div>
+
+      </div>
   )
 }

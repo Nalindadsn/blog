@@ -1,15 +1,15 @@
 import '../styles/globals.css'
 import '../styles/index.css'
 import Layout from '../components/Layout'
-import { DataProvider } from '../store/GlobalState'
+import { StoreProvider } from '../utils/Store'
 
 function MyApp({ Component, pageProps }) {
   return (
-    <DataProvider>
+    <StoreProvider>
       <Layout>
         <Component {...pageProps} />
       </Layout>
-    </DataProvider>
+    </StoreProvider>
   )
 }
 

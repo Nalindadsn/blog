@@ -1,22 +1,25 @@
-import React, { useState } from 'react'
+import React, { useContext, useState } from 'react'
 import Link from 'next/link';
 import NavBar from './NavBar'
 import Notify from './Notify'
-// import Modal from './Modal'
+import { Store } from '../utils/Store'
 
 
 function Layout({children}) {
 
+    const { state, dispatch } = useContext(Store)
+    const { darkMode,  userInfo } = state
 
 
     return (
         <div>
-<NavBar/>
+<NavBar userInfo={userInfo}/>
 
 <NavBar />
-            <Notify/>
+            {/* <Notify/> */}
             {/* <Modal /> */}
             {children}
+ 
         </div>
     )
 }

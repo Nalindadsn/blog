@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import Link from 'next/link'
 import Image from 'next/image';
 import { useRouter } from 'next/router';
-function NavBar() {
+function NavBar(userInfo) {
   
   const router = useRouter()
 
@@ -22,6 +22,7 @@ function NavBar() {
     const isActive = (r) => {
       if(r === router.pathname){
           return " bg-gray-900 "
+          
       }else{
           return ""
       }
@@ -35,20 +36,22 @@ function NavBar() {
 }
 const hd = (r) => {
   if(r === router.pathname){
-      return " none "
-      setShowMe(true)
+   
+      return " hidden "
   }else{
       return ""
   }
 }
+const ui=JSON.parse(JSON.stringify(userInfo))
     return (
        <div>
+         
              <nav className="bg-gray-800 w-full h-16  px-1   shadow-md fixed z-50" >
   <div className="max-w-7xl mx-0 p-0 sm:px-2 lg:px-6">
     <div className="relative flex items-center justify-between h-16">
       <div className="absolute inset-y-0 left-0 flex items-center md:hidden">
 
-        <button  onClick={toggle} type="button" className="inline-flex items-center justify-center p-2  text-gray-400 hover:text-white bg-gray-700/10 hover:bg-gray-700/50 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white fixed top-16 z-50" aria-controls="mobile-menu" aria-expanded="false">
+        <button  onClick={toggle} type="button" className={" inline-flex items-center justify-center p-2  text-gray-400 hover:text-white  hover:bg-gray-700/50 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white fixed top-16 z-50 "} aria-controls="mobile-menu" aria-expanded="false">
           <span className="sr-only">Open main menu</span>
           
           
@@ -141,7 +144,9 @@ const hd = (r) => {
               </Link>
 
         <div className="ml-3 relative">
-
+        {/* {userInfo ? (
+          // <span>{console.log(userInfo.token)}</span>
+        ):""} */}
           {/* <div>
             <button type="button" className="bg-gray-800 flex text-sm rounded-full focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white" id="user-menu-button" aria-expanded="false" aria-haspopup="true">
               <span className="sr-only">Open user menu</span>
@@ -174,7 +179,7 @@ const hd = (r) => {
 
 
 
-<aside id="sidebar" className={"z-40 bg-gray-800 text-gray-100 md:w-64 w-3/4 space-y-6 pt-6 px-0  inset-y-0 left-0 transform md:relative md:translate-x-0 transition duration-200 ease-in-out  md:flex md:flex-col md:justify-between overflow-y-auto hidden md:block  fixed"+hd('/articles')} data-dev-hint="sidebar; px-0 for frameless; px-2 for visually inset the navigation"  style={
+<aside id="sidebar" className={"z-40 bg-gray-800 text-gray-100 md:w-64 w-3/4 space-y-6 pt-6 px-0  inset-y-0 left-0 transform md:relative md:translate-x-0 transition duration-200 ease-in-out  md:flex md:flex-col md:justify-between overflow-y-auto hidden md:block  fixed "+hd('/articles')} data-dev-hint="sidebar; px-0 for frameless; px-2 for visually inset the navigation"   style={
           showMe!==""?(showMe?{ display:"block"}:{display:"none" }):({})
       }>
         <div className="flex flex-col space-y-6" data-dev-hint="optional div for having an extra footer navigation">
