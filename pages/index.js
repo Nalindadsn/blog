@@ -325,7 +325,7 @@ tempor
 export default Home
 export async function getServerSideProps() {
   await db.connect()
-  const products = await Product.find({}).lean()
+  const products = await Product.find({}).lean().limit(6)
   const categories = await Category.find({}).lean()
 
 

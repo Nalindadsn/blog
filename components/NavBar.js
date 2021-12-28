@@ -15,9 +15,9 @@ function NavBar(userInfo) {
     }
     
   
-    function toggleuser(){
-      setShowMe2(!showMe2);
-    }
+    // function toggleuser(){
+    //   setShowMe2(!showMe2);
+    // }
     
     const isActive = (r) => {
       if(r === router.pathname){
@@ -192,9 +192,9 @@ const ui=JSON.parse(JSON.stringify(userInfo))
            
             <nav data-dev-hint="main navigation">
               <Link href="/">
-                <a className={"mt-14 flex items-center space-x-2 py-2 px-4 transition duration-200 text-white hover:bg-gray-700 hover:text-white" + isActiveM('/')}>
+                <a  className={"mt-14 flex items-center space-x-2 py-2 px-4 transition duration-200 text-white hover:bg-gray-700 hover:text-white" + isActiveM('/')}>
                     <i className="fa fa-home"></i>
-                    <span>Home</span>
+                    <span  onClick={toggle}>Home</span>
                 </a>
               </Link>
               <Link href="/articles">
