@@ -3,6 +3,9 @@ import '../styles/index.css'
 import Layout from '../components/Layout'
 import { StoreProvider } from '../utils/Store'
 
+
+import "prismjs/themes/prism-tomorrow.css";
+
 function MyApp({ Component, pageProps }) {
   return (
     <StoreProvider>
