@@ -28,13 +28,13 @@ export default function PostScreen(props) {
 <br/>
 {product.name}
 
-<pre class="line-numbers">
-    <code class="language-css">
+<pre className="line-numbers">
+    <code className="language-css">
 
     </code>
 </pre>
 
-<pre class="line-numbers language-markup">
+<pre className="line-numbers language-markup">
     <code>
         &lt;img src="example.png"&gt;
     </code>
