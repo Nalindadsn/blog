@@ -79,9 +79,14 @@
       width: 100%;
       border-left: 18px solid #333;
     }
+    .hdv{
+      display: none;
+    }
 
    }
-
+.hdv{
+  width: 250px;
+}
 
    
    .treeStruc{
