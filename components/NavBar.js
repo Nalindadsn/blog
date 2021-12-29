@@ -137,11 +137,11 @@ const ui=JSON.parse(JSON.stringify(userInfo))
         </a>
         </Link>
  
-              <Link href='/register'>
+              {/* <Link href='/register'>
               <a className="border-2 text-white border-white  py-1 px-3 mr-1 rounded-full text-gray-400 hover:text-gray-800 hover:bg-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white">
                 Register
               </a>
-              </Link>
+              </Link> */}
 
         <div className="ml-3 relative">
         {/* {userInfo ? (
