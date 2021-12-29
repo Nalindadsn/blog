@@ -22,23 +22,24 @@ export default function PostScreen(props) {
 
 <div>
   <div className='bg-gray-800 '>
-    <h1 className=' p-5 pl-12 text-center pt-20 text-4xl text-white'>{product.name}</h1>
+    <h1 className=' p-5 pl-12 pt-20 text-4xl text-white'>{product.name}</h1>
   </div>
   
-<br/>
-<br/>
-<br/>
+<div className='container  mx-auto'>
+
 <h2>Directory List</h2>
 <div dangerouslySetInnerHTML={{__html:product.description}}></div>
-
-
-
+  
 
 <pre className="line-numbers language-markup">
     <code>
     &lt;img src="example.png"&gt;&lt;img src="example.png"&gt;&lt;img src="example.png"&gt;&lt;img src="example.png"&gt;
     </code>
 </pre>
+
+</div>
+
+
 
 
 </div>
