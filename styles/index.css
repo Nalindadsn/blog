@@ -77,7 +77,8 @@
     }
     .treeStruc{
       width: 100%;
-      border-left: 18px solid #333;
+      border-left: 5px solid #333;
+      border-top: 1px solid #333;
     }
     .hdv{
       display: none;
@@ -91,9 +92,7 @@
    
    .treeStruc{
 
-	
     float: right;
-    width: 200px;
     padding: 10px;
     box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
     margin: 10px;

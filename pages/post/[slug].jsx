@@ -6,6 +6,7 @@ import Prism from "prismjs";
 import "prismjs/components/prism-hcl";
 import "prismjs/plugins/line-highlight/prism-line-highlight";
 import { useEffect } from 'react';
+import Head from 'next/head';
 
 
 export default function PostScreen(props) {
@@ -21,82 +22,72 @@ export default function PostScreen(props) {
 
 
 
-const a=`
-<div className="treeStruc">
-<ul>
-<li className="root">
-Root 
-</li>
-<li>
-<div className='fa fa-folder'></div>  includes
-<ul>
-<li><i className='fa fa-sticky-note'></i> config.php</li>
-<li><i className='fa fa-sticky-note'></i>ajax.php</li>
-</ul>  
-</li>
-<li><i className='fa fa-sticky-note'></i> index.php</li>
-
-</ul> 
-
-</div> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-proident, sunt in culpa qui officia deserunt mollit anim id est laborum.    
-<div><pre className="line-numbers language-markup">
-<code>
-&lt;img src="example.png"&gt;&lt;img src="example.png"&gt;
-&lt;img src="example.png"&gt;&lt;img src="example.png"&gt;
-</code>
-</pre></div>`
-
-
-
 
   return (
 
 <div>
+<Head>
+        <title>{product.name} -codeaddon</title>
+      </Head>
   <div className='bg-gray-800 '>
     <h1 className=' p-5 pl-12 pt-20 text-4xl text-white'>{product.name}</h1>
   </div>
   
-<div className='container  mx-auto'>
-
-
-
-  
-
-<pre className="line-numbers language-markup">
-    <code>
-    &lt;img src="example.png"&gt;&lt;img src="example.png"&gt;&lt;img src="example.png"&gt;&lt;img src="example.png"&gt;
-    </code>
-</pre>
-
-</div>
-
-
-
-<div className="flex flex-col h-screen container mx-auto">
-  <div className="flex flex-1 overflow-hidden">
-    <div className="flex flex-1 flex-col">
-      <div className="flex bg-gray-300 h-16 p-4"><h2>Directory List</h2></div>
-      <div className="flex flex-1 bg-blue-300 overflow-y-auto paragraph px-4">
 
 
 
 
 
-      <div dangerouslySetInnerHTML={{__html:product.description}}></div>
 
-      </div>
+
+
+
+
+<div  className="relative min-h-screen md:flex" data-dev-hint="container">
+
+
+
+    
+    <div id="content"  className="flex-1 p-6 lg:px-8">
+        <div  className="max-w-7xl mx-auto">
+            <div  className="px-4 py-6 sm:px-0">
+                <div  className="border-4 border-dashed border-gray-200 rounded-lg h-96">
+                <div dangerouslySetInnerHTML={{__html:product.description}}></div>
+                </div>
+            </div>
+        </div>
     </div>
-    <div className="flex bg-gray-100 w-32 p-4 hdv">Sidebar Sidebar Sidebar Sidebar Sidebar testststst</div>
+
+    <aside id="sidebar"  className=" shadow md:w-64 w-3/4 space-y-6  px-0 absolute inset-y-0 left-0 transform md:relative md:translate-x-0 transition duration-200 ease-in-out  md:flex md:flex-col md:justify-between overflow-y-auto" data-dev-hint="sidebar; px-0 for frameless; px-2 for visually inset the navigation">
+        <div  className="flex flex-col space-y-6" data-dev-hint="optional div for having an extra footer navigation">
+            
+            
+
+            <nav data-dev-hint="main navigation">
+                
+                
+            </nav>
+        </div>
 
 
-  </div>
-  <div className="flex">Footer</div>
+    </aside>
+
 </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 </div>
  
 
