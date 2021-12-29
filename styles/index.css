@@ -75,5 +75,73 @@
     aside{
       display: none;
     }
+    .treeStruc{
+      width: 100%;
+      border-left: 18px solid #333;
+    }
 
    }
+
+
+   
+   .treeStruc{
+	
+    float: right;
+    padding: 10px;
+    box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+    margin: 10px;
+  
+  }
+
+   
+  .treeStruc ul{
+	
+    margin: 0px 0px 0px 20px; 
+    list-style: none; line-height: 2em; 
+  
+  }
+    
+.treeStruc li{
+
+        font-size: 16px;
+      position: relative;
+}
+
+.treeStruc li:before{
+          position: absolute;
+          left: -15px;
+          top: 0px;
+          content: '';
+          display: block;
+          border-left: 1px solid #ddd;
+          height: 1em;
+          border-bottom: 1px solid #ddd;
+          width: 10px;
+}
+
+.treeStruc li:after{
+          position: absolute;
+          left: -15px;
+          bottom: -7px;
+          content: '';
+          display: block;
+          border-left: 1px solid #ddd;
+          height: 100%;
+}
+
+.treeStruc .root{
+margin: 0px 0px 0px -20px;
+}
+.treeStruc .root:before{
+display: none;
+}
+.treeStruc .root:after{
+display: none;
+}
+
+.treeStruc li:last-child:after{
+display: none
+}
+.fa-sticky-note{
+  contain: "test";
+}
