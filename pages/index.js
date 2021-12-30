@@ -146,8 +146,8 @@ const Home = (props) => {
 
 <p className='text-slate-300'>
 
-Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-tempor 
+{/* Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+tempor  */}
 
 </p>
 
@@ -158,7 +158,7 @@ tempor
                   </div>
                   <div className="flex-1 pl-2">
                     <h2 className="text-white mb-1">Nalinda Dissanayaka</h2>
-                    <p className="text-white opacity-50 text-xs">May 18</p>
+                    <p className="text-white opacity-50 text-xs">{product.createdAt}</p>
                   </div>
                 </div>
                 <span className="text-white opacity-50">
