@@ -63,7 +63,7 @@ const Home = (props) => {
       <div id="buttons" className="font-medium flex flex-row mt-4 py-2 rounded">
 
       <a href="#watch-video" className='mx-4 p-2 px-4 border-2 text-white border-white rounded-lg  bg-gray-800 hover:text-white hover:bg-gray-900 cursor-pointer'>Sign In</a>
-        <a className="mx-4 p-2 px-4 border-2 text-white border-white rounded-lg  bg-gray-800 hover:text-white hover:bg-gray-900 cursor-pointer">Register</a>
+        {/* <a className="mx-4 p-2 px-4 border-2 text-white border-white rounded-lg  bg-gray-800 hover:text-white hover:bg-gray-900 cursor-pointer">Register</a> */}
       
       </div>
 </div>
