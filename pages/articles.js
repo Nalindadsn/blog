@@ -145,7 +145,7 @@ export default function Articles(props) {
 
 
 
-<div className="flex pt-20">
+<div className="flex md:pt-20 sm:pt-20">
   <div className="w-1/2 h-12"><h1 className="font-bold text-3xl ml-14">Articles</h1></div>
   <div className="w-1/2 h-12 text-right mr-3"><a href="">Home</a>/<a href="">Articles</a>   </div>
 </div>
