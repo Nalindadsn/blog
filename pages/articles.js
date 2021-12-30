@@ -150,7 +150,7 @@ export default function Articles(props) {
   <div className="w-1/2 h-12 text-right mr-3"><a href="">Home</a>/<a href="">Articles</a>   </div>
 </div>
 
-  <div className=" pt-3 pb-6 flex-1">
+  <div className=" pt-0 pb-6 flex-1">
     <div className="container mx-auto">
 
 
@@ -160,7 +160,7 @@ export default function Articles(props) {
 
 
 
-    <div className="container my-8 mx-auto px-4 leading-normal">
+    <div className="container mx-auto px-4 leading-normal">
 
 
 
@@ -236,12 +236,7 @@ tempor  */}
       
       
       </div>
-      <div className="text-center pt-6 pb-12 ">
-      <Link href="/articles" > 
-      <a className="border border-gray-600 text-gray-600 px-4 py-2 rounded-full hover:bg-gray-600 hover:text-white">Show More</a>
-      </Link> 
-
-      </div>
+      
     </div>
   </div>
 </div>
