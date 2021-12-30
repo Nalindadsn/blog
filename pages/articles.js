@@ -5,10 +5,14 @@ import React, { useState } from "react";
 
 import Link from 'next/link'
 import Footerb from '../components/Footerb';
+import db from '../utils/db';
+import Product from '../models/Product';
+import Category from '../models/Category';
 
-export default function Articles() {
+export default function Articles(props) {
 
 
+  const { products,categories } = props;
   
   const [showMe, setShowMe] = useState('');
 
@@ -114,7 +118,7 @@ export default function Articles() {
 
     </aside>
 
-    <main id="content" className="flex-1 lg:px-8">
+    <main id="content" className="flex-1 lg:px-0">
 
         <div className="max-w-7xl mx-auto">
 
@@ -163,27 +167,88 @@ export default function Articles() {
     <div className="">
 
 
-    {/* <div className="relative p-3 mb-2 bg-gray-800 text-white  rounded-md shadow">  
-  <button className=" absolute right-0 bottom-1 mt-2 mx-4 p-2  px-4 border-2 text-white text-center border-white rounded-lg hover:text-white hover:bg-gray-400 ">Start</button>
-    <div className=''>
-      <span className='text-gray-800 bg-white px-2 mr-2'>01.</span>
-         web develpment quiz 1 web develpment quiz 1 web develpment quiz 1 web develpment quiz 1 web develpment quiz 1 web develpment quiz 1 web develpment quiz 1 web develpment quiz 1 web develpment quiz 1<br/>
-        <hr className='bg-slate-900 mt-2 mb-5'/><span className='bg-slate-900 p-2 mt-5'>No of Questions : 50</span>
 
+  {/* --------------------------------------
+   */}
+
+
+
+
+<div className="flex flex-col min-h-screen md:px-3">
+
+  <div className=" pb-6 flex-1">
+    <div>
+      <div className="flex flex-wrap md:-mx-3">
+
+        
+ 
+      {products?.map((product) => (
+
+
+        <div key={product._id} className="md:w-1/2 px-3 mb-6 w-full ">
+          <div className="flex w-full h-full flex-wrap bg-gray-800 overflow-hidden rounded shadow">
+            <div className="w-2/6">
+            <div style={{position:"relative",height:"100%",paddingBottom:"100%"}}>
+              <Image
+      src="https://res.cloudinary.com/masterdevs/image/upload/v1640117880/codeaddon/codeaddon-banner_tmtp8t.png"
+      alt={product.name}
+      layout='fill'
+      objectFit='cover'
+    />
+
+            </div>
+            </div>
+            <div className="w-4/6 p-5">
+              <h2 className="text-white font-bold	 leading-normal text-lg">
+              <Link href={`/post/${product.slug}`}>
+          <a>{product.name}</a>
+        </Link>
+                 </h2>
+
+<p className='text-slate-300'>
+
+{/* Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+tempor  */}
+
+</p>
+
+              <div className="flex flex-wrap justify-between items-center mt-3 ">
+                <div className="inline-flex items-center shadow">
+                  <div className="w-10 h-10 rounded-full overflow-hidden flex-shrink-0 ">
+                    <Image width="256" height="256" src="https://res.cloudinary.com/masterdevs/image/upload/v1640114706/codeaddon/nalinda-dissanayaka_u5uh0z.jpg" alt='Nalinda Dissanayaka - author' />
+                  </div>
+                  <div className="flex-1 pl-2">
+                    <h2 className="text-white mb-1">Nalinda Dissanayaka</h2>
+                    <p className="text-white opacity-50 text-xs">{product.createdAt}</p>
+                  </div>
+                </div>
+                <span className="text-white opacity-50">
+              <svg className="fill-current w-5 h-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 459 459">
+                <path d="M357 0H102C73.95 0 51 22.95 51 51v408l178.5-76.5L408 459V51c0-28.05-22.95-51-51-51z"/>
+              </svg>
+            </span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+))}        
+      
+      
+      </div>
+      <div className="text-center pt-6 pb-12 ">
+      <Link href="/articles" > 
+      <a className="border border-gray-600 text-gray-600 px-4 py-2 rounded-full hover:bg-gray-600 hover:text-white">Show More</a>
+      </Link> 
+
+      </div>
     </div>
   </div>
+</div>
 
 
-
-  <div className="relative p-3 mb-2 bg-gray-800 text-white  rounded-md shadow">  
-  <button className=" absolute right-0 bottom-1 mt-2 mx-4 p-2  px-4 border-2 text-white text-center border-white rounded-lg hover:text-white hover:bg-gray-400 ">Start</button>
-    <div className=''>
-      <span className='text-gray-800 bg-white px-2 mr-2'>01.</span>
-         web develpment quiz 1 web develpment quiz 1 web develpment quiz 1 web develpment quiz 1 web develpment quiz 1 web develpment quiz 1 web develpment quiz 1 web develpment quiz 1 web develpment quiz 1<br/>
-        <hr className='bg-slate-900 mt-2 mb-5'/><span className='bg-slate-900 p-2 mt-5'>No of Questions : 50</span>
-
-    </div>
-  </div> */}
+{/* 
+  ------------------------------------------------- */}
 
 
 
@@ -227,48 +292,28 @@ export default function Articles() {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-{/* //------------------- */}
-
-
-
-
-
-
-
-{/* 
-  ------------------------------------------------- */}
-
-
-
-
-
-
-
-
       </div>
 
  
     </div>
   )
+}
+
+export async function getServerSideProps() {
+  await db.connect()
+  const products = await Product.find({}).lean().limit(6)
+  const categories = await Category.find({}).lean()
+
+
+  await db.disconnect()
+  return {
+    props: {
+      products: JSON.parse(JSON.stringify(products)).map(
+        db.convertDocToObj
+      ),
+      categories: JSON.parse(JSON.stringify(categories)).map(
+        db.convertDocToObj
+      ),
+    },
+  }
 }
