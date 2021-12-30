@@ -160,11 +160,11 @@ export default function Articles(props) {
 
 
 
-    <div className="container mx-auto px-4 leading-normal">
+    <div className="container mx-auto px-0 leading-normal">
 
 
 
-    <div className="">
+    <div>
 
 
 
@@ -174,7 +174,7 @@ export default function Articles(props) {
 
 
 
-<div className="flex flex-col min-h-screen md:px-3">
+<div className="flex flex-col min-h-screen md:px-0">
 
   <div className=" pb-6 flex-1">
     <div>
