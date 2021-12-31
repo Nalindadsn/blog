@@ -19,7 +19,7 @@ const Home = (props) => {
 
 <div className=" mx-auto  ">
   <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6">
-    <div className="  relative  py-12  pl-12 ml-12  hidden md:block ">
+    <div className="relative  py-12  pl-12 ml-12  hidden md:block ">
     <figcaption className="absolute -left-5 top-24 text-lg -mt-16 text-white px-4 pt-12  ">
 
 
@@ -40,7 +40,7 @@ const Home = (props) => {
 
 
     </div>
-    <div className=" justify-center relative  ">
+    <div className=" justify-center relative  my-auto ">
 
 <div className='bg-gray-900/50 md:bg-gray-900/0 absolute w-full h-full z-30' ></div>
 

@@ -1,7 +1,11 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
+code{
+  background-color: #f5f5f5;
+  padding: 2px 5px;
+  color: #ff0000;
+}
 .video-wrap {
     position: relative;
     padding-bottom: 56.25%;

@@ -170,82 +170,372 @@ const data = {
       {
         
       user: '613f3c0b217785ee9b399d9c',
-        name: 'Mysql Queries',
-        slug: 'mysql-queries',
-        category: 'Shirts',
-        image: '/images/shirt3.jpg',
-        price: 90,
-        brand: 'Raymond',
-        rating: 4.5,
-        numReviews: 10,
-        countInStock: 20,
-        description: 'Mysql Queries',
+        name: 'How to check user availability using PHP and MYSQL(PDO)',
+        slug: 'check-user-availability',
+        category: 'php mysql',
+        image: 'https://res.cloudinary.com/masterdevs/image/upload/v1640874093/codeaddon/Check_Email_Availaility-tutorial_php-codeaddon.com_p9otkg.jpg',
+        price: 0,
+        brand: 'codeaddon',
+        rating: 0.0,
+        numReviews: 0,
+        countInStock: 1,
+        description: `
+        <h3 class="text-2xl">01 Step- Create database </h3> 
+      <div class="treeStruc">
+<ul>
+  <li class="root">
+    Root 
+  </li>
+  <li>
+   <i class='fa fa-folder'></i>  includes
+    <ul>
+      <li><i class='fa fa-sticky-note'></i> config.php</li>
+      <li><i class='fa fa-sticky-note'></i> ajax.php</li>
+    </ul>  
+  </li>
+  <li>
+   <i class='fa fa-folder'></i>  css
+    <ul>
+      <li><i class='fa fa-sticky-note'></i> style.css</li>
+    </ul>  
+  </li>
+  <li>
+   <i class='fa fa-folder'></i>  js
+    <ul>
+      <li><i class='fa fa-sticky-note'></i> script.js</li>
+    </ul>  
+  </li>
+  <li><i class='fa fa-sticky-note'></i> index.php</li>
+
+</ul> 
+        
+    </div> 
+
+<pre class="line-numbers language-markup">
+    <code>
+--
+-- Database: &#96;codeaddon&#96;
+--
+CREATE TABLE &#96;users&#96; &#40;
+  &#96;id&#96; int&#40;11&#41; NOT NULL,
+  &#96;email&#96; varchar&#40;100&#41; NOT NULL
+&#41; ENGINE&#61;InnoDB DEFAULT CHARSET&#61;utf8&#59;
+
+INSERT INTO &#96;users&#96; &#40;&#96;id&#96;, &#96;email&#96;&#41; VALUES
+&#40;1, 'user@example.com'&#41;&#59;
+
+ALTER TABLE &#96;users&#96;
+  ADD PRIMARY KEY &#40;&#96;id&#96;&#41;&#59;
+ALTER TABLE &#96;users&#96;
+  MODIFY &#96;id&#96; int&#40;11&#41; NOT NULL AUTO_INCREMENT, AUTO_INCREMENT&#61;2&#59;
+COMMIT&#59;
+    </code>
+</pre>
+<h3 class="text-2xl">02 Step- Connect to the database </h3>
+<code>includes/config.php</code>
+<pre>
+    <code class="line-numbers language-js">
+&#60;?php
+$server = "localhost";
+$dbname = "codeaddon";
+$user = "root";
+$pass = "";
+
+// Create connection
+try{
+   $conn = new PDO("mysql:host=$server;dbname=$dbname","$user","$pass");
+   $conn->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
+}catch(PDOException $e){
+   die('Unable to connect with the database');
+}
+    </code>
+</pre>
+                     <code>index.php</code>
+                <pre>
+                  <code class='language-markup'>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+   &lt;meta charset="utf-8"&gt;
+   &lt;title&gt;Check Email Availaility&lt;/title&gt;
+   &lt;script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"&gt;&lt;/script&gt;
+   &lt;link rel="stylesheet" type="text/css" href="css/style.css"&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+&lt;form action="action.php"  class="form"&gt;
+   &lt;h3&gt;- Check Email Availaility -&lt;/h3&gt;
+   &lt;div&gt;
+      &lt;label for="txt_email"&gt;Email Address&lt;/label&gt;
+      &lt;input type="text"  class="textbox" id="txt_email" name="txt_email" placeholder="Enter email address" /&gt;
+      &lt;!-- Response --&gt;
+      &lt;div id="response" &gt;loading...&lt;/div&gt;
+      &lt;input type="submit" name="submit" id="submit"&gt;
+   &lt;/div&gt;
+   &lt;hr&gt;
+   More details : &lt;a href="https://www.codeaddon.com/"&gt;codeaddon.com&lt;/a&gt;
+&lt;/form&gt;
+
+&lt;script type="text/javascript" src="js/script.js"&gt;&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code>
+                </pre>
+
+<code>js/script.js</code>
+<pre class="line-numbers language-js">
+    <code>
+      $(document).ready(function(){
+
+      $("#submit").prop("disabled", true);
+      $("#txt_email").keyup(function(){
+
+      var email = $(this).val().trim();
+
+      if(email != ''){
+        $.ajax({
+           url: 'includes/ajax.php',
+           type: 'post',
+           data: {email:email},
+           success: function(response){
+            if (response==1) {
+              $("#submit").prop("disabled", false);
+              $("#response").html("<span  class='available'>Available</span>");
+            }else{
+              $("#submit").prop("disabled", true);
+              $("#response").html("<span  class='not_available'>That email is already in use.<span>");
+            }
+           }
+        });
+     }else{
+        $("#response").html("Empty...");
+              $("#submit").prop("disabled", true);
+     }
+
+  });
+
+});
+    </code>
+</pre>
+
+<code>includes/ajax.php</code>
+<pre class="line-numbers language-js">
+    <code>
+&#60;?php
+include 'config.php';
+
+if(isset($_POST['email'])){
+   $email = $_POST['email'];
+   $statement = $conn->prepare("SELECT count(*) as cntUser FROM users WHERE email=:email");
+   $statement->bindValue(':email', $email, PDO::PARAM_STR);
+   $statement->execute(); 
+   $count = $statement->fetchColumn();
+
+   $response = 1;
+   if($count > 0){
+      $response = 0;
+   }
+
+   echo $response;
+   exit;
+}
+</code>
+</pre>
+
+
+        `,
       },
       {
         user: '613f3c0b217785ee9b399d9c',
-        name: 'How to make a next app?',
-        slug: 'create-next-app',
-        category: 'Pants',
-        image: '/images/pants1.jpg',
-        price: 90,
-        brand: 'Oliver',
-        rating: 4.5,
-        numReviews: 10,
-        countInStock: 20,
-        description: 'How to make a next app?',
-      },
+        name: 'How to add data with PHP & MYSQL ?',
+        slug: 'insert-data',
+        category: 'php mysql',
+        image: 'https://res.cloudinary.com/masterdevs/image/upload/v1640957582/codeaddon/insert_data_using_phppdo_ajax_tutorial_dtloed.jpg',
+        price: 0,
+        brand: 'codeaddon',
+        rating: 0.0,
+        numReviews: 0,
+        countInStock: 0,
+        description: `
+
+
+        <h3 class="text-2xl">01 Step- Create database </h3> 
+      <div class="treeStruc">
+<ul>
+  <li class="root">
+    Root 
+  </li>
+  <li>
+   <i class='fa fa-folder'></i>  includes
+    <ul>
+      <li><i class='fa fa-sticky-note'></i> config.php</li>
+      <li><i class='fa fa-sticky-note'></i> ajax.php</li>
+    </ul>  
+  </li>
+  <li>
+   <i class='fa fa-folder'></i>  css
+    <ul>
+      <li><i class='fa fa-sticky-note'></i> style.css</li>
+    </ul>  
+  </li>
+  <li>
+   <i class='fa fa-folder'></i>  js
+    <ul>
+      <li><i class='fa fa-sticky-note'></i> script.js</li>
+    </ul>  
+  </li>
+  <li><i class='fa fa-sticky-note'></i> index.php</li>
+
+</ul> 
+        
+    </div> 
+
+<pre class="line-numbers language-mysql">
+    <code>
+
+    CREATE TABLE &#96;users&#96; (
+      &#96;id&#96; int(11) NOT NULL,
+      &#96;email&#96; varchar(100) NOT NULL,
+      &#96;full_name&#96; varchar(300) NOT NULL
+    ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+    
+    
+    INSERT INTO &#96;users&#96; (&#96;id&#96;, &#96;email&#96;, &#96;full_name&#96;) VALUES
+    (1, 'nalinda@example.com', 'Nalinda Dissanayaka');
+    
+    ALTER TABLE &#96;users&#96;
+      ADD PRIMARY KEY (&#96;id&#96;);
+    
+    ALTER TABLE &#96;users&#96;
+      MODIFY &#96;id&#96; int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+    COMMIT;
+    
+    
+    </code>
+</pre>
+<h3 class="text-2xl">02 Step- Connect to the database </h3>
+<code>includes/config.php</code>
+<pre>
+    <code class="line-numbers language-js">
+&#60;?php
+$server = "localhost";
+$dbname = "codeaddon";
+$user = "root";
+$pass = "";
+
+// Create connection
+try{
+   $conn = new PDO("mysql:host=$server;dbname=$dbname","$user","$pass");
+   $conn->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
+}catch(PDOException $e){
+   die('Unable to connect with the database');
+}
+    </code>
+</pre>
+                     <code>index.php</code>
+                <pre>
+                  <code class='language-markup'>
+&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+
+&lt;head&gt;
+  &lt;meta charset="utf-8" /&gt;
+  &lt;link rel="stylesheet" type="text/css" href="css/style.css"&gt;
+   &lt;script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"&gt;&lt;/script&gt;
+
+&lt;/head&gt;
+
+&lt;body class=""&gt;
+
+
+    &lt;form method="post" id="form"&gt;
+
+        &lt;h3&gt;- Insert Data -&lt;/h3&gt;
+
+        &lt;div&gt;
+          &lt;label&gt;Full Name&lt;/label&gt;
+          &lt;input type="text"  name="i_full_name" id="i_full_name" class="form-control" /&gt;
+          &lt;label&gt;Email Address&lt;/label&gt;
+          &lt;input type="text"  name="i_email" id="i_email" class="form-control" /&gt;
+
+        &lt;/div&gt;
+        &lt;div class=""&gt;
+          &lt;input type="submit" name="action" id="action" class="btn btn-success" value="Add" /&gt;
+          &lt;span class="loader" style="display: none;"&gt;
+            Loading...
+          &lt;/span&gt;
+          &lt;span id="erm"&gt;&lt;/span&gt;
+          &lt;hr&gt;
+          More details : &lt;a href="https://www.codeaddon.com/"&gt;codeaddon.com&lt;/a&gt;
+        &lt;/div&gt;
+    &lt;/form&gt;
+
+&lt;script type="text/javascript" src="js/script.js"&gt;&lt;/script&gt;
+&lt;/body&gt;
+
+&lt;/html&gt;
+
+                  </code>
+                </pre>
+
+<code>js/script.js</code>
+<pre class="line-numbers language-js">
+    <code>
+
+    $(document).on('submit', '#form', function(event){
+      event.preventDefault();
+      var i_name = $('#i_name').val();
+      var i_email = $('#i_email').val();
+   
+      if(i_name != '' && i_email!='')
       {
-        user: '613f3c0b217785ee9b399d9c',
-        name: 'How to make a react app?',
-        slug: 'create-react-app',
-        category: 'Pants',
-        image: '/images/pants2.jpg',
-        price: 95,
-        brand: 'Zara',
-        rating: 4.5,
-        numReviews: 10,
-        countInStock: 20,
-        description: 'How to make a react app?',
-      },
+        $.ajax({
+          url:"includes/ajax.php",
+          method:'POST',
+          data:new FormData(this),
+          contentType:false,
+          processData:false,
+          beforeSend:function(){
+            $('.loader').show();
+          },
+          success:function(data)
+          {
+            $('.loader').hide();
+            $('#erm').html("<span class='success'>"+data+"</span>");
+            $('#form')[0].reset();
+          }
+        });
+      }
+      else
       {
-        user: '613f3c0b217785ee9b399d9c',
-        name: 'what is web development?',
-        slug: 'what-is-web-development',
-        category: 'Pants',
-        image: '/images/pants3.jpg',
-        price: 75,
-        brand: 'Casely',
-        rating: 4.5,
-        numReviews: 10,
-        countInStock: 20,
-        description: 'what is web development?',
-      },
-      {
-        user: '613f3c0b217785ee9b399d9c',
-        name: 'How to connect a database?',
-        slug: 'connect a database',
-        category: 'Pants',
-        image: '/images/pants3.jpg',
-        price: 75,
-        brand: 'Casely',
-        rating: 4.5,
-        numReviews: 10,
-        countInStock: 20,
-        description: 'How to connect a database?',
-      },
-      {
-        user: '613f3c0b217785ee9b399d9c',
-        name: 'How to create a responsive website?',
-        slug: 'responsive-web-development',
-        category: 'Pants',
-        image: '/images/pants3.jpg',
-        price: 75,
-        brand: 'Casely',
-        rating: 4.5,
-        numReviews: 10,
-        countInStock: 20,
-        description: 'How to create a responsive website?',
-      },
+        $('#erm').html("<span class='error'>Both Fields are Required</span>");
+      }
+    });
+    </code>
+</pre>
+
+<code>includes/ajax.php</code>
+<pre class="line-numbers language-js">
+    <code>
+    &lt;?php
+    include('config.php');
+    
+        $statement = $conn->prepare("
+          INSERT INTO users (full_name,email) 
+          VALUES (:i_full_name,:i_email)
+        ");
+        $result = $statement->execute(
+          array(
+            ':i_full_name'	=>	$_POST["i_full_name"],
+            ':i_email'	=>	$_POST["i_email"]
+          )
+        );
+        if(!empty($result))
+        {
+          echo 'User Added Successfully';
+    }
+    </code>
+</pre>`,
+      }
   ],
     categories: [
 

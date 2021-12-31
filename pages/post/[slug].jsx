@@ -55,7 +55,7 @@ export default function PostScreen(props) {
                 <div  className="border-4 border-dashed border-gray-200 rounded-lg h-96">
                 <h1 className=' p-5 pt-12 pl-0 text-4xl '>{product.name}</h1>
                 
-                <Image src="https://res.cloudinary.com/masterdevs/image/upload/v1640874093/codeaddon/Check_Email_Availaility-tutorial_php-codeaddon.com_p9otkg.jpg" width="882" height="332" alt="Check Email Availaility tutorial_php"/>
+                <Image src={product.image} width="882" height="332" alt="Check Email Availaility tutorial_php"/>
 
                 <div dangerouslySetInnerHTML={{__html:product.description}}></div>
                 </div>

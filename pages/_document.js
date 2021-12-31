@@ -7,6 +7,7 @@ class MyDocument extends Document{
                 <Head>
                     <meta name="description" content="web development lessons"/>
                     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+                    <link rel='icon' type='image/png' sizes='50/21' href='https://res.cloudinary.com/masterdevs/image/upload/v1640957932/codeaddon/favicon_mej2py.png'/>
                  
                  </Head>
                 <body>
