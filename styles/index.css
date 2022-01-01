@@ -155,3 +155,6 @@ display: none
 .fa-sticky-note{
   contain: "test";
 }
+.fa-folder{
+  color: #f59e0b;
+}
