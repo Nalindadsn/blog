@@ -180,7 +180,8 @@ const data = {
         numReviews: 0,
         countInStock: 1,
         description: `
-        <h3 class="text-2xl">01 Step- Create database </h3> 
+        <p>In this tutorial, we will examine whether e-mail addresses are included in the database without refreshing the page. This can be used for username, email, ID etc.</p>
+        <h3 class="text-2xl pt-4">01 Step- Create database </h3> 
       <div class="treeStruc">
 <ul>
   <li class="root">
@@ -210,7 +211,7 @@ const data = {
 </ul> 
         
     </div> 
-
+<p>First you need to create a table in the database. This table is named users.</p>
 <pre class="line-numbers language-markup">
     <code>
 --
@@ -231,7 +232,8 @@ ALTER TABLE &#96;users&#96;
 COMMIT&#59;
     </code>
 </pre>
-<h3 class="text-2xl">02 Step- Connect to the database </h3>
+<h3 class="text-2xl pt-4">02 Step- Connect to the database </h3>
+<p>Now you need to connect with that database. Here I am using mysql extension called PDO.</p>
 <code>includes/config.php</code>
 <pre>
     <code class="line-numbers language-js">
@@ -250,6 +252,8 @@ try{
 }
     </code>
 </pre>
+<h3 class="text-2xl pt-4">03 Step - User Interface</h3>
+<p>The jquery library should be linked to the index.php file. Here the jquery CDN is used. If necessary you can use the downloaded file.</p>
                      <code>index.php</code>
                 <pre>
                   <code class='language-markup'>
@@ -281,10 +285,80 @@ try{
 &lt;/html&gt;</code>
                 </pre>
 
+
+<h3 class="text-2xl pt-4">04 Step - Add Styles</h3>
+<code>css/style.css</code>
+<pre class="line-numbers language-css">
+<code>
+
+    .form{
+      max-width: 500px;
+      margin: 100px auto;
+      background-color: #1F2937;
+      color: #fff;
+      padding: 15px;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+    .form h3{
+      text-align: center;
+    }
+    .form a{
+      color: #F59E0B;
+    }
+
+
+    input[type=email]{
+      width:100%;
+      border:2px solid #aaa;
+      border-radius:4px;
+      margin:8px 0;
+      outline:none;
+      padding:8px;
+      box-sizing:border-box;
+      transition:.3s;
+    }
+
+    input[type=email]:focus{
+      border-color:dodgerBlue;
+      box-shadow:0 0 8px 0 dodgerBlue;
+    }
+
+    input[type=submit] {
+       padding: 7px 20px;
+       background-color: #7289da;
+       border: 2px solid #7289da;
+       color: #fff;
+    }
+
+    input[type=submit]:disabled {
+       background-color: #969bac;
+       border: 2px solid #969bac;
+
+    }
+    .available{
+       background-color: green;
+       color: #fff;
+       padding: 0 5px;
+
+    }
+    .not_available{
+       background-color: red;
+       color: #fff;
+       padding: 0 5px;
+
+    }
+    #response{
+       padding: 5px 0;
+    }
+</code>
+</pre>
+
+
+
+<h3 class="text-2xl pt-4">05 Step - Add Script for Insert Data</h3>
 <code>js/script.js</code>
 <pre class="line-numbers language-js">
     <code>
-      $(document).ready(function(){
 
       $("#submit").prop("disabled", true);
       $("#txt_email").keyup(function(){
@@ -313,9 +387,9 @@ try{
 
   });
 
-});
     </code>
 </pre>
+<h3 class="text-2xl pt-4">06 Step - PHP script</h3>
 
 <code>includes/ajax.php</code>
 <pre class="line-numbers language-js">
@@ -342,6 +416,7 @@ if(isset($_POST['email'])){
 </pre>
 
 
+        
         `,
       },
       {
@@ -356,6 +431,7 @@ if(isset($_POST['email'])){
         numReviews: 0,
         countInStock: 0,
         description: `
+
 
 
         <h3 class="text-2xl">01 Step- Create database </h3> 
@@ -477,6 +553,52 @@ try{
                   </code>
                 </pre>
 
+<pre class="line-numbers language-css">
+    <code>
+  #form{
+    max-width: 800px;
+    margin: 100px auto;
+    background-color: #1F2937;
+    color: #fff;
+    padding: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  #form h3{
+    text-align: center;
+  }
+  #form a{
+    color: #F59E0B;
+  }
+
+  input[type=submit] {
+    padding: 7px 20px;
+    background-color: #7289da;
+    border: 2px solid #7289da;
+    color: #fff;
+    cursor: pointer;
+  }
+  #form input[type=text]{
+    width:100%;
+    border:2px solid #aaa;
+    border-radius:4px;
+    margin:8px 0;
+    outline:none;
+    padding:8px;
+    box-sizing:border-box;
+    transition:.3s;
+  }
+  .success{
+      background-color: green;
+      color: #fff;
+    padding: 8px;
+  }
+  .error{
+      background-color: red;
+      color: #fff;
+    padding: 8px;
+  }
+</code>
+</pre>
 <code>js/script.js</code>
 <pre class="line-numbers language-js">
     <code>
