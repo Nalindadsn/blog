@@ -33,7 +33,9 @@ const Home = (props) => {
       <h2 className="font-bold text-5xl text-white leading-tight mt-3 mb-6">WELCOME TO <span className="text-amber-500 shadow">CODEADDON</span></h2>
       <span className="font-normal text-gray-300"> Each and every kind of web development tutorial has been found in here.</span>
       <div id="buttons" className="font-medium flex flex-row mt-6">
-        <a href="#watch-video" className='mx-4 p-2 px-4 border-2 text-white border-white rounded-lg hover:text-white hover:bg-gray-900 cursor-pointer'>Sign In</a>
+        <Link href="/login">
+        <a className='mx-4 p-2 px-4 border-2 text-white border-white rounded-lg hover:text-white hover:bg-gray-900 cursor-pointer'>Sign In</a>
+        </Link>
         {/* <a className="mx-4 p-2 px-4 border-2 text-white border-white rounded-lg hover:text-white hover:bg-gray-900 cursor-pointer">Register</a> */}
       </div>
       
@@ -61,8 +63,9 @@ const Home = (props) => {
       <h2 className="font-bold text-4xl text-white leading-tight  text-shadow-lg pt-1 pb-2	">WELCOME TO <span className="text-amber-500 shadow">CODEADDON</span></h2>
       <span className="font-small text-white pt-0 text-shadow-lg	 "> Each and every kind of web development tutorial has been found in here.</span>
       <div id="buttons" className="font-medium flex flex-row mt-4 py-2 rounded">
-
-      <a href="#watch-video" className='mx-4 p-2 px-4 border-2 text-white border-white rounded-lg  bg-gray-800 hover:text-white hover:bg-gray-900 cursor-pointer'>Sign In</a>
+    <Link href="/login">
+    <a className='mx-4 p-2 px-4 border-2 text-white border-white rounded-lg  bg-gray-800 hover:text-white hover:bg-gray-900 cursor-pointer'>Sign In</a>
+    </Link>
         {/* <a className="mx-4 p-2 px-4 border-2 text-white border-white rounded-lg  bg-gray-800 hover:text-white hover:bg-gray-900 cursor-pointer">Register</a> */}
       
       </div>
