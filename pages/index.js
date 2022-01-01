@@ -95,9 +95,11 @@ const Home = (props) => {
 
 <div className='text-center  w-full p-5 pt-12'>
 {categories?.map((category) => (
-      <a href='' key={category._id} className="md:w-1/5 px-3 mb-1 bg-gray-800 text-white p-2 m-1 inline-block">
+  <Link href='/'>
+    <a key={category._id} className="md:w-1/5 px-3 mb-1 bg-gray-800 text-white p-2 m-1 inline-block">
         {category.name}
       </a>
+  </Link>
       ))}
 </div>
 
