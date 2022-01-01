@@ -29,7 +29,7 @@ const Home = (props) => {
   <h1  className="bg-sky-300 px-2 ">T</h1>
 </div>
 </figcaption>
-    <h4 className="font-medium text-gray-300 pt-20">Web Development</h4>
+    <h4 className="font-medium text-gray-300 pt-20"><i class="fa fa-globe"></i> Web Development</h4>
       <h2 className="font-bold text-5xl text-white leading-tight mt-3 mb-6">WELCOME TO <span className="text-amber-500 shadow">CODEADDON</span></h2>
       <span className="font-normal text-gray-300"> Each and every kind of web development tutorial has been found in here.</span>
       <div id="buttons" className="font-medium flex flex-row mt-6">
@@ -59,7 +59,7 @@ const Home = (props) => {
 
 
 <div className="shadow py-5 pl-5  mr-6 pr-7">
-<h4 className="font-medium text-white pt-12 mt-5 text-shadow-lg  	 ml-10">Web Development</h4>
+<h4 className="font-medium text-white pt-12 mt-5 text-shadow-lg  	 ml-10"><i class="fa fa-globe"></i> Web Development</h4>
       <h2 className="font-bold text-4xl text-white leading-tight  text-shadow-lg pt-1 pb-2	">WELCOME TO <span className="text-amber-500 shadow">CODEADDON</span></h2>
       <span className="font-small text-white pt-0 text-shadow-lg	 "> Each and every kind of web development tutorial has been found in here.</span>
       <div id="buttons" className="font-medium flex flex-row mt-4 py-2 rounded">

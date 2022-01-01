@@ -669,17 +669,17 @@ try{
         type:"article"
       },
       {
-        name: 'PHP & MYSQL',
-        slug: 'php-mysql',
-        image: 'https://res.cloudinary.com/masterdevs/image/upload/v1640231976/codeaddon/codeaddon-image-icon2_srky38.jpg',
-        description: 'PHP & MYSQL',
-        type:"video"
-      },
-      {
         name: 'Javascript',
         slug: 'javascript',
         image: 'https://res.cloudinary.com/masterdevs/image/upload/v1640231976/codeaddon/codeaddon-image-icon2_srky38.jpg',
         description: 'Javascript',
+        type:"video"
+      },
+      {
+        name: 'PHP & MYSQL',
+        slug: 'php-mysql',
+        image: 'https://res.cloudinary.com/masterdevs/image/upload/v1640231976/codeaddon/codeaddon-image-icon2_srky38.jpg',
+        description: 'PHP & MYSQL',
         type:"video"
       },
       {
@@ -696,27 +696,27 @@ try{
         description: 'Nextjs',
         type:"video"
       },
-      {
-        name: 'PHP',
-        slug: 'php',
-        image: 'https://res.cloudinary.com/masterdevs/image/upload/v1640231976/codeaddon/codeaddon-image-icon2_srky38.jpg',
-        description: 'PHP',
-        type:"article"
-      },
-      {
-        name: 'MYSQL',
-        slug: 'mysql',
-        image: 'https://res.cloudinary.com/masterdevs/image/upload/v1640231976/codeaddon/codeaddon-image-icon2_srky38.jpg',
-        description: 'MYSQL',
-        type:"video"
-      },
-      {
-        name: 'HTML',
-        slug: 'html',
-        image: 'https://res.cloudinary.com/masterdevs/image/upload/v1640231976/codeaddon/codeaddon-image-icon2_srky38.jpg',
-        description: 'HTML',
-        type:"video"
-      },
+      // {
+      //   name: 'PHP',
+      //   slug: 'php',
+      //   image: 'https://res.cloudinary.com/masterdevs/image/upload/v1640231976/codeaddon/codeaddon-image-icon2_srky38.jpg',
+      //   description: 'PHP',
+      //   type:"article"
+      // },
+      // {
+      //   name: 'MYSQL',
+      //   slug: 'mysql',
+      //   image: 'https://res.cloudinary.com/masterdevs/image/upload/v1640231976/codeaddon/codeaddon-image-icon2_srky38.jpg',
+      //   description: 'MYSQL',
+      //   type:"video"
+      // },
+      // {
+      //   name: 'HTML',
+      //   slug: 'html',
+      //   image: 'https://res.cloudinary.com/masterdevs/image/upload/v1640231976/codeaddon/codeaddon-image-icon2_srky38.jpg',
+      //   description: 'HTML',
+      //   type:"video"
+      // },
 
     ]
 }
