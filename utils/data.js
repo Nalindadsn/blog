@@ -188,25 +188,25 @@ const data = {
     Root 
   </li>
   <li>
-   <i class='fa fa-folder'></i>  includes
+   <i className='fa fa-folder'></i>  includes
     <ul>
-      <li><i class='fa fa-sticky-note'></i> config.php</li>
-      <li><i class='fa fa-sticky-note'></i> ajax.php</li>
+      <li><i className='fa fa-sticky-note'></i> config.php</li>
+      <li><i className='fa fa-sticky-note'></i> ajax.php</li>
     </ul>  
   </li>
   <li>
-   <i class='fa fa-folder'></i>  css
+   <i className='fa fa-folder'></i>  css
     <ul>
-      <li><i class='fa fa-sticky-note'></i> style.css</li>
+      <li><i className='fa fa-sticky-note'></i> style.css</li>
     </ul>  
   </li>
   <li>
-   <i class='fa fa-folder'></i>  js
+   <i className='fa fa-folder'></i>  js
     <ul>
-      <li><i class='fa fa-sticky-note'></i> script.js</li>
+      <li><i className='fa fa-sticky-note'></i> script.js</li>
     </ul>  
   </li>
-  <li><i class='fa fa-sticky-note'></i> index.php</li>
+  <li><i className='fa fa-sticky-note'></i> index.php</li>
 
 </ul> 
         
@@ -256,7 +256,7 @@ try{
 <p>The jquery library should be linked to the index.php file. Here the jquery CDN is used. If necessary you can use the downloaded file.</p>
                      <code>index.php</code>
                 <pre>
-                  <code class='language-markup'>
+                  <code className='language-markup'>
 &lt;!DOCTYPE html&gt;
 &lt;html&gt;
 &lt;head&gt;
@@ -373,10 +373,10 @@ try{
            success: function(response){
             if (response==1) {
               $("#submit").prop("disabled", false);
-              $("#response").html("<span  class='available'>Available</span>");
+              $("#response").html("<span  className='available'>Available</span>");
             }else{
               $("#submit").prop("disabled", true);
-              $("#response").html("<span  class='not_available'>That email is already in use.<span>");
+              $("#response").html("<span  className='not_available'>That email is already in use.<span>");
             }
            }
         });
@@ -441,25 +441,25 @@ if(isset($_POST['email'])){
     Root 
   </li>
   <li>
-   <i class='fa fa-folder'></i>  includes
+   <i className='fa fa-folder'></i>  includes
     <ul>
-      <li><i class='fa fa-sticky-note'></i> config.php</li>
-      <li><i class='fa fa-sticky-note'></i> ajax.php</li>
+      <li><i className='fa fa-sticky-note'></i> config.php</li>
+      <li><i className='fa fa-sticky-note'></i> ajax.php</li>
     </ul>  
   </li>
   <li>
-   <i class='fa fa-folder'></i>  css
+   <i className='fa fa-folder'></i>  css
     <ul>
-      <li><i class='fa fa-sticky-note'></i> style.css</li>
+      <li><i className='fa fa-sticky-note'></i> style.css</li>
     </ul>  
   </li>
   <li>
-   <i class='fa fa-folder'></i>  js
+   <i className='fa fa-folder'></i>  js
     <ul>
-      <li><i class='fa fa-sticky-note'></i> script.js</li>
+      <li><i className='fa fa-sticky-note'></i> script.js</li>
     </ul>  
   </li>
-  <li><i class='fa fa-sticky-note'></i> index.php</li>
+  <li><i className='fa fa-sticky-note'></i> index.php</li>
 
 </ul> 
         
@@ -509,7 +509,7 @@ try{
 </pre>
                      <code>index.php</code>
                 <pre>
-                  <code class='language-markup'>
+                  <code className='language-markup'>
 &lt;!DOCTYPE html&gt;
 &lt;html lang="en"&gt;
 
@@ -622,14 +622,14 @@ try{
           success:function(data)
           {
             $('.loader').hide();
-            $('#erm').html("<span class='success'>"+data+"</span>");
+            $('#erm').html("<span className='success'>"+data+"</span>");
             $('#form')[0].reset();
           }
         });
       }
       else
       {
-        $('#erm').html("<span class='error'>Both Fields are Required</span>");
+        $('#erm').html("<span className='error'>Both Fields are Required</span>");
       }
     });
     </code>
