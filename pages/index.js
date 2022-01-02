@@ -61,7 +61,7 @@ const Home = (props) => {
 <div className="shadow py-5 pl-5  mr-6 pr-7">
 <h4 className="font-medium text-white pt-12 mt-5 text-shadow-lg  	 ml-10"><i className="fa fa-globe"></i> Web Development</h4>
       <h2 className="font-bold text-4xl text-white leading-tight  text-shadow-lg pt-1 pb-2	">WELCOME TO <span className="text-amber-500 shadow">CODEADDON</span></h2>
-      <span className="font-small text-white pt-0 text-shadow-lg	 "> Each and every kind of web development tutorial has been found in here.</span>
+      <span className="font-small text-white pt-0 text-shadow-lg	 "> Solve all your web designing conflicts with our advanced and easy tutorials.</span>
       <div id="buttons" className="font-medium flex flex-row mt-4 py-2 rounded">
     <Link href="/login">
     <a className='mx-4 p-2 px-4 border-2 text-white border-white rounded-lg  bg-gray-800 hover:text-white hover:bg-gray-900 cursor-pointer'>Sign In</a>
