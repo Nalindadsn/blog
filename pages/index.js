@@ -29,7 +29,7 @@ const Home = (props) => {
   <h1  className="bg-sky-300 px-2 ">T</h1>
 </div>
 </figcaption>
-    <h4 className="font-medium text-gray-300 pt-20"><i className="fa fa-globe"></i> Web Development</h4>
+    <h4 className="font-medium text-gray-300 pt-20"><i className="fa fa-globe "></i> Web Development</h4>
       <h2 className="font-bold text-5xl text-white leading-tight mt-3 mb-6">WELCOME TO <span className="text-amber-500 shadow">CODEADDON</span></h2>
       <span className="font-normal text-gray-300"> Each and every kind of web development tutorial has been found in here.</span>
       <div id="buttons" className="font-medium flex flex-row mt-6">
