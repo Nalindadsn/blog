@@ -31,7 +31,7 @@ const Home = (props) => {
 </figcaption>
     <h4 className="font-medium text-gray-300 pt-20"><i className="fa fa-globe "></i> Web Development</h4>
       <h2 className="font-bold text-5xl text-white leading-tight mt-3 mb-6">WELCOME TO <span className="text-amber-500 shadow">CODEADDON</span></h2>
-      <span className="font-normal text-gray-300"> Each and every kind of web development tutorial has been found in here.</span>
+      <span className="font-normal text-gray-300"> Solve all your web designing conflicts with our advanced and easy tutorials.</span>
       <div id="buttons" className="font-medium flex flex-row mt-6">
         <Link href="/login">
         <a className='mx-4 p-2 px-4 border-2 text-white border-white rounded-lg hover:text-white hover:bg-gray-900 cursor-pointer'>Sign In</a>
