@@ -172,7 +172,7 @@ const data = {
       user: '613f3c0b217785ee9b399d9c',
         name: 'How to check user availability using PHP and MYSQL(PDO)',
         slug: 'check-user-availability',
-        category: 'php mysql',
+        category: '61d08124cc87d287539961ff',
         image: 'https://res.cloudinary.com/masterdevs/image/upload/v1640874093/codeaddon/Check_Email_Availaility-tutorial_php-codeaddon.com_p9otkg.jpg',
         price: 0,
         brand: 'codeaddon',
@@ -188,25 +188,25 @@ const data = {
     Root 
   </li>
   <li>
-   <i className='fa fa-folder'></i>  includes
+   <i class='fa fa-folder'></i>  includes
     <ul>
-      <li><i className='fa fa-sticky-note'></i> config.php</li>
-      <li><i className='fa fa-sticky-note'></i> ajax.php</li>
+      <li><i class='fa fa-sticky-note'></i> config.php</li>
+      <li><i class='fa fa-sticky-note'></i> ajax.php</li>
     </ul>  
   </li>
   <li>
-   <i className='fa fa-folder'></i>  css
+   <i class='fa fa-folder'></i>  css
     <ul>
-      <li><i className='fa fa-sticky-note'></i> style.css</li>
+      <li><i class='fa fa-sticky-note'></i> style.css</li>
     </ul>  
   </li>
   <li>
-   <i className='fa fa-folder'></i>  js
+   <i class='fa fa-folder'></i>  js
     <ul>
-      <li><i className='fa fa-sticky-note'></i> script.js</li>
+      <li><i class='fa fa-sticky-note'></i> script.js</li>
     </ul>  
   </li>
-  <li><i className='fa fa-sticky-note'></i> index.php</li>
+  <li><i class='fa fa-sticky-note'></i> index.php</li>
 
 </ul> 
         
@@ -256,7 +256,7 @@ try{
 <p>The jquery library should be linked to the index.php file. Here the jquery CDN is used. If necessary you can use the downloaded file.</p>
                      <code>index.php</code>
                 <pre>
-                  <code className='language-markup'>
+                  <code class='language-markup'>
 &lt;!DOCTYPE html&gt;
 &lt;html&gt;
 &lt;head&gt;
@@ -373,10 +373,10 @@ try{
            success: function(response){
             if (response==1) {
               $("#submit").prop("disabled", false);
-              $("#response").html("<span  className='available'>Available</span>");
+              $("#response").html("<span  class='available'>Available</span>");
             }else{
               $("#submit").prop("disabled", true);
-              $("#response").html("<span  className='not_available'>That email is already in use.<span>");
+              $("#response").html("<span  class='not_available'>That email is already in use.<span>");
             }
            }
         });
@@ -415,15 +415,14 @@ if(isset($_POST['email'])){
 </code>
 </pre>
 
-
         
         `,
       },
       {
         user: '613f3c0b217785ee9b399d9c',
-        name: 'How to add data with PHP & MYSQL ?',
+        name: 'How to add data in PHP & MYSQL using AJAX?',
         slug: 'insert-data',
-        category: 'php mysql',
+        category: '61d08124cc87d287539961ff',
         image: 'https://res.cloudinary.com/masterdevs/image/upload/v1640957582/codeaddon/insert_data_using_phppdo_ajax_tutorial_dtloed.jpg',
         price: 0,
         brand: 'codeaddon',
@@ -432,6 +431,7 @@ if(isset($_POST['email'])){
         countInStock: 0,
         description: `
 
+        <p>This tutorial will show you how to enter data using PHP and Ajax without refreshing the page.</p>
 
 
         <h3 class="text-2xl">01 Step- Create database </h3> 
@@ -441,25 +441,25 @@ if(isset($_POST['email'])){
     Root 
   </li>
   <li>
-   <i className='fa fa-folder'></i>  includes
+   <i class='fa fa-folder'></i>  includes
     <ul>
-      <li><i className='fa fa-sticky-note'></i> config.php</li>
-      <li><i className='fa fa-sticky-note'></i> ajax.php</li>
+      <li><i class='fa fa-sticky-note'></i> config.php</li>
+      <li><i class='fa fa-sticky-note'></i> ajax.php</li>
     </ul>  
   </li>
   <li>
-   <i className='fa fa-folder'></i>  css
+   <i class='fa fa-folder'></i>  css
     <ul>
-      <li><i className='fa fa-sticky-note'></i> style.css</li>
+      <li><i class='fa fa-sticky-note'></i> style.css</li>
     </ul>  
   </li>
   <li>
-   <i className='fa fa-folder'></i>  js
+   <i class='fa fa-folder'></i>  js
     <ul>
-      <li><i className='fa fa-sticky-note'></i> script.js</li>
+      <li><i class='fa fa-sticky-note'></i> script.js</li>
     </ul>  
   </li>
-  <li><i className='fa fa-sticky-note'></i> index.php</li>
+  <li><i class='fa fa-sticky-note'></i> index.php</li>
 
 </ul> 
         
@@ -509,7 +509,7 @@ try{
 </pre>
                      <code>index.php</code>
                 <pre>
-                  <code className='language-markup'>
+                  <code class='language-markup'>
 &lt;!DOCTYPE html&gt;
 &lt;html lang="en"&gt;
 
@@ -622,14 +622,14 @@ try{
           success:function(data)
           {
             $('.loader').hide();
-            $('#erm').html("<span className='success'>"+data+"</span>");
+            $('#erm').html("<span class='success'>"+data+"</span>");
             $('#form')[0].reset();
           }
         });
       }
       else
       {
-        $('#erm').html("<span className='error'>Both Fields are Required</span>");
+        $('#erm').html("<span class='error'>Both Fields are Required</span>");
       }
     });
     </code>

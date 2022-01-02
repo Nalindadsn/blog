@@ -151,8 +151,7 @@ const Home = (props) => {
 
 <p className='text-slate-300'>
 
-{/* Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-tempor  */}
+{product.descriptionShort}
 
 </p>
 
@@ -160,6 +159,7 @@ tempor  */}
                 <div className="inline-flex items-center shadow">
                   <div className="w-10 h-10 rounded-full overflow-hidden flex-shrink-0 ">
                     <Image width="256" height="256" src="https://res.cloudinary.com/masterdevs/image/upload/v1640114706/codeaddon/nalinda-dissanayaka_u5uh0z.jpg" alt='Nalinda Dissanayaka - author' />
+                    
                   </div>
                   <div className="flex-1 pl-2">
                     <h2 className="text-white mb-1">Nalinda Dissanayaka</h2>

@@ -8,6 +8,7 @@ import Footerb from '../../components/Footerb';
 import db from '../../utils/db';
 import Product from '../../models/Product';
 import Category from '../../models/Category';
+import Cat from '../../components/Cat';
 
 export default function Articles(props) {
 
@@ -218,6 +219,7 @@ tempor  */}
                     <Image width="256" height="256" src="https://res.cloudinary.com/masterdevs/image/upload/v1640114706/codeaddon/nalinda-dissanayaka_u5uh0z.jpg" alt='Nalinda Dissanayaka - author' />
                   </div>
                   <div className="flex-1 pl-2">
+                  <Cat props={product.category} />
                     <h2 className="text-white mb-1">Nalinda Dissanayaka</h2>
                     <p className="text-white opacity-50 text-xs">{product.createdAt}</p>
                   </div>
@@ -298,7 +300,6 @@ export async function getServerSideProps() {
   await db.connect()
   const products = await Product.find({}).lean().limit(6)
   const categories = await Category.find({}).lean()
-
 
   await db.disconnect()
   return {
