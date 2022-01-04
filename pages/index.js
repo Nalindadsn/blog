@@ -5,8 +5,15 @@ import db from '../utils/db';
 import Product from '../models/Product';
 import Category from '../models/Category';
 import Footer from '../components/Footer';
+import { useContext } from 'react';
+import { Store } from '../utils/Store';
+import { useRouter } from 'next/router';
 const Home = (props) => {
  
+  const router = useRouter()
+    const { state, dispatch } = useContext(Store)
+    const { darkMode, cart, userInfo } = state
+  
   const { products,categories } = props;
   
   return(
@@ -33,9 +40,17 @@ const Home = (props) => {
       <h2 className="font-bold text-5xl text-white leading-tight mt-3 mb-6">WELCOME TO <span className="text-amber-500 shadow">CODEADDON</span></h2>
       <span className="font-normal text-gray-300"> Solve all your web designing conflicts with our advanced and easy tutorials.</span>
       <div id="buttons" className="font-medium flex flex-row mt-6">
+        {
+          userInfo?(
+            <div className='text-white'>Hello, <span className='bg-white text-gray-800 py-1 px-2 rounded'>{userInfo.name}</span></div>
+          ):(
+            
         <Link href="/login">
         <a className='mx-4 p-2 px-4 border-2 text-white border-white rounded-lg hover:text-white hover:bg-gray-900 cursor-pointer'>Sign In</a>
         </Link>
+          )
+        }
+        
         {/* <a className="mx-4 p-2 px-4 border-2 text-white border-white rounded-lg hover:text-white hover:bg-gray-900 cursor-pointer">Register</a> */}
       </div>
       
