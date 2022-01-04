@@ -1,9 +1,10 @@
-import React, { useState } from 'react'
+import React, { useState,dispatch,useContext } from 'react'
 import Link from 'next/link'
 import Image from 'next/image';
 import { useRouter } from 'next/router';
-function NavBar(userInfo) {
+function NavBar() {
   
+
   const router = useRouter()
 
     const [showMe, setShowMe] = useState(false);
@@ -15,9 +16,9 @@ function NavBar(userInfo) {
     }
     
   
-    // function toggleuser(){
-    //   setShowMe2(!showMe2);
-    // }
+    function toggleuser(){
+      setShowMe2(!showMe2);
+    }
     
     const isActive = (r) => {
       if(r === router.pathname){
@@ -42,8 +43,8 @@ const hd = (r) => {
       return ""
   }
 }
-const ui=JSON.parse(JSON.stringify(userInfo))
     return (
+
        <div>
          
              <nav className="bg-gray-800 w-full h-16  px-1   shadow-md fixed z-50" >
@@ -108,7 +109,7 @@ const ui=JSON.parse(JSON.stringify(userInfo))
 </Link> */}
 
             <Link href="/quizzes">            
-            <a className={" text-white px-3 py-2 rounded-md text-sm font-medium  hover:bg-gray-900" + isActive('/quizzes')}>Quizzes</a>
+            <a className={" text-white px-3 py-2 rounded-md text-sm font-medium  hover:bg-gray-900" + isActive('/quizzes')}>Quizzes </a>
             </Link>
             <Link href="/about">
             <a className={" text-white px-3 py-2 rounded-md text-sm font-medium  hover:bg-gray-900" + isActive('/about')}>About</a>
@@ -147,6 +148,7 @@ const ui=JSON.parse(JSON.stringify(userInfo))
         {/* {userInfo ? (
           // <span>{console.log(userInfo.token)}</span>
         ):""} */}
+        
           {/* <div>
             <button type="button" className="bg-gray-800 flex text-sm rounded-full focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white" id="user-menu-button" aria-expanded="false" aria-haspopup="true">
               <span className="sr-only">Open user menu</span>

@@ -3,22 +3,28 @@ import Link from 'next/link';
 import NavBar from './NavBar'
 import Notify from './Notify'
 import { Store } from '../utils/Store'
+import { useRouter } from 'next/router';
 
 
 
 function Layout({children}) {
-
-      
-
+    
+  const router = useRouter()
     const { state, dispatch } = useContext(Store)
-    const { darkMode,  userInfo } = state
-
+    const { darkMode, cart, userInfo } = state
+  
 
     return (
         <div>
-<NavBar userInfo={userInfo}/>
+<NavBar/>
  
-
+{/* Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem 
+Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem 
+Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem 
+Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem 
+Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem 
+Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem    */}
+{/* {console.log(JSON.parse(JSON.stringify(userInfo.name)))} */}
             {/* <Notify/> */}
             {/* <Modal /> */}
             {children}
