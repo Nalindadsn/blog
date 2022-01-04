@@ -6,6 +6,7 @@ import Cookies from 'js-cookie';
 import { useRouter } from 'next/router';
 import Layout from '../components/Layout'
 import Image from 'next/image';
+import Link from 'next/link';
 
 
 export default function Login() {
@@ -52,7 +53,7 @@ router.push(redirect || '/');
               </div>
           </div>
           <div className="mt-10 px-12 sm:px-24 md:px-48 lg:px-12 lg:mt-16 xl:px-24 xl:max-w-2xl">
-              <h2 className="text-center text-4xl text-indigo-900 font-display font-semibold lg:text-left xl:text-5xl
+              <h2 className="text-center text-4xl text-gray-800 font-display font-semibold lg:text-left xl:text-5xl
               xl:text-bold">Log in</h2>
               <div className="mt-12">
                   <form  onSubmit={submitHandler}>
@@ -78,7 +79,10 @@ router.push(redirect || '/');
                       </div>
                   </form>
                   <div className="mt-12 text-sm font-display font-semibold text-gray-700 text-center">
-                      Don't have an account ? <a className="cursor-pointer text-indigo-600 hover:text-indigo-800">Sign up</a>
+                      Don't have an account ? 
+                      <Link href="/register">
+                      <a className="cursor-pointer text-indigo-600 hover:text-indigo-800"> Sign up</a>
+                      </Link>
                   </div>
               </div>
           </div>
