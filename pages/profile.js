@@ -20,10 +20,10 @@ function Profile() {
   }, [])
 
   return (
-    <Layout title="Profile">
+    <div title="Profile">
  <br/> <br/> <br/>
  
-    </Layout>
+    </div>
   )
 }
 
