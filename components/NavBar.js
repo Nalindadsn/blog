@@ -3,6 +3,7 @@ import Link from 'next/link'
 import Image from 'next/image';
 import { useRouter } from 'next/router';
 import { Store } from '../utils/Store';
+import Cookies from 'js-cookie'
 function NavBar() {
   
   const router = useRouter()
@@ -46,11 +47,20 @@ const hd = (r) => {
       return ""
   }
 }
+const logoutClickHandler = () => {
+  toggleuser()
+  dispatch({ type: 'USER_LOGOUT' })
+  Cookies.remove('userInfo')
+  Cookies.remove('cartItems')
+  Cookies.remove('shippinhAddress')
+  Cookies.remove('paymentMethod')
+  router.push('/')
+}
     return (
 
        <div>
          
-             <nav className="bg-gray-800 w-full h-16  px-1   shadow-md fixed z-50" >
+             <nav className="bg-gray-800 w-full h-16  px-1   shadow-md fixed z-40" >
   <div className="max-w-7xl mx-0 p-0 sm:px-2 lg:px-6">
     <div className="relative flex items-center justify-between h-16">
       <div className="absolute inset-y-0 left-0 flex items-center md:hidden">
@@ -149,27 +159,20 @@ const hd = (r) => {
         )}
 
         {userInfo ? (
-           <div>
+           <div onClick={toggleuser}>
             <button type="button" className="bg-gray-800 flex text-sm rounded-full focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white" id="user-menu-button" aria-expanded="false" aria-haspopup="true">
               <span className="sr-only">Open user menu</span>
-              <img  onClick={toggleuser}  className="h-8 w-8 rounded-full" src={userInfo.image} alt="user" />
-              <span className='text-white pt-1 pl-1'>{userInfo.name}</span>
+              <img   className="h-8 w-8 rounded-full" src={userInfo.image} alt="user" />
+              <span className='text-white p-1 '>{userInfo.name}</span>
             </button>
           </div> 
         ):(
-          
-
-   
                 <Link href='/register'>
                 <a className="border-2 text-white border-white  py-1 px-3 mr-1 rounded-full text-gray-400 hover:text-gray-800 hover:bg-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white">
                   Register
                 </a>
                 </Link>
         )}
-        
-
-        
-          
 
           <div  className="z-50 origin-top-right absolute right-0 mt-2 w-48 rounded-md shadow-lg py-1 bg-white ring-1 ring-black ring-opacity-5 focus:outline-none" role="menu" aria-orientation="vertical" aria-labelledby="user-menu-button" tabIndex="-1"  style={{
         display: showMe2?"block":"none"
@@ -177,10 +180,7 @@ const hd = (r) => {
         <Link href="/profile">
           <a className="block px-4 py-2 text-sm text-gray-700" role="menuitem" tabIndex="-1" id="user-menu-item-0">Your Profile</a>
         </Link>
-        <Link href="/settings">
-          <a className="block px-4 py-2 text-sm text-gray-700" role="menuitem" tabIndex="-1" id="user-menu-item-1">Settings</a>
-        </Link>
-          <div className="block px-4 py-2 text-sm text-gray-700 cursor-pointer" role="menuitem" tabIndex="-1" id="user-menu-item-2">Sign out</div>
+          <div  onClick={logoutClickHandler} className="z-50 block px-4 py-2 text-sm text-gray-700 cursor-pointer" role="menuitem" tabIndex="-1" id="user-menu-item-2">Sign out</div>
           </div>
         </div>
       </div>

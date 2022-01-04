@@ -5,6 +5,7 @@ import { Store } from '../utils/Store';
 import Cookies from 'js-cookie';
 import { useRouter } from 'next/router';
 import Layout from '../components/Layout'
+import Image from 'next/image';
 
 
 export default function Login() {
@@ -35,23 +36,83 @@ router.push(redirect || '/');
 }
       };
     return (
-      <div>
-
-      <div className='w-full max-w-xs pt-20 m-auto'>
-        <form className='bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4 ' onSubmit={submitHandler} >
-        <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="email" >email</label>
-            <input type="text" name="email" id="email" className="appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" 
-            onChange={e=>setEmail(e=e.target.value)}
-             /><br/>
-             <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="password" >password</label>
-            <input type="password" name="password" id="password" className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" 
-            onChange={e=>setPassword(e=e.target.value)} /><br/>
-            <button type="submit" className='mt-5 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline'>submit</button>
-        </form>
 
 
+<div>
+
+
+
+<div className="lg:flex">
+      <div className="lg:w-1/2 xl:max-w-screen-sm">
+          <div className="py-12   flex justify-center lg:justify-start lg:px-12">
+              <div className="cursor-pointer flex items-center">
+                  <div>
+                      
+                  </div>
+              </div>
+          </div>
+          <div className="mt-10 px-12 sm:px-24 md:px-48 lg:px-12 lg:mt-16 xl:px-24 xl:max-w-2xl">
+              <h2 className="text-center text-4xl text-indigo-900 font-display font-semibold lg:text-left xl:text-5xl
+              xl:text-bold">Log in</h2>
+              <div className="mt-12">
+                  <form  onSubmit={submitHandler}>
+                      <div>
+                          <div className="text-sm font-bold text-gray-700 tracking-wide">Email Address</div>
+                          <input className="w-full text-lg py-2 border-b border-gray-300 focus:outline-none focus:border-indigo-500"  type="text" name="email" id="email" onChange={e=>setEmail(e=e.target.value)} />
+                      </div>
+                      <div className="mt-8">
+                          <div className="flex justify-between items-center">
+                              <div className="text-sm font-bold text-gray-700 tracking-wide">
+                                  Password
+                              </div>
+                              
+                          </div>
+                          <input className="w-full text-lg py-2 border-b border-gray-300 focus:outline-none focus:border-indigo-500"  type="password" name="password" id="password" onChange={e=>setPassword(e=e.target.value)} />
+                      </div>
+                      <div className="mt-10">
+                          <button className=" text-gray-100 p-4 w-full rounded-full tracking-wide bg-amber-500
+                          font-semibold font-display focus:outline-none focus:shadow-outline 
+                          shadow-lg">
+                              Log In
+                          </button>
+                      </div>
+                  </form>
+                  <div className="mt-12 text-sm font-display font-semibold text-gray-700 text-center">
+                      Don't have an account ? <a className="cursor-pointer text-indigo-600 hover:text-indigo-800">Sign up</a>
+                  </div>
+              </div>
+          </div>
       </div>
-
+      <div className="hidden lg:flex items-center justify-center  flex-1 h-screen">
+          <div className="max-w-xs transform duration-200 hover:scale-110 cursor-pointer">
+             
+             <Image className="w-5/6 mx-auto" src="https://res.cloudinary.com/masterdevs/image/upload/v1641315776/codeaddon/login_Icon_oufkgj.png" width="300" height="308" alt="user login image"/>
+                 
+          </div>
       </div>
+  </div>
+
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   )
 }
