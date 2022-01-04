@@ -2,10 +2,13 @@ import React, { useState,dispatch,useContext } from 'react'
 import Link from 'next/link'
 import Image from 'next/image';
 import { useRouter } from 'next/router';
+import { Store } from '../utils/Store';
 function NavBar() {
   
-
   const router = useRouter()
+    const { state, dispatch } = useContext(Store)
+    const { darkMode, cart, userInfo } = state
+  
 
     const [showMe, setShowMe] = useState(false);
     const [showMe2, setShowMe2] = useState(false);  
@@ -132,30 +135,40 @@ const hd = (r) => {
         </button>
         {/* <pre>{JSON.stringify(u.name)}</pre> */}
 
-        <Link href='/login'>
-        <a className="border-2 text-white border-white  py-1 px-3 mr-1 rounded-full text-gray-400 hover:text-gray-800 hover:bg-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white">
-          Login
-        </a>
-        </Link>
- 
-              {/* <Link href='/register'>
-              <a className="border-2 text-white border-white  py-1 px-3 mr-1 rounded-full text-gray-400 hover:text-gray-800 hover:bg-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white">
-                Register
-              </a>
-              </Link> */}
-
         <div className="ml-3 relative">
-        {/* {userInfo ? (
-          // <span>{console.log(userInfo.token)}</span>
-        ):""} */}
-        
-          {/* <div>
+
+
+        {userInfo ? (
+""
+        ):(
+        <Link href='/login'>
+          <a className="border-2 text-white border-white  py-1 px-3 mr-1 rounded-full text-gray-400 hover:text-gray-800 hover:bg-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white">
+            Login
+          </a>
+          </Link>
+        )}
+
+        {userInfo ? (
+           <div>
             <button type="button" className="bg-gray-800 flex text-sm rounded-full focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white" id="user-menu-button" aria-expanded="false" aria-haspopup="true">
               <span className="sr-only">Open user menu</span>
-              <img  onClick={toggleuser}  className="h-8 w-8 rounded-full" src="https://res.cloudinary.com/masterdevs/image/upload/v1640359719/codeaddon/codeaddon-user_bclsui.jpg" alt="" />
-              
+              <img  onClick={toggleuser}  className="h-8 w-8 rounded-full" src={userInfo.image} alt="user" />
+              <span className='text-white pt-1 pl-1'>{userInfo.name}</span>
             </button>
-          </div> */}
+          </div> 
+        ):(
+          
+
+   
+                <Link href='/register'>
+                <a className="border-2 text-white border-white  py-1 px-3 mr-1 rounded-full text-gray-400 hover:text-gray-800 hover:bg-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white">
+                  Register
+                </a>
+                </Link>
+        )}
+        
+
+        
           
 
           <div  className="z-50 origin-top-right absolute right-0 mt-2 w-48 rounded-md shadow-lg py-1 bg-white ring-1 ring-black ring-opacity-5 focus:outline-none" role="menu" aria-orientation="vertical" aria-labelledby="user-menu-button" tabIndex="-1"  style={{
