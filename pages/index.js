@@ -78,9 +78,16 @@ const Home = (props) => {
       <h2 className="font-bold text-4xl text-white leading-tight  text-shadow-lg pt-1 pb-2	">WELCOME TO <span className="text-amber-500 shadow">CODEADDON</span></h2>
       <span className="font-small text-white pt-0 text-shadow-lg	 "> Solve all your web designing conflicts with our advanced and easy tutorials.</span>
       <div id="buttons" className="font-medium flex flex-row mt-4 py-2 rounded">
-    <Link href="/login">
-    <a className='mx-4 p-2 px-4 border-2 text-white border-white rounded-lg  bg-gray-800 hover:text-white hover:bg-gray-900 cursor-pointer'>Sign In</a>
-    </Link>
+      {
+          userInfo?(
+            <div className='text-white'>Hello, <span className='bg-white text-gray-800 py-1 px-2 rounded'>{userInfo.name}</span></div>
+          ):(
+            
+        <Link href="/login">
+        <a className='mx-4 p-2 px-4 border-2 text-white border-white rounded-lg hover:text-white hover:bg-gray-900 cursor-pointer'>Sign In</a>
+        </Link>
+          )
+        }
         {/* <a className="mx-4 p-2 px-4 border-2 text-white border-white rounded-lg  bg-gray-800 hover:text-white hover:bg-gray-900 cursor-pointer">Register</a> */}
       
       </div>
