@@ -204,8 +204,15 @@ const logoutClickHandler = () => {
           <a href="#" className="text-white flex items-center space-x-2 px-4" title="Your App is cool">
             
             </a>
+
            
             <nav data-dev-hint="main navigation">
+            <button  onClick={toggle} type="button" className={" inline-flex items-center justify-center py-2 px-4  text-white hover:text-white bg-red-500/80  hover:bg-red-500 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white fixed top-16 z-50 "} aria-controls="mobile-menu" aria-expanded="false">
+          <span className="sr-only">Open main menu</span>
+          
+          
+X
+        </button>
               <Link href="/">
                 <a  className={"mt-14 flex items-center space-x-2 py-2 px-4 transition duration-200 text-white hover:bg-gray-700 hover:text-white" + isActiveM('/')}>
                     <i className="fa fa-home"></i>
