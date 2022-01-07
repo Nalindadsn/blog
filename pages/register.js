@@ -99,8 +99,6 @@ import Image from 'next/image';
                 onChange={(e) => setPassword(e.target.value)}
               ></input>
 
-
-
                       </div>
                       <div className="mt-8">
                           <div className="flex justify-between items-center">
