@@ -60,7 +60,7 @@ const logoutClickHandler = () => {
 
        <div>
          
-             <nav className="bg-gray-800 w-full h-16  px-1   shadow-md fixed z-40" >
+             <nav className="bg-gray-800 w-full h-16  px-1   shadow-md fixed z-50" >
   <div className="max-w-7xl mx-0 p-0 sm:px-2 lg:px-6">
     <div className="relative flex items-center justify-between h-16">
       <div className="absolute inset-y-0 left-0 flex items-center md:hidden">
