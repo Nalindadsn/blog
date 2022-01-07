@@ -59,7 +59,6 @@ function Profile() {
  
 
     <div className="container mx-auto my-5 p-5">
-<h2 className='text-4xl p-5'>OUR TEAM</h2>
         <div className="md:flex no-wrap md:-mx-2 ">
 
             <div className="w-full md:w-3/12 md:mx-2">
@@ -213,6 +212,8 @@ function Profile() {
 
             <div className="w-full md:w-9/12 mx-2 h-64">
               
+<h1 className='text-4xl p-5'>Profile</h1>
+{/*               
                 <div className="bg-white p-3 shadow-sm rounded-sm">
                     <div className="flex items-center space-x-2 font-semibold text-gray-900 leading-8">
                         <span clas="text-green-500">
@@ -244,7 +245,7 @@ function Profile() {
                             </div>
                         </div>
                     </div>
-                </div>
+                </div> */}
 
                 <div className="my-4"></div>
 
@@ -275,37 +276,7 @@ function Profile() {
 
 {/* 
       //////////////////////////////////////////// */}
-      <div container spacing={1}>
-        <div item md={3} xs={12}>
-          <div>
-            <div>
-              <div href="/profile" passHref>
-                <div selected button component="a">
-                  <p primary="User Profile"></p>
-                </div>
-              </div>
-              <div href="/order-history" passHref>
-                <div button component="a">
-                  <p primary="Order History"></p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div item md={9} xs={12}>
-          <confirmPassword>
-            <div>
-              <div>
-                <p component="h1" variant="h1">
-                  Profile
-                </p>
-              </div>
-              <div>
-              </div>
-            </div>
-          </confirmPassword>
-        </div>
-      </div>
+
     </div>
   )
 }
