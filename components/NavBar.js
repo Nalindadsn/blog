@@ -63,9 +63,19 @@ const logoutClickHandler = () => {
              <nav className="bg-gray-800 w-full h-16  px-1   shadow-md fixed z-40" >
   <div className="max-w-7xl mx-0 p-0 sm:px-2 lg:px-6">
     <div className="relative flex items-center justify-between h-16">
-      <div className="absolute inset-y-0 left-0 flex items-center md:hidden">
-
-       
+      <div className="absolute inset-y-0 left-0 flex items-center md:hidden z-10">
+  <button  onClick={toggle} type="button" className={" inline-flex items-center justify-center p-2  text-gray-400 hover:text-white bg-gray-600/20  hover:bg-gray-700/50 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white fixed top-16 z-30 "} aria-controls="mobile-menu" aria-expanded="false">
+          <span className="sr-only">Open main menu</span>
+          
+          
+          <svg className="block h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+          
+          <svg className="hidden h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" />
+          </svg>
+        </button>
       </div>
       <div className="flex-1 flex items-center  md:items-stretch ">
         <div className="flex-shrink-0 flex items-center text-white">
@@ -180,19 +190,6 @@ const logoutClickHandler = () => {
 
 
 </nav>
-
-<button  onClick={toggle} type="button" className={" inline-flex items-center justify-center p-2  text-gray-400 hover:text-white bg-gray-600/20  hover:bg-gray-700/50 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white fixed top-16 z-30 "} aria-controls="mobile-menu" aria-expanded="false">
-          <span className="sr-only">Open main menu</span>
-          
-          
-          <svg className="block h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h16" />
-          </svg>
-          
-          <svg className="hidden h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" />
-          </svg>
-        </button>
 
 <aside id="sidebar" className={"z-30 bg-gray-800 text-gray-100 md:w-64 w-3/4 space-y-6 pt-6 px-0  inset-y-0 left-0 transform md:relative md:translate-x-0 transition duration-200 ease-in-out  md:flex md:flex-col md:justify-between overflow-y-auto hidden md:block  fixed "+hd('/articles')} data-dev-hint="sidebar; px-0 for frameless; px-2 for visually inset the navigation"   style={
           showMe!==""?(showMe?{ display:"block"}:{display:"none" }):({})
