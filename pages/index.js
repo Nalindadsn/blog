@@ -59,9 +59,9 @@ const Home = (props) => {
     </div>
     <div className=" justify-center relative  my-auto ">
 
-<div className='bg-gray-900/50 md:bg-gray-900/0 absolute w-full h-full z-30' ></div>
+<div className='bg-gray-900/50 md:bg-gray-900/0 absolute w-full h-full z-20' ></div>
 
-    <figcaption className="absolute right-0 top-24 text-lg -mt-16 text-white px-4 pt-12 z-40  block md:hidden ">
+    <figcaption className="absolute right-0 top-24 text-lg -mt-16 text-white px-4 pt-12 z-30  block md:hidden ">
 
 
 <div className=" p-5">
@@ -70,7 +70,7 @@ const Home = (props) => {
   <h1  className="bg-sky-300 px-2 ">T</h1>
 </div>
 </figcaption>
-    <figcaption className="absolute -left-5 top-0 text-lg -mt-16 text-white px-4 pt-12 block md:hidden z-30">
+    <figcaption className="absolute -left-5 top-0 text-lg -mt-16 text-white px-4 pt-12 block md:hidden z-20">
 
 
 <div className=" py-5 pl-5  mr-6 pr-7">
@@ -84,7 +84,7 @@ const Home = (props) => {
           ):(
             
         <Link href="/login">
-        <a className='p-2 px-4 border-2 text-white border-white rounded-lg hover:text-white hover:bg-gray-900 cursor-pointer z-40'>Sign In</a>
+        <a className='p-2 px-4 border-2 text-white border-white rounded-lg hover:text-white hover:bg-gray-900 cursor-pointer z-30'>Sign In</a>
         </Link>
           )
         }
@@ -96,7 +96,7 @@ const Home = (props) => {
 
 
 <div className='bg-white h-12'></div>
-<Image width="675" height="528" className="z-20 pb-14 object-cover h-full w-full block md:hidden sm:hidden" src="https://res.cloudinary.com/masterdevs/image/upload/v1640121452/codeaddon/codeaddon-banner-web-development_vibee4.png" alt='codeaddon-banner-web-development' />
+<Image width="675" height="528" className="z-10 pb-14 object-cover h-full w-full block md:hidden sm:hidden" src="https://res.cloudinary.com/masterdevs/image/upload/v1640121452/codeaddon/codeaddon-banner-web-development_vibee4.png" alt='codeaddon-banner-web-development' />
 
 
 
@@ -223,7 +223,7 @@ const Home = (props) => {
       <div className="h-64 md:h-80 relative">
         <img src="https://images.unsplash.com/photo-1480694313141-fce5e697ee25?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=602&h=320q=80" className="absolute z-0 object-cover w-full h-64 md:h-80 rounded-lg" />
         <div className="absolute gradient w-full h-64 md:h-80 rounded-lg z-10"></div>
-        <div className="absolute left-0 right-0 bottom-0 p-4 z-30">
+        <div className="absolute left-0 right-0 bottom-0 p-4 z-20">
           <h1 className="font-bold text-white leading-tight sm:mb-2 group-hover:underline text-2xl md:text-3xl">The technology helping keep women safe on the streets</h1>
           <div className="text-xs text-white hidden sm:block">
             <div className="flex items-center">
@@ -240,7 +240,7 @@ const Home = (props) => {
       <div className="h-64 md:h-80 relative">
         <img src="https://images.unsplash.com/photo-1501386761578-eac5c94b800a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=602&h=320q=80" target="_blank" className="absolute z-0 object-cover w-full h-64 md:h-80 rounded-lg" />
         <div className="absolute gradient w-full h-64 md:h-80 rounded-lg z-10"></div>
-        <div className="absolute left-0 right-0 bottom-0 p-4 z-30">
+        <div className="absolute left-0 right-0 bottom-0 p-4 z-20">
           <h1 className="font-bold text-white leading-tight sm:mb-2 group-hover:underline text-2xl md:text-3xl">Football fans spending millions on club crypto-tokens</h1>
           <div className="text-xs text-white hidden sm:block">
             <div className="flex items-center">
