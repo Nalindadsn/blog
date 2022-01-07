@@ -50,12 +50,12 @@ function Profile() {
     }
   }
   return (
-    <div className="Profile pt-20">
+    <div className="Profile">
 
 
 
 
-<div className="bg-gray-100 pt-20">
+<div className="bg-gray-100  pt-20">
  
 
     <div className="container mx-auto my-5 p-5">
