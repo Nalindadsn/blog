@@ -84,7 +84,7 @@ const Home = (props) => {
           ):(
             
         <Link href="/login">
-        <a className='mx-4 p-2 px-4 border-2 text-white border-white rounded-lg hover:text-white hover:bg-gray-900 cursor-pointer'>Sign In</a>
+        <a className='p-2 px-4 border-2 text-white border-white rounded-lg hover:text-white hover:bg-gray-900 cursor-pointer z-40'>Sign In</a>
         </Link>
           )
         }
