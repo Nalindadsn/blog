@@ -56,9 +56,9 @@ function Profile() {
 
 
 <div className="bg-gray-100  pt-20">
- 
 
     <div className="container mx-auto my-5 p-5">
+<h1 className='text-4xl p-5  mb-3'>Profile</h1>
         <div className="md:flex no-wrap md:-mx-2 ">
 
             <div className="w-full md:w-3/12 md:mx-2">
@@ -214,7 +214,8 @@ function Profile() {
               
               
                 <div className="bg-white p-3 shadow-sm rounded-sm">
-<h1 className='text-4xl p-5'>Profile</h1>
+
+                <h3 className='text-2xl p-5 '>Activities</h3>
 
                 </div>
 
