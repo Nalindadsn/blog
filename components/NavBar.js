@@ -16,11 +16,13 @@ function NavBar() {
   
     
     function toggle(){
+      setShowMe2(false)
       setShowMe(!showMe);
     }
     
   
     function toggleuser(){
+      setShowMe(false)
       setShowMe2(!showMe2);
     }
     
