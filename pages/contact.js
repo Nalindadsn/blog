@@ -27,9 +27,10 @@ import Image from 'next/image';
           email,
           message,
         });
-        dispatch({ type: 'USER_LOGIN', payload: data });
-        Cookies.set('userInfo', JSON.stringify(data));
         alert('Message Sent')
+        setName('')
+        setEmail('')
+        setMessage('')
       } catch (err) {
         alert(err.response.data ? err.response.data.message : err.message);
       }
@@ -64,6 +65,7 @@ import Image from 'next/image';
                 placeholder="Name"
                 className="w-full text-lg py-2 border-b border-gray-300 focus:outline-none focus:border-indigo-500"
                 onChange={(e) => setName(e.target.value)}
+                value={name}
               />
                       
                       </div>
@@ -75,8 +77,8 @@ import Image from 'next/image';
                 className="w-full text-lg py-2 border-b border-gray-300 focus:outline-none focus:border-indigo-500"
                 id="email"
                 placeholder="Email"
-                inputProps={{ type: 'email' }}
                 onChange={(e) => setEmail(e.target.value)}
+                value={email}
               ></input>                    
                      
                       </div>
@@ -87,6 +89,7 @@ import Image from 'next/image';
                 id="message"
                 placeholder="Message"
                 onChange={(e) => setMessage(e.target.value)}
+                value={message}
                 ></textarea>
                 
 
