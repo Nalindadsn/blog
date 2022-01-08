@@ -176,8 +176,6 @@ const logoutClickHandler = () => {
   </div>
 
 
-
-
 </nav>
 <div className="absolute inset-y-0 left-0 flex items-center md:hidden z-30">
   <button  onClick={toggle} type="button" className={" inline-flex items-center justify-center p-2  text-gray-400 hover:text-white bg-gray-600/20  hover:bg-gray-700/50 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white fixed top-16 z-30 "} aria-controls="mobile-menu" aria-expanded="false">
