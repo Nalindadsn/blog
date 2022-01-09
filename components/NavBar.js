@@ -1,4 +1,4 @@
-import React, { useState,dispatch,useContext } from 'react'
+import React, { useState,dispatch,useContext, useEffect } from 'react'
 import Link from 'next/link'
 import Image from 'next/image';
 import { useRouter } from 'next/router';
@@ -24,6 +24,12 @@ function NavBar() {
     function toggleuser(){
       setShowMe(false)
       setShowMe2(!showMe2);
+    }
+
+    function cb(){
+      
+      setShowMe(false)
+      setShowMe2(false)
     }
     
     const isActive = (r) => {
@@ -58,10 +64,20 @@ const logoutClickHandler = () => {
   Cookies.remove('paymentMethod')
   router.push('/')
 }
+useEffect(() => {
+  setShowMe(false)
+  setShowMe2(false)
+}, [])
     return (
 
        <div>
+         {/* <div className=' bg-gray-900/50 w-full h-full fixed  z-40' onClick={cb}  
+        
+          style={
+            showMe2!==""?(showMe2?{ display:"block"}:{display:"none" }):({})
+        }
          
+         ></div> */}
              <nav className="bg-gray-800 w-full h-16  px-1   shadow-md fixed z-50" >
   <div className="max-w-7xl mx-0 p-0 sm:px-2 lg:px-6">
     <div className="relative flex items-center justify-between h-16">

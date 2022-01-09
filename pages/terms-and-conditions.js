@@ -4,7 +4,7 @@ import Footer from '../components/Footer'
 function Tc() {
     return (
         <div>
-        <div className='container  mx-auto pt-20'>
+        <div className='container  mx-auto pt-20 p-3'>
             <h1 className='text-4xl'><strong>Terms and Conditions</strong></h1>
 
 <p className='py-5'>Welcome to Codeaddon!</p>

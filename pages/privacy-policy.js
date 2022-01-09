@@ -4,7 +4,7 @@ import Footer from '../components/Footer'
 function privacyPolicy() {
     return (
         <div >
-            <div className='container  mx-auto pt-20'>
+            <div className='container  mx-auto pt-20 p-3'>
             <h1 className='text-4xl'>Privacy Policy for Codeaddon</h1>
 
 <p className='py-2'>At Codeaddon, accessible from https://www.codeaddon.com, one of our main priorities is the privacy of our visitors. This Privacy Policy document contains types of information that is collected and recorded by Codeaddon and how we use it.</p>

@@ -22,7 +22,9 @@ const Home = (props) => {
         <title>Home Page -codeaddon</title>
       </Head>
 {/* //------------------- */}
-<div className="bg-gray-800">
+<div className="bg-gray-800 relative">
+{/* <div className=' bg-gray-900   z-20' style={{width:"100%",height:"100%",position:"fixed"}}></div> */}
+
 
 <div className=" mx-auto  ">
   <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6">
