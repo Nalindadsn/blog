@@ -27,8 +27,12 @@ function Footer() {
                     </div>
                   </div> 
                   <div className="md:flex-1 md:px-4 text-center md:text-right">
-                    <a href="#" className="py-2 px-4 text-white inline-block hover:underline">Terms of Service</a>
-                    <a href="#" className="py-2 px-4 text-white inline-block hover:underline">Privacy Policy</a>
+                    <Link href="/terms-and-conditions">
+                    <a className="py-2 px-4 text-white inline-block hover:underline">Terms of Service</a>
+                    </Link>
+                    <Link href="/privacy-policy">
+                    <a className="py-2 px-4 text-white inline-block hover:underline">Privacy Policy</a>
+                    </Link>
                   </div>
                 </div>
     
