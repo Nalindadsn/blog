@@ -28,7 +28,8 @@ export default function PostScreen(props) {
 
 <div>
 <Head>
-        <title>{product.name} -codeaddon</title>
+        <title>{product.name} - Codeaddon </title>
+        <meta name="description" content={product.description}></meta>
       </Head>
   <div className='bg-gray-800 '>
     

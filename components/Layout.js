@@ -7,7 +7,7 @@ import { useRouter } from 'next/router';
 
 
 
-function Layout({children}) {
+function Layout({ children}) {
     
   const router = useRouter()
     const { state, dispatch } = useContext(Store)
