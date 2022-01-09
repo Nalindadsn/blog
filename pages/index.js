@@ -164,7 +164,7 @@ const Home = (props) => {
 
             </div>
             </div>
-            <div className="w-4/6 p-5">
+            <div className="w-4/6 p-5 ">
               <h2 className=" font-bold	 leading-normal text-lg">
               <Link href={`/post/${product.slug}`}>
           <a>{product.name}</a>

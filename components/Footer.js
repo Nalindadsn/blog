@@ -8,10 +8,10 @@ function Footer() {
         <footer>
 
 
-        <div className="footer-2  pt-6 md:pt-12">
+        <div className="footer-2   border-gray-900">
 
     
-            <div className="border-t border-solid border-gray-900 mt-4 py-4 bg-gray-800">
+            <div className="border-t border-solid  py-4 bg-gray-800">
               <div className="container px-4 mx-auto">
     
                 <div className="md:flex md:-mx-4 md:items-center ">
