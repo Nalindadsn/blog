@@ -8,6 +8,7 @@ import "prismjs/plugins/line-highlight/prism-line-highlight";
 import { useEffect } from 'react';
 import Head from 'next/head';
 import Image from 'next/image';
+import NavBar from '../../components/NavBar';
 
 
 export default function PostScreen(props) {
@@ -43,7 +44,7 @@ export default function PostScreen(props) {
 
 
 
-
+<NavBar/>
 
 <div  className="relative min-h-screen md:flex" data-dev-hint="container">
 
@@ -54,9 +55,11 @@ export default function PostScreen(props) {
         <div  className="max-w-7xl mx-auto">
             <div  className="px-4 py-6 sm:px-0">
                 <div  className="border-4 border-dashed border-gray-200 rounded-lg h-96">
-                <h1 className=' p-5 pt-12 pl-0 text-4xl '>{product.name}</h1>
-                
+                <h1 className=' p-5 pt-12 pl-0 text-4xl '><strong>{product.name}</strong></h1>
+                <div className='bg-gray-800 p-3'>
                 <Image src={product.image} width="882" height="332" alt="Check Email Availaility tutorial_php"/>
+
+                </div>
 
                 <div dangerouslySetInnerHTML={{__html:product.description}}></div>
                 </div>
