@@ -8,6 +8,7 @@ import Footerb from '../components/Footerb';
 import db from '../utils/db';
 import Product from '../models/Product';
 import Category from '../models/Category';
+import NavBar from '../components/NavBar';
 
 export default function Articles(props) {
 
@@ -31,6 +32,7 @@ export default function Articles(props) {
     <div >
 
 
+<NavBar/>
 
 
       <div >

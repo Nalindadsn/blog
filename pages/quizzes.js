@@ -5,6 +5,7 @@ import React, { useState } from "react";
 
 import Link from 'next/link'
 import Footerb from '../components/Footerb';
+import NavBar from '../components/NavBar';
 
 export default function Quiz() {
 
@@ -26,6 +27,7 @@ export default function Quiz() {
   return (
     <div >
 
+<NavBar/>
 
 
 

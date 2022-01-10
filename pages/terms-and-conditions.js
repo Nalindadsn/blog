@@ -1,9 +1,12 @@
 import React from 'react'
 import Footer from '../components/Footer'
+import NavBar from '../components/NavBar'
 
 function Tc() {
     return (
         <div>
+            <NavBar/>
+
         <div className='container  mx-auto pt-20 p-3'>
             <h1 className='text-4xl'><strong>Terms and Conditions</strong></h1>
 

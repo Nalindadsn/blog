@@ -8,6 +8,7 @@ import Footer from '../components/Footer';
 import { useContext } from 'react';
 import { Store } from '../utils/Store';
 import { useRouter } from 'next/router';
+import NavBar from '../components/NavBar';
 const Home = (props) => {
  
   const router = useRouter()
@@ -22,6 +23,8 @@ const Home = (props) => {
         <title>Home Page -codeaddon</title>
       </Head>
 {/* //------------------- */}
+<NavBar/>
+
 <div className="bg-gray-800 relative">
 {/* <div className=' bg-gray-900   z-20' style={{width:"100%",height:"100%",position:"fixed"}}></div> */}
 

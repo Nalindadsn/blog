@@ -7,6 +7,7 @@
   import { Store } from '../utils/Store';
   import Cookies from 'js-cookie';
 import Image from 'next/image';
+import NavBar from '../components/NavBar';
   
   export default function Register() {
     const router = useRouter();
@@ -44,6 +45,8 @@ import Image from 'next/image';
     };
     return (
       <div>
+        <NavBar/>
+
 
 <div>
 

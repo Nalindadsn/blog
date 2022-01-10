@@ -7,6 +7,7 @@ import { useRouter } from 'next/router';
 import Layout from '../components/Layout'
 import Image from 'next/image';
 import Link from 'next/link';
+import NavBar from '../components/NavBar';
 
 
 export default function Login() {
@@ -40,6 +41,7 @@ router.push(redirect || '/');
 
 
 <div>
+<NavBar/>
 
 
 

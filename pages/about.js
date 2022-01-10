@@ -1,5 +1,6 @@
 import Head from 'next/head'
 import Footer from '../components/Footer'
+import NavBar from '../components/NavBar'
 const About = (props) => {
  
 
@@ -7,6 +8,7 @@ const About = (props) => {
   return(
     <div>
 
+<NavBar/>
 
 
 

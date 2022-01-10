@@ -1,11 +1,14 @@
 import React from 'react'
 import Footer from '../components/Footer'
+import NavBar from '../components/NavBar'
 
 function privacyPolicy() {
     return (
         <div >
+            <NavBar/>
+
             <div className='container  mx-auto pt-20 p-3'>
-            <h1 className='text-4xl'>Privacy Policy for Codeaddon</h1>
+            <h1 className='text-4xl'><strong>Privacy Policy for Codeaddon</strong></h1>
 
 <p className='py-2'>At Codeaddon, accessible from https://www.codeaddon.com, one of our main priorities is the privacy of our visitors. This Privacy Policy document contains types of information that is collected and recorded by Codeaddon and how we use it.</p>
 
