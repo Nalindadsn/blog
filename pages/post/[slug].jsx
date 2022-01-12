@@ -49,17 +49,17 @@ export default function PostScreen(props) {
 <div  className="relative min-h-screen md:flex" data-dev-hint="container">
 
 
-
-    
     <div id="content"  className="flex-1 p-6 lg:px-8">
         <div  className="max-w-7xl mx-auto">
             <div  className="px-4 py-6 sm:px-0">
                 <div  className="border-4 border-dashed border-gray-200 rounded-lg h-96">
                 <h1 className=' p-5 pt-12 pl-0 text-4xl '><strong>{product.name}</strong></h1>
-                <div className='bg-gray-800 p-3'>
+                <div className='bg-gray-800 p-3 rounded'>
                 <Image src={product.image} width="882" height="332" alt="Check Email Availaility tutorial_php"/>
 
                 </div>
+                
+
 
                 <div dangerouslySetInnerHTML={{__html:product.description}}></div>
                 </div>

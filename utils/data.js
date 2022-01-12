@@ -180,10 +180,23 @@ const data = {
         numReviews: 0,
         countInStock: 1,
         description: `
+
         <p>In this tutorial, we will examine whether e-mail addresses are included in the database without refreshing the page. This can be used for username, email, ID etc.</p>
         <h3 class="text-2xl pt-4">01 Step- Create database </h3> 
+
+<div class="container m-auto text-grey-darkest">
+
+   <div class="flex flex-wrap -mx-2 mb-8">
+      <div class="w-full md:w-2/2 lg:w-1/2 ">
+         <div class=" text-sm text-grey-dark flex items-center justify-center">
+
+
       <div class="treeStruc">
-<ul>
+<h3><strong>Folder Structure</strong></h3>
+
+
+
+<ul class="w-full">
   <li class="root">
     Root 
   </li>
@@ -211,6 +224,85 @@ const data = {
 </ul> 
         
     </div> 
+
+
+
+         </div>
+      </div>
+      <div class="w-full md:w-2/2 lg:w-1/2 ">
+         <div class=" text-sm text-grey-dark">
+
+
+<h3><strong>Table structure</strong></h3>
+<h4>users</h4>
+<table class="w-full leading-normal">
+          <thead>
+            <tr>
+              <th
+                class="px-5 py-3 border-b-2 border-gray-200 bg-gray-100 text-left text-xs font-semibold text-gray-700 uppercase tracking-wider"
+              >
+                Name
+              </th>
+              <th
+                class="px-5 py-3 border-b-2 border-gray-200 bg-gray-100 text-left text-xs font-semibold text-gray-700 uppercase tracking-wider"
+              >
+                Type
+              </th>
+              <th
+                class="px-5 py-3 border-b-2 border-gray-200 bg-gray-100 text-left text-xs font-semibold text-gray-700 uppercase tracking-wider"
+              >
+                Extra
+              </th>
+              
+              <th
+                class="px-5 py-3 border-b-2 border-gray-200 bg-gray-100"
+              ></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                    <p class="text-gray-900 whitespace-no-wrap mx-5">
+                      id
+                    </p>
+              </td>
+              <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                <p class="text-gray-900 whitespace-no-wrap mx-5">int(11)</p>
+              </td>
+              <td class="px-5 py-5 border-b   text-sm">
+                  <span
+                    aria-hidden
+                    class="px-2 inset-0 bg-amber-500 text-white rounded-full"
+                  > AUTO_INCREMENT</span>
+              </td>
+            </tr>
+            <tr>
+              <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                    <p class="text-gray-900 whitespace-no-wrap mx-5">
+                      id
+                    </p>
+              </td>
+              <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                <p class="text-gray-900 whitespace-no-wrap mx-5">varchar(100)</p>
+              </td>
+              <td class="px-5 py-5 border-b   text-sm">
+              </td>
+            </tr>
+          </tbody>
+        </table>
+         </div>
+      </div>
+   </div>
+
+
+
+</div>
+
+
+
+
+
+
 <p>First you need to create a table in the database. This table is named users.</p>
 <pre class="line-numbers language-markup">
     <code>
@@ -416,6 +508,7 @@ if(isset($_POST['email'])){
 </pre>
 
         
+         
         `,
       },
       {
@@ -655,6 +748,307 @@ try{
         {
           echo 'User Added Successfully';
     }
+    </code>
+</pre>`,
+      },
+      {
+        user: '613f3c0b217785ee9b399d9c',
+        name: 'How to get data from db using MySQL, PHP and PDO with AJAX with jQuery datatable',
+        slug: 'fetch-data-with-datatable',
+        category: '61d08124cc87d287539961ff',
+        image: 'https://res.cloudinary.com/masterdevs/image/upload/v1641991518/codeaddon/how_to_get_data_from_db_using_MySQL_PHP_and_PDO_with_AJAX_with_jQuery_datatable_ipogpl.png',
+        price: 0,
+        brand: 'codeaddon',
+        rating: 0.0,
+        numReviews: 0,
+        countInStock: 0,
+        description: `
+
+        <p>.</p>
+
+
+        <h3 class="text-2xl">01 Step- Create database </h3> 
+      <div class="treeStruc">
+<ul>
+  <li class="root">
+    Root 
+  </li>
+  <li>
+   <i class='fa fa-folder'></i>  includes
+    <ul>
+      <li><i class='fa fa-sticky-note'></i> config.php</li>
+      <li><i class='fa fa-sticky-note'></i> ajax.php</li>
+    </ul>  
+  </li>
+  <li>
+   <i class='fa fa-folder'></i>  css
+    <ul>
+      <li><i class='fa fa-sticky-note'></i> style.css</li>
+    </ul>  
+  </li>
+  <li>
+   <i class='fa fa-folder'></i>  js
+    <ul>
+      <li><i class='fa fa-sticky-note'></i> script.js</li>
+    </ul>  
+  </li>
+  <li><i class='fa fa-sticky-note'></i> index.php</li>
+
+</ul> 
+        
+    </div> 
+
+<pre class="line-numbers language-mysql">
+    <code>
+
+    --
+    -- Table structure for table &#96;accounts&#96;
+    --
+    
+    CREATE TABLE &#96;accounts&#96; (
+      &#96;id&#96; int(11) NOT NULL,
+      &#96;created_at&#96; timestamp NOT NULL DEFAULT current_timestamp(),
+      &#96;measurement_no&#96; int(11) NOT NULL,
+      &#96;no_beneficiaries&#96; int(5) NOT NULL,
+      &#96;phone_fixed&#96; varchar(15) NOT NULL,
+      &#96;phone_mobile&#96; varchar(15) NOT NULL,
+      &#96;status&#96; int(1) NOT NULL
+    ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+    
+    --
+    -- Dumping data for table &#96;accounts&#96;
+    --
+    
+    INSERT INTO &#96;accounts&#96; (&#96;id&#96;, &#96;created_at&#96;, &#96;measurement_no&#96;, &#96;no_beneficiaries&#96;, &#96;phone_fixed&#96;, &#96;phone_mobile&#96;, &#96;status&#96;) VALUES
+    (65, '2021-08-26 06:40:09', 111111, 6, '0254575444', '0711111111', 1),
+    (66, '2021-09-03 11:27:42', 222222, 5, '0114455444', '0711111111', 1),
+    (67, '2021-10-14 12:25:53', 456445, 3, '0114455444', '0711111111', 1),
+    (68, '2021-10-14 15:25:26', 456478, 3, '0114455444', '0711111111', 1),
+    (69, '2021-10-14 17:28:40', 456477, 4, '0114455444', '0711111111', 1),
+    (70, '2021-10-14 17:31:47', 555555, 1, '0114455444', '0711111111', 1),
+    (71, '2021-10-15 01:22:26', 456472, 5, '0114455444', '0711111111', 1),
+    (72, '2021-10-15 04:06:42', 454564, 4, '0114455444', '0711111111', 1),
+    (73, '2021-10-15 04:08:06', 349777, 3, '0114455444', '0711111111', 0),
+    (74, '2021-10-15 04:59:37', 343456, 1, '0114455444', '0711111111', 0),
+    (75, '2022-01-12 10:23:32', 555555, 3, '0114455444', '0711111111', 0),
+    (76, '2022-01-12 15:21:21', 456789, 6, '0114455444', '0711111111', 1);
+    ALTER TABLE &#96;accounts&#96;
+      ADD PRIMARY KEY (&#96;id&#96;),
+      ADD UNIQUE KEY &#96;id_2&#96; (&#96;id&#96;),
+      ADD KEY &#96;id&#96; (&#96;id&#96;);
+    
+    ALTER TABLE &#96;accounts&#96;
+      MODIFY &#96;id&#96; int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=77;
+    COMMIT;
+    
+    
+    
+    </code>
+</pre>
+<h3 class="text-2xl">02 Step- Connect to the database </h3>
+<code>includes/config.php</code>
+<pre>
+    <code class="line-numbers language-js">
+&#60;?php
+$server = "localhost";
+$dbname = "codeaddon";
+$user = "root";
+$pass = "";
+
+// Create connection
+try{
+   $conn = new PDO("mysql:host=$server;dbname=$dbname","$user","$pass");
+   $conn->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
+}catch(PDOException $e){
+   die('Unable to connect with the database');
+}
+    </code>
+</pre>
+                     <code>index.php</code>
+                <pre>
+                  <code class='language-markup'>
+&lt;!DOCTYPE html&gt;
+
+&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+
+&lt;head&gt;
+  &lt;meta charset="utf-8" /&gt;
+  &lt;meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"&gt;
+  &lt;title&gt;
+    Admin
+  &lt;/title&gt;
+  &lt;link rel="stylesheet" type="text/css" href="css/style.css"&gt;
+  &lt;link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"&gt;
+  &lt;link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"&gt;
+
+  &lt;!-- DataTables --&gt;
+  &lt;link rel="stylesheet" href="https://cdn.datatables.net/1.11.3/css/dataTables.bootstrap5.min.css"&gt;
+  &lt;link rel="stylesheet" href="https://cdn.datatables.net/responsive/2.2.9/css/responsive.dataTables.min.css"&gt;
+  &lt;link rel="stylesheet" href="https://cdn.datatables.net/buttons/2.1.1/css/buttons.bootstrap5.min.css"&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+&lt;br&gt;
+    &lt;div class="container"&gt;
+      &lt;h1 class="text-center"&gt;how to get data from db using MySQL, PHP and PDO with AJAX with jQuery datatable&lt;/h1&gt;
+      &lt;div class="table-responsive"&gt;
+        &lt;table id="elec_data" class="table table-bordered table-striped"&gt;
+          &lt;thead&gt;
+            &lt;tr&gt;
+              &lt;th&gt;Accounts Number &lt;/th&gt;
+              &lt;th&gt;Meetar Number &lt;/th&gt;
+              &lt;th&gt;No of Beneficiaries&lt;/th&gt;
+              &lt;th&gt;Contact Number&lt;/th&gt;
+              &lt;th&gt;Mobile Number&lt;/th&gt;
+              &lt;th&gt;Created at&lt;/th&gt;
+            &lt;/tr&gt;
+          &lt;/thead&gt;
+        &lt;/table&gt;        
+      &lt;/div&gt;
+    &lt;/div&gt;
+
+&lt;script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"&gt;&lt;/script&gt;
+
+&lt;script src="https://cdn.datatables.net/1.11.3/js/jquery.dataTables.min.js"&gt;&lt;/script&gt;
+&lt;script src="https://cdn.datatables.net/1.11.3/js/dataTables.bootstrap5.min.js"&gt;&lt;/script&gt;
+&lt;script src="https://cdn.datatables.net/responsive/2.2.9/js/dataTables.responsive.min.js"&gt;&lt;/script&gt;
+
+&lt;script src="https://cdn.datatables.net/buttons/2.1.1/js/dataTables.buttons.min.js"&gt;&lt;/script&gt;
+&lt;script src="https://cdn.datatables.net/buttons/2.1.1/js/buttons.bootstrap5.min.js"&gt;&lt;/script&gt;
+&lt;script src="https://cdn.datatables.net/buttons/2.1.0/js/buttons.html5.min.js"&gt;&lt;/script&gt;
+&lt;script src="https://cdn.datatables.net/buttons/2.1.0/js/buttons.print.min.js"&gt;&lt;/script&gt;
+&lt;script src="https://cdn.datatables.net/buttons/2.1.0/js/buttons.colVis.min.js"&gt;&lt;/script&gt;
+
+&lt;script src="js/script.js"&gt;&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+                  </code>
+                </pre>
+
+<pre class="line-numbers language-css">
+    <code>
+    #elec_data_wrapper div.dt-buttons.btn-group.flex-wrap{
+      max-width: 300px;
+    }
+    .dt-buttons button{
+      background-color: #1F2937;
+    }
+    
+     #elec_data_length > label{
+      float: right;
+    }
+    
+    #elec_data_previous > a, #elec_data_next > a,#elec_data_paginate > ul > li.paginate_button.page-item > a{
+      width: auto;
+      height: auto;
+      padding: 10px;
+      border-radius: 0 !important;
+      background-color: #1F2937;
+      color: #fff;
+    
+    
+    }
+    #elec_data_paginate > ul > li.paginate_button.page-item.active > a{
+    
+      background-color: #fff;
+      color: #1F2937;
+    }
+    .page-item.active .page-link{
+      border-color: #1F2937;
+    }    
+</code>
+</pre>
+<code>js/script.js</code>
+<pre class="line-numbers language-js">
+    <code>
+    var dataTable = $('#elec_data').DataTable({
+      "paging": true,
+      "ordering": true,
+      "info": true,
+      "autoWidth": false,
+      "responsive": true,
+      "processing":true,
+      "serverSide":true,
+      "order":[],
+    "ajax":{
+      url:"includes/ajax.php",
+      type:"POST"
+    },
+      dom: 'lBfrtip',
+      buttons: ['copy','csv','print'],
+  });    </code>
+</pre>
+
+<code>includes/ajax.php</code>
+<pre class="line-numbers language-js">
+    <code>
+    &lt;?php
+    include('config.php');
+    
+    
+    function get_total_all_records($conn)
+    {
+      $statement = $conn->prepare("SELECT * FROM  accounts");
+      $statement->execute();
+      $result = $statement->fetchAll();
+      return $statement->rowCount();
+    }
+    
+    
+    $query = '';
+    $output = array();
+    $query .= 'SELECT * FROM  accounts WHERE ';
+    if(isset($_POST["search"]["value"]))
+    {
+      $query .= '  accounts.id	 LIKE "%'.$_POST["search"]["value"].'%" ';
+    }
+    if(isset($_POST["order"]))
+    {
+      $query .= 'ORDER BY '.$_POST['order']['0']['column'].' '.$_POST['order']['0']['dir'].' ';
+    }
+    else
+    {
+      $query .= 'ORDER BY accounts.id DESC ';
+    }
+    if($_POST["length"] != -1)
+    {
+      $query .= 'LIMIT ' . $_POST['start'] . ', ' . $_POST['length'];
+    }
+    $statement = $conn->prepare($query);
+    $statement->execute();
+    $result = $statement->fetchAll();
+    $data = array();
+    $filtered_rows = $statement->rowCount();
+    foreach($result as $row)
+    {
+      $sub_array = array();
+    
+       if ($row['status']==0) {
+         $sub_array[] =  $row["id"].' <span class="badge bg-danger">Inactive</span>';
+       }else{
+         $sub_array[] =  $row["id"].' <span class="badge bg-success">Active</span>';
+       }
+       $sub_array[] = $row["measurement_no"];
+       $sub_array[] = $row["no_beneficiaries"];
+       $sub_array[] = $row["phone_fixed"];
+       $sub_array[] = $row["phone_mobile"];
+      if (date('Y-m-d') == date('Y-m-d', strtotime($row["created_at"]))) {
+         $sub_array[] = '<i class="fa fa-circle text-success"></i> '.$row["created_at"];
+      }else{
+         $sub_array[] = $row["created_at"];
+      }
+    
+    $data[] = $sub_array;
+    }
+    $output = array(
+      "draw"				=>	intval($_POST["draw"]),
+      "recordsTotal"		=> 	$filtered_rows,
+      "recordsFiltered"	=>	get_total_all_records($conn),
+      "data"				=>	$data
+    );
+    echo json_encode($output);
+    ?&gt;
     </code>
 </pre>`,
       }
