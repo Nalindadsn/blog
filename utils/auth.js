@@ -34,7 +34,7 @@ const isAuth = async (req, res, next) => {
   }
 };
 const role = async (req, res, next) => {
-  if (req.user.role) {
+  if (req.user.role==="admin") {
     next();
   } else {
     res.status(401).send({ message: 'User is not admin' });
