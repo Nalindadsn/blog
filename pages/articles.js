@@ -120,7 +120,7 @@ export default function Articles(props) {
 
     </aside>
 
-    <main id="content" className="flex-1 lg:px-0 bg-gray-100">
+    <main id="content" className="flex-1 lg:px-0 ">
 
         <div className="max-w-7xl mx-auto">
 
@@ -176,69 +176,56 @@ export default function Articles(props) {
 
 
 
-<div className="flex flex-col min-h-screen md:px-0">
-
-  <div className=" pb-6 flex-1">
-    <div>
-      <div className="flex flex-wrap md:-mx-3">
-
-      {products?.map((product) => (
+<div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10">
+    
 
 
-<div key={product._id} className="md:w-1/2 px-3 mb-6 w-full ">
-  <div className="flex w-full h-full flex-wrap bg-white overflow-hidden rounded shadow">
-    <div className="w-2/6">
-    <div style={{position:"relative",height:"100%",paddingBottom:"100%"}}>
-      <Image
-src="https://res.cloudinary.com/masterdevs/image/upload/v1640117880/codeaddon/codeaddon-banner_tmtp8t.png"
-alt={product.name}
-layout='fill'
-objectFit='cover'
-/>
 
-    </div>
-    </div>
-    <div className="w-4/6 p-5">
-      <h2 className=" font-bold	 leading-normal text-lg">
-      <Link href={`/post/${product.slug}`}>
-  <a>{product.name}</a>
+
+
+
+    {products?.map((product) => (
+
+
+
+  <div key={product._id} className="rounded overflow-hidden shadow-lg flex flex-col">
+<Link href={`/post/${product.slug}`}>
+<a className='p-2 bg-gray-800'>
+  <Image className="w-full" src={product.image} width="886" height="332" alt={product.name}/>
+</a>
+
 </Link>
-         </h2>
+<div className="px-6 py-4 mb-auto">
+  <div className="mb-3">
+<Link href={product.category}>
+<a className="text-xs text-indigo-600 transition duration-500 ease-in-out">{product.category}</a>
+</Link>
+    
+    
 
-<p className='text-slate-600'>
 
-{product.descriptionShort}
-
-</p>
-
-      <div className="flex flex-wrap justify-between items-center mt-3 ">
-        <div className="inline-flex items-center ">
-          <div className="w-10 h-10 rounded-full overflow-hidden flex-shrink-0 ">
-            <Image width="256" height="256" src={"https://res.cloudinary.com/masterdevs/image/upload/v1640114706/codeaddon/nalinda-dissanayaka_u5uh0z.jpg"} alt='Nalinda Dissanayaka - author' />
-            
-          </div>
-          <div className="flex-1 pl-2">
-            <h2 className=" mb-1">Nalinda Dissanayaka</h2>
-            <p className=" opacity-50 text-xs">{product.createdAt}</p>
-          </div>
-        </div>
-        <span className=" opacity-50">
-      <svg className="fill-current w-5 h-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 459 459">
-        <path d="M357 0H102C73.95 0 51 22.95 51 51v408l178.5-76.5L408 459V51c0-28.05-22.95-51-51-51z"/>
-      </svg>
-    </span>
-      </div>
+</div>
+<Link href={`/post/${product.slug}`}>
+<a className="font-medium text-lg inline-block hover:text-indigo-600 transition duration-500 ease-in-out inline-block mb-2">{product.name}</a>
+</Link>
+  <p className="text-gray-500 text-sm">
+  {product.descriptionShort}
+  </p>
+</div>
+<div className="flex items-center px-6 pb-4">
+    
+    <Image width={50} height={50} className="w-12 h-12 rounded-full mr-2" src={"https://res.cloudinary.com/masterdevs/image/upload/v1640114706/codeaddon/nalinda-dissanayaka_u5uh0z.jpg"} alt="Nalinda Dissanayaka"/>
+    <div className="text-sm">
+      <h4 className="text-gray-900 font-medium leading-none hover:text-indigo-600">Nalinda Dissanayaka</h4>
+      <p className="text-gray-600">{product.createdAt}</p>
     </div>
   </div>
-</div>
+</div>        
 
 ))}        
+    
 
-      
-      </div>
-      
-    </div>
-  </div>
+  
 </div>
 
 
