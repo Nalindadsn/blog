@@ -33,7 +33,7 @@ const isAuth = async (req, res, next) => {
     res.status(401).send({ message: 'Token is not suppiled' });
   }
 };
-const role = async (req, res, next) => {
+const isAdmin = async (req, res, next) => {
   if (req.user.role==="admin") {
     next();
   } else {
@@ -41,4 +41,5 @@ const role = async (req, res, next) => {
   }
 };
 
-export { signToken, isAuth, role };
+
+export { signToken, isAuth, isAdmin };
