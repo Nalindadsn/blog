@@ -60,6 +60,7 @@ export default function PostScreen(props) {
 
                 </div>
                 <div dangerouslySetInnerHTML={{__html:product.description}} className='mb-5'></div>
+                <br/>
                 </div>
             </div>
         </div>
