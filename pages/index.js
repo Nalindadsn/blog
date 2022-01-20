@@ -31,16 +31,17 @@ const Home = (props) => {
 
 <div className=" mx-auto  ">
   <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6">
+    
+    
     <div className="relative  py-12  pl-12 ml-12  hidden md:block ">
+    <div className="m-auto">
     <figcaption className="absolute -left-5 top-24 text-lg -mt-16 text-white px-4 pt-12  ">
-
-
-<div className="shadow">
-  <h1  className="bg-sky-600 px-2 ">F</h1>
-  <h1  className="bg-red-500 px-2 ">Y</h1>
-  <h1  className="bg-sky-300 px-2 ">T</h1>
-</div>
-</figcaption>
+    <div className="shadow">
+      <h1  className="bg-sky-600 px-2 ">F</h1>
+      <h1  className="bg-red-500 px-2 ">Y</h1>
+      <h1  className="bg-sky-300 px-2 ">T</h1>
+    </div>
+    </figcaption>
     <h4 className="font-medium text-gray-300 pt-20"><i className="fa fa-globe "></i> Web Development</h4>
       <h2 className="font-bold text-5xl text-white leading-tight mt-3 mb-6">WELCOME TO <span className="text-amber-500 shadow">CODEADDON</span></h2>
       <span className="font-normal text-gray-300"> Solve all your web designing and development conflicts with our advanced and easy tutorials.</span>
@@ -55,31 +56,23 @@ const Home = (props) => {
         </Link>
           )
         }
-        
-        {/* <a className="mx-4 p-2 px-4 border-2 text-white border-white rounded-lg hover:text-white hover:bg-gray-900 cursor-pointer">Register</a> */}
-      </div>
-      
-
-
+      </div></div>
     </div>
+
+
     <div className=" justify-center relative  my-auto ">
-
 <div className='bg-gray-900/50 md:bg-gray-900/0 absolute w-full h-full z-20' ></div>
-
     <figcaption className="absolute right-0 top-28 text-lg -mt-16 text-white px-4 pt-12 z-30  block md:hidden ">
-
-
-<div className=" p-5">
-  <h1  className="bg-sky-600 px-2 ">F</h1>
-  <h1  className="bg-red-500 px-2 ">Y</h1>
-  <h1  className="bg-sky-300 px-2 ">T</h1>
-</div>
-</figcaption>
+    <div className=" p-5">
+      <h1  className="bg-sky-600 px-2 ">F</h1>
+      <h1  className="bg-red-500 px-2 ">Y</h1>
+      <h1  className="bg-sky-300 px-2 ">T</h1>
+    </div>
+    </figcaption>
     <figcaption className="absolute -left-5 top-0 text-lg -mt-16 text-white px-4 pt-12 block md:hidden z-20">
 
-
 <div className=" py-5 pl-5  mr-6 pr-7">
-<h4 className="font-medium text-white pt-12 mt-5 text-shadow-lg  	 ml-10"><i className="fa fa-globe"></i> Web Development</h4>
+      <h4 className="font-medium text-white pt-12 mt-5 text-shadow-lg  	 ml-10"><i className="fa fa-globe"></i> Web Development</h4>
       <h2 className="font-bold text-4xl text-white leading-tight  text-shadow-lg pt-1 pb-2	">WELCOME TO <span className="text-amber-500 shadow">CODEADDON</span></h2>
       <span className="font-small text-white pt-0 text-shadow-lg	 "> Solve all your web designing and development conflicts with our advanced and easy tutorials.</span>
       <div id="buttons" className="font-medium flex flex-row py-2 rounded">
@@ -99,7 +92,6 @@ const Home = (props) => {
 </div>
 </figcaption>
 
-
 <div className='bg-white h-12'></div>
 <Image width="675" height="528" className="z-10 pb-14 object-cover h-full w-full block md:hidden sm:hidden" src="https://res.cloudinary.com/masterdevs/image/upload/v1640121452/codeaddon/codeaddon-banner-web-development_vibee4.png" alt='codeaddon-banner-web-development' />
 
@@ -107,6 +99,8 @@ const Home = (props) => {
 
 
     </div>
+
+    
   </div>
 </div>
 

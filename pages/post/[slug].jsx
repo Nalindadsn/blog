@@ -9,6 +9,7 @@ import { useEffect } from 'react';
 import Head from 'next/head';
 import Image from 'next/image';
 import NavBar from '../../components/NavBar';
+import Footer from '../../components/Footer';
 
 
 export default function PostScreen(props) {
@@ -58,14 +59,12 @@ export default function PostScreen(props) {
                 <Image src={product.image} width="882" height="332" alt="Check Email Availaility tutorial_php"/>
 
                 </div>
-                
-
-
-                <div dangerouslySetInnerHTML={{__html:product.description}}></div>
+                <div dangerouslySetInnerHTML={{__html:product.description}} className='mb-5'></div>
                 </div>
             </div>
         </div>
     </div>
+    
 
     <aside id="sidebar"  className=" shadow md:w-64 w-3/4 space-y-6  px-0 absolute inset-y-0 left-0 transform md:relative md:translate-x-0 transition duration-200 ease-in-out  md:flex md:flex-col md:justify-between overflow-y-auto" data-dev-hint="sidebar; px-0 for frameless; px-2 for visually inset the navigation">
         <div  className="flex flex-col space-y-6" data-dev-hint="optional div for having an extra footer navigation">
@@ -82,9 +81,6 @@ export default function PostScreen(props) {
     </aside>
 
 </div>
-
-
-
 
 
 
