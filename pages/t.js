@@ -1,14 +1,20 @@
 
-import Layout from '../components/Layout'
 import db from '../utils/db';
+
+import Footer from '../components/Footer'
+import NavBar from '../components/NavBar'
 
 export default function T(props) {
   return (
-    <Layout>
-      <br/><br/><br/>
-ooo
-lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem 
+    <div>
+      
 
-    </Layout>
+<NavBar/>
+<div className='pt-24'>
+  oop
+</div>
+
+</div>
+
   )
 }

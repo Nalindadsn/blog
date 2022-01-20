@@ -136,86 +136,71 @@ const Home = (props) => {
    */}
 
 
-
-
-<div className="flex flex-col min-h-screen md:px-3 bg-gray-100">
-  <div className="">
-    
-    
-    <div className="flex justify-center   py-5">
-
-      <h2 className=' py-5  font-bold text-4xl text-gray-900 '> Latest Atricles </h2>
+<div className="max-w-screen-xl mx-auto p-5 sm:p-10 md:p-16">
+  
+  <div className="border-b mb-5 flex justify-between text-sm">
+    <div className="text-indigo-600 flex items-center pb-2 pr-2 border-b-2 border-indigo-600 uppercase">
+  
+      <a href="#" className="font-semibold inline-block">Latest Posts</a>
     </div>
+    <a href="#">See All</a>
   </div>
-  <div className=" pb-6 flex-1">
-    <div className="container mx-auto">
-      <div className="flex flex-wrap md:-mx-3">
+  
+  <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10">
+    
 
-        
- 
+
+
+
+
+
       {products?.map((product) => (
 
 
-        <div key={product._id} className="md:w-1/2 px-3 mb-6 w-full ">
-          <div className="flex w-full h-full flex-wrap bg-white overflow-hidden rounded shadow">
-            <div className="w-2/6">
-            <div style={{position:"relative",height:"100%",paddingBottom:"100%"}}>
-              <Image
-      src="https://res.cloudinary.com/masterdevs/image/upload/v1640117880/codeaddon/codeaddon-banner_tmtp8t.png"
-      alt={product.name}
-      layout='fill'
-      objectFit='cover'
-    />
+  
+    <div key={product._id} className="rounded overflow-hidden shadow-lg flex flex-col">
+  <a className='p-2 bg-gray-800'>
+    <Image className="w-full" src={product.image} width="886" height="332" alt={product.name}/>
+</a>
+  <div className="px-6 py-4 mb-auto">
+    <div className="mb-3">
+      <a href="#" className="text-xs text-indigo-600 transition duration-500 ease-in-out">
+{product.category}
+</a>
 
-            </div>
-            </div>
-            <div className="w-4/6 p-5 ">
-              <h2 className=" font-bold	 leading-normal text-lg">
-              <Link href={`/post/${product.slug}`}>
-          <a>{product.name}</a>
-        </Link>
-                 </h2>
-
-<p className='text-slate-600'>
-
-{product.descriptionShort}
-
-</p>
-
-              <div className="flex flex-wrap justify-between items-center mt-3 ">
-                <div className="inline-flex items-center ">
-                  <div className="w-10 h-10 rounded-full overflow-hidden flex-shrink-0 ">
-                    <Image width="256" height="256" src={"https://res.cloudinary.com/masterdevs/image/upload/v1640114706/codeaddon/nalinda-dissanayaka_u5uh0z.jpg"} alt='Nalinda Dissanayaka - author' />
-                    
-                  </div>
-                  <div className="flex-1 pl-2">
-                    <h2 className=" mb-1">Nalinda Dissanayaka</h2>
-                    <p className=" opacity-50 text-xs">{product.createdAt}</p>
-                  </div>
-                </div>
-                <span className=" opacity-50">
-              <svg className="fill-current w-5 h-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 459 459">
-                <path d="M357 0H102C73.95 0 51 22.95 51 51v408l178.5-76.5L408 459V51c0-28.05-22.95-51-51-51z"/>
-              </svg>
-            </span>
-              </div>
-            </div>
-          </div>
-        </div>
+  
+</div>
+    <a href="#" className="font-medium text-lg inline-block hover:text-indigo-600 transition duration-500 ease-in-out inline-block mb-2">{product.name}</a>
+    <p className="text-gray-500 text-sm">
+    {product.descriptionShort}
+    </p>
+  </div>
+  <div className="flex items-center px-6 pb-4">
+      <a href="#"><Image width={50} height={50} className="w-12 h-12 rounded-full mr-2" src={"https://res.cloudinary.com/masterdevs/image/upload/v1640114706/codeaddon/nalinda-dissanayaka_u5uh0z.jpg"} alt="Nalinda Dissanayaka"/></a>
+      <div className="text-sm">
+        <a href="#" className="text-gray-900 font-medium leading-none hover:text-indigo-600">Nalinda Dissanayaka</a>
+        <p className="text-gray-600">{product.createdAt}</p>
+      </div>
+    </div>
+</div>        
 
 ))}        
       
-      
-      </div>
-      <div className="text-center pt-6 pb-12 ">
-      <Link href="/articles" > 
+
+    
+  </div>
+  <div className='text-center pt-12'>
+<Link href="/articles" > 
       <a className="border border-gray-600 text-gray-600 px-4 py-2 rounded-full hover:bg-gray-600 hover:text-white">Show More</a>
       </Link> 
 
-      </div>
-    </div>
   </div>
 </div>
+
+
+  
+
+
 
 
 {/* 
