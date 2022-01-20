@@ -141,9 +141,12 @@ const Home = (props) => {
   <div className="border-b mb-5 flex justify-between text-sm">
     <div className="text-indigo-600 flex items-center pb-2 pr-2 border-b-2 border-indigo-600 uppercase">
   
-      <a href="#" className="font-semibold inline-block">Latest Posts</a>
+      <h4 className="font-semibold inline-block">Latest Posts</h4>
     </div>
-    <a href="#">See All</a>
+    <Link href="/articles">
+      <a>See All</a>
+    </Link>
+    
   </div>
   
   <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10">
