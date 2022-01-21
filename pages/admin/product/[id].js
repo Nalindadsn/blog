@@ -149,39 +149,13 @@ function ProductEdit({ params }) {
   const [data, setData] = useState('')
 
   return (
-    <div title={`Edit Product ${productId}`}>
-      <div container spacing={1}>
-        <div item md={3} xs={12}>
-          <div >
-            <div>
-              <NextLink href="/admin/dashboard" passHref>
-                <div button component="a">
-                  <div primary="Admin Dashboard"></div>
-                </div>
-              </NextLink>
-              <NextLink href="/admin/orders" passHref>
-                <div button component="a">
-                  <div primary="Orders"></div>
-                </div>
-              </NextLink>
-              <NextLink href="/admin/products" passHref>
-                <div selected button component="a">
-                  <div primary="Products"></div>
-                </div>
-              </NextLink>
-              <NextLink href="/admin/users" passHref>
-                <div button component="a">
-                  <div primary="Users"></div>
-                </div>
-              </NextLink>
-            </div>
-          </div>
-        </div>
-        <div item md={9} xs={12}>
+    <div>
+      <div>
+        <div>
           <div >
             <div>
               <div>
-                <p component="h1" variant="h1">
+                <p>
                   Edit Product {productId}
                 </p>
               </div>
@@ -197,19 +171,56 @@ function ProductEdit({ params }) {
                   >
                   <div>
                     <div>
-                          <input type="text"  id="name" name='name'/>
+                      <Controller
+                        name="name"
+                        control={control}
+                        defaultValue=""
+                        rules={{
+                          required: true,
+                        }}
+                        render={({ field }) => (
+                          <input type="text"  id="name"/>
                           
+                        )}></Controller>
                     </div>
                     <div>
-                          <input type="text"  id="slug" name='slug'/>
+                      <Controller
+                        name="slug"
+                        control={control}
+                        defaultValue=""
+                        rules={{
+                          required: true,
+                        }}
+                        render={({ field }) => (
+                          <input type="text"  id="slug"/>
                           
+                        )}></Controller>
                     </div>
                     <div>
-                          <input type="text" id="price" name='price'/>
-                          
+                      <Controller
+                        name="price"
+                        control={control}
+                        defaultValue=""
+                        rules={{
+                          required: true,
+                        }}
+                        render={({ field }) => (
+                          <input type="text"  id="price"/>
+                         
+                        )}></Controller>
                     </div>
                     <div>
-                          <input type="text" id="image" name='image'/>
+                      <Controller
+                        name="image"
+                        control={control}
+                        defaultValue=""
+                        rules={{
+                          required: true,
+                        }}
+                        render={({ field }) => (
+
+                          <input type="text"  id="image"/>
+                        )}></Controller>
                     </div>
                     <div>
                       <button variant="contained" component="label">
@@ -219,12 +230,21 @@ function ProductEdit({ params }) {
                       {loadingUpload && "aaa"}
                     </div>
                     <div>
-                          <input type="checkbox" onClick={(e) => setIsFeatured(e.target.checked)} checked={isFeatured} name="isFeatured"/>
+                          <input type="checkbox" onClick={(e) => setIsFeatured(e.target.checked)}  name="isFeatured"/>
                          
                     </div>
                     <div>
+                      <Controller
+                        name="featuredImage"
+                        control={control}
+                        defaultValue=""
+                        rules={{
+                          required: true,
+                        }}
+                        render={({ field }) => (
                           <input type="text"  id="featuredImage"/>
                           
+                        )}></Controller>
                     </div>
                     <div>
                       <button variant="contained" component="label">
@@ -238,15 +258,43 @@ function ProductEdit({ params }) {
                       {loadingUpload && "aaaa"}
                     </div>
                     <div>
+                      <Controller
+                        name="category"
+                        control={control}
+                        defaultValue=""
+                        rules={{
+                          required: true,
+                        }}
+                        render={({ field }) => (
                           <input type="text"  id="category"/>
                           
+                        )}></Controller>
                     </div>
                     <div>
+                      <Controller
+                        name="brand"
+                        control={control}
+                        defaultValue=""
+                        rules={{
+                          required: true,
+                        }}
+                        render={({ field }) => (
                           <input type="text"  id="brand"/>
+                          
+                        )}></Controller>
                     </div>
                     <div>
+                      <Controller
+                        name="countInStock"
+                        control={control}
+                        defaultValue=""
+                        rules={{
+                          required: true,
+                        }}
+                        render={({ field }) => (
                           <input type="text"  id="countInStock"/>
                           
+                        )}></Controller>
                     </div>
                     <div>
                       <Controller
@@ -277,35 +325,16 @@ function ProductEdit({ params }) {
                               {...field}
                             />
 
-                            {/* {JSON.stringify(data)} */}
-
-                            {/* 
-                          // <TextField
-                          //   variant="outlined"
-                          //   fullWidth
-                          //   multiline
-                          //   id="description"
-                          //   label="Description"
-                          //   error={Boolean(errors.description)}
-                          //   helperText={
-                          //     errors.description
-                          //       ? 'Description is required'
-                          //       : ''
-                          //   }
-                          //   {...field}></TextField>                             */}
                           </div>
                         )}></Controller>
                     </div>
 
                     <div>
                       <button
-                        variant="contained"
-                        type="submit"
-                        fullWidth
-                        color="primary">
+                        type="submit">
                         Update
                       </button>
-                      {loadingUpdate && "aaaaa"}
+                      {loadingUpdate && "loading..."}
                     </div>
                   </div>
                 </form>

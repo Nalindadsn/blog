@@ -110,49 +110,21 @@ function AdminProdcuts() {
   };
   return (
     <div title="Products">
-      <div container spacing={1}>
-        <div item md={3} xs={12}>
-          <div >
-            <div>
-              <NextLink href="/admin/dashboard" passHref>
-                <div button component="a">
-                  <div primary="Admin Dashboard"></div>
-                </div>
-              </NextLink>
-              <NextLink href="/admin/orders" passHref>
-                <div button component="a">
-                  <div primary="Orders"></div>
-                </div>
-              </NextLink>
-              <NextLink href="/admin/products" passHref>
-                <div selected button component="a">
-                  <div primary="Products"></div>
-                </div>
-              </NextLink>
-              <NextLink href="/admin/users" passHref>
-                <div button component="a">
-                  <div primary="Users"></div>
-                </div>
-              </NextLink>
-            </div>
-          </div>
-        </div>
-        <div item md={9} xs={12}>
+      <div>
+        <div>
           <div >
             <div>
               <div>
-                <div container alignItems="center">
-                  <div item xs={6}>
-                    <p component="h1" variant="h1">
+                <div>
+                  <div>
+                    <p>
                       Products
                     </p>
                     {loadingDelete && "aaaa"}
                   </div>
-                  <div align="right" item xs={6}>
+                  <div>
                     <button
                       onClick={createHandler}
-                      color="primary"
-                      variant="contained"
                     >
                       Create
                     </button>
@@ -169,17 +141,18 @@ function AdminProdcuts() {
                 ) : (
                   <div>
                     <table>
-                      <th>
+                      <thead>
                         <tr>
-                          <td>ID</td>
-                          <td>NAME</td>
-                          <td>PRICE</td>
-                          <td>CATEGORY</td>
-                          <td>COUNT</td>
-                          <td>RATING</td>
-                          <td>ACTIONS</td>
+                          <th>ID</th>
+                          <th>NAME</th>
+                          <th>PRICE</th>
+                          <th>CATEGORY</th>
+                          <th>COUNT</th>
+                          <th>RATING</th>
+                          <th>ACTIONS</th>
                         </tr>
-                      </th>
+
+                      </thead>
                       <tbody>
                         {products.map((product) => (
                           <tr key={product._id}>
@@ -202,8 +175,6 @@ function AdminProdcuts() {
                               </NextLink>{' '}
                               <button
                                 onClick={() => deleteHandler(product._id)}
-                                size="small"
-                                variant="contained"
                               >
                                 Delete
                               </button>
