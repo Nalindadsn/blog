@@ -7,6 +7,8 @@ import { getError } from '../utils/error'
 import { Store } from '../utils/Store'
 import { Controller, useForm } from 'react-hook-form'
 import Cookies from 'js-cookie'
+import NavBar from '../components/NavBar';
+
 
 function Profile() {
   const { state, dispatch } = useContext(Store)
@@ -53,6 +55,7 @@ function Profile() {
     <div>
 
 
+<NavBar/>
 
 
 <div className="bg-gray-100  pt-20">
