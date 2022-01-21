@@ -120,7 +120,7 @@ function AdminProdcuts() {
                     <p>
                       Products
                     </p>
-                    {loadingDelete && "aaaa"}
+                    {loadingDelete && "loading..."}
                   </div>
                   <div>
                     <button
@@ -128,14 +128,14 @@ function AdminProdcuts() {
                     >
                       Create
                     </button>
-                    {loadingCreate && "aaaa"}
+                    {loadingCreate && "loading..."}
                   </div>
                 </div>
               </div>
 
               <div>
                 {loading ? (
-                  "aaaaa"
+                  "loading..."
                 ) : error ? (
                   <p >{error}</p>
                 ) : (
