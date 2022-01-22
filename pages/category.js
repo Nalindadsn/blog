@@ -8,6 +8,8 @@ import ProductItem from '../components/ProductItem'
 import { Store } from '../utils/Store'
 import axios from 'axios'
 import Link from 'next/link'
+import Head from 'next/head'
+import NavBar from '../components/NavBar'
 // import { Pagination } from '@material-ui/lab'
 
 const PAGE_SIZE = 10
@@ -101,17 +103,22 @@ export default function Search(props) {
     router.push('/cart')
   }
   return (
-    <Layout title="Search">
+    <div title="Search">
+            <Head>
+        <title>Category {category !== 'all' && ' : ' + category}</title>
+      </Head>
+{/* //------------------- */}
+<NavBar/>
       <div>
         
-        <div item md={9}>
+        <div>
           
 
 
 
           <div className="max-w-screen-xl mx-auto p-5 sm:p-10 md:p-16">
   
-  <div className="border-b mb-5 flex justify-between text-sm">
+  <div className="border-b mb-5 flex justify-between text-sm pt-20">
     <div className="text-amber-500 flex items-center pb-2 pr-2 border-b-2 border-amber-500 uppercase">
   
       <h4 className="font-semibold inline-block">{category !== 'all' && ' : ' + category}</h4>
@@ -148,7 +155,7 @@ export default function Search(props) {
             onChange={pageHandler}></Pagination> */}
         </div>
       </div>
-    </Layout>
+    </div>
   )
 }
 
