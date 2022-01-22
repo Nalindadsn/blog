@@ -116,7 +116,7 @@ const Home = (props) => {
 
 <div className='text-center  w-full p-5 pt-12'>
 {categories?.map((category) => (
-  <Link href='/' key={category._id}>
+  <Link href={`/category?category=${category.slug}`} key={category._id}>
     <a className="md:w-1/5 px-3 mb-1 bg-gray-800 text-white p-2 m-1 inline-block">
         {category.name}
       </a>
@@ -181,9 +181,9 @@ const Home = (props) => {
   </div>
   <div className="flex items-center px-6 pb-4">
       
-      <Image width={50} height={50} className="w-12 h-12 rounded-full mr-2" src={"https://res.cloudinary.com/masterdevs/image/upload/v1640114706/codeaddon/nalinda-dissanayaka_u5uh0z.jpg"} alt="Nalinda Dissanayaka"/>
+      <Image width={50} height={50} className="w-12 h-12 rounded-full " src={"https://res.cloudinary.com/masterdevs/image/upload/v1640114706/codeaddon/nalinda-dissanayaka_u5uh0z.jpg"} alt="Nalinda Dissanayaka"/>
       <div className="text-sm">
-        <h4 className="text-gray-900 font-medium leading-none hover:text-amber-500">Nalinda Dissanayaka</h4>
+        <h4 className="text-gray-900 font-medium leading-none hover:text-amber-500 ml-2">Nalinda Dissanayaka</h4>
         <p className="text-gray-600">{product.createdAt}</p>
       </div>
     </div>

@@ -7,6 +7,7 @@ import Product from '../models/Product'
 import ProductItem from '../components/ProductItem'
 import { Store } from '../utils/Store'
 import axios from 'axios'
+import Link from 'next/link'
 // import { Pagination } from '@material-ui/lab'
 
 const PAGE_SIZE = 10
@@ -102,75 +103,29 @@ export default function Search(props) {
   return (
     <Layout title="Search">
       <div>
-        <div item md={3}>
-          <div>
-            <div>
-            </div>
-            <div>
-              <div>
-                <div>Brands</div>
-                <div value={brand} onChange={brandHandler} fullWidth>
-                  <div value="all">All</div>
-                  {brands &&
-                    brands.map((brand) => (
-                      <div key={brand} value={brand}>
-                        {brand}
-                      </div>
-                    ))}
-                </div>
-              </div>
-            </div>
-            <div>
-              <div>
-                <div>Prices</div>
-                <div value={price} onChange={priceHandler} fullWidth>
-                  <div value="all">All</div>
-                  {prices.map((price) => (
-                    <div key={price.value} value={price.value}>
-                      {price.name}
-                    </div>
-                  ))}
-                </div>
-              </div>
-            </div>
-            <div>
-            </div>
-          </div>
-        </div>
+        
         <div item md={9}>
-          <div container justifyContent="space-between" alignItems="center">
-            <div item>
-              {products.length === 0 ? 'No' : countProducts} Results
-              {query !== 'all' && query !== '' && ' : ' + query}
-              {category !== 'all' && ' : ' + category}
-              {brand !== 'all' && ' : ' + brand}
-              {price !== 'all' && ' : Price ' + price}
-              {rating !== 'all' && ' : Rating ' + rating + ' & up'}
-              {(query !== 'all' && query !== '') ||
-              category !== 'all' ||
-              brand !== 'all' ||
-              rating !== 'all' ||
-              price !== 'all' ? (
-                <div onClick={() => router.push('/search')}>
-                  Cancel
-                </div>
-              ) : null}
-            </div>
-            <div item>
-              <div component="span">
-                Sort by
-              </div>
-              <div value={sort} onChange={sortHandler}>
-                <div value="featured">Featured</div>
-                <div value="lowest">Price: Low to High</div>
-                <div value="highest">Price: High to Low</div>
-                <div value="toprated">Customer Reviews</div>
-                <div value="newest">Newest Arrivals</div>
-              </div>
-            </div>
-          </div>
-          <div container spacing={3}>
-            {products.map((product) => (
+          
+
+
+
+          <div className="max-w-screen-xl mx-auto p-5 sm:p-10 md:p-16">
+  
+  <div className="border-b mb-5 flex justify-between text-sm">
+    <div className="text-amber-500 flex items-center pb-2 pr-2 border-b-2 border-amber-500 uppercase">
+  
+      <h4 className="font-semibold inline-block">{category !== 'all' && ' : ' + category}</h4>
+    </div>
+    <Link href="/articles">
+      <a>See All</a>
+    </Link>
+    
+  </div>
+  
+  <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10">
+    
+
+  {products.map((product) => (
               <div item md={4} key={product.name}>
                 <ProductItem
                   product={product}
@@ -178,7 +133,15 @@ export default function Search(props) {
                 />
               </div>
             ))}
-          </div>
+
+
+
+    
+  </div>
+
+</div>
+
+        
           {/* <Pagination
             defaultPage={parseInt(query.page || '1')}
             count={pages}
