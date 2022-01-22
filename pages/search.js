@@ -38,7 +38,7 @@ export default function Search(props) {
     rating = 'all',
     sort = 'featured',
   } = router.query
-  const { products, countProducts, categories, brands, pages } = props
+  const { products, countProducts, brands, pages } = props
 
   const filterSearch = ({
     page,

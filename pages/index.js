@@ -133,7 +133,7 @@ const Home = (props) => {
 <div className="max-w-screen-xl mx-auto p-5 sm:p-10 md:p-16">
   
   <div className="border-b mb-5 flex justify-between text-sm">
-    <div className="text-indigo-600 flex items-center pb-2 pr-2 border-b-2 border-indigo-600 uppercase">
+    <div className="text-amber-500 flex items-center pb-2 pr-2 border-b-2 border-amber-500 uppercase">
   
       <h4 className="font-semibold inline-block">Latest Posts</h4>
     </div>
@@ -165,7 +165,7 @@ const Home = (props) => {
   <div className="px-6 py-4 mb-auto">
     <div className="mb-3">
 <Link href={product.category}>
-<a className="text-xs text-indigo-600 transition duration-500 ease-in-out">{product.category}</a>
+<a className="text-xs text-amber-500 transition duration-500 ease-in-out"><i className="	fa fa-circle"></i> {product.category}</a>
 </Link>
       
       
@@ -173,7 +173,7 @@ const Home = (props) => {
   
 </div>
 <Link href={`/post/${product.slug}`}>
-  <a className="font-medium text-lg inline-block hover:text-indigo-600 transition duration-500 ease-in-out inline-block mb-2">{product.name}</a>
+  <a className="font-medium text-lg inline-block hover:text-amber-500 transition duration-500 ease-in-out inline-block mb-2">{product.name}</a>
 </Link>
     <p className="text-gray-500 text-sm">
     {product.descriptionShort}
@@ -183,7 +183,7 @@ const Home = (props) => {
       
       <Image width={50} height={50} className="w-12 h-12 rounded-full mr-2" src={"https://res.cloudinary.com/masterdevs/image/upload/v1640114706/codeaddon/nalinda-dissanayaka_u5uh0z.jpg"} alt="Nalinda Dissanayaka"/>
       <div className="text-sm">
-        <h4 className="text-gray-900 font-medium leading-none hover:text-indigo-600">Nalinda Dissanayaka</h4>
+        <h4 className="text-gray-900 font-medium leading-none hover:text-amber-500">Nalinda Dissanayaka</h4>
         <p className="text-gray-600">{product.createdAt}</p>
       </div>
     </div>
