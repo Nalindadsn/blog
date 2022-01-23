@@ -347,7 +347,7 @@ const Home = (props) => {
 export default Home
 export async function getServerSideProps() {
   await db.connect()
-  const products = await Product.find({}).lean().limit(6)
+  const products = await Product.find({}).lean().limit(10)
   const categories = await Category.find({}).lean()
 
 
