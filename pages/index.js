@@ -42,7 +42,15 @@ const Home = (props) => {
       <h1  className="bg-sky-300 px-2 ">T</h1>
     </div>
     </figcaption>
-    <h4 className="font-medium text-gray-300 pt-20"><i className="fa fa-globe "></i> Web Development</h4>
+    {/* <form className=' mt-5 pt-12'> 
+<div class="flex mb-4">
+  <div class="w-1/2  h-12"><input type="text" className='w-full'/></div>
+  <div class="w-1/2  h-12"><button type="submit"><i class="fa fa-search text-white pl-2"></i></button> </div>
+</div>
+    
+  </form> */}
+
+    <h4 className="font-medium text-gray-300 "><i className="fa fa-globe "></i> Web Development</h4>
       <h2 className="font-bold text-5xl text-white leading-tight mt-3 mb-6">WELCOME TO <span className="text-amber-500 shadow">CODEADDON</span></h2>
       <span className="font-normal text-gray-300"> Solve all your web designing and development conflicts with our advanced and easy tutorials.</span>
       <div id="buttons" className="font-medium flex flex-row mt-6">
@@ -72,7 +80,14 @@ const Home = (props) => {
     <figcaption className="absolute -left-5 top-0 text-lg -mt-16 text-white px-4 pt-12 block md:hidden z-20">
 
 <div className=" py-5 pl-5  mr-6 pr-7">
-      <h4 className="font-medium text-white pt-12 mt-5 text-shadow-lg  	 ml-10"><i className="fa fa-globe"></i> Web Development</h4>
+  {/* <form className=' mt-5 pt-12'> 
+<div class="flex mb-4">
+  <div class="w-1/2 bg-gray-500 h-12"><input type="text" className='w-full'/></div>
+  <div class="w-1/2 bg-gray-300 h-12"><i class="fa fa-search"></i></div>
+</div>
+    
+  </form> */}
+      <h4 className="font-medium text-white text-shadow-lg  	 ml-10"><i className="fa fa-globe"></i> Web Development</h4>
       <h2 className="font-bold text-4xl text-white leading-tight  text-shadow-lg pt-1 pb-2	">WELCOME TO <span className="text-amber-500 shadow">CODEADDON</span></h2>
       <span className="font-small text-white pt-0 text-shadow-lg	 "> Solve all your web designing and development conflicts with our advanced and easy tutorials.</span>
       <div id="buttons" className="font-medium flex flex-row py-2 rounded">
