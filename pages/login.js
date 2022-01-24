@@ -4,7 +4,6 @@ import React, { useContext, useEffect, useState } from 'react';
 import { Store } from '../utils/Store';
 import Cookies from 'js-cookie';
 import { useRouter } from 'next/router';
-import Layout from '../components/Layout'
 import Image from 'next/image';
 import Link from 'next/link';
 import NavBar from '../components/NavBar';

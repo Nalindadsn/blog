@@ -1,7 +1,6 @@
 
 import { useRouter } from 'next/router'
 import React, { useContext } from 'react'
-import Layout from '../components/Layout'
 import db from '../utils/db'
 import Product from '../models/Product'
 import ProductItem from '../components/ProductItem'
@@ -100,7 +99,7 @@ export default function Search(props) {
     router.push('/cart')
   }
   return (
-    <Layout title="Search">
+    <div>
       <div>
         <div item md={3}>
           <div>
@@ -185,7 +184,7 @@ export default function Search(props) {
             onChange={pageHandler}></Pagination> */}
         </div>
       </div>
-    </Layout>
+    </div>
   )
 }
 
