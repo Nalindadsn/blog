@@ -160,3 +160,58 @@ display: none
 .fa-folder{
   color: #f59e0b;
 }
+
+
+.custom-radios div {
+  display: inline-block;
+}
+.custom-radios input[type="radio"] {
+  display: none;
+  
+}
+.custom-radios div {
+  
+  padding-right: 5px;
+}
+.custom-radios input[type="radio"] + label {
+  color: #333;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+}
+.custom-radios input[type="radio"] + label span {
+  display: inline-block;
+  vertical-align: middle;
+  cursor: pointer;
+  border: 2px solid #ccc;
+  background-repeat: no-repeat;
+  background-position: center;
+  text-align: center;
+  line-height: 35px;
+  position: relative;
+  padding:0 10px;
+}
+.custom-radios input[type="radio"] + label span img {
+  opacity: 0;
+  transition: all 0.3s ease;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  background-color: #2ecc71;
+  padding: 2px;
+  width: 10px;
+}
+.custom-radios input[type="radio"].color-1 + label span {
+  background-color: #fff;
+}
+.custom-radios input[type="radio"].color-2 + label span {
+  background-color: #3498db;
+}
+.custom-radios input[type="radio"]#color-3 + label span {
+  background-color: #f1c40f;
+}
+.custom-radios input[type="radio"]#color-4 + label span {
+  background-color: #e74c3c;
+}
+.custom-radios input[type="radio"]:checked + label span img {
+  opacity: 1;
+}
