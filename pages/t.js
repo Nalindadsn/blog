@@ -50,17 +50,17 @@ import NavBar from '../components/NavBar';
 <div className="pt-20">
 
 
-<div class="flex flex-wrap -mx-2 mb-8">
-      <div class="w-full md:w-1/2 lg:w-1/2 px-2 mb-4 ">
-         <div class="border h-12 text-sm text-grey-dark flex items-center justify-center">
+<div className="flex flex-wrap -mx-2 mb-8">
+      <div className="w-full md:w-1/2 lg:w-1/2 px-2 mb-4 ">
+         <div className="border h-12 text-sm text-grey-dark flex items-center justify-center">
             <p>full / half / quarter</p>
          </div>
-         <div class="border h-12 text-sm text-grey-dark flex items-center justify-center">
+         <div className="border h-12 text-sm text-grey-dark flex items-center justify-center">
             <p>full / half / quarter</p>
          </div>
       </div>
-      <div class="w-full md:w-1/2 lg:w-1/2 px-2 mb-4">
-         <div class="border h-12 text-sm text-grey-dark flex items-center justify-center">
+      <div className="w-full md:w-1/2 lg:w-1/2 px-2 mb-4">
+         <div className="border h-12 text-sm text-grey-dark flex items-center justify-center">
             <p>full / half / quarter</p>
          </div>
       </div>
@@ -97,7 +97,7 @@ import NavBar from '../components/NavBar';
 
           
 
-                          <div class="custom-radios">
+                          <div className="custom-radios">
   <div>
     <input type="radio" id="1" name="boardType" value="1"  onChange={(e) => setBoardType(e.target.value)} defaultChecked />
     <label for="1">
